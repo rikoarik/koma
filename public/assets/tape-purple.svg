@@ -1,0 +1,9 @@
+<svg width="150" height="38" viewBox="0 0 150 38" fill="none" xmlns="http://www.w3.org/2000/svg">
+  <!-- Electric Purple Semi-transparent Tape -->
+  <path d="M2 4 L9 1 L15 6 L22 0 L142 3 L149 7 L146 16 L150 24 L145 32 L149 37 L140 35 L135 38 L14 36 L7 38 L1 32 L4 24 L0 16 L4 9 Z" 
+        fill="#5A46D6" fill-opacity="0.85" stroke="#3F2F9C" stroke-width="0.7"/>
+  <!-- Micro grid pattern -->
+  <line x1="20" y1="8" x2="135" y2="8" stroke="#F7F4EE" stroke-width="0.75" stroke-dasharray="3 3" opacity="0.45"/>
+  <line x1="20" y1="19" x2="135" y2="19" stroke="#F7F4EE" stroke-width="0.75" stroke-dasharray="3 3" opacity="0.45"/>
+  <line x1="20" y1="30" x2="135" y2="30" stroke="#F7F4EE" stroke-width="0.75" stroke-dasharray="3 3" opacity="0.45"/>
+</svg>

@@ -1,0 +1,958 @@
+
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset="utf-8">
+  <title>KOMA Brand Identity Specimen</title>
+  <style>
+    * { box-sizing: border-box; }
+    body {
+      margin: 0;
+      padding: 48px;
+      background: #F7F4EE;
+      color: #1D1B18;
+      font-family: -apple-system, BlinkMacSystemFont, "Inter", "Segoe UI", sans-serif;
+      -webkit-font-smoothing: antialiased;
+    }
+    .header {
+      display: flex;
+      justify-content: space-between;
+      align-items: flex-end;
+      border-bottom: 2px solid #1D1B18;
+      padding-bottom: 20px;
+      margin-bottom: 40px;
+    }
+    .brand-title {
+      font-size: 32px;
+      font-weight: 800;
+      letter-spacing: -0.03em;
+      margin: 0;
+    }
+    .brand-subtitle {
+      font-size: 14px;
+      font-weight: 500;
+      color: #524E48;
+      margin-top: 6px;
+    }
+    .meta-tag {
+      font-size: 11px;
+      font-weight: 700;
+      text-transform: uppercase;
+      letter-spacing: 0.1em;
+      background: #5A46D6;
+      color: #F7F4EE;
+      padding: 6px 12px;
+      border-radius: 4px;
+    }
+    
+    .section-title {
+      font-size: 12px;
+      font-weight: 700;
+      text-transform: uppercase;
+      letter-spacing: 0.1em;
+      color: #524E48;
+      margin: 36px 0 16px;
+      display: flex;
+      align-items: center;
+      gap: 8px;
+    }
+    .section-title::after {
+      content: "";
+      flex: 1;
+      height: 1px;
+      background: #DCCDBB;
+    }
+
+    .grid-2 {
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      gap: 24px;
+    }
+    .grid-3 {
+      display: grid;
+      grid-template-columns: 1fr 1fr 1fr;
+      gap: 24px;
+    }
+    .grid-4 {
+      display: grid;
+      grid-template-columns: 1fr 1fr 1fr 1fr;
+      gap: 20px;
+    }
+
+    .card {
+      background: #FFFFFF;
+      border: 1px solid #E5E0D5;
+      border-radius: 12px;
+      padding: 32px 28px;
+      display: flex;
+      flex-direction: column;
+      justify-content: space-between;
+      min-height: 200px;
+      position: relative;
+    }
+    .card.dark {
+      background: #1D1B18;
+      border-color: #2F2C27;
+      color: #F7F4EE;
+    }
+    .card.violet {
+      background: #5A46D6;
+      border-color: #4835C2;
+      color: #FFFFFF;
+    }
+    .card.paper-pattern {
+      background: #F7F4EE;
+      border: 1px dashed #DCCDBB;
+    }
+
+    .card-label {
+      font-size: 11px;
+      font-weight: 600;
+      text-transform: uppercase;
+      letter-spacing: 0.08em;
+      color: #524E48;
+      margin-bottom: 20px;
+    }
+    .dark .card-label {
+      color: #A39E93;
+    }
+    .violet .card-label {
+      color: #D6D0FF;
+    }
+
+    .logo-container {
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      flex: 1;
+      padding: 10px 0;
+    }
+    .logo-container svg {
+      max-width: 100%;
+      height: auto;
+      max-height: 80px;
+    }
+
+    .card-footer {
+      font-size: 11px;
+      color: #7A746B;
+      margin-top: 16px;
+      font-mono;
+    }
+    .dark .card-footer {
+      color: #8C867B;
+    }
+    .violet .card-footer {
+      color: #C3BDFF;
+    }
+
+    .color-swatches {
+      display: grid;
+      grid-template-columns: repeat(3, 1fr);
+      gap: 16px;
+      margin-top: 12px;
+    }
+    .swatch {
+      border-radius: 8px;
+      overflow: hidden;
+      border: 1px solid #E5E0D5;
+      background: #FFFFFF;
+    }
+    .swatch-color {
+      height: 60px;
+      width: 100%;
+    }
+    .swatch-info {
+      padding: 12px;
+    }
+    .swatch-name {
+      font-size: 12px;
+      font-weight: 700;
+      margin-bottom: 2px;
+    }
+    .swatch-hex {
+      font-size: 11px;
+      font-family: monospace;
+      color: #524E48;
+    }
+
+    .concept-box {
+      background: #FFFFFF;
+      border-left: 4px solid #5A46D6;
+      border-radius: 0 8px 8px 0;
+      padding: 20px 24px;
+      margin-bottom: 32px;
+    }
+    .concept-quote {
+      font-size: 16px;
+      font-weight: 500;
+      font-style: italic;
+      color: #1D1B18;
+      margin-bottom: 6px;
+    }
+    .concept-desc {
+      font-size: 13px;
+      color: #524E48;
+      line-height: 1.5;
+    }
+
+    .favicon-row {
+      display: flex;
+      align-items: center;
+      gap: 20px;
+      margin-top: 10px;
+    }
+    .fav-item {
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      gap: 6px;
+    }
+    .fav-item span {
+      font-size: 10px;
+      color: #524E48;
+      font-family: monospace;
+    }
+  </style>
+</head>
+<body>
+
+  <div class="header">
+    <div>
+      <h1 class="brand-title">koma,</h1>
+      <div class="brand-subtitle">Brand Identity System & Vector Specifications — Indonesian Digital Hangout</div>
+    </div>
+    <div class="meta-tag">Art Direction: Contemporary Editorial</div>
+  </div>
+
+  <div class="concept-box">
+    <div class="concept-quote">"Sebuah jeda, bukan akhir kalimat." (A pause, not an ending.)</div>
+    <div class="concept-desc">
+      In contemporary indie internet culture, the comma represents spontaneous thoughts mid-flow, an open invitation for others to finish the sentence, and a restorative pause between life's noise. The identity pairs precision Swiss-editorial lowercase geometry with a confident, kinetic comma symbol.
+    </div>
+  </div>
+
+  <div class="section-title">01. Primary Horizontal Logo Lockups</div>
+  <div class="grid-2">
+    <!-- Card 1: Primary Editorial Color -->
+    <div class="card">
+      <div class="card-label">Primary Colorway (Ink + Electric Violet on Paper)</div>
+      <div class="logo-container">
+        <?xml version="1.0" encoding="UTF-8"?>
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 411.5 160" width="411.5" height="160" id="koma-horizontal-logo">
+  
+  <!-- Wordmark Layer (Targetable for Stagger / Scroll-Craft) -->
+  <g id="koma-wordmark" data-layer="wordmark" fill="#1D1B18">
+    
+    <g id="glyph-k" class="koma-glyph" data-letter="k">
+      <rect x="36" y="24" width="17" height="88" rx="0.75" />
+      <path d="
+        M 52.5 81.5
+        L 88 56
+        L 107 56
+        L 69 83
+        L 108 112
+        L 87 112
+        L 58.5 90.5
+        L 52.5 95
+        Z
+      " />
+    </g>
+  
+    
+    <g id="glyph-o" class="koma-glyph" data-letter="o">
+      <path fill-rule="evenodd" d="
+        M 143.5 55
+        A 28.5 28.5 0 1 1 143.49 55
+        Z
+        M 143.5 72
+        A 11.5 11.5 0 1 0 143.51 72
+        Z
+      " />
+    </g>
+  
+    
+    <g id="glyph-m" class="koma-glyph" data-letter="m">
+      <path d="
+        M 181 56
+        L 197.5 56
+        L 197.5 67
+        C 202.5 59.5, 211 55, 222.5 55
+        C 233.5 55, 241 60.5, 244.5 69.5
+        C 250.5 59.5, 259 55, 270.5 55
+        C 283.5 55, 290.5 63.5, 290.5 78
+        L 290.5 112
+        L 274 112
+        L 274 79.5
+        C 274 73.5, 270.5 70, 264.5 70
+        C 257.5 70, 252.5 74.5, 252.5 82
+        L 252.5 112
+        L 236 112
+        L 236 79.5
+        C 236 73.5, 232.5 70, 226 70
+        C 219 70, 214 74.5, 214 82
+        L 214 112
+        L 181 112
+        Z
+      " />
+    </g>
+  
+    
+    <g id="glyph-a" class="koma-glyph" data-letter="a">
+      <path fill-rule="evenodd" d="
+        M 326 55
+        C 341 55, 352.5 65, 355 76.5
+        L 355 56
+        L 371.5 56
+        L 371.5 112
+        L 355.5 112
+        L 355.5 102
+        C 352 108.5, 341.5 113, 327.5 113
+        C 311.5 113, 299 99.5, 299 83.5
+        C 299 68, 311 55, 326 55
+        Z
+        M 328 71.5
+        C 318 71.5, 315 77, 315 83.5
+        C 315 90.5, 318 96.5, 328 96.5
+        C 338 96.5, 355 90.5, 355 83.5
+        C 355 77, 338 71.5, 328 71.5
+        Z
+      " />
+    </g>
+  
+  </g>
+  <!-- Symbol Layer (Independent Layer for Scroll-Craft Pinning / Floating / Morphing) -->
+  <g id="koma-symbol" data-layer="symbol" fill="#5A46D6">
+    <path id="glyph-comma" d="
+    M 371.5 96
+    A 16 16 0 0 1 403.5 96
+    C 403.5 110.4, 395.82 123.36, 371.5 132
+    C 376.3 126.6, 384 118, 385 112
+    C 385 111, 371.5 108, 371.5 96
+    Z
+  " />
+  </g>
+</svg>
+      </div>
+      <div class="card-footer">Asset: koma-logo-horizontal-color.svg / .png</div>
+    </div>
+
+    <!-- Card 2: Monochrome Ink -->
+    <div class="card">
+      <div class="card-label">Monochrome Ink (Print, Newsprint, Editorial)</div>
+      <div class="logo-container">
+        <?xml version="1.0" encoding="UTF-8"?>
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 411.5 160" width="411.5" height="160" id="koma-horizontal-logo">
+  
+  <!-- Wordmark Layer (Targetable for Stagger / Scroll-Craft) -->
+  <g id="koma-wordmark" data-layer="wordmark" fill="#1D1B18">
+    
+    <g id="glyph-k" class="koma-glyph" data-letter="k">
+      <rect x="36" y="24" width="17" height="88" rx="0.75" />
+      <path d="
+        M 52.5 81.5
+        L 88 56
+        L 107 56
+        L 69 83
+        L 108 112
+        L 87 112
+        L 58.5 90.5
+        L 52.5 95
+        Z
+      " />
+    </g>
+  
+    
+    <g id="glyph-o" class="koma-glyph" data-letter="o">
+      <path fill-rule="evenodd" d="
+        M 143.5 55
+        A 28.5 28.5 0 1 1 143.49 55
+        Z
+        M 143.5 72
+        A 11.5 11.5 0 1 0 143.51 72
+        Z
+      " />
+    </g>
+  
+    
+    <g id="glyph-m" class="koma-glyph" data-letter="m">
+      <path d="
+        M 181 56
+        L 197.5 56
+        L 197.5 67
+        C 202.5 59.5, 211 55, 222.5 55
+        C 233.5 55, 241 60.5, 244.5 69.5
+        C 250.5 59.5, 259 55, 270.5 55
+        C 283.5 55, 290.5 63.5, 290.5 78
+        L 290.5 112
+        L 274 112
+        L 274 79.5
+        C 274 73.5, 270.5 70, 264.5 70
+        C 257.5 70, 252.5 74.5, 252.5 82
+        L 252.5 112
+        L 236 112
+        L 236 79.5
+        C 236 73.5, 232.5 70, 226 70
+        C 219 70, 214 74.5, 214 82
+        L 214 112
+        L 181 112
+        Z
+      " />
+    </g>
+  
+    
+    <g id="glyph-a" class="koma-glyph" data-letter="a">
+      <path fill-rule="evenodd" d="
+        M 326 55
+        C 341 55, 352.5 65, 355 76.5
+        L 355 56
+        L 371.5 56
+        L 371.5 112
+        L 355.5 112
+        L 355.5 102
+        C 352 108.5, 341.5 113, 327.5 113
+        C 311.5 113, 299 99.5, 299 83.5
+        C 299 68, 311 55, 326 55
+        Z
+        M 328 71.5
+        C 318 71.5, 315 77, 315 83.5
+        C 315 90.5, 318 96.5, 328 96.5
+        C 338 96.5, 355 90.5, 355 83.5
+        C 355 77, 338 71.5, 328 71.5
+        Z
+      " />
+    </g>
+  
+  </g>
+  <!-- Symbol Layer (Independent Layer for Scroll-Craft Pinning / Floating / Morphing) -->
+  <g id="koma-symbol" data-layer="symbol" fill="#1D1B18">
+    <path id="glyph-comma" d="
+    M 371.5 96
+    A 16 16 0 0 1 403.5 96
+    C 403.5 110.4, 395.82 123.36, 371.5 132
+    C 376.3 126.6, 384 118, 385 112
+    C 385 111, 371.5 108, 371.5 96
+    Z
+  " />
+  </g>
+</svg>
+      </div>
+      <div class="card-footer">Asset: koma-logo-horizontal-ink.svg / .png</div>
+    </div>
+
+    <!-- Card 3: Reverse on Ink Dark Mode -->
+    <div class="card dark">
+      <div class="card-label">Dark Mode / Night Reading (#1D1B18)</div>
+      <div class="logo-container">
+        <?xml version="1.0" encoding="UTF-8"?>
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 411.5 160" width="411.5" height="160" id="koma-horizontal-logo">
+  
+  <!-- Wordmark Layer (Targetable for Stagger / Scroll-Craft) -->
+  <g id="koma-wordmark" data-layer="wordmark" fill="#F7F4EE">
+    
+    <g id="glyph-k" class="koma-glyph" data-letter="k">
+      <rect x="36" y="24" width="17" height="88" rx="0.75" />
+      <path d="
+        M 52.5 81.5
+        L 88 56
+        L 107 56
+        L 69 83
+        L 108 112
+        L 87 112
+        L 58.5 90.5
+        L 52.5 95
+        Z
+      " />
+    </g>
+  
+    
+    <g id="glyph-o" class="koma-glyph" data-letter="o">
+      <path fill-rule="evenodd" d="
+        M 143.5 55
+        A 28.5 28.5 0 1 1 143.49 55
+        Z
+        M 143.5 72
+        A 11.5 11.5 0 1 0 143.51 72
+        Z
+      " />
+    </g>
+  
+    
+    <g id="glyph-m" class="koma-glyph" data-letter="m">
+      <path d="
+        M 181 56
+        L 197.5 56
+        L 197.5 67
+        C 202.5 59.5, 211 55, 222.5 55
+        C 233.5 55, 241 60.5, 244.5 69.5
+        C 250.5 59.5, 259 55, 270.5 55
+        C 283.5 55, 290.5 63.5, 290.5 78
+        L 290.5 112
+        L 274 112
+        L 274 79.5
+        C 274 73.5, 270.5 70, 264.5 70
+        C 257.5 70, 252.5 74.5, 252.5 82
+        L 252.5 112
+        L 236 112
+        L 236 79.5
+        C 236 73.5, 232.5 70, 226 70
+        C 219 70, 214 74.5, 214 82
+        L 214 112
+        L 181 112
+        Z
+      " />
+    </g>
+  
+    
+    <g id="glyph-a" class="koma-glyph" data-letter="a">
+      <path fill-rule="evenodd" d="
+        M 326 55
+        C 341 55, 352.5 65, 355 76.5
+        L 355 56
+        L 371.5 56
+        L 371.5 112
+        L 355.5 112
+        L 355.5 102
+        C 352 108.5, 341.5 113, 327.5 113
+        C 311.5 113, 299 99.5, 299 83.5
+        C 299 68, 311 55, 326 55
+        Z
+        M 328 71.5
+        C 318 71.5, 315 77, 315 83.5
+        C 315 90.5, 318 96.5, 328 96.5
+        C 338 96.5, 355 90.5, 355 83.5
+        C 355 77, 338 71.5, 328 71.5
+        Z
+      " />
+    </g>
+  
+  </g>
+  <!-- Symbol Layer (Independent Layer for Scroll-Craft Pinning / Floating / Morphing) -->
+  <g id="koma-symbol" data-layer="symbol" fill="#8A7BFF">
+    <path id="glyph-comma" d="
+    M 371.5 96
+    A 16 16 0 0 1 403.5 96
+    C 403.5 110.4, 395.82 123.36, 371.5 132
+    C 376.3 126.6, 384 118, 385 112
+    C 385 111, 371.5 108, 371.5 96
+    Z
+  " />
+  </g>
+</svg>
+      </div>
+      <div class="card-footer">Asset: koma-logo-horizontal-dark.svg / .png</div>
+    </div>
+
+    <!-- Card 4: Pure Paper Reverse -->
+    <div class="card violet">
+      <div class="card-label">Electric Violet Campaign Canvas (#5A46D6)</div>
+      <div class="logo-container">
+        <?xml version="1.0" encoding="UTF-8"?>
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 411.5 160" width="411.5" height="160" id="koma-horizontal-logo">
+  
+  <!-- Wordmark Layer (Targetable for Stagger / Scroll-Craft) -->
+  <g id="koma-wordmark" data-layer="wordmark" fill="#F7F4EE">
+    
+    <g id="glyph-k" class="koma-glyph" data-letter="k">
+      <rect x="36" y="24" width="17" height="88" rx="0.75" />
+      <path d="
+        M 52.5 81.5
+        L 88 56
+        L 107 56
+        L 69 83
+        L 108 112
+        L 87 112
+        L 58.5 90.5
+        L 52.5 95
+        Z
+      " />
+    </g>
+  
+    
+    <g id="glyph-o" class="koma-glyph" data-letter="o">
+      <path fill-rule="evenodd" d="
+        M 143.5 55
+        A 28.5 28.5 0 1 1 143.49 55
+        Z
+        M 143.5 72
+        A 11.5 11.5 0 1 0 143.51 72
+        Z
+      " />
+    </g>
+  
+    
+    <g id="glyph-m" class="koma-glyph" data-letter="m">
+      <path d="
+        M 181 56
+        L 197.5 56
+        L 197.5 67
+        C 202.5 59.5, 211 55, 222.5 55
+        C 233.5 55, 241 60.5, 244.5 69.5
+        C 250.5 59.5, 259 55, 270.5 55
+        C 283.5 55, 290.5 63.5, 290.5 78
+        L 290.5 112
+        L 274 112
+        L 274 79.5
+        C 274 73.5, 270.5 70, 264.5 70
+        C 257.5 70, 252.5 74.5, 252.5 82
+        L 252.5 112
+        L 236 112
+        L 236 79.5
+        C 236 73.5, 232.5 70, 226 70
+        C 219 70, 214 74.5, 214 82
+        L 214 112
+        L 181 112
+        Z
+      " />
+    </g>
+  
+    
+    <g id="glyph-a" class="koma-glyph" data-letter="a">
+      <path fill-rule="evenodd" d="
+        M 326 55
+        C 341 55, 352.5 65, 355 76.5
+        L 355 56
+        L 371.5 56
+        L 371.5 112
+        L 355.5 112
+        L 355.5 102
+        C 352 108.5, 341.5 113, 327.5 113
+        C 311.5 113, 299 99.5, 299 83.5
+        C 299 68, 311 55, 326 55
+        Z
+        M 328 71.5
+        C 318 71.5, 315 77, 315 83.5
+        C 315 90.5, 318 96.5, 328 96.5
+        C 338 96.5, 355 90.5, 355 83.5
+        C 355 77, 338 71.5, 328 71.5
+        Z
+      " />
+    </g>
+  
+  </g>
+  <!-- Symbol Layer (Independent Layer for Scroll-Craft Pinning / Floating / Morphing) -->
+  <g id="koma-symbol" data-layer="symbol" fill="#F7F4EE">
+    <path id="glyph-comma" d="
+    M 371.5 96
+    A 16 16 0 0 1 403.5 96
+    C 403.5 110.4, 395.82 123.36, 371.5 132
+    C 376.3 126.6, 384 118, 385 112
+    C 385 111, 371.5 108, 371.5 96
+    Z
+  " />
+  </g>
+</svg>
+      </div>
+      <div class="card-footer">Asset: koma-logo-horizontal-paper.svg / .png</div>
+    </div>
+  </div>
+
+  <div class="section-title">02. Standalone Symbol & App Icon (Scroll-Craft Ready)</div>
+  <div class="grid-4">
+    <!-- Icon 1 -->
+    <div class="card" style="align-items: center; text-align: center;">
+      <div class="card-label">Violet Symbol Mark</div>
+      <div class="logo-container" style="width: 80px; height: 80px;">
+        <?xml version="1.0" encoding="UTF-8"?>
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 120 120" width="120" height="120" id="koma-mark">
+  
+  <g id="koma-symbol-standalone" fill="#5A46D6">
+    <path id="glyph-comma-mark" d="
+    M 38 46
+    A 28 28 0 0 1 94 46
+    C 94 71.2, 80.56 93.88, 38 109
+    C 46.400000000000006 99.55, 59.875 84.5, 61.625 74
+    C 61.625 72.25, 38 67, 38 46
+    Z
+  " />
+  </g>
+</svg>
+      </div>
+      <div class="card-footer">koma-symbol-violet.svg</div>
+    </div>
+
+    <!-- Icon 2 -->
+    <div class="card" style="align-items: center; text-align: center;">
+      <div class="card-label">Ink Symbol Mark</div>
+      <div class="logo-container" style="width: 80px; height: 80px;">
+        <?xml version="1.0" encoding="UTF-8"?>
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 120 120" width="120" height="120" id="koma-mark">
+  
+  <g id="koma-symbol-standalone" fill="#1D1B18">
+    <path id="glyph-comma-mark" d="
+    M 38 46
+    A 28 28 0 0 1 94 46
+    C 94 71.2, 80.56 93.88, 38 109
+    C 46.400000000000006 99.55, 59.875 84.5, 61.625 74
+    C 61.625 72.25, 38 67, 38 46
+    Z
+  " />
+  </g>
+</svg>
+      </div>
+      <div class="card-footer">koma-symbol-ink.svg</div>
+    </div>
+
+    <!-- Icon 3 -->
+    <div class="card violet" style="align-items: center; text-align: center;">
+      <div class="card-label">iOS / App Icon (Violet)</div>
+      <div class="logo-container" style="width: 80px; height: 80px;">
+        <?xml version="1.0" encoding="UTF-8"?>
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 120 120" width="120" height="120" id="koma-mark">
+  <rect width="120" height="120" rx="28" fill="#5A46D6" />
+  <g id="koma-symbol-standalone" fill="#F7F4EE">
+    <path id="glyph-comma-mark" d="
+    M 38 46
+    A 28 28 0 0 1 94 46
+    C 94 71.2, 80.56 93.88, 38 109
+    C 46.400000000000006 99.55, 59.875 84.5, 61.625 74
+    C 61.625 72.25, 38 67, 38 46
+    Z
+  " />
+  </g>
+</svg>
+      </div>
+      <div class="card-footer">koma-app-icon-512.png</div>
+    </div>
+
+    <!-- Icon 4 -->
+    <div class="card dark" style="align-items: center; text-align: center;">
+      <div class="card-label">App Icon (Ink Charcoal)</div>
+      <div class="logo-container" style="width: 80px; height: 80px;">
+        <?xml version="1.0" encoding="UTF-8"?>
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 120 120" width="120" height="120" id="koma-mark">
+  <rect width="120" height="120" rx="28" fill="#1D1B18" />
+  <g id="koma-symbol-standalone" fill="#F7F4EE">
+    <path id="glyph-comma-mark" d="
+    M 38 46
+    A 28 28 0 0 1 94 46
+    C 94 71.2, 80.56 93.88, 38 109
+    C 46.400000000000006 99.55, 59.875 84.5, 61.625 74
+    C 61.625 72.25, 38 67, 38 46
+    Z
+  " />
+  </g>
+</svg>
+      </div>
+      <div class="card-footer">koma-app-icon-ink-512.png</div>
+    </div>
+  </div>
+
+  <div class="section-title">03. Stacked Lockup & Favicon Fidelity</div>
+  <div class="grid-2">
+    <!-- Stacked Card -->
+    <div class="card">
+      <div class="card-label">Vertical / Stacked Poster Lockup</div>
+      <div class="logo-container">
+        <?xml version="1.0" encoding="UTF-8"?>
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 360 260" width="360" height="260" id="koma-stacked-logo">
+  
+  <!-- Centered Symbol Mark -->
+  <g id="koma-symbol-top" data-layer="symbol" fill="#5A46D6">
+    <path id="glyph-comma-stacked" d="
+    M 163.6 68
+    A 22.4 22.4 0 0 1 208.4 68
+    C 208.4 88.16, 197.648 106.304, 163.6 118.4
+    C 170.32 110.84, 181.1 98.8, 182.5 90.4
+    C 182.5 89, 163.6 84.8, 163.6 68
+    Z
+  " />
+  </g>
+  <!-- Centered Wordmark (no trailing comma) -->
+  <g id="koma-wordmark-bottom" data-layer="wordmark" transform="translate(0, 100)" fill="#1D1B18">
+    
+    <g id="glyph-k" class="koma-glyph" data-letter="k">
+      <rect x="26" y="24" width="17" height="88" rx="0.75" />
+      <path d="
+        M 42.5 81.5
+        L 78 56
+        L 97 56
+        L 59 83
+        L 98 112
+        L 77 112
+        L 48.5 90.5
+        L 42.5 95
+        Z
+      " />
+    </g>
+  
+    
+    <g id="glyph-o" class="koma-glyph" data-letter="o">
+      <path fill-rule="evenodd" d="
+        M 133.5 55
+        A 28.5 28.5 0 1 1 133.49 55
+        Z
+        M 133.5 72
+        A 11.5 11.5 0 1 0 133.51 72
+        Z
+      " />
+    </g>
+  
+    
+    <g id="glyph-m" class="koma-glyph" data-letter="m">
+      <path d="
+        M 171 56
+        L 187.5 56
+        L 187.5 67
+        C 192.5 59.5, 201 55, 212.5 55
+        C 223.5 55, 231 60.5, 234.5 69.5
+        C 240.5 59.5, 249 55, 260.5 55
+        C 273.5 55, 280.5 63.5, 280.5 78
+        L 280.5 112
+        L 264 112
+        L 264 79.5
+        C 264 73.5, 260.5 70, 254.5 70
+        C 247.5 70, 242.5 74.5, 242.5 82
+        L 242.5 112
+        L 226 112
+        L 226 79.5
+        C 226 73.5, 222.5 70, 216 70
+        C 209 70, 204 74.5, 204 82
+        L 204 112
+        L 171 112
+        Z
+      " />
+    </g>
+  
+    
+    <g id="glyph-a" class="koma-glyph" data-letter="a">
+      <path fill-rule="evenodd" d="
+        M 316 55
+        C 331 55, 342.5 65, 345 76.5
+        L 345 56
+        L 361.5 56
+        L 361.5 112
+        L 345.5 112
+        L 345.5 102
+        C 342 108.5, 331.5 113, 317.5 113
+        C 301.5 113, 289 99.5, 289 83.5
+        C 289 68, 301 55, 316 55
+        Z
+        M 318 71.5
+        C 308 71.5, 305 77, 305 83.5
+        C 305 90.5, 308 96.5, 318 96.5
+        C 328 96.5, 345 90.5, 345 83.5
+        C 345 77, 328 71.5, 318 71.5
+        Z
+      " />
+    </g>
+  
+  </g>
+</svg>
+      </div>
+      <div class="card-footer">Asset: koma-logo-stacked-color.svg / .png</div>
+    </div>
+
+    <!-- Favicon scale test -->
+    <div class="card paper-pattern">
+      <div class="card-label">Favicon Multi-Scale Optical Legibility</div>
+      <div style="flex: 1; display: flex; flex-direction: column; justify-content: center; align-items: center;">
+        <div class="favicon-row">
+          <div class="fav-item" style="min-width: 32px;">
+            <div style="width: 16px; height: 16px;"><?xml version="1.0" encoding="UTF-8"?>
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 32 32" width="32" height="32" id="koma-favicon">
+  <rect width="32" height="32" rx="7" fill="#5A46D6" />
+  <path fill="#F7F4EE" d="
+    M 9.82 11.5
+    A 7.68 7.68 0 0 1 25.18 11.5
+    C 25.18 18.412, 21.4936 24.632800000000003, 9.82 28.78
+    C 12.124 26.188000000000002, 15.82 22.06, 16.3 19.18
+    C 16.3 18.7, 9.82 17.259999999999998, 9.82 11.5
+    Z
+  " />
+</svg></div>
+            <span style="font-size: 10px; margin-top: 4px;">16px</span>
+          </div>
+          <div class="fav-item" style="min-width: 32px;">
+            <div style="width: 24px; height: 24px;"><?xml version="1.0" encoding="UTF-8"?>
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 32 32" width="32" height="32" id="koma-favicon">
+  <rect width="32" height="32" rx="7" fill="#5A46D6" />
+  <path fill="#F7F4EE" d="
+    M 9.82 11.5
+    A 7.68 7.68 0 0 1 25.18 11.5
+    C 25.18 18.412, 21.4936 24.632800000000003, 9.82 28.78
+    C 12.124 26.188000000000002, 15.82 22.06, 16.3 19.18
+    C 16.3 18.7, 9.82 17.259999999999998, 9.82 11.5
+    Z
+  " />
+</svg></div>
+            <span style="font-size: 10px; margin-top: 4px;">24px</span>
+          </div>
+          <div class="fav-item" style="min-width: 36px;">
+            <div style="width: 32px; height: 32px;"><?xml version="1.0" encoding="UTF-8"?>
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 32 32" width="32" height="32" id="koma-favicon">
+  <rect width="32" height="32" rx="7" fill="#5A46D6" />
+  <path fill="#F7F4EE" d="
+    M 9.82 11.5
+    A 7.68 7.68 0 0 1 25.18 11.5
+    C 25.18 18.412, 21.4936 24.632800000000003, 9.82 28.78
+    C 12.124 26.188000000000002, 15.82 22.06, 16.3 19.18
+    C 16.3 18.7, 9.82 17.259999999999998, 9.82 11.5
+    Z
+  " />
+</svg></div>
+            <span style="font-size: 10px; margin-top: 4px;">32px</span>
+          </div>
+          <div class="fav-item" style="min-width: 48px;">
+            <div style="width: 48px; height: 48px;"><?xml version="1.0" encoding="UTF-8"?>
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 32 32" width="32" height="32" id="koma-favicon">
+  <rect width="32" height="32" rx="7" fill="#5A46D6" />
+  <path fill="#F7F4EE" d="
+    M 9.82 11.5
+    A 7.68 7.68 0 0 1 25.18 11.5
+    C 25.18 18.412, 21.4936 24.632800000000003, 9.82 28.78
+    C 12.124 26.188000000000002, 15.82 22.06, 16.3 19.18
+    C 16.3 18.7, 9.82 17.259999999999998, 9.82 11.5
+    Z
+  " />
+</svg></div>
+            <span style="font-size: 10px; margin-top: 4px;">48px</span>
+          </div>
+          <div class="fav-item" style="min-width: 64px;">
+            <div style="width: 64px; height: 64px;"><?xml version="1.0" encoding="UTF-8"?>
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 32 32" width="32" height="32" id="koma-favicon">
+  <rect width="32" height="32" rx="7" fill="#5A46D6" />
+  <path fill="#F7F4EE" d="
+    M 9.82 11.5
+    A 7.68 7.68 0 0 1 25.18 11.5
+    C 25.18 18.412, 21.4936 24.632800000000003, 9.82 28.78
+    C 12.124 26.188000000000002, 15.82 22.06, 16.3 19.18
+    C 16.3 18.7, 9.82 17.259999999999998, 9.82 11.5
+    Z
+  " />
+</svg></div>
+            <span style="font-size: 10px; margin-top: 4px;">64px</span>
+          </div>
+        </div>
+      </div>
+      <div class="card-footer">Tested at 16px browser tab resolution with optical contrast tuning</div>
+    </div>
+  </div>
+
+  <div class="section-title">04. Brand Color Palette</div>
+  <div class="color-swatches">
+    <div class="swatch">
+      <div class="swatch-color" style="background: #1D1B18;"></div>
+      <div class="swatch-info">
+        <div class="swatch-name">Tinta Arang (Ink)</div>
+        <div class="swatch-hex">#1D1B18 &bull; RGB(29, 27, 24)</div>
+      </div>
+    </div>
+    <div class="swatch">
+      <div class="swatch-color" style="background: #5A46D6;"></div>
+      <div class="swatch-info">
+        <div class="swatch-name">Electric Violet</div>
+        <div class="swatch-hex">#5A46D6 &bull; RGB(90, 70, 214)</div>
+      </div>
+    </div>
+    <div class="swatch">
+      <div class="swatch-color" style="background: #F7F4EE; border-bottom: 1px solid #E5E0D5;"></div>
+      <div class="swatch-info">
+        <div class="swatch-name">Kertas Hangat (Warm Paper)</div>
+        <div class="swatch-hex">#F7F4EE &bull; RGB(247, 244, 238)</div>
+      </div>
+    </div>
+  </div>
+
+</body>
+</html>

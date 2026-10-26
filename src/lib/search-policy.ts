@@ -1,0 +1,33 @@
+import type { Post } from '@/types';
+
+export const SITE_URL = 'https://ruangkoma.web.id';
+export const ARCHIVE_PAGE_SIZE = 20;
+
+// A conservative publication gate, not a general profanity filter. A false positive
+// only withholds search discovery; it never removes a published community post.
+export function searchExclusion(post: Pick<Post, 'content' | 'moderationState' | 'isHidden' | 'searchConsent' | 'reportCount' | 'isAiGenerated'>): string | null {
+  if (post.moderationState !== 'published' || post.isHidden) return 'moderasi';
+  if (post.searchConsent !== true) return 'tanpa izin pencarian';
+  if (post.reportCount > 0) return 'dilaporkan';
+  if (post.isAiGenerated) return 'dibantu AI';
+  const content = post.content.trim();
+  if (content.length < 120 || content.split(/\s+/u).length < 20) return 'konten pendek';
+  if (/https?:\/\/|www\.|(?:\b[a-z0-9._%+-]+@[a-z0-9.-]+\.[a-z]{2,}\b)|(?:\+?62|0)8[\d\s().-]{8,}|\b\d{16}\b/iu.test(content)) return 'tautan atau data pribadi';
+  if (/(.)\1{12,}/u.test(content)) return 'pola berulang';
+  return null;
+}
+
+export function eligiblePosts(posts: Post[]): Post[] {
+  const seen = new Set<string>();
+  return [...posts].sort((a, b) => a.createdAt.localeCompare(b.createdAt) || a.id.localeCompare(b.id)).filter((post) => {
+    if (searchExclusion(post)) return false;
+    const fingerprint = post.content.toLocaleLowerCase('id-ID').replace(/[^\p{L}\p{N}]+/gu, ' ').trim().replace(/\s+/g, ' ');
+    if (seen.has(fingerprint)) return false;
+    seen.add(fingerprint);
+    return true;
+  }).reverse();
+}
+
+export function postUrl(id: string): string {
+  return `${SITE_URL}/coretan/${encodeURIComponent(id)}`;
+}

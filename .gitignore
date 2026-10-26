@@ -1,0 +1,55 @@
+# Dependencies
+/node_modules
+/.pnp
+.pnp.js
+
+# Next.js Build Output & Caches
+/.next/
+/.next-*/
+/.swc/
+/.turbo/
+/out/
+/build/
+/dist/
+
+# AI Agent Workspace & IDE Configurations
+/.agents/
+/.gemini/
+/.claude/
+/.cursor/
+/.idea/
+/.vscode/
+
+# TypeScript & Build Metadata
+*.tsbuildinfo
+next-env.d.ts.bak
+
+# Local Environment & Secrets
+.env
+.env*.local
+!.env.example
+
+# Local Database & Cache (Fail-closed / PDP compliance)
+.local-koma-db.json
+*.sqlite
+*.sqlite-journal
+
+# Documentation & Screenshots
+docs/
+
+# Logs
+logs
+*.log
+npm-debug.log*
+yarn-debug.log*
+yarn-error.log*
+pnpm-debug.log*
+
+# Vercel & Deployment
+.vercel
+
+# Operating System Files
+.DS_Store
+*.pem
+*.swp
+*.swo
