@@ -46,6 +46,7 @@ export default function AdminPage() {
   // Global data states
   const [analyticsSummary, setAnalyticsSummary] = useState<AdminAnalyticsSummary | null>(null);
   const [detailedAnalytics, setDetailedAnalytics] = useState<DetailedAnalyticsResult | null>(null);
+  const [searchVisibility, setSearchVisibility] = useState<{ eligible: number; noindex: number; excluded: number; sitemapUrl: string; note: string } | null>(null);
   const [analyticsPeriod, setAnalyticsPeriod] = useState<'24h' | '7d' | '30d' | 'all'>('7d');
   const [reports, setReports] = useState<any[]>([]);
   const [messages, setMessages] = useState<AdminMessage[]>([]);
@@ -99,6 +100,7 @@ export default function AdminPage() {
           setIsAuthenticated(true);
           setAnalyticsSummary(data.analytics);
           setDetailedAnalytics(data.detailed);
+          setSearchVisibility(data.searchVisibility || null);
         }
       } else if (res.status === 401) {
         setIsAuthenticated(false);
@@ -597,6 +599,7 @@ export default function AdminPage() {
           {activeTab === 'analytics' && (
             <AdminAnalyticsView
               data={detailedAnalytics}
+              searchVisibility={searchVisibility}
               period={analyticsPeriod}
               onPeriodChange={(p) => {
                 setAnalyticsPeriod(p);

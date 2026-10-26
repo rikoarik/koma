@@ -20,6 +20,7 @@ import { DetailedAnalyticsResult } from '@/lib/storage';
 
 interface AdminAnalyticsViewProps {
   data: DetailedAnalyticsResult | null;
+  searchVisibility: { eligible: number; noindex: number; excluded: number; sitemapUrl: string; note: string } | null;
   period: '24h' | '7d' | '30d' | 'all';
   onPeriodChange: (p: '24h' | '7d' | '30d' | 'all') => void;
   isLoading?: boolean;
@@ -27,6 +28,7 @@ interface AdminAnalyticsViewProps {
 
 export default function AdminAnalyticsView({
   data,
+  searchVisibility,
   period,
   onPeriodChange,
   isLoading = false,
@@ -235,6 +237,19 @@ export default function AdminAnalyticsView({
           </div>
         </div>
       </div>
+
+      <section className="bg-white p-6 rounded-xl border border-slate-200 shadow-xs space-y-4" aria-label="Visibilitas pencarian">
+        <h3 className="font-sans font-bold text-base text-slate-900">Visibilitas Pencarian & AI</h3>
+        {searchVisibility ? <>
+          <div className="grid grid-cols-1 sm:grid-cols-3 gap-3 text-xs font-mono">
+            <div className="p-3 bg-slate-50 border border-slate-200 rounded-lg">Layak diajukan ke indeks <strong className="block text-xl text-slate-900">{searchVisibility.eligible}</strong></div>
+            <div className="p-3 bg-slate-50 border border-slate-200 rounded-lg">Publik · noindex <strong className="block text-xl text-slate-900">{searchVisibility.noindex}</strong></div>
+            <div className="p-3 bg-slate-50 border border-slate-200 rounded-lg">Tidak publik <strong className="block text-xl text-slate-900">{searchVisibility.excluded}</strong></div>
+          </div>
+          <p className="text-xs text-slate-600">{searchVisibility.note} Sitemap: <a className="underline" href={searchVisibility.sitemapUrl} target="_blank" rel="noreferrer">{searchVisibility.sitemapUrl}</a> (status pengiriman belum diverifikasi).</p>
+        </> : <p className="text-xs text-slate-600">Status indeks belum tersedia.</p>}
+        <p className="text-xs text-slate-600">Klik, impresi, CTR, kesalahan crawl/indeks, dan tren Search Console/Bing belum tersedia: belum ada integrasi resmi yang dikonfigurasi. Trafik rujukan AI dan sitasi AI Overviews, ChatGPT, Perplexity, maupun Copilot tidak diukur oleh telemetri anonim Koma. Tidak ada angka yang diperkirakan.</p>
+      </section>
 
       {/* Main Interactive Chart */}
       <AdminChart

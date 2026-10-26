@@ -1,5 +1,5 @@
 import { NextRequest, NextResponse } from 'next/server';
-import { getAdminAnalyticsSummary, getAdminDetailedAnalytics } from '@/lib/storage';
+import { getAdminAnalyticsSummary, getAdminDetailedAnalytics, getSearchVisibilitySummary } from '@/lib/storage';
 import { verifyAdminAuth } from '@/lib/admin-auth';
 
 export async function GET(request: NextRequest) {
@@ -13,11 +13,13 @@ export async function GET(request: NextRequest) {
 
     const summary = await getAdminAnalyticsSummary();
     const detailed = await getAdminDetailedAnalytics(validPeriod);
+    const searchVisibility = await getSearchVisibilitySummary();
 
     return NextResponse.json({
       success: true,
       analytics: summary,
       detailed,
+      searchVisibility,
     });
   } catch (error: any) {
     return NextResponse.json(
