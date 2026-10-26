@@ -33,7 +33,7 @@ const PRESET_TOPICS = [
   { id: 'visual-zine', label: '#visual-zine' },
 ];
 
-export default function JelajahClient({ initialPosts, archiveLinks }: { initialPosts: Post[]; archiveLinks: { id: string; content: string }[] }) {
+export default function JelajahClient({ initialPosts }: { initialPosts: Post[] }) {
   const [posts, setPosts] = useState<Post[]>(initialPosts);
   const [filter, setFilter] = useState<FeedFilter>('populer');
   const [activeTopic, setActiveTopic] = useState('semua');
@@ -45,6 +45,7 @@ export default function JelajahClient({ initialPosts, archiveLinks }: { initialP
   const [isComposerOpen, setIsComposerOpen] = useState(false);
   const [composerInitialText, setComposerInitialText] = useState('');
 
+  const initialLoad = React.useRef(true);
   const fetchPosts = async () => {
     setIsLoading(true);
     try {
@@ -64,6 +65,7 @@ export default function JelajahClient({ initialPosts, archiveLinks }: { initialP
   };
 
   useEffect(() => {
+    if (initialLoad.current) { initialLoad.current = false; return; }
     const timer = setTimeout(() => {
       fetchPosts();
     }, 200);
@@ -408,7 +410,6 @@ export default function JelajahClient({ initialPosts, archiveLinks }: { initialP
         )}
         <nav aria-label="Arsip coretan yang diizinkan ditemukan" className="border-t border-ink/15 pt-4 font-mono text-xs text-ink-muted">
           <Link href="/jelajah/arsip">Arsip coretan yang boleh ditemukan lewat pencarian →</Link>
-          <ul className="sr-only">{archiveLinks.map((post) => <li key={post.id}><Link href={`/coretan/${post.id}`}>{post.content.slice(0, 100)}</Link></li>)}</ul>
         </nav>
       </main>
 

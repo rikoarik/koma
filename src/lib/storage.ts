@@ -29,6 +29,9 @@ interface LocalDBStore {
 }
 
 function getLocalStore(): LocalDBStore {
+  if (process.env.NODE_ENV === 'production') {
+    throw new Error('Database PostgreSQL belum dikonfigurasi');
+  }
   if (fs.existsSync(LOCAL_DB_PATH)) {
     try {
       const data = fs.readFileSync(LOCAL_DB_PATH, 'utf-8');

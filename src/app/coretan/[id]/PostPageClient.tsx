@@ -17,7 +17,6 @@ export default function PostPageClient({ params, initialPost }: { params: { id: 
 
   useEffect(() => {
     async function loadPost() {
-      setIsLoading(true);
       try {
         const res = await fetch(`/api/posts/${params.id}`);
         const data = await res.json();

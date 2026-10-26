@@ -14,6 +14,8 @@ export function searchExclusion(post: Pick<Post, 'content' | 'moderationState' |
   if (content.length < 120 || content.split(/\s+/u).length < 20) return 'konten pendek';
   if (/https?:\/\/|www\.|(?:\b[a-z0-9._%+-]+@[a-z0-9.-]+\.[a-z]{2,}\b)|(?:\+?62|0)8[\d\s().-]{8,}|\b\d{16}\b/iu.test(content)) return 'tautan atau data pribadi';
   if (/(.)\1{12,}/u.test(content)) return 'pola berulang';
+  // Avoid automatically syndicating safety-sensitive disclosures to search.
+  if (/\b(?:bunuh diri|ingin mati|melukai diri|self harm|pemerkosaan|kekerasan seksual|alamat rumah|nomor ktp)\b/iu.test(content)) return 'perlu tinjauan privasi';
   return null;
 }
 

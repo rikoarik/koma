@@ -9,8 +9,10 @@ export const dynamic = 'force-dynamic';
 type Props = { searchParams: { page?: string } };
 export async function generateMetadata({ searchParams }: Props): Promise<Metadata> {
   const page = Number(searchParams.page || '1');
-  return { title: 'Arsip Coretan | Koma', robots: { index: false, follow: true },
-    alternates: { canonical: page > 1 ? `/jelajah/arsip?page=${page}` : '/jelajah/arsip' } };
+  const eligible = await getSearchEligiblePosts();
+  return { title: 'Arsip Coretan | Koma', description: 'Coretan yang diizinkan penulis untuk ditemukan lewat mesin pencari.', robots: { index: eligible.length > 0, follow: true },
+    alternates: { canonical: page > 1 ? `/jelajah/arsip?page=${page}` : '/jelajah/arsip' },
+    openGraph: { title: 'Arsip Coretan | Koma', url: page > 1 ? `/jelajah/arsip?page=${page}` : '/jelajah/arsip', type: 'website' } };
 }
 
 export default async function ArchivePage({ searchParams }: Props) {

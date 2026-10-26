@@ -1,30 +1,29 @@
-import { sql } from '@vercel/postgres';
-import { drizzle } from 'drizzle-orm/vercel-postgres';
+import { drizzle } from 'drizzle-orm/node-postgres';
+import { sql } from 'drizzle-orm';
+import { Pool } from 'pg';
 import * as schema from './schema';
 
-if (!process.env.POSTGRES_URL && process.env.DATABASE_URL) {
-  process.env.POSTGRES_URL = process.env.DATABASE_URL;
-}
-if (!process.env.POSTGRES_URL && process.env.STORAGE_URL) {
-  process.env.POSTGRES_URL = process.env.STORAGE_URL;
-}
+// The Prisma Postgres marketplace integration prefixes its keys with the database name.
+// Do not silently fall back to a different database if its preferred URL is malformed.
+const connectionString = [
+  process.env.ruangkoma_POSTGRES_URL,
+  process.env.ruangkoma_DATABASE_URL,
+  process.env.DATABASE_URL,
+  process.env.POSTGRES_URL,
+].find((value) => value?.trim())?.trim();
 
-export const isPostgresConfigured = Boolean(
-  process.env.POSTGRES_URL || process.env.DATABASE_URL || process.env.POSTGRES_PRISMA_URL || process.env.STORAGE_URL
-);
+export const isPostgresConfigured = Boolean(connectionString && /^postgres(?:ql)?:\/\//i.test(connectionString));
 
 export const db = isPostgresConfigured
-  ? drizzle({ client: sql, schema })
+  ? drizzle({ client: new Pool({ connectionString, max: 5 }), schema })
   : null;
 
-/**
- * Auto-initializes PostgreSQL tables if running on Vercel Postgres for the first time.
- */
+/** Initialize the Koma tables without replacing or seeding any existing data. */
 export async function ensurePostgresTables() {
-  if (!isPostgresConfigured || !sql) return false;
+  if (!db) return false;
 
   try {
-    await sql`
+    await db.execute(sql`
       CREATE TABLE IF NOT EXISTS posts (
         id text PRIMARY KEY,
         author_alias text NOT NULL DEFAULT 'Tanpa Nama',
@@ -46,10 +45,10 @@ export async function ensurePostgresTables() {
         search_consent boolean NOT NULL DEFAULT false,
         created_at timestamptz NOT NULL DEFAULT now(),
         updated_at timestamptz NOT NULL DEFAULT now()
-      );
-    `;
+      )
+    `);
 
-    await sql`
+    await db.execute(sql`
       CREATE TABLE IF NOT EXISTS replies (
         id text PRIMARY KEY,
         post_id text NOT NULL REFERENCES posts(id) ON DELETE CASCADE,
@@ -61,30 +60,30 @@ export async function ensurePostgresTables() {
         moderation_state text NOT NULL DEFAULT 'published',
         is_hidden boolean NOT NULL DEFAULT false,
         created_at timestamptz NOT NULL DEFAULT now()
-      );
-    `;
+      )
+    `);
 
-    // Existing deployments may have created these tables before moderation states existed.
-    await sql`ALTER TABLE posts ADD COLUMN IF NOT EXISTS moderation_state text NOT NULL DEFAULT 'published'`;
-    await sql`ALTER TABLE posts ADD COLUMN IF NOT EXISTS search_consent boolean NOT NULL DEFAULT false`;
-    await sql`ALTER TABLE replies ADD COLUMN IF NOT EXISTS moderation_state text NOT NULL DEFAULT 'published'`;
+    // Compatible with tables created by older deployments; nonconsenting by default.
+    await db.execute(sql`ALTER TABLE posts ADD COLUMN IF NOT EXISTS moderation_state text NOT NULL DEFAULT 'published'`);
+    await db.execute(sql`ALTER TABLE posts ADD COLUMN IF NOT EXISTS search_consent boolean NOT NULL DEFAULT false`);
+    await db.execute(sql`ALTER TABLE replies ADD COLUMN IF NOT EXISTS moderation_state text NOT NULL DEFAULT 'published'`);
 
-    await sql`
+    await db.execute(sql`
       CREATE TABLE IF NOT EXISTS reactions (
         id text PRIMARY KEY,
         post_id text NOT NULL REFERENCES posts(id) ON DELETE CASCADE,
         reaction_type text NOT NULL,
         session_id text NOT NULL,
         created_at timestamptz NOT NULL DEFAULT now()
-      );
-    `;
+      )
+    `);
 
-    await sql`
-      CREATE UNIQUE INDEX IF NOT EXISTS idx_unique_post_reaction_session 
-      ON reactions (post_id, reaction_type, session_id);
-    `;
+    await db.execute(sql`
+      CREATE UNIQUE INDEX IF NOT EXISTS idx_unique_post_reaction_session
+      ON reactions (post_id, reaction_type, session_id)
+    `);
 
-    await sql`
+    await db.execute(sql`
       CREATE TABLE IF NOT EXISTS reports (
         id text PRIMARY KEY,
         target_type text NOT NULL DEFAULT 'post',
@@ -94,10 +93,10 @@ export async function ensurePostgresTables() {
         status text NOT NULL DEFAULT 'PENDING',
         reporter_session text NOT NULL,
         created_at timestamptz NOT NULL DEFAULT now()
-      );
-    `;
+      )
+    `);
 
-    await sql`
+    await db.execute(sql`
       CREATE TABLE IF NOT EXISTS moderation_rules (
         id text PRIMARY KEY,
         word_or_pattern text NOT NULL,
@@ -106,10 +105,10 @@ export async function ensurePostgresTables() {
         severity text NOT NULL DEFAULT 'medium',
         description text,
         created_at timestamptz NOT NULL DEFAULT now()
-      );
-    `;
+      )
+    `);
 
-    await sql`
+    await db.execute(sql`
       CREATE TABLE IF NOT EXISTS analytics_events (
         id text PRIMARY KEY,
         session_id text NOT NULL,
@@ -117,28 +116,28 @@ export async function ensurePostgresTables() {
         path text,
         metadata text,
         created_at timestamptz NOT NULL DEFAULT now()
-      );
-    `;
+      )
+    `);
 
-    await sql`
+    await db.execute(sql`
       CREATE TABLE IF NOT EXISTS site_settings (
         key text PRIMARY KEY,
         value text NOT NULL,
         updated_at timestamptz NOT NULL DEFAULT now()
-      );
-    `;
+      )
+    `);
 
-    await sql`
+    await db.execute(sql`
       CREATE TABLE IF NOT EXISTS admin_audit_logs (
         id text PRIMARY KEY,
         action text NOT NULL,
         target text NOT NULL,
         details text NOT NULL,
         created_at timestamptz NOT NULL DEFAULT now()
-      );
-    `;
+      )
+    `);
 
-    await sql`
+    await db.execute(sql`
       CREATE TABLE IF NOT EXISTS moderation_cases (
         id text PRIMARY KEY,
         target_type text NOT NULL,
@@ -149,10 +148,10 @@ export async function ensurePostgresTables() {
         reason text NOT NULL,
         created_at timestamptz NOT NULL DEFAULT now(),
         reviewed_at timestamptz
-      );
-    `;
+      )
+    `);
 
-    await sql`
+    await db.execute(sql`
       CREATE TABLE IF NOT EXISTS admin_messages (
         id text PRIMARY KEY,
         session_id text NOT NULL,
@@ -160,10 +159,10 @@ export async function ensurePostgresTables() {
         content text NOT NULL,
         read_at timestamptz,
         created_at timestamptz NOT NULL DEFAULT now()
-      );
-    `;
+      )
+    `);
 
-    await sql`CREATE INDEX IF NOT EXISTS idx_admin_messages_created_at ON admin_messages (created_at DESC)`;
+    await db.execute(sql`CREATE INDEX IF NOT EXISTS idx_admin_messages_created_at ON admin_messages (created_at DESC)`);
 
     return true;
   } catch (err) {

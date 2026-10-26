@@ -13,7 +13,7 @@ export async function generateMetadata({ params }: Props): Promise<Metadata> {
   if (!post) return { title: 'Coretan tidak ditemukan | Koma', robots: { index: false, follow: false } };
   const allowed = (await getSearchEligiblePosts()).some((item) => item.id === post.id);
   const url = postUrl(post.id);
-  if (!allowed) return { title: 'Coretan di Koma', robots: { index: false, follow: true, nocache: true }, alternates: { canonical: url } };
+  if (!allowed) return { title: 'Coretan di Koma', robots: { index: false, follow: true, nocache: true }, alternates: { canonical: url }, openGraph: { title: 'Coretan di Koma', url, images: ['/brand/png/koma-app-icon-512.png'] }, twitter: { card: 'summary', title: 'Coretan di Koma' } };
   const title = `${post.content.trim().slice(0, 72)}${post.content.trim().length > 72 ? '…' : ''} | Koma`;
   const description = post.content.trim().slice(0, 155);
   return {
