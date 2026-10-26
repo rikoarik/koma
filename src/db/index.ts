@@ -2,8 +2,15 @@ import { sql } from '@vercel/postgres';
 import { drizzle } from 'drizzle-orm/vercel-postgres';
 import * as schema from './schema';
 
+if (!process.env.POSTGRES_URL && process.env.DATABASE_URL) {
+  process.env.POSTGRES_URL = process.env.DATABASE_URL;
+}
+if (!process.env.POSTGRES_URL && process.env.STORAGE_URL) {
+  process.env.POSTGRES_URL = process.env.STORAGE_URL;
+}
+
 export const isPostgresConfigured = Boolean(
-  process.env.POSTGRES_URL || process.env.DATABASE_URL || process.env.POSTGRES_PRISMA_URL
+  process.env.POSTGRES_URL || process.env.DATABASE_URL || process.env.POSTGRES_PRISMA_URL || process.env.STORAGE_URL
 );
 
 export const db = isPostgresConfigured
