@@ -34,9 +34,6 @@ next-env.d.ts.bak
 *.sqlite
 *.sqlite-journal
 
-# Documentation & Screenshots
-docs/
-
 # Logs
 logs
 *.log
