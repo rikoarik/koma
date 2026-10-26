@@ -1,4 +1,4 @@
-import [OI] from 'openai';
+import OpenAI from 'openai';
 import sharp from 'sharp';
 import { z } from 'zod';
 
@@ -57,7 +57,7 @@ export async function moderateImage(file: File): Promise<ImageModerationResult> 
   }
 
   try {
-    const client = new [OI]({
+    const client = new OpenAI({
       apiKey: key,
       baseURL: process.env.AI_IMAGE_MODERATION_BASE_URL || process.env.AI_MODERATION_BASE_URL || 'https://api.openai.com/v1',
       timeout: 20000,
@@ -89,7 +89,7 @@ export async function moderateImage(file: File): Promise<ImageModerationResult> 
     // Never log image bytes, provider response bodies, request URLs or credentials.
     console.error('[ImageModeration] provider failure', {
       type: error instanceof Error ? error.name : 'UnknownError',
-      status: error instanceof [OI].APIError ? error.status : undefined,
+      status: error instanceof OpenAI.APIError ? error.status : undefined,
     });
     return { ok: false, status: 503, error: 'Pemeriksaan gambar gagal. Gambar tidak diterbitkan; coba lagi nanti.' };
   }
