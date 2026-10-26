@@ -1,0 +1,4 @@
+# Local isolated Next.js build outputs, not deployment source.
+.next-*/
+.local-koma-db.json
+*.tsbuildinfo

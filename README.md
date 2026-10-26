@@ -86,7 +86,7 @@ Semua kunci/password bersifat **server-side**. Jangan menggunakan prefiks `NEXT_
 | `AI_BASE_URL`, `AI_FALLBACK_MODEL` | Endpoint/model cadangan studio tulisan. | Opsional sesuai provider. |
 | `AI_MODERATION_API_KEY`, `AI_MODERATION_MODEL`, `AI_MODERATION_BASE_URL` | Provider khusus moderasi teks. | Bila memakai provider moderasi yang berbeda dari studio. |
 | `BLOB_READ_WRITE_TOKEN`, `IMAGE_UPLOAD_SIGNING_SECRET` | Penyimpanan gambar di Vercel Blob dan pengikatan hasil upload ke sesi. | Diperlukan bersama pemeriksaan gambar agar upload tersedia. |
-| `AI_IMAGE_MODERATION_API_KEY`, `AI_IMAGE_MODERATION_MODEL`, `AI_IMAGE_MODERATION_BASE_URL` | Pemeriksaan konten gambar dan model vision; kunci dapat memakai variabel moderasi/AI umum jika dikonfigurasi. | Upload gambar membutuhkan model vision dan provider yang mendukung endpoint moderasi gambar. |
+| `AI_IMAGE_MODERATION_API_KEY`, `AI_IMAGE_MODERATION_MODEL`, `AI_IMAGE_MODERATION_BASE_URL` | Pemeriksaan konten gambar dan model vision; kunci dapat memakai variabel moderasi/AI umum jika dikonfigurasi. | Upload gambar membutuhkan model vision yang mendukung chat completions dengan input gambar dan balasan JSON. |
 | `AI_IMAGE_API_KEY`, `AI_IMAGE_MODEL`, `AI_IMAGE_BASE_URL` | Provider terpisah untuk generasi gambar di integrasi AI. | Opsional, sesuai fitur/provider yang digunakan. |
 
 Rujukan variabel lain: [`.env.example`](.env.example). Untuk penyedia layanan apa pun, gunakan kredensial asli dari layanan tersebut **hanya di environment server**. Jangan menaruh fallback kredensial di source code.

@@ -14,9 +14,9 @@ const original = {
 
 let server: Server;
 let baseURL: string;
-let moderationFlag = false;
 let visionDecision: 'safe' | 'unsafe' | 'uncertain' = 'safe';
 let providerFails = false;
+let visionGarbage = false;
 let requestCount = 0;
 let receivedWebp = false;
 
@@ -32,8 +32,7 @@ before(async () => {
     receivedWebp = (payload.input?.[0]?.image_url.url || payload.messages?.[1]?.content?.[1]?.image_url?.url || '').startsWith('data:image/webp;base64,');
     res.setHeader('content-type', 'application/json');
     if (providerFails) { res.statusCode = 503; res.end('{}'); return; }
-    if (req.url === '/moderations') res.end(JSON.stringify({ results: [{ flagged: moderationFlag, categories: {} }] }));
-    else if (req.url === '/chat/completions') res.end(JSON.stringify({ choices: [{ message: { content: JSON.stringify({ decision: visionDecision, category: visionDecision === 'safe' ? 'none' : 'personal_data' }) } }] }));
+    if (req.url === '/chat/completions') res.end(JSON.stringify({ choices: [{ message: { content: visionGarbage ? 'I could not read that.' : JSON.stringify({ decision: visionDecision, category: visionDecision === 'safe' ? 'none' : 'personal_data' }) } }] }));
     else { res.statusCode = 404; res.end('{}'); }
   });
   await new Promise<void>((resolve) => server.listen(0, '127.0.0.1', resolve));
@@ -87,13 +86,12 @@ test('fails closed without a configured vision model', async () => {
   process.env.AI_IMAGE_MODERATION_MODEL = 'vision-test';
 });
 
-test('checks re-encoded image with moderation and vision before accepting', async () => {
-  moderationFlag = false;
+test('checks re-encoded image with the vision model before accepting', async () => {
   visionDecision = 'safe';
   requestCount = 0;
   const result = await moderateImage(await imageFile());
   assert.equal(result.ok, true);
-  assert.equal(requestCount, 2);
+  assert.equal(requestCount, 1);
   assert.equal(receivedWebp, true);
   if (result.ok) assert.equal((await sharp(result.image).metadata()).format, 'webp');
 });
@@ -106,14 +104,22 @@ test('provider failure never makes an image public', async () => {
   providerFails = false;
 });
 
-test('rejects flagged and uncertain images', async () => {
-  moderationFlag = true;
+test('unreadable vision reply is held instead of published', async () => {
+  visionGarbage = true;
+  const result = await moderateImage(await imageFile());
+  visionGarbage = false;
+  assert.equal(result.ok, false);
+  if (!result.ok) assert.equal(result.status, 503);
+});
+
+test('rejects unsafe and uncertain images', async () => {
+  visionDecision = 'unsafe';
   let result = await moderateImage(await imageFile());
   assert.equal(result.ok, false);
   if (!result.ok) assert.equal(result.status, 422);
-  moderationFlag = false;
   visionDecision = 'uncertain';
   result = await moderateImage(await imageFile());
   assert.equal(result.ok, false);
   if (!result.ok) assert.equal(result.status, 422);
+  visionDecision = 'safe';
 });
