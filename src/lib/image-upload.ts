@@ -31,7 +31,9 @@ export function isAllowedImage(url: unknown, token: unknown, sessionId: string):
   if (Number(expires) < Date.now() || Number(expires) > Date.now() + TOKEN_LIFETIME_MS) return false;
   try {
     const parsed = new URL(url);
-    if (parsed.protocol !== 'https:' || !parsed.hostname.endsWith('.public.blob.vercel-storage.com') || !parsed.pathname.startsWith('/koma/uploads/')) return false;
+    // Only accept images from Koma's moderated public store, not arbitrary
+    // public Vercel Blob URLs minted elsewhere.
+    if (parsed.protocol !== 'https:' || parsed.hostname !== 'hmpot4xs7ppc9ux4.public.blob.vercel-storage.com' || !parsed.pathname.startsWith('/koma/uploads/')) return false;
   } catch { return false; }
   const expected = crypto.createHmac('sha256', key).update(`${sessionId}\n${url}\n${expires}`).digest('hex');
   return crypto.timingSafeEqual(Buffer.from(signature, 'hex'), Buffer.from(expected, 'hex'));

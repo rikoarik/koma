@@ -9,7 +9,9 @@ import { checkRateLimit } from '@/lib/validation';
 export const runtime = 'nodejs';
 
 export async function POST(request: NextRequest) {
-  const blobToken = process.env.BLOB_READ_WRITE_TOKEN?.trim();
+  // This token belongs to the dedicated public store; the unprefixed token may
+  // point to the existing private store, which cannot serve post images.
+  const blobToken = process.env.KOMA_PUBLIC_READ_WRITE_TOKEN?.trim();
   const signingSecret = process.env.IMAGE_UPLOAD_SIGNING_SECRET?.trim();
   if (!blobToken || !signingSecret) {
     return NextResponse.json({ success: false, error: 'Unggah gambar belum tersedia.' }, { status: 503 });

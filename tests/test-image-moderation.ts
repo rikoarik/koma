@@ -60,9 +60,11 @@ async function imageFile(): Promise<File> {
 }
 
 test('uploaded URL requires a matching session, unexpired signature and approved host', () => {
-  const url = 'https://example.public.blob.vercel-storage.com/koma/uploads/safe.webp';
+  const url = 'https://hmpot4xs7ppc9ux4.public.blob.vercel-storage.com/koma/uploads/safe.webp';
   const token = signImageUpload(url, 'sess_a');
   assert.equal(isAllowedImage(url, token, 'sess_a'), true);
+  const foreignUrl = 'https://example.public.blob.vercel-storage.com/koma/uploads/safe.webp';
+  assert.equal(isAllowedImage(foreignUrl, signImageUpload(foreignUrl, 'sess_a'), 'sess_a'), false);
   assert.equal(isAllowedImage(url, token, 'sess_b'), false);
   assert.equal(isAllowedImage(url.replace('safe.webp', 'other.webp'), token, 'sess_a'), false);
   assert.equal(isAllowedImage('https://evil.example/koma/uploads/safe.webp', token, 'sess_a'), false);
