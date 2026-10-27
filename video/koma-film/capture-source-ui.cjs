@@ -1,0 +1,8 @@
+const {chromium}=require('playwright-core');
+const http=require('node:http'),fs=require('node:fs'),path=require('node:path');
+(async()=>{
+const server=http.createServer((req,res)=>{const url=new URL(req.url,'http://local');let p=path.join(__dirname,decodeURIComponent(url.pathname));if(url.pathname.startsWith('/assets/')&&!fs.existsSync(p))p=path.join(__dirname,'../../public',url.pathname);const ext=path.extname(p);res.setHeader('Content-Type',({'.html':'text/html','.js':'text/javascript','.css':'text/css','.svg':'image/svg+xml','.webp':'image/webp'})[ext]||'application/octet-stream');if(fs.existsSync(p))fs.createReadStream(p).pipe(res);else{res.statusCode=404;res.end()}});await new Promise(r=>server.listen(4459,'127.0.0.1',r));
+const browser=await chromium.launch({executablePath:'/Applications/Google Chrome.app/Contents/MacOS/Google Chrome',headless:true});const page=await browser.newPage({viewport:{width:780,height:1400},deviceScaleFactor:2});
+await page.goto('http://127.0.0.1:4459/ui-harness.html?mode=studio',{waitUntil:'networkidle'});await page.screenshot({path:path.join(__dirname,'assets/screens/studio-source.png')});
+await page.goto('http://127.0.0.1:4459/ui-harness.html?mode=post',{waitUntil:'networkidle'});await page.locator('article').screenshot({path:path.join(__dirname,'assets/screens/post-source.png')});await page.getByRole('button',{name:'1 balasan'}).click();await page.locator('article').screenshot({path:path.join(__dirname,'assets/screens/reply-source.png')});
+await browser.close();server.close();console.log('Captured real repository components with explicitly fictional fixture data.');})();

@@ -1,0 +1,15 @@
+<svg width="120" height="120" viewBox="0 0 120 120" fill="none" xmlns="http://www.w3.org/2000/svg">
+  <!-- Scalloped playful zine sticker -->
+  <path d="M60 4 L68 18 L84 12 L87 28 L103 28 L99 44 L114 50 L104 63 L115 74 L101 82 L106 97 L90 99 L89 115 L74 109 L67 122 L56 111 L44 120 L40 105 L24 108 L26 92 L11 88 L19 74 L6 65 L19 54 L11 39 L26 36 L27 20 L42 24 L48 9 Z" 
+        fill="#5A46D6" stroke="#1D1B18" stroke-width="2"/>
+  <circle cx="60" cy="62" r="38" fill="#F7F4EE" stroke="#1D1B18" stroke-width="1.5"/>
+  <text x="60" y="55" text-anchor="middle" font-family="'Courier New', monospace" font-size="9" font-weight="900" fill="#5A46D6" letter-spacing="1">
+    KOMA
+  </text>
+  <text x="60" y="68" text-anchor="middle" font-family="'Courier New', monospace" font-size="11" font-weight="900" fill="#1D1B18" letter-spacing="1">
+    ZINE
+  </text>
+  <text x="60" y="78" text-anchor="middle" font-family="'Courier New', monospace" font-size="6.5" font-weight="700" fill="#5A46D6">
+    EDISI DIGITAL
+  </text>
+</svg>

@@ -1,0 +1,1378 @@
+{
+  "ok": true,
+  "strict": false,
+  "browserSkipped": false,
+  "lint": {
+    "ok": true,
+    "errorCount": 0,
+    "warningCount": 1,
+    "infoCount": 0,
+    "findings": [
+      {
+        "code": "timeline_track_too_dense",
+        "severity": "warning",
+        "message": "Track 0 has 23 timed elements in this HTML file. Smaller sub-compositions keep timelines easier to read, iterate on, and diff.",
+        "selector": "[data-composition-id]",
+        "dataAttributes": {},
+        "sourceFile": "/Users/macbookm2/Documents/antigravity/jolly-lovelace/video/koma-film/compositions/captions.html",
+        "bbox": {
+          "x": 0,
+          "y": 0,
+          "width": 0,
+          "height": 0
+        },
+        "time": 0,
+        "fixHint": "Move coherent scene groups into smaller .html files and mount them from the parent with data-composition-src so the timeline stays easier to inspect, revise, and validate."
+      }
+    ],
+    "filesScanned": 10
+  },
+  "runtime": {
+    "ok": true,
+    "errorCount": 0,
+    "warningCount": 0,
+    "infoCount": 0,
+    "findings": []
+  },
+  "layout": {
+    "ok": true,
+    "errorCount": 0,
+    "warningCount": 2,
+    "infoCount": 28,
+    "findings": [
+      {
+        "code": "canvas_overflow",
+        "severity": "warning",
+        "time": 11.306,
+        "selector": "#product-post > p:nth-of-type(1)",
+        "message": "Text extends outside the composition canvas.",
+        "rect": {
+          "left": 141.84,
+          "top": 1830.35,
+          "right": 584.26,
+          "bottom": 2081.71,
+          "width": 442.42,
+          "height": 251.36
+        },
+        "containerSelector": "#root",
+        "text": "Tadi bilang“sama-sama”ke mesin parkir.",
+        "fixHint": "Move the text inward, reduce its size, or mark intentional off-canvas animation with data-layout-allow-overflow.",
+        "containerRect": {
+          "left": 0,
+          "top": 0,
+          "right": 1080,
+          "bottom": 1920,
+          "width": 1080,
+          "height": 1920
+        },
+        "overflow": {
+          "bottom": 161.71
+        },
+        "dataAttributes": {},
+        "sourceFile": "compositions/product.html",
+        "bbox": {
+          "x": 141.84,
+          "y": 1830.35,
+          "width": 442.42,
+          "height": 251.36
+        },
+        "firstSeen": 11.306,
+        "lastSeen": 13.361,
+        "occurrences": 2,
+        "heldMs": 0,
+        "times": [
+          11.306,
+          13.361
+        ]
+      },
+      {
+        "code": "panel_out_of_canvas",
+        "severity": "warning",
+        "time": 11.306,
+        "selector": "#product-post",
+        "message": "Painted panel extends outside the composition canvas.",
+        "rect": {
+          "left": 91.17,
+          "top": 1674.47,
+          "right": 920.83,
+          "bottom": 2303.25,
+          "width": 829.66,
+          "height": 628.78
+        },
+        "containerSelector": "#root",
+        "text": "Tanpa Nama Boleh Dibalas Tadi bilang “sama-sama”",
+        "fixHint": "Move the panel inward, or mark intentional off-canvas animation with data-layout-allow-overflow.",
+        "containerRect": {
+          "left": 0,
+          "top": 0,
+          "right": 1080,
+          "bottom": 1920,
+          "width": 1080,
+          "height": 1920
+        },
+        "overflow": {
+          "bottom": 383.25
+        },
+        "dataAttributes": {},
+        "sourceFile": "compositions/product.html",
+        "bbox": {
+          "x": 91.17,
+          "y": 1674.47,
+          "width": 829.66,
+          "height": 628.78
+        },
+        "firstSeen": 11.306,
+        "lastSeen": 13.361,
+        "occurrences": 2,
+        "heldMs": 0,
+        "times": [
+          11.306,
+          13.361
+        ]
+      },
+      {
+        "code": "canvas_overflow",
+        "severity": "info",
+        "time": 11.306,
+        "selector": "#product-compose > div:nth-of-type(1)",
+        "message": "Text extends outside the composition canvas.",
+        "rect": {
+          "left": 1246,
+          "top": 297,
+          "right": 1559.27,
+          "bottom": 330,
+          "width": 313.27,
+          "height": 33
+        },
+        "containerSelector": "#root",
+        "text": "KOMA • LEMBAR BARU",
+        "fixHint": "Move the text inward, reduce its size, or mark intentional off-canvas animation with data-layout-allow-overflow.",
+        "containerRect": {
+          "left": 0,
+          "top": 0,
+          "right": 1080,
+          "bottom": 1920,
+          "width": 1080,
+          "height": 1920
+        },
+        "overflow": {
+          "right": 479.27
+        },
+        "dataAttributes": {},
+        "sourceFile": "compositions/product.html",
+        "bbox": {
+          "x": 1246,
+          "y": 297,
+          "width": 313.27,
+          "height": 33
+        },
+        "firstSeen": 11.306,
+        "lastSeen": 17.472,
+        "occurrences": 3,
+        "heldMs": 0,
+        "times": [
+          11.306,
+          15.417,
+          17.472
+        ]
+      },
+      {
+        "code": "canvas_overflow",
+        "severity": "info",
+        "time": 11.306,
+        "selector": "#product-compose > h2:nth-of-type(1)",
+        "message": "Text extends outside the composition canvas.",
+        "rect": {
+          "left": 1246,
+          "top": 349.69,
+          "right": 1633.47,
+          "bottom": 481.28,
+          "width": 387.47,
+          "height": 131.59
+        },
+        "containerSelector": "#root",
+        "text": "Tumpahkanisi kepalamu.",
+        "fixHint": "Move the text inward, reduce its size, or mark intentional off-canvas animation with data-layout-allow-overflow.",
+        "containerRect": {
+          "left": 0,
+          "top": 0,
+          "right": 1080,
+          "bottom": 1920,
+          "width": 1080,
+          "height": 1920
+        },
+        "overflow": {
+          "right": 553.47
+        },
+        "dataAttributes": {},
+        "sourceFile": "compositions/product.html",
+        "bbox": {
+          "x": 1246,
+          "y": 349.69,
+          "width": 387.47,
+          "height": 131.59
+        },
+        "firstSeen": 11.306,
+        "lastSeen": 17.472,
+        "occurrences": 3,
+        "heldMs": 0,
+        "times": [
+          11.306,
+          15.417,
+          17.472
+        ]
+      },
+      {
+        "code": "canvas_overflow",
+        "severity": "info",
+        "time": 11.306,
+        "selector": "#product-compose > div:nth-of-type(3)",
+        "message": "Text extends outside the composition canvas.",
+        "rect": {
+          "left": 1246,
+          "top": 533.88,
+          "right": 1559.27,
+          "bottom": 566.88,
+          "width": 313.27,
+          "height": 33
+        },
+        "containerSelector": "#root",
+        "text": "IDENTITAS PENGIRIM",
+        "fixHint": "Move the text inward, reduce its size, or mark intentional off-canvas animation with data-layout-allow-overflow.",
+        "containerRect": {
+          "left": 0,
+          "top": 0,
+          "right": 1080,
+          "bottom": 1920,
+          "width": 1080,
+          "height": 1920
+        },
+        "overflow": {
+          "right": 479.27
+        },
+        "dataAttributes": {},
+        "sourceFile": "compositions/product.html",
+        "bbox": {
+          "x": 1246,
+          "y": 533.88,
+          "width": 313.27,
+          "height": 33
+        },
+        "firstSeen": 11.306,
+        "lastSeen": 17.472,
+        "occurrences": 3,
+        "heldMs": 0,
+        "times": [
+          11.306,
+          15.417,
+          17.472
+        ]
+      },
+      {
+        "code": "canvas_overflow",
+        "severity": "info",
+        "time": 11.306,
+        "selector": "#product-anon",
+        "message": "Text extends outside the composition canvas.",
+        "rect": {
+          "left": 1264,
+          "top": 606.56,
+          "right": 1472.89,
+          "bottom": 639.56,
+          "width": 208.89,
+          "height": 33
+        },
+        "containerSelector": "#root",
+        "text": "◉ Tanpa Nama",
+        "fixHint": "Move the text inward, reduce its size, or mark intentional off-canvas animation with data-layout-allow-overflow.",
+        "containerRect": {
+          "left": 0,
+          "top": 0,
+          "right": 1080,
+          "bottom": 1920,
+          "width": 1080,
+          "height": 1920
+        },
+        "overflow": {
+          "right": 392.89
+        },
+        "dataAttributes": {},
+        "sourceFile": "compositions/product.html",
+        "bbox": {
+          "x": 1264,
+          "y": 606.56,
+          "width": 208.89,
+          "height": 33
+        },
+        "firstSeen": 11.306,
+        "lastSeen": 17.472,
+        "occurrences": 3,
+        "heldMs": 0,
+        "times": [
+          11.306,
+          15.417,
+          17.472
+        ]
+      },
+      {
+        "code": "canvas_overflow",
+        "severity": "info",
+        "time": 11.306,
+        "selector": "#product-compose > div:nth-of-type(5)",
+        "message": "Text extends outside the composition canvas.",
+        "rect": {
+          "left": 1522.89,
+          "top": 606.56,
+          "right": 1679.53,
+          "bottom": 639.56,
+          "width": 156.64,
+          "height": 33
+        },
+        "containerSelector": "#root",
+        "text": "○ Samaran",
+        "fixHint": "Move the text inward, reduce its size, or mark intentional off-canvas animation with data-layout-allow-overflow.",
+        "containerRect": {
+          "left": 0,
+          "top": 0,
+          "right": 1080,
+          "bottom": 1920,
+          "width": 1080,
+          "height": 1920
+        },
+        "overflow": {
+          "right": 599.53
+        },
+        "dataAttributes": {},
+        "sourceFile": "compositions/product.html",
+        "bbox": {
+          "x": 1522.89,
+          "y": 606.56,
+          "width": 156.64,
+          "height": 33
+        },
+        "firstSeen": 11.306,
+        "lastSeen": 17.472,
+        "occurrences": 3,
+        "heldMs": 0,
+        "times": [
+          11.306,
+          15.417,
+          17.472
+        ]
+      },
+      {
+        "code": "canvas_overflow",
+        "severity": "info",
+        "time": 11.306,
+        "selector": "#product-compose > div:nth-of-type(6)",
+        "message": "Text extends outside the composition canvas.",
+        "rect": {
+          "left": 1246,
+          "top": 685.56,
+          "right": 1489.64,
+          "bottom": 718.56,
+          "width": 243.64,
+          "height": 33
+        },
+        "containerSelector": "#root",
+        "text": "Naskah Coretan",
+        "fixHint": "Move the text inward, reduce its size, or mark intentional off-canvas animation with data-layout-allow-overflow.",
+        "containerRect": {
+          "left": 0,
+          "top": 0,
+          "right": 1080,
+          "bottom": 1920,
+          "width": 1080,
+          "height": 1920
+        },
+        "overflow": {
+          "right": 409.64
+        },
+        "dataAttributes": {},
+        "sourceFile": "compositions/product.html",
+        "bbox": {
+          "x": 1246,
+          "y": 685.56,
+          "width": 243.64,
+          "height": 33
+        },
+        "firstSeen": 11.306,
+        "lastSeen": 17.472,
+        "occurrences": 3,
+        "heldMs": 0,
+        "times": [
+          11.306,
+          15.417,
+          17.472
+        ]
+      },
+      {
+        "code": "canvas_overflow",
+        "severity": "info",
+        "time": 11.306,
+        "selector": "#product-compose > div:nth-of-type(8)",
+        "message": "Text extends outside the composition canvas.",
+        "rect": {
+          "left": 1246,
+          "top": 1031.25,
+          "right": 1472.25,
+          "bottom": 1064.25,
+          "width": 226.25,
+          "height": 33
+        },
+        "containerSelector": "#root",
+        "text": "#cerita-kecil",
+        "fixHint": "Move the text inward, reduce its size, or mark intentional off-canvas animation with data-layout-allow-overflow.",
+        "containerRect": {
+          "left": 0,
+          "top": 0,
+          "right": 1080,
+          "bottom": 1920,
+          "width": 1080,
+          "height": 1920
+        },
+        "overflow": {
+          "right": 392.25
+        },
+        "dataAttributes": {},
+        "sourceFile": "compositions/product.html",
+        "bbox": {
+          "x": 1246,
+          "y": 1031.25,
+          "width": 226.25,
+          "height": 33
+        },
+        "firstSeen": 11.306,
+        "lastSeen": 17.472,
+        "occurrences": 3,
+        "heldMs": 0,
+        "times": [
+          11.306,
+          15.417,
+          17.472
+        ]
+      },
+      {
+        "code": "canvas_overflow",
+        "severity": "info",
+        "time": 11.306,
+        "selector": "p.ui-label.violet",
+        "message": "Text extends outside the composition canvas.",
+        "rect": {
+          "left": 138.42,
+          "top": 2091.02,
+          "right": 366.09,
+          "bottom": 2135.82,
+          "width": 227.67,
+          "height": 44.8
+        },
+        "containerSelector": "#root",
+        "text": "#cerita-kecil",
+        "fixHint": "Move the text inward, reduce its size, or mark intentional off-canvas animation with data-layout-allow-overflow.",
+        "containerRect": {
+          "left": 0,
+          "top": 0,
+          "right": 1080,
+          "bottom": 1920,
+          "width": 1080,
+          "height": 1920
+        },
+        "overflow": {
+          "bottom": 215.82
+        },
+        "dataAttributes": {},
+        "sourceFile": "compositions/product.html",
+        "bbox": {
+          "x": 138.42,
+          "y": 2091.02,
+          "width": 227.67,
+          "height": 44.8
+        },
+        "firstSeen": 11.306,
+        "lastSeen": 13.361,
+        "occurrences": 2,
+        "heldMs": 0,
+        "times": [
+          11.306,
+          13.361
+        ]
+      },
+      {
+        "code": "canvas_overflow",
+        "severity": "info",
+        "time": 11.306,
+        "selector": "#product-reactions > span:nth-of-type(1)",
+        "message": "Text extends outside the composition canvas.",
+        "rect": {
+          "left": 609.25,
+          "top": 2209.17,
+          "right": 854.28,
+          "bottom": 2254.88,
+          "width": 245.03,
+          "height": 45.71
+        },
+        "containerSelector": "#root",
+        "text": "Beri tanggapan",
+        "fixHint": "Move the text inward, reduce its size, or mark intentional off-canvas animation with data-layout-allow-overflow.",
+        "containerRect": {
+          "left": 0,
+          "top": 0,
+          "right": 1080,
+          "bottom": 1920,
+          "width": 1080,
+          "height": 1920
+        },
+        "overflow": {
+          "bottom": 334.88
+        },
+        "dataAttributes": {},
+        "sourceFile": "compositions/product.html",
+        "bbox": {
+          "x": 609.25,
+          "y": 2209.17,
+          "width": 245.03,
+          "height": 45.71
+        },
+        "firstSeen": 11.306,
+        "lastSeen": 13.361,
+        "occurrences": 2,
+        "heldMs": 0,
+        "times": [
+          11.306,
+          13.361
+        ]
+      },
+      {
+        "code": "canvas_overflow",
+        "severity": "info",
+        "time": 11.306,
+        "selector": "#product-serious > span:nth-of-type(1)",
+        "message": "Text extends outside the composition canvas.",
+        "rect": {
+          "left": 1293.34,
+          "top": 842.08,
+          "right": 1470.27,
+          "bottom": 898.98,
+          "width": 176.93,
+          "height": 56.9
+        },
+        "containerSelector": "#root",
+        "text": "Tanpa Nama",
+        "fixHint": "Move the text inward, reduce its size, or mark intentional off-canvas animation with data-layout-allow-overflow.",
+        "containerRect": {
+          "left": 0,
+          "top": 0,
+          "right": 1080,
+          "bottom": 1920,
+          "width": 1080,
+          "height": 1920
+        },
+        "overflow": {
+          "right": 390.27
+        },
+        "dataAttributes": {},
+        "sourceFile": "compositions/product.html",
+        "bbox": {
+          "x": 1293.34,
+          "y": 842.08,
+          "width": 176.93,
+          "height": 56.9
+        },
+        "firstSeen": 11.306,
+        "lastSeen": 15.417,
+        "occurrences": 3,
+        "heldMs": 0,
+        "times": [
+          11.306,
+          13.361,
+          15.417
+        ]
+      },
+      {
+        "code": "canvas_overflow",
+        "severity": "info",
+        "time": 11.306,
+        "selector": "#product-serious > p:nth-of-type(1)",
+        "message": "Text extends outside the composition canvas.",
+        "rect": {
+          "left": 1276.29,
+          "top": 894.26,
+          "right": 1806.53,
+          "bottom": 1069.59,
+          "width": 530.24,
+          "height": 175.33
+        },
+        "containerSelector": "#root",
+        "text": "Hari ini akhirnya beranibilang: aku butuh istirahat.",
+        "fixHint": "Move the text inward, reduce its size, or mark intentional off-canvas animation with data-layout-allow-overflow.",
+        "containerRect": {
+          "left": 0,
+          "top": 0,
+          "right": 1080,
+          "bottom": 1920,
+          "width": 1080,
+          "height": 1920
+        },
+        "overflow": {
+          "right": 726.53
+        },
+        "dataAttributes": {},
+        "sourceFile": "compositions/product.html",
+        "bbox": {
+          "x": 1276.29,
+          "y": 894.26,
+          "width": 530.24,
+          "height": 175.33
+        },
+        "firstSeen": 11.306,
+        "lastSeen": 15.417,
+        "occurrences": 3,
+        "heldMs": 0,
+        "times": [
+          11.306,
+          13.361,
+          15.417
+        ]
+      },
+      {
+        "code": "content_overlap",
+        "severity": "info",
+        "time": 14.056,
+        "selector": "#product-compose > div:nth-of-type(8)",
+        "message": "Two text blocks overlap and may render unreadable.",
+        "rect": {
+          "left": 146,
+          "top": 965.06,
+          "right": 372.25,
+          "bottom": 998.06,
+          "width": 226.25,
+          "height": 33
+        },
+        "containerSelector": "#product-post > p:nth-of-type(1)",
+        "text": "#cerita-kecil",
+        "fixHint": "Give each block its own zone, or put data-layout-allow-overlap on the text or on a container inside the scene. A marker on the scene root does not apply.",
+        "dataAttributes": {},
+        "sourceFile": "compositions/product.html",
+        "bbox": {
+          "x": 146,
+          "y": 965.06,
+          "width": 226.25,
+          "height": 33
+        },
+        "firstSeen": 14.056,
+        "lastSeen": 14.056,
+        "occurrences": 1,
+        "heldMs": 0,
+        "times": [
+          14.056
+        ]
+      },
+      {
+        "code": "content_overlap",
+        "severity": "info",
+        "time": 14.056,
+        "selector": "p.ui-label.violet",
+        "message": "Two text blocks overlap and may render unreadable.",
+        "rect": {
+          "left": 143.78,
+          "top": 1096.64,
+          "right": 370.49,
+          "bottom": 1132.95,
+          "width": 226.71,
+          "height": 36.31
+        },
+        "containerSelector": "#product-label",
+        "text": "#cerita-kecil",
+        "fixHint": "Give each block its own zone, or put data-layout-allow-overlap on the text or on a container inside the scene. A marker on the scene root does not apply.",
+        "dataAttributes": {},
+        "sourceFile": "compositions/product.html",
+        "bbox": {
+          "x": 143.78,
+          "y": 1096.64,
+          "width": 226.71,
+          "height": 36.31
+        },
+        "firstSeen": 14.056,
+        "lastSeen": 14.056,
+        "occurrences": 1,
+        "heldMs": 0,
+        "times": [
+          14.056
+        ]
+      },
+      {
+        "code": "container_overflow",
+        "severity": "info",
+        "time": 17.472,
+        "selector": "#product-canvas",
+        "message": "Element extends outside a clipping layout container.",
+        "rect": {
+          "left": 0,
+          "top": -242.2,
+          "right": 1080,
+          "bottom": 1677.8,
+          "width": 1080,
+          "height": 1920
+        },
+        "containerSelector": "#product > div:nth-of-type(1)",
+        "fixHint": "Resize/reposition the child or container, or mark intentional overflow with data-layout-allow-overflow.",
+        "containerRect": {
+          "left": 0,
+          "top": 0,
+          "right": 1080,
+          "bottom": 1920,
+          "width": 1080,
+          "height": 1920
+        },
+        "overflow": {
+          "top": 242.2
+        },
+        "dataAttributes": {},
+        "sourceFile": "compositions/product.html",
+        "bbox": {
+          "x": 0,
+          "y": -242.2,
+          "width": 1080,
+          "height": 1920
+        },
+        "firstSeen": 17.472,
+        "lastSeen": 17.472,
+        "occurrences": 1,
+        "heldMs": 0,
+        "times": [
+          17.472
+        ]
+      },
+      {
+        "code": "content_overlap",
+        "severity": "info",
+        "time": 20.877,
+        "selector": "#modes-open > p:nth-of-type(1)",
+        "message": "Two text blocks overlap and may render unreadable.",
+        "rect": {
+          "left": 148.09,
+          "top": 661.92,
+          "right": 637.78,
+          "bottom": 773.32,
+          "width": 489.69,
+          "height": 111.4
+        },
+        "containerSelector": "#modes-listen > div:nth-of-type(2) > p:nth-of-type(1)",
+        "text": "“Tadi bilang sama-sama ke mesin parkir.”",
+        "fixHint": "Give each block its own zone, or put data-layout-allow-overlap on the text or on a container inside the scene. A marker on the scene root does not apply.",
+        "dataAttributes": {},
+        "sourceFile": "compositions/modes.html",
+        "bbox": {
+          "x": 148.09,
+          "y": 661.92,
+          "width": 489.69,
+          "height": 111.4
+        },
+        "firstSeen": 20.877,
+        "lastSeen": 20.877,
+        "occurrences": 1,
+        "heldMs": 0,
+        "times": [
+          20.877
+        ]
+      },
+      {
+        "code": "canvas_overflow",
+        "severity": "info",
+        "time": 21.583,
+        "selector": "#modes-open > h2:nth-of-type(1)",
+        "message": "Text extends outside the composition canvas.",
+        "rect": {
+          "left": 115.75,
+          "top": -1145.3,
+          "right": 633.78,
+          "bottom": -1007.25,
+          "width": 518.03,
+          "height": 138.05
+        },
+        "containerSelector": "#root",
+        "text": "Mau ngobrol?",
+        "fixHint": "Move the text inward, reduce its size, or mark intentional off-canvas animation with data-layout-allow-overflow.",
+        "containerRect": {
+          "left": 0,
+          "top": 0,
+          "right": 1080,
+          "bottom": 1920,
+          "width": 1080,
+          "height": 1920
+        },
+        "overflow": {
+          "top": 1145.3
+        },
+        "dataAttributes": {},
+        "sourceFile": "compositions/modes.html",
+        "bbox": {
+          "x": 115.75,
+          "y": -1145.3,
+          "width": 518.03,
+          "height": 138.05
+        },
+        "firstSeen": 21.583,
+        "lastSeen": 23.639,
+        "occurrences": 2,
+        "heldMs": 0,
+        "times": [
+          21.583,
+          23.639
+        ]
+      },
+      {
+        "code": "canvas_overflow",
+        "severity": "info",
+        "time": 21.583,
+        "selector": "#modes-open-button > span:nth-of-type(1)",
+        "message": "Text extends outside the composition canvas.",
+        "rect": {
+          "left": 157.12,
+          "top": -961.96,
+          "right": 488,
+          "bottom": -879.97,
+          "width": 330.88,
+          "height": 81.99
+        },
+        "containerSelector": "#root",
+        "text": "Boleh Dibalas",
+        "fixHint": "Move the text inward, reduce its size, or mark intentional off-canvas animation with data-layout-allow-overflow.",
+        "containerRect": {
+          "left": 0,
+          "top": 0,
+          "right": 1080,
+          "bottom": 1920,
+          "width": 1080,
+          "height": 1920
+        },
+        "overflow": {
+          "top": 961.96
+        },
+        "dataAttributes": {},
+        "sourceFile": "compositions/modes.html",
+        "bbox": {
+          "x": 157.12,
+          "y": -961.96,
+          "width": 330.88,
+          "height": 81.99
+        },
+        "firstSeen": 21.583,
+        "lastSeen": 23.639,
+        "occurrences": 2,
+        "heldMs": 0,
+        "times": [
+          21.583,
+          23.639
+        ]
+      },
+      {
+        "code": "canvas_overflow",
+        "severity": "info",
+        "time": 21.583,
+        "selector": "#modes-open-button > p:nth-of-type(1)",
+        "message": "Text extends outside the composition canvas.",
+        "rect": {
+          "left": 163.88,
+          "top": -889.41,
+          "right": 414.3,
+          "bottom": -828.66,
+          "width": 250.42,
+          "height": 60.75
+        },
+        "containerSelector": "#root",
+        "text": "Terbuka komentar",
+        "fixHint": "Move the text inward, reduce its size, or mark intentional off-canvas animation with data-layout-allow-overflow.",
+        "containerRect": {
+          "left": 0,
+          "top": 0,
+          "right": 1080,
+          "bottom": 1920,
+          "width": 1080,
+          "height": 1920
+        },
+        "overflow": {
+          "top": 889.41
+        },
+        "dataAttributes": {},
+        "sourceFile": "compositions/modes.html",
+        "bbox": {
+          "x": 163.88,
+          "y": -889.41,
+          "width": 250.42,
+          "height": 60.75
+        },
+        "firstSeen": 21.583,
+        "lastSeen": 23.639,
+        "occurrences": 2,
+        "heldMs": 0,
+        "times": [
+          21.583,
+          23.639
+        ]
+      },
+      {
+        "code": "canvas_overflow",
+        "severity": "info",
+        "time": 21.583,
+        "selector": "#modes-open > p:nth-of-type(1)",
+        "message": "Text extends outside the composition canvas.",
+        "rect": {
+          "left": 152.22,
+          "top": -795.93,
+          "right": 644.48,
+          "bottom": -635.86,
+          "width": 492.26,
+          "height": 160.07
+        },
+        "containerSelector": "#root",
+        "text": "“Tadi bilang sama-samake mesin parkir.”",
+        "fixHint": "Move the text inward, reduce its size, or mark intentional off-canvas animation with data-layout-allow-overflow.",
+        "containerRect": {
+          "left": 0,
+          "top": 0,
+          "right": 1080,
+          "bottom": 1920,
+          "width": 1080,
+          "height": 1920
+        },
+        "overflow": {
+          "top": 795.93
+        },
+        "dataAttributes": {},
+        "sourceFile": "compositions/modes.html",
+        "bbox": {
+          "x": 152.22,
+          "y": -795.93,
+          "width": 492.26,
+          "height": 160.07
+        },
+        "firstSeen": 21.583,
+        "lastSeen": 23.639,
+        "occurrences": 2,
+        "heldMs": 0,
+        "times": [
+          21.583,
+          23.639
+        ]
+      },
+      {
+        "code": "canvas_overflow",
+        "severity": "info",
+        "time": 25.694,
+        "selector": "#studio-choice > p:nth-of-type(1)",
+        "message": "Text extends outside the composition canvas.",
+        "rect": {
+          "left": -948.39,
+          "top": 594.66,
+          "right": -441.03,
+          "bottom": 845.26,
+          "width": 507.36,
+          "height": 250.6
+        },
+        "containerSelector": "#root",
+        "text": "Tetap kamuyang pilih.",
+        "fixHint": "Move the text inward, reduce its size, or mark intentional off-canvas animation with data-layout-allow-overflow.",
+        "containerRect": {
+          "left": 0,
+          "top": 0,
+          "right": 1080,
+          "bottom": 1920,
+          "width": 1080,
+          "height": 1920
+        },
+        "overflow": {
+          "left": 948.39
+        },
+        "dataAttributes": {},
+        "sourceFile": "compositions/studio.html",
+        "bbox": {
+          "x": -948.39,
+          "y": 594.66,
+          "width": 507.36,
+          "height": 250.6
+        },
+        "firstSeen": 25.694,
+        "lastSeen": 27.75,
+        "occurrences": 2,
+        "heldMs": 0,
+        "times": [
+          25.694,
+          27.75
+        ]
+      },
+      {
+        "code": "canvas_overflow",
+        "severity": "info",
+        "time": 25.694,
+        "selector": "#studio-choice > p:nth-of-type(2)",
+        "message": "Text extends outside the composition canvas.",
+        "rect": {
+          "left": -921.53,
+          "top": 823.8,
+          "right": -506.39,
+          "bottom": 908.01,
+          "width": 415.14,
+          "height": 84.21
+        },
+        "containerSelector": "#root",
+        "text": "Baca. Sunting. Setujui.",
+        "fixHint": "Move the text inward, reduce its size, or mark intentional off-canvas animation with data-layout-allow-overflow.",
+        "containerRect": {
+          "left": 0,
+          "top": 0,
+          "right": 1080,
+          "bottom": 1920,
+          "width": 1080,
+          "height": 1920
+        },
+        "overflow": {
+          "left": 921.53
+        },
+        "dataAttributes": {},
+        "sourceFile": "compositions/studio.html",
+        "bbox": {
+          "x": -921.53,
+          "y": 823.8,
+          "width": 415.14,
+          "height": 84.21
+        },
+        "firstSeen": 25.694,
+        "lastSeen": 27.75,
+        "occurrences": 2,
+        "heldMs": 0,
+        "times": [
+          25.694,
+          27.75
+        ]
+      },
+      {
+        "code": "text_occluded",
+        "severity": "info",
+        "time": 29.806,
+        "selector": "#studio-panel > div:nth-of-type(3) > span:nth-of-type(1)",
+        "message": "Text is hidden beneath an opaque element.",
+        "rect": {
+          "left": 164,
+          "top": 558.44,
+          "right": 355.44,
+          "bottom": 591.44,
+          "width": 191.44,
+          "height": 33
+        },
+        "containerSelector": "#studio-choice",
+        "text": "Humor Receh",
+        "fixHint": "Give the text its own zone, raise its stacking order above the covering element, or mark intentional layering with data-layout-allow-occlusion.",
+        "coveredFraction": 0.41,
+        "dataAttributes": {},
+        "sourceFile": "compositions/studio.html",
+        "bbox": {
+          "x": 164,
+          "y": 558.44,
+          "width": 191.44,
+          "height": 33
+        },
+        "firstSeen": 29.806,
+        "lastSeen": 29.806,
+        "occurrences": 1,
+        "heldMs": 0,
+        "times": [
+          29.806
+        ]
+      },
+      {
+        "code": "text_occluded",
+        "severity": "info",
+        "time": 29.806,
+        "selector": "#studio-panel > div:nth-of-type(3) > span:nth-of-type(2)",
+        "message": "Text is hidden beneath an opaque element.",
+        "rect": {
+          "left": 405.44,
+          "top": 558.44,
+          "right": 614.28,
+          "bottom": 591.44,
+          "width": 208.84,
+          "height": 33
+        },
+        "containerSelector": "#studio-choice",
+        "text": "Pikiran Acak",
+        "fixHint": "Give the text its own zone, raise its stacking order above the covering element, or mark intentional layering with data-layout-allow-occlusion.",
+        "coveredFraction": 0.78,
+        "dataAttributes": {},
+        "sourceFile": "compositions/studio.html",
+        "bbox": {
+          "x": 405.44,
+          "y": 558.44,
+          "width": 208.84,
+          "height": 33
+        },
+        "firstSeen": 29.806,
+        "lastSeen": 29.806,
+        "occurrences": 1,
+        "heldMs": 0,
+        "times": [
+          29.806
+        ]
+      },
+      {
+        "code": "text_occluded",
+        "severity": "info",
+        "time": 29.806,
+        "selector": "#studio-panel > div:nth-of-type(4)",
+        "message": "Text is hidden beneath an opaque element.",
+        "rect": {
+          "left": 146,
+          "top": 627.44,
+          "right": 683.69,
+          "bottom": 658.44,
+          "width": 537.69,
+          "height": 31
+        },
+        "containerSelector": "#studio-choice",
+        "text": "Topik atau Kata Kunci (Opsional)",
+        "fixHint": "Give the text its own zone, raise its stacking order above the covering element, or mark intentional layering with data-layout-allow-occlusion.",
+        "coveredFraction": 1,
+        "dataAttributes": {},
+        "sourceFile": "compositions/studio.html",
+        "bbox": {
+          "x": 146,
+          "y": 627.44,
+          "width": 537.69,
+          "height": 31
+        },
+        "firstSeen": 29.806,
+        "lastSeen": 29.806,
+        "occurrences": 1,
+        "heldMs": 0,
+        "times": [
+          29.806
+        ]
+      },
+      {
+        "code": "text_occluded",
+        "severity": "info",
+        "time": 29.806,
+        "selector": "#studio-panel > div:nth-of-type(5)",
+        "message": "Text is hidden beneath an opaque element.",
+        "rect": {
+          "left": 165,
+          "top": 699.83,
+          "right": 627.16,
+          "bottom": 742.83,
+          "width": 462.16,
+          "height": 43
+        },
+        "containerSelector": "#studio-choice",
+        "text": "sama-sama ke mesin parkir",
+        "fixHint": "Give the text its own zone, raise its stacking order above the covering element, or mark intentional layering with data-layout-allow-occlusion.",
+        "coveredFraction": 1,
+        "dataAttributes": {},
+        "sourceFile": "compositions/studio.html",
+        "bbox": {
+          "x": 165,
+          "y": 699.83,
+          "width": 462.16,
+          "height": 43
+        },
+        "firstSeen": 29.806,
+        "lastSeen": 29.806,
+        "occurrences": 1,
+        "heldMs": 0,
+        "times": [
+          29.806
+        ]
+      },
+      {
+        "code": "text_occluded",
+        "severity": "info",
+        "time": 29.806,
+        "selector": "#studio-button",
+        "message": "Text is hidden beneath an opaque element.",
+        "rect": {
+          "left": 170,
+          "top": 803.13,
+          "right": 386.05,
+          "bottom": 837.13,
+          "width": 216.05,
+          "height": 34
+        },
+        "containerSelector": "#studio-choice",
+        "text": "Ramu 3 Saran",
+        "fixHint": "Give the text its own zone, raise its stacking order above the covering element, or mark intentional layering with data-layout-allow-occlusion.",
+        "coveredFraction": 1,
+        "dataAttributes": {},
+        "sourceFile": "compositions/studio.html",
+        "bbox": {
+          "x": 170,
+          "y": 803.13,
+          "width": 216.05,
+          "height": 34
+        },
+        "firstSeen": 29.806,
+        "lastSeen": 29.806,
+        "occurrences": 1,
+        "heldMs": 0,
+        "times": [
+          29.806
+        ]
+      },
+      {
+        "code": "text_occluded",
+        "severity": "info",
+        "time": 29.806,
+        "selector": "#studio-result > div:nth-of-type(1)",
+        "message": "Text is hidden beneath an opaque element.",
+        "rect": {
+          "left": 168,
+          "top": 900.13,
+          "right": 722.5,
+          "bottom": 931.13,
+          "width": 554.5,
+          "height": 31
+        },
+        "containerSelector": "#studio-choice",
+        "text": "Opsi 1 • Terpilih untuk disunting",
+        "fixHint": "Give the text its own zone, raise its stacking order above the covering element, or mark intentional layering with data-layout-allow-occlusion.",
+        "coveredFraction": 0.67,
+        "dataAttributes": {},
+        "sourceFile": "compositions/studio.html",
+        "bbox": {
+          "x": 168,
+          "y": 900.13,
+          "width": 554.5,
+          "height": 31
+        },
+        "firstSeen": 29.806,
+        "lastSeen": 29.806,
+        "occurrences": 1,
+        "heldMs": 0,
+        "times": [
+          29.806
+        ]
+      },
+      {
+        "code": "content_overlap",
+        "severity": "info",
+        "time": 30.592,
+        "selector": "#studio-choice > p:nth-of-type(2)",
+        "message": "Two text blocks overlap and may render unreadable.",
+        "rect": {
+          "left": 0,
+          "top": 1029.93,
+          "right": 761.33,
+          "bottom": 1189.07,
+          "width": 761.33,
+          "height": 159.14
+        },
+        "containerSelector": "#studio-canvas > div:nth-of-type(4)",
+        "text": "Baca. Sunting. Setujui.",
+        "fixHint": "Give each block its own zone, or put data-layout-allow-overlap on the text or on a container inside the scene. A marker on the scene root does not apply.",
+        "dataAttributes": {},
+        "sourceFile": "compositions/studio.html",
+        "bbox": {
+          "x": 0,
+          "y": 1029.93,
+          "width": 761.33,
+          "height": 159.14
+        },
+        "firstSeen": 30.592,
+        "lastSeen": 30.592,
+        "occurrences": 1,
+        "heldMs": 0,
+        "times": [
+          30.592
+        ]
+      }
+    ],
+    "duration": 37,
+    "samples": [
+      1.028,
+      3.083,
+      5.139,
+      7.194,
+      9.25,
+      11.306,
+      13.361,
+      15.417,
+      17.472,
+      19.528,
+      21.583,
+      23.639,
+      25.694,
+      27.75,
+      29.806,
+      31.861,
+      33.917,
+      35.972
+    ],
+    "transitionSamples": [],
+    "transitionSamplesDropped": 0,
+    "tolerance": 2,
+    "totalIssueCount": 30,
+    "truncated": false
+  },
+  "motion": {
+    "ok": true,
+    "errorCount": 0,
+    "warningCount": 0,
+    "infoCount": 0,
+    "findings": [],
+    "enabled": false,
+    "samples": 0
+  },
+  "contrast": {
+    "ok": true,
+    "errorCount": 0,
+    "warningCount": 0,
+    "infoCount": 0,
+    "findings": [],
+    "enabled": true,
+    "samples": [
+      1.028,
+      9.25,
+      17.472,
+      25.694,
+      35.972
+    ],
+    "checked": 30,
+    "passed": 30
+  },
+  "craft": {
+    "ok": true,
+    "errorCount": 0,
+    "warningCount": 0,
+    "infoCount": 0,
+    "findings": [],
+    "enabled": true,
+    "step": 0.125,
+    "samples": 296
+  },
+  "audio": {
+    "ok": true,
+    "errorCount": 0,
+    "warningCount": 0,
+    "infoCount": 0,
+    "findings": []
+  },
+  "hdr": {
+    "autoPromotion": null,
+    "inspection": "available"
+  },
+  "snapshots": {
+    "enabled": false,
+    "files": [],
+    "times": [],
+    "findingFiles": []
+  },
+  "saved": {
+    "id": "5b6ebb26-cb10-4a85-b0e2-6dd0dae168f2",
+    "revision": null,
+    "report": "/Users/macbookm2/Documents/antigravity/jolly-lovelace/video/koma-film/.hyperframes/artifacts/checks/5b6ebb26-cb10-4a85-b0e2-6dd0dae168f2.json",
+    "attribution": "inputs-changed"
+  },
+  "_meta": {
+    "version": "0.8.206",
+    "latestVersion": "0.8.206",
+    "updateAvailable": false
+  }
+}

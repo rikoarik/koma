@@ -7,7 +7,7 @@ export const metadata: Metadata = {
   title: 'Koma — Sudut Singgah Anonim & Zine Digital',
   alternates: { canonical: '/' },
   openGraph: { title: 'Koma — Sudut Singgah Anonim & Zine Digital', description: 'Tempat buat bilang hal-hal yang selama ini cuma ada di kepala.', url: '/', siteName: 'Koma', locale: 'id_ID', type: 'website', images: ['/brand/png/koma-app-icon-512.png'] },
-  twitter: { card: 'summary', images: ['/brand/png/koma-app-icon-512.png'] },
+  twitter: { card: 'summary', title: 'Koma — Sudut Singgah Anonim & Zine Digital', description: 'Tempat buat bilang hal-hal yang selama ini cuma ada di kepala.', images: ['/brand/png/koma-app-icon-512.png'] },
   verification: { google: process.env.GOOGLE_SITE_VERIFICATION || undefined, other: process.env.BING_SITE_VERIFICATION ? { 'msvalidate.01': process.env.BING_SITE_VERIFICATION } : {} },
   description: 'Tempat buat bilang hal-hal yang selama ini cuma ada di kepala. Tanpa nama, tanpa algoritma penghakiman.',
   applicationName: 'Koma',
@@ -41,7 +41,7 @@ export default function RootLayout({
         <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify({ '@context': 'https://schema.org', '@graph': [
           { '@type': 'WebSite', '@id': 'https://ruangkoma.web.id/#website', name: 'Koma', url: 'https://ruangkoma.web.id', inLanguage: 'id-ID', description: 'Ruang ekspresi anonim dan percakapan teks dalam bahasa Indonesia.' },
           { '@type': 'Organization', '@id': 'https://ruangkoma.web.id/#organization', name: 'Koma', url: 'https://ruangkoma.web.id', logo: 'https://ruangkoma.web.id/brand/png/koma-app-icon-512.png' },
-        ] }) }} />
+        ] }).replace(/</g, '\\u003c') }} />
         <PWARegistration />
         {/* Grain overlay across the app */}
         <div className="paper-grain fixed inset-0 z-50 pointer-events-none" />

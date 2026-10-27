@@ -1,0 +1,63 @@
+{
+  "ok": true,
+  "outputDir": "/Users/macbookm2/Documents/antigravity/jolly-lovelace/video/koma-film/.hyperframes/artifacts/snapshots/7568d2b3-1d38-4006-af54-d104fcb2ecfc",
+  "frames": [
+    {
+      "path": "/Users/macbookm2/Documents/antigravity/jolly-lovelace/video/koma-film/.hyperframes/artifacts/snapshots/7568d2b3-1d38-4006-af54-d104fcb2ecfc/frame-00-at-1.5s.png",
+      "time": 1.5
+    },
+    {
+      "path": "/Users/macbookm2/Documents/antigravity/jolly-lovelace/video/koma-film/.hyperframes/artifacts/snapshots/7568d2b3-1d38-4006-af54-d104fcb2ecfc/frame-01-at-4s.png",
+      "time": 4
+    },
+    {
+      "path": "/Users/macbookm2/Documents/antigravity/jolly-lovelace/video/koma-film/.hyperframes/artifacts/snapshots/7568d2b3-1d38-4006-af54-d104fcb2ecfc/frame-02-at-6.8s.png",
+      "time": 6.8
+    },
+    {
+      "path": "/Users/macbookm2/Documents/antigravity/jolly-lovelace/video/koma-film/.hyperframes/artifacts/snapshots/7568d2b3-1d38-4006-af54-d104fcb2ecfc/frame-03-at-9.5s.png",
+      "time": 9.5
+    },
+    {
+      "path": "/Users/macbookm2/Documents/antigravity/jolly-lovelace/video/koma-film/.hyperframes/artifacts/snapshots/7568d2b3-1d38-4006-af54-d104fcb2ecfc/frame-04-at-12.8s.png",
+      "time": 12.8
+    },
+    {
+      "path": "/Users/macbookm2/Documents/antigravity/jolly-lovelace/video/koma-film/.hyperframes/artifacts/snapshots/7568d2b3-1d38-4006-af54-d104fcb2ecfc/frame-05-at-16.2s.png",
+      "time": 16.2
+    },
+    {
+      "path": "/Users/macbookm2/Documents/antigravity/jolly-lovelace/video/koma-film/.hyperframes/artifacts/snapshots/7568d2b3-1d38-4006-af54-d104fcb2ecfc/frame-06-at-19.7s.png",
+      "time": 19.7
+    },
+    {
+      "path": "/Users/macbookm2/Documents/antigravity/jolly-lovelace/video/koma-film/.hyperframes/artifacts/snapshots/7568d2b3-1d38-4006-af54-d104fcb2ecfc/frame-07-at-23s.png",
+      "time": 23
+    },
+    {
+      "path": "/Users/macbookm2/Documents/antigravity/jolly-lovelace/video/koma-film/.hyperframes/artifacts/snapshots/7568d2b3-1d38-4006-af54-d104fcb2ecfc/frame-08-at-27.7s.png",
+      "time": 27.7
+    },
+    {
+      "path": "/Users/macbookm2/Documents/antigravity/jolly-lovelace/video/koma-film/.hyperframes/artifacts/snapshots/7568d2b3-1d38-4006-af54-d104fcb2ecfc/frame-09-at-29.5s.png",
+      "time": 29.5
+    },
+    {
+      "path": "/Users/macbookm2/Documents/antigravity/jolly-lovelace/video/koma-film/.hyperframes/artifacts/snapshots/7568d2b3-1d38-4006-af54-d104fcb2ecfc/frame-10-at-35.5s.png",
+      "time": 35.5
+    },
+    {
+      "path": "/Users/macbookm2/Documents/antigravity/jolly-lovelace/video/koma-film/.hyperframes/artifacts/snapshots/7568d2b3-1d38-4006-af54-d104fcb2ecfc/frame-11-at-35.89s.png",
+      "time": 35.89
+    }
+  ],
+  "contactSheets": [
+    "/Users/macbookm2/Documents/antigravity/jolly-lovelace/video/koma-film/.hyperframes/artifacts/snapshots/7568d2b3-1d38-4006-af54-d104fcb2ecfc/contact-sheet-1.jpg",
+    "/Users/macbookm2/Documents/antigravity/jolly-lovelace/video/koma-film/.hyperframes/artifacts/snapshots/7568d2b3-1d38-4006-af54-d104fcb2ecfc/contact-sheet-2.jpg"
+  ],
+  "_meta": {
+    "version": "0.8.206",
+    "latestVersion": "0.8.206",
+    "updateAvailable": false
+  }
+}

@@ -7,18 +7,26 @@ import { ARCHIVE_PAGE_SIZE } from '@/lib/search-policy';
 export const dynamic = 'force-dynamic';
 
 type Props = { searchParams: { page?: string } };
+function archivePage(raw: string): number | null {
+  if (!/^[1-9]\d*$/.test(raw) || Number(raw) > 100000) return null;
+  return Number(raw);
+}
 export async function generateMetadata({ searchParams }: Props): Promise<Metadata> {
-  const page = Number(searchParams.page || '1');
+  const raw = searchParams.page ?? '1';
+  const page = archivePage(raw);
   const eligible = await getSearchEligiblePosts();
-  return { title: 'Arsip Coretan | Koma', description: 'Coretan yang diizinkan penulis untuk ditemukan lewat mesin pencari.', robots: { index: eligible.length > 0, follow: true },
-    alternates: { canonical: page > 1 ? `/jelajah/arsip?page=${page}` : '/jelajah/arsip' },
-    openGraph: { title: 'Arsip Coretan | Koma', url: page > 1 ? `/jelajah/arsip?page=${page}` : '/jelajah/arsip', type: 'website' } };
+  const pages = Math.max(1, Math.ceil(eligible.length / ARCHIVE_PAGE_SIZE));
+  const valid = page !== null && page <= pages && (page !== 1 || searchParams.page === undefined);
+  const url = page && page > 1 ? `/jelajah/arsip?page=${page}` : '/jelajah/arsip';
+  return { title: 'Arsip Coretan | Koma', description: 'Coretan yang diizinkan penulis untuk ditemukan lewat mesin pencari.', robots: { index: valid && eligible.length > 0, follow: true },
+    alternates: valid ? { canonical: url } : undefined,
+    openGraph: { title: 'Arsip Coretan | Koma', url, type: 'website' } };
 }
 
 export default async function ArchivePage({ searchParams }: Props) {
-  const raw = searchParams.page || '1';
-  if (!/^[1-9]\d*$/.test(raw) || Number(raw) > 100000) notFound();
-  const page = Number(raw);
+  const raw = searchParams.page ?? '1';
+  const page = archivePage(raw);
+  if (page === null || (page === 1 && searchParams.page !== undefined)) notFound();
   const eligible = await getSearchEligiblePosts();
   const pages = Math.max(1, Math.ceil(eligible.length / ARCHIVE_PAGE_SIZE));
   if (page > pages) notFound();

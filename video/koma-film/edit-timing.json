@@ -1,0 +1,488 @@
+{
+  "duration": 37,
+  "fps": 30,
+  "scenes": [
+    {
+      "id": "head",
+      "start": 0,
+      "duration": 2.8
+    },
+    {
+      "id": "noodle",
+      "start": 2.8,
+      "duration": 2.6
+    },
+    {
+      "id": "parking",
+      "start": 5.4,
+      "duration": 2.8
+    },
+    {
+      "id": "question",
+      "start": 8.2,
+      "duration": 2.6
+    },
+    {
+      "id": "product",
+      "start": 10.8,
+      "duration": 6.8
+    },
+    {
+      "id": "modes",
+      "start": 17.6,
+      "duration": 6.8
+    },
+    {
+      "id": "studio",
+      "start": 24.4,
+      "duration": 6.2
+    },
+    {
+      "id": "close",
+      "start": 30.6,
+      "duration": 6.4
+    }
+  ],
+  "voices": [
+    {
+      "id": "01-hook",
+      "text": "Pernah nggak, isi kepala kamu kayak gini?",
+      "file": "assets/voice/01-hook.mp3",
+      "duration": 3.048,
+      "words": [
+        {
+          "text": "Pernah",
+          "start": 0.098583,
+          "end": 0.405166
+        },
+        {
+          "text": "nggak",
+          "start": 0.405208,
+          "end": 0.782583
+        },
+        {
+          "text": "isi",
+          "start": 1.006583,
+          "end": 1.218833
+        },
+        {
+          "text": "kepala",
+          "start": 1.218875,
+          "end": 1.4665
+        },
+        {
+          "text": "kamu",
+          "start": 1.4665,
+          "end": 1.631583
+        },
+        {
+          "text": "kayak",
+          "start": 1.631583,
+          "end": 1.832041
+        },
+        {
+          "text": "gini",
+          "start": 1.832083,
+          "end": 2.256624
+        }
+      ],
+      "start": 0.15,
+      "trimEnd": 2.436624
+    },
+    {
+      "id": "02-noodle",
+      "text": "Kenapa mi instan lebih enak punya teman?",
+      "file": "assets/voice/02-noodle.mp3",
+      "duration": 2.712,
+      "words": [
+        {
+          "text": "Kenapa",
+          "start": 0.098583,
+          "end": 0.464166
+        },
+        {
+          "text": "mi",
+          "start": 0.464166,
+          "end": 0.558499
+        },
+        {
+          "text": "instan",
+          "start": 0.5585,
+          "end": 0.900458
+        },
+        {
+          "text": "lebih",
+          "start": 0.900458,
+          "end": 1.077333
+        },
+        {
+          "text": "enak",
+          "start": 1.077375,
+          "end": 1.301416
+        },
+        {
+          "text": "punya",
+          "start": 1.301416,
+          "end": 1.490082
+        },
+        {
+          "text": "teman",
+          "start": 1.490083,
+          "end": 1.902833
+        }
+      ],
+      "start": 2.85,
+      "trimEnd": 2.082833
+    },
+    {
+      "id": "03-parking",
+      "text": "Tadi bilang sama-sama ke mesin parkir.",
+      "file": "assets/voice/03-parking.mp3",
+      "duration": 2.784,
+      "words": [
+        {
+          "text": "Tadi",
+          "start": 0.098583,
+          "end": 0.369791
+        },
+        {
+          "text": "bilang",
+          "start": 0.369791,
+          "end": 0.593832
+        },
+        {
+          "text": "sama-sama",
+          "start": 0.593875,
+          "end": 1.100958
+        },
+        {
+          "text": "ke",
+          "start": 1.100958,
+          "end": 1.183499
+        },
+        {
+          "text": "mesin",
+          "start": 1.1835,
+          "end": 1.431125
+        },
+        {
+          "text": "parkir",
+          "start": 1.431125,
+          "end": 1.973583
+        }
+      ],
+      "start": 5.45,
+      "trimEnd": 2.1535830000000002
+    },
+    {
+      "id": "04-question",
+      "text": "Pengin cerita, tapi ke siapa?",
+      "file": "assets/voice/04-question.mp3",
+      "duration": 2.832,
+      "words": [
+        {
+          "text": "Pengin",
+          "start": 0.098583,
+          "end": 0.346208
+        },
+        {
+          "text": "cerita",
+          "start": 0.346208,
+          "end": 0.924041
+        },
+        {
+          "text": "tapi",
+          "start": 1.1835,
+          "end": 1.419333
+        },
+        {
+          "text": "ke",
+          "start": 1.419333,
+          "end": 1.478291
+        },
+        {
+          "text": "siapa",
+          "start": 1.478291,
+          "end": 2.044332
+        }
+      ],
+      "start": 8.25,
+      "trimEnd": 2.224332
+    },
+    {
+      "id": "05-koma",
+      "text": "Di Koma, cerita nggak harus pakai nama.",
+      "file": "assets/voice/05-koma.mp3",
+      "duration": 3.12,
+      "words": [
+        {
+          "text": "Di",
+          "start": 0.098583,
+          "end": 0.263666
+        },
+        {
+          "text": "Koma",
+          "start": 0.263666,
+          "end": 0.758957
+        },
+        {
+          "text": "cerita",
+          "start": 1.030208,
+          "end": 1.336791
+        },
+        {
+          "text": "nggak",
+          "start": 1.336791,
+          "end": 1.454707
+        },
+        {
+          "text": "harus",
+          "start": 1.454708,
+          "end": 1.631583
+        },
+        {
+          "text": "pakai",
+          "start": 1.631583,
+          "end": 1.867416
+        },
+        {
+          "text": "nama",
+          "start": 1.867458,
+          "end": 2.327374
+        }
+      ],
+      "start": 10.95,
+      "trimEnd": 2.507374
+    },
+    {
+      "id": "06-range",
+      "text": "Yang receh, yang serius, sama-sama punya ruang.",
+      "file": "assets/voice/06-range.mp3",
+      "duration": 3.936,
+      "words": [
+        {
+          "text": "Yang",
+          "start": 0.098583,
+          "end": 0.299041
+        },
+        {
+          "text": "receh",
+          "start": 0.299041,
+          "end": 0.841499
+        },
+        {
+          "text": "yang",
+          "start": 1.077375,
+          "end": 1.266041
+        },
+        {
+          "text": "serius",
+          "start": 1.266041,
+          "end": 1.820291
+        },
+        {
+          "text": "sama-sama",
+          "start": 2.008958,
+          "end": 2.504249
+        },
+        {
+          "text": "punya",
+          "start": 2.50425,
+          "end": 2.7165
+        },
+        {
+          "text": "ruang",
+          "start": 2.7165,
+          "end": 3.12925
+        }
+      ],
+      "start": 14.05,
+      "trimEnd": 3.30925
+    },
+    {
+      "id": "07-reply",
+      "text": "Mau ngobrol? Boleh dibalas.",
+      "file": "assets/voice/07-reply.mp3",
+      "duration": 3.528,
+      "words": [
+        {
+          "text": "Mau",
+          "start": 0.1,
+          "end": 0.371208
+        },
+        {
+          "text": "ngobrol",
+          "start": 0.371208,
+          "end": 0.913666
+        },
+        {
+          "text": "Boleh",
+          "start": 1.700958,
+          "end": 2.066499
+        },
+        {
+          "text": "dibalas",
+          "start": 2.0665,
+          "end": 2.738666
+        }
+      ],
+      "start": 17.7,
+      "trimEnd": 2.918666
+    },
+    {
+      "id": "08-listen",
+      "text": "Lagi pengin diam? Cukup didengar.",
+      "file": "assets/voice/08-listen.mp3",
+      "duration": 3.672,
+      "words": [
+        {
+          "text": "Lagi",
+          "start": 0.1,
+          "end": 0.430208
+        },
+        {
+          "text": "pengin",
+          "start": 0.430208,
+          "end": 0.654249
+        },
+        {
+          "text": "diam",
+          "start": 0.65425,
+          "end": 1.090583
+        },
+        {
+          "text": "Cukup",
+          "start": 1.877833,
+          "end": 2.266999
+        },
+        {
+          "text": "didengar",
+          "start": 2.267,
+          "end": 2.880208
+        }
+      ],
+      "start": 21,
+      "trimEnd": 3.0602080000000003
+    },
+    {
+      "id": "09-studio",
+      "text": "Ada juga rancangan AI Studio, buat meramu ide.",
+      "file": "assets/voice/09-studio.mp3",
+      "duration": 3.648,
+      "words": [
+        {
+          "text": "Ada",
+          "start": 0.108958,
+          "end": 0.309416
+        },
+        {
+          "text": "juga",
+          "start": 0.309416,
+          "end": 0.533457
+        },
+        {
+          "text": "rancangan",
+          "start": 0.5335,
+          "end": 0.899041
+        },
+        {
+          "text": "AI",
+          "start": 0.899041,
+          "end": 1.040541
+        },
+        {
+          "text": "Studio",
+          "start": 1.040583,
+          "end": 1.653791
+        },
+        {
+          "text": "buat",
+          "start": 1.889625,
+          "end": 2.160833
+        },
+        {
+          "text": "meramu",
+          "start": 2.160833,
+          "end": 2.396666
+        },
+        {
+          "text": "ide",
+          "start": 2.396708,
+          "end": 2.844833
+        }
+      ],
+      "start": 24.55,
+      "trimEnd": 3.024833
+    },
+    {
+      "id": "10-choice",
+      "text": "Tetap kamu yang pilih.",
+      "file": "assets/voice/10-choice.mp3",
+      "duration": 2.064,
+      "words": [
+        {
+          "text": "Tetap",
+          "start": 0.1,
+          "end": 0.418416
+        },
+        {
+          "text": "kamu",
+          "start": 0.418416,
+          "end": 0.630666
+        },
+        {
+          "text": "yang",
+          "start": 0.630666,
+          "end": 0.783957
+        },
+        {
+          "text": "pilih",
+          "start": 0.783958,
+          "end": 1.267458
+        }
+      ],
+      "start": 28.6,
+      "trimEnd": 1.447458
+    },
+    {
+      "id": "11-close",
+      "text": "Koma. Jeda sebentar, cerita apa aja.",
+      "file": "assets/voice/11-close.mp3",
+      "duration": 4.416,
+      "words": [
+        {
+          "text": "Koma",
+          "start": 0.1,
+          "end": 0.748583
+        },
+        {
+          "text": "Jeda",
+          "start": 1.535125,
+          "end": 1.806333
+        },
+        {
+          "text": "sebentar",
+          "start": 1.806375,
+          "end": 2.419583
+        },
+        {
+          "text": "cerita",
+          "start": 2.667208,
+          "end": 2.973791
+        },
+        {
+          "text": "apa",
+          "start": 2.973833,
+          "end": 3.127124
+        },
+        {
+          "text": "aja",
+          "start": 3.127125,
+          "end": 3.610625
+        }
+      ],
+      "start": 30.9,
+      "trimEnd": 3.7906250000000004
+    }
+  ]
+}

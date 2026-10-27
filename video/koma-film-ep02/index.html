@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+<html lang="id" data-resolution="portrait" data-composition-variables='[{"id":"paper","type":"color","label":"Paper","default":"#F7F4EE"},{"id":"accent","type":"color","label":"Koma Violet","default":"#5A46D6"},{"id":"cta","type":"string","label":"Verified website","default":"ruangkoma.web.id"}]'>
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=1080,height=1920">
+  <title>Koma Episode 02 — Pesan yang Nggak Pernah Terkirim</title>
+  <script src="assets/vendor/gsap.min.js"></script>
+  <style>
+    @font-face { font-family: 'Koma Serif'; src: local('Georgia'); font-weight: 400; }
+    @font-face { font-family: 'Koma Serif'; src: local('Georgia Bold'); font-weight: 700 900; }
+    @font-face { font-family: 'Koma Serif'; src: local('Georgia Italic'); font-style: italic; }
+    @font-face { font-family: 'Koma Mono'; src: local('Courier New'); font-weight: 400; }
+    @font-face { font-family: 'Koma Mono'; src: local('Courier New Bold'); font-weight: 700 900; }
+    @font-face { font-family: 'Koma Sans'; src: local('Arial'); font-weight: 400; }
+    @font-face { font-family: 'Koma Sans'; src: local('Arial Bold'); font-weight: 700; }
+
+    * { box-sizing: border-box; }
+    html, body {
+      margin: 0;
+      width: 1080px;
+      height: 1920px;
+      overflow: hidden;
+      background: #F7F4EE;
+      color: #1D1B18;
+      font-family: 'Koma Serif';
+    }
+    #root {
+      position: absolute;
+      inset: 0;
+      overflow: hidden;
+    }
+    .clip {
+      position: absolute;
+      inset: 0;
+    }
+  </style>
+</head>
+<body>
+  <div id="root" data-composition-id="main" data-start="0" data-duration="19.0" data-width="1080" data-height="1920" data-fps="30">
+    <!-- Music Bed -->
+    <audio id="music" class="clip" data-start="0" data-duration="19.0" data-track-index="3" data-volume="0.8" data-fade-in="0.3" data-fade-out="1.5" src="assets/audio/music-bed.mp3"></audio>
+
+    <!-- Voiceover Tracks (MiniMax Indonesian HD) -->
+    <audio id="voice-1" class="clip" data-start="0.15" data-duration="3.65" data-track-index="0" data-volume="1.0" src="assets/voice/01-hook.mp3"></audio>
+    <audio id="voice-2" class="clip" data-start="3.90" data-duration="5.10" data-track-index="0" data-volume="1.0" src="assets/voice/02-hesitation.mp3"></audio>
+    <audio id="voice-3" class="clip" data-start="9.20" data-duration="4.45" data-track-index="0" data-volume="1.0" src="assets/voice/03-fragments.mp3"></audio>
+    <audio id="voice-4" class="clip" data-start="13.80" data-duration="4.85" data-track-index="0" data-volume="1.0" src="assets/voice/04-brand.mp3"></audio>
+
+    <!-- Tactile Foley / SFX -->
+    <audio id="sfx-typing" class="clip" data-start="0.45" data-duration="1.5" data-track-index="4" data-volume="0.25" src="assets/audio/typing.mp3"></audio>
+    <audio id="sfx-whoosh1" class="clip" data-start="3.55" data-duration="0.55" data-track-index="5" data-volume="0.2" src="assets/audio/whoosh-short.mp3"></audio>
+    <audio id="sfx-click" class="clip" data-start="6.50" data-duration="0.36" data-track-index="6" data-volume="0.28" src="assets/audio/click-soft.mp3"></audio>
+    <audio id="sfx-backspace" class="clip" data-start="7.10" data-duration="0.068" data-track-index="7" data-volume="0.3" src="assets/audio/BACKSPACE.mp3"></audio>
+    <audio id="sfx-whoosh2" class="clip" data-start="8.85" data-duration="0.55" data-track-index="8" data-volume="0.2" src="assets/audio/whoosh-short.mp3"></audio>
+    <audio id="sfx-pop" class="clip" data-start="10.80" data-duration="0.6" data-track-index="9" data-volume="0.2" src="assets/audio/pop.mp3"></audio>
+    <audio id="sfx-whoosh3" class="clip" data-start="13.45" data-duration="0.55" data-track-index="10" data-volume="0.2" src="assets/audio/whoosh-short.mp3"></audio>
+    <audio id="sfx-impact" class="clip" data-start="13.85" data-duration="2.11" data-track-index="11" data-volume="0.22" src="assets/audio/impact-bass-1.mp3"></audio>
+
+    <!-- Visual Scenes (Sub-compositions) -->
+    <div id="scene1" class="clip" data-composition-id="scene1" data-composition-src="compositions/scene1-hook.html" data-start="0" data-duration="3.8" data-track-index="0" data-track-kind="graphics" data-width="1080" data-height="1920"></div>
+    <div id="scene2" class="clip" data-composition-id="scene2" data-composition-src="compositions/scene2-hesitation.html" data-start="3.8" data-duration="5.3" data-track-index="0" data-track-kind="graphics" data-width="1080" data-height="1920"></div>
+    <div id="scene3" class="clip" data-composition-id="scene3" data-composition-src="compositions/scene3-fragments.html" data-start="9.1" data-duration="4.6" data-track-index="0" data-track-kind="graphics" data-width="1080" data-height="1920"></div>
+    <div id="scene4" class="clip" data-composition-id="scene4" data-composition-src="compositions/scene4-brand.html" data-start="13.7" data-duration="5.3" data-track-index="0" data-track-kind="graphics" data-width="1080" data-height="1920"></div>
+
+    <!-- Animated Dynamic Captions -->
+    <div id="captions" class="clip" data-composition-id="captions" data-composition-src="compositions/captions.html" data-start="0" data-duration="19.0" data-track-index="1" data-track-kind="captions" data-width="1080" data-height="1920" style="z-index: 100; pointer-events: none;"></div>
+  </div>
+
+  <script>
+    window.__timelines = window.__timelines || {};
+    const tl = gsap.timeline({ paused: true });
+    tl.set({}, {}, 19.0);
+    window.__timelines.main = tl;
+  </script>
+</body>
+</html>

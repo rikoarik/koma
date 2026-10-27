@@ -1,0 +1,7 @@
+<svg width="160" height="40" viewBox="0 0 160 40" fill="none" xmlns="http://www.w3.org/2000/svg">
+  <!-- Washi Kraft Paper Tape with ripped jagged edges -->
+  <path d="M0 6 L8 2 L14 7 L20 1 L28 8 L35 3 L152 4 L158 8 L154 18 L160 25 L153 32 L159 38 L150 36 L144 39 L138 35 L12 36 L6 39 L0 34 L5 25 L1 18 L6 12 Z" 
+        fill="#DCCDBB" fill-opacity="0.82" stroke="#B8A38B" stroke-width="0.8"/>
+  <line x1="15" y1="12" x2="145" y2="12" stroke="#C5B198" stroke-width="0.8" stroke-dasharray="8 4" opacity="0.6"/>
+  <line x1="15" y1="26" x2="145" y2="26" stroke="#C5B198" stroke-width="0.8" stroke-dasharray="12 6" opacity="0.6"/>
+</svg>

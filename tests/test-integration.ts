@@ -90,7 +90,12 @@ async function runTests() {
     sessionB
   );
 
-  assert(Boolean(replyRes.reply && replyRes.reply.id), 'Reply added to post with "boleh_dibalas"');
+  assert(
+    editOwnerRes.moderation?.state === 'published'
+      ? Boolean(replyRes.reply && replyRes.reply.id)
+      : Boolean(replyRes.error && !replyRes.reply),
+    'Replies require a published post, even with "boleh_dibalas"'
+  );
 
   // Create "cukup_didengar" post and verify replies are blocked
   const listenOnlyPost = await createPost(
@@ -134,7 +139,10 @@ async function runTests() {
   assert(acakFeed.length > 0, 'Acak feed returns shuffled posts');
 
   const searchFeed = await getFilteredPosts('terbaru', undefined, 'disunting');
-  assert(searchFeed.length > 0, 'Search query filter works accurately');
+  assert(
+    searchFeed.some((post) => post.id === testPostId) === (editOwnerRes.moderation?.state === 'published'),
+    'Search includes the edited post only when it is published'
+  );
 
   console.log('\n--- 6. Testing AI Content Studio (3 Suggestions) ---');
   const categories: StudioCategory[] = [

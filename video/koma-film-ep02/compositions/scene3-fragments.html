@@ -1,0 +1,202 @@
+<template>
+<style>
+@font-face { font-family: 'Koma Serif'; src: local('Georgia'); font-weight: 400; }
+@font-face { font-family: 'Koma Serif'; src: local('Georgia Bold'); font-weight: 700 900; }
+@font-face { font-family: 'Koma Serif'; src: local('Georgia Italic'); font-style: italic; }
+@font-face { font-family: 'Koma Mono'; src: local('Courier New'); font-weight: 400; }
+@font-face { font-family: 'Koma Mono'; src: local('Courier New Bold'); font-weight: 700 900; }
+
+* { box-sizing: border-box; }
+#root { position: absolute; inset: 0; overflow: hidden; width: 1080px; height: 1920px; background: #F7F4EE; }
+
+.scene {
+  position: absolute;
+  inset: 0;
+  background: linear-gradient(#F7F4EEe0, #F7F4EEe0), url('assets/visual/paper-texture.webp') center/1080px 1080px;
+}
+
+.header-group {
+  position: absolute;
+  left: 110px;
+  top: 230px;
+  width: 860px;
+}
+
+.kicker {
+  font-family: 'Koma Mono';
+  font-size: 28px;
+  font-weight: 700;
+  color: #3F2EA6;
+  letter-spacing: 2px;
+  margin-bottom: 14px;
+}
+
+.headline {
+  font-family: 'Koma Serif';
+  font-size: 104px;
+  line-height: 1.04;
+  letter-spacing: -4px;
+  font-weight: 700;
+  color: #1D1B18;
+  margin: 0;
+}
+.violet-italic {
+  font-style: italic;
+  color: #5A46D6;
+}
+
+.sub-mono {
+  font-family: 'Koma Mono';
+  font-size: 32px;
+  font-weight: 700;
+  color: #5C564E;
+  letter-spacing: -0.5px;
+  margin-top: 24px;
+}
+
+/* Floating collage paper scraps */
+.scrap {
+  position: absolute;
+  background: #FAF8F5;
+  border: 2px solid #CBC3B5;
+  border-radius: 4px;
+  padding: 24px 34px;
+  box-shadow: 8px 14px 0 #1D1B1812, 0 16px 32px #1D1B180e;
+  font-family: 'Koma Serif';
+  color: #1D1B18;
+  z-index: 2;
+}
+
+.scrap-1 {
+  left: 130px;
+  top: 680px;
+  font-size: 44px;
+  transform: rotate(-3deg);
+  background: #FAF8F5;
+}
+.scrap-2 {
+  left: 480px;
+  top: 780px;
+  font-size: 40px;
+  transform: rotate(2.5deg);
+  background: #F4EFE6;
+}
+.scrap-3 {
+  left: 150px;
+  top: 880px;
+  font-size: 42px;
+  transform: rotate(-1.5deg);
+  background: #ECE9FE;
+  border-color: #5A46D655;
+  color: #3F2EA6;
+}
+.scrap-4 {
+  left: 490px;
+  top: 980px;
+  font-size: 38px;
+  font-family: 'Koma Mono';
+  font-weight: 700;
+  transform: rotate(3deg);
+  background: #FAF8F5;
+}
+
+.stamp-badge {
+  position: absolute;
+  left: 140px;
+  top: 1040px;
+  width: 190px;
+  opacity: 0.92;
+  transform: rotate(-6deg);
+}
+
+.tape-asset-1 {
+  position: absolute;
+  left: 180px;
+  top: 658px;
+  width: 160px;
+  height: 42px;
+  z-index: 3;
+}
+.tape-asset-2 {
+  position: absolute;
+  left: 560px;
+  top: 760px;
+  width: 170px;
+  height: 44px;
+  z-index: 3;
+}
+</style>
+
+<div id="root" data-composition-id="scene3" data-width="1080" data-height="1920" data-duration="4.6">
+  <div id="s3-canvas" class="scene">
+    <div class="header-group" id="s3-header">
+      <div class="kicker" id="s3-kicker">KEHENINGAN :</div>
+      <h1 class="headline" id="s3-title">
+        Padahal...<br>
+        <span class="violet-italic">masih pengen cerita.</span>
+      </h1>
+      <div class="sub-mono" id="s3-sub">
+        cuma bingung mau dikasih ke siapa.
+      </div>
+    </div>
+
+    <!-- Floating scraps -->
+    <div class="scrap scrap-1" id="s3-sc1">
+      "takut ganggu aja sih..."
+    </div>
+    <img src="assets/visual/tape-purple.svg" class="tape-asset-1" id="s3-tape1" alt="" data-layout-ignore>
+
+    <div class="scrap scrap-2" id="s3-sc2">
+      "kemarin tuh sebenarnya..."
+    </div>
+    <img src="assets/visual/tape-kraft.svg" class="tape-asset-2" id="s3-tape2" alt="" data-layout-ignore>
+
+    <div class="scrap scrap-3" id="s3-sc3">
+      "nggak penting kali ya buat orang lain."
+    </div>
+
+    <div class="scrap scrap-4" id="s3-sc4">
+      [ DIBIARKAN TERTULIS ]
+    </div>
+
+    <img src="assets/visual/stamp-dengar.svg" class="stamp-badge" id="s3-stamp" alt="" data-layout-ignore>
+  </div>
+</div>
+
+<script>
+(() => {
+  const tl = gsap.timeline({ paused: true });
+
+  // Scene 3 entrance
+  tl.fromTo('#s3-kicker', { y: -20, opacity: 0 }, { y: 0, opacity: 1, duration: 0.35, ease: 'power2.out' }, 0.05);
+  tl.fromTo('#s3-title', { y: 35, opacity: 0 }, { y: 0, opacity: 1, duration: 0.45, ease: 'power3.out' }, 0.12);
+  tl.fromTo('#s3-sub', { opacity: 0, y: 15 }, { opacity: 1, y: 0, duration: 0.4, ease: 'power2.out' }, 0.3);
+
+  // Staggered arrival of floating scraps
+  tl.fromTo(['#s3-sc1', '#s3-tape1'], { y: 50, opacity: 0, rotation: -6 }, { y: 0, opacity: 1, rotation: -3, duration: 0.5, ease: 'back.out(1.2)' }, 0.45);
+  tl.fromTo(['#s3-sc2', '#s3-tape2'], { y: 60, opacity: 0, rotation: 6 }, { y: 0, opacity: 1, rotation: 2.5, duration: 0.5, ease: 'back.out(1.2)' }, 0.7);
+  tl.fromTo('#s3-sc3', { y: 60, opacity: 0, rotation: -4 }, { y: 0, opacity: 1, rotation: -1.5, duration: 0.5, ease: 'back.out(1.2)' }, 0.95);
+  tl.fromTo('#s3-sc4', { y: 50, opacity: 0, rotation: 5 }, { y: 0, opacity: 1, rotation: 3, duration: 0.45, ease: 'back.out(1.2)' }, 1.2);
+  tl.fromTo('#s3-stamp', { scale: 1.8, opacity: 0, rotation: -20 }, { scale: 1, opacity: 0.92, rotation: -6, duration: 0.35, ease: 'back.out(1.6)' }, 1.4);
+
+  // Micro floating motion
+  tl.to('#s3-sc1', { y: -10, rotation: -2.5, duration: 1.5, yoyo: true, repeat: 1, ease: 'sine.inOut' }, 1.5);
+  tl.to('#s3-sc2', { y: 8, rotation: 3, duration: 1.5, yoyo: true, repeat: 1, ease: 'sine.inOut' }, 1.5);
+  tl.to('#s3-sc3', { y: -8, rotation: -1, duration: 1.5, yoyo: true, repeat: 1, ease: 'sine.inOut' }, 1.55);
+
+  // Convergence transition: pieces collapse inward toward center (4.2s - 4.5s)
+  tl.to(['#s3-sc1', '#s3-sc2', '#s3-sc3', '#s3-sc4', '#s3-stamp', '#s3-tape1', '#s3-tape2'], {
+    scale: 0.85,
+    opacity: 0,
+    y: 80,
+    duration: 0.3,
+    ease: 'power3.in'
+  }, 4.22);
+  tl.to(['#s3-title', '#s3-sub', '#s3-kicker'], { opacity: 0, duration: 0.25 }, 4.26);
+
+  tl.set({}, {}, 4.6);
+  window.__timelines = window.__timelines || {};
+  window.__timelines['scene3'] = tl;
+})();
+</script>
+</template>

@@ -1,0 +1,188 @@
+[
+  {
+    "id": "01-hook",
+    "text": "Pernah ngetik panjang... terus dihapus semua?",
+    "start": 0.2,
+    "file": "assets/voice/01-hook.mp3",
+    "duration": 3.0,
+    "words": [
+      {
+        "text": "Pernah",
+        "start": 0.098,
+        "end": 0.382
+      },
+      {
+        "text": "ngetik",
+        "start": 0.382,
+        "end": 0.575
+      },
+      {
+        "text": "panjang",
+        "start": 0.575,
+        "end": 1.064
+      },
+      {
+        "text": "terus",
+        "start": 1.234,
+        "end": 1.461
+      },
+      {
+        "text": "dihapus",
+        "start": 1.461,
+        "end": 1.745
+      },
+      {
+        "text": "semua",
+        "start": 1.745,
+        "end": 2.223
+      }
+    ]
+  },
+  {
+    "id": "02-hesitation",
+    "text": "Udah ditulis, dibaca ulang, nggak jadi dikirim.",
+    "start": 3.8,
+    "file": "assets/voice/02-hesitation.mp3",
+    "duration": 3.888,
+    "words": [
+      {
+        "text": "Udah",
+        "start": 0.098,
+        "end": 0.336
+      },
+      {
+        "text": "ditulis",
+        "start": 0.336,
+        "end": 0.905
+      },
+      {
+        "text": "dibaca",
+        "start": 1.132,
+        "end": 1.473
+      },
+      {
+        "text": "ulang",
+        "start": 1.473,
+        "end": 1.882
+      },
+      {
+        "text": "nggak",
+        "start": 2.132,
+        "end": 2.348
+      },
+      {
+        "text": "jadi",
+        "start": 2.348,
+        "end": 2.586
+      },
+      {
+        "text": "dikirim",
+        "start": 2.586,
+        "end": 3.12
+      }
+    ]
+  },
+  {
+    "id": "03-fragments",
+    "text": "Padahal masih pengen cerita, cuma bingung ke siapa.",
+    "start": 8.2,
+    "file": "assets/voice/03-fragments.mp3",
+    "duration": 3.48,
+    "words": [
+      {
+        "text": "Padahal",
+        "start": 0.107,
+        "end": 0.459
+      },
+      {
+        "text": "masih",
+        "start": 0.459,
+        "end": 0.698
+      },
+      {
+        "text": "pengen",
+        "start": 0.698,
+        "end": 0.891
+      },
+      {
+        "text": "cerita",
+        "start": 0.891,
+        "end": 1.425
+      },
+      {
+        "text": "cuma",
+        "start": 1.664,
+        "end": 1.88
+      },
+      {
+        "text": "bingung",
+        "start": 1.88,
+        "end": 2.118
+      },
+      {
+        "text": "ke",
+        "start": 2.118,
+        "end": 2.175
+      },
+      {
+        "text": "siapa",
+        "start": 2.175,
+        "end": 2.72
+      }
+    ]
+  },
+  {
+    "id": "04-brand",
+    "text": "Koma. Cerita apa aja, tanpa harus kirim ke siapa-siapa.",
+    "start": 12.6,
+    "file": "assets/voice/04-brand.mp3",
+    "duration": 4.92,
+    "words": [
+      {
+        "text": "Koma",
+        "start": 0.1,
+        "end": 0.748
+      },
+      {
+        "text": "Cerita",
+        "start": 1.511,
+        "end": 1.761
+      },
+      {
+        "text": "apa",
+        "start": 1.761,
+        "end": 1.909
+      },
+      {
+        "text": "aja",
+        "start": 1.909,
+        "end": 2.386
+      },
+      {
+        "text": "tanpa",
+        "start": 2.648,
+        "end": 2.898
+      },
+      {
+        "text": "harus",
+        "start": 2.898,
+        "end": 3.091
+      },
+      {
+        "text": "kirim",
+        "start": 3.091,
+        "end": 3.318
+      },
+      {
+        "text": "ke",
+        "start": 3.318,
+        "end": 3.375
+      },
+      {
+        "text": "siapa-siapa",
+        "start": 3.375,
+        "end": 4.148
+      }
+    ]
+  }
+]

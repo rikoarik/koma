@@ -11,7 +11,8 @@ export const metadata: Metadata = {
   robots: { index: false, follow: true }, // The interactive feed includes publicly visible, non-consenting posts.
 };
 
-export default async function JelajahPage() {
-  const posts = await getFilteredPosts('populer');
-  return <JelajahClient initialPosts={posts} />;
+export default async function JelajahPage({ searchParams }: { searchParams: { q?: string } }) {
+  const query = typeof searchParams.q === 'string' ? searchParams.q.trim().slice(0, 100) : '';
+  const posts = await getFilteredPosts('populer', undefined, query || undefined);
+  return <JelajahClient initialPosts={posts} initialQuery={query} />;
 }

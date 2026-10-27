@@ -1,0 +1,13 @@
+{
+  "$schema": "https://hyperframes.heygen.com/schema/hyperframes.json",
+  "name": "koma-film-ep02",
+  "title": "Koma Episode 02 — Pesan yang Nggak Pernah Terkirim",
+  "fps": 30,
+  "width": 1080,
+  "height": 1920,
+  "duration": 19.0,
+  "paths": {
+    "blocks": "compositions",
+    "assets": "assets"
+  }
+}

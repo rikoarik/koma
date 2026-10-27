@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html lang="id" data-resolution="portrait" data-composition-variables='[{"id":"paper","type":"color","label":"Paper","default":"#F7F4EE"},{"id":"accent","type":"color","label":"Koma Violet","default":"#5A46D6"},{"id":"cta","type":"string","label":"Verified website","default":"ruangkoma.web.id"}]'>
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=1080,height=1920">
+  <title>Koma Episode 03 — Isi Kepala Jam 2 Pagi</title>
+  <script src="assets/vendor/gsap.min.js"></script>
+  <style>
+    @font-face { font-family: 'Koma Serif'; src: local('Georgia'); font-weight: 400; }
+    @font-face { font-family: 'Koma Serif'; src: local('Georgia Bold'); font-weight: 700 900; }
+    @font-face { font-family: 'Koma Serif'; src: local('Georgia Italic'); font-style: italic; }
+    @font-face { font-family: 'Koma Mono'; src: local('Courier New'); font-weight: 400; }
+    @font-face { font-family: 'Koma Mono'; src: local('Courier New Bold'); font-weight: 700 900; }
+
+    * { box-sizing: border-box; }
+    html, body {
+      margin: 0;
+      width: 1080px;
+      height: 1920px;
+      overflow: hidden;
+      background: #F7F4EE;
+      color: #1D1B18;
+      font-family: 'Koma Serif';
+    }
+    #root {
+      position: absolute;
+      inset: 0;
+      overflow: hidden;
+    }
+    .clip {
+      position: absolute;
+      inset: 0;
+    }
+  </style>
+</head>
+<body>
+  <div id="root" data-composition-id="main" data-start="0" data-duration="26.0" data-width="1080" data-height="1920" data-fps="30">
+    <!-- Master Voiceover Track (Authoritative Audio) -->
+    <audio id="voice-master" class="clip" data-start="0.10" data-duration="24.96" data-track-index="0" data-volume="1.0" src="assets/voice/voiceover-master.mp3"></audio>
+
+    <!-- Nighttime Ambience & Clock -->
+    <audio id="sfx-night" class="clip" data-start="0" data-duration="5.5" data-track-index="1" data-volume="0.35" src="assets/audio/night-ambience.mp3"></audio>
+    <audio id="sfx-clock" class="clip" data-start="0.2" data-duration="2.5" data-track-index="2" data-volume="0.6" src="assets/audio/clock-ticks.mp3"></audio>
+    <audio id="sfx-rewind" class="clip" data-start="4.65" data-duration="0.85" data-track-index="3" data-volume="0.65" src="assets/audio/rewind-archive.mp3"></audio>
+
+    <!-- Music Cues & Comedic Accents -->
+    <audio id="music-memory" class="clip" data-start="5.75" data-duration="3.0" data-track-index="4" data-volume="0.32" src="assets/audio/music-memory.mp3"></audio>
+    <audio id="sfx-scratch" class="clip" data-start="8.85" data-duration="0.45" data-track-index="5" data-volume="0.75" src="assets/audio/record-scratch.mp3"></audio>
+    <audio id="sfx-cricket" class="clip" data-start="9.50" data-duration="0.65" data-track-index="6" data-volume="0.45" src="assets/audio/cricket-chirp.mp3"></audio>
+    <audio id="sfx-thud" class="clip" data-start="12.35" data-duration="0.40" data-track-index="7" data-volume="0.6" src="assets/audio/facepalm-thud.mp3"></audio>
+    <audio id="sfx-whoosh" class="clip" data-start="13.35" data-duration="0.55" data-track-index="8" data-volume="0.25" src="assets/audio/whoosh-short.mp3"></audio>
+    <audio id="sfx-pop" class="clip" data-start="16.45" data-duration="0.70" data-track-index="9" data-volume="0.3" src="assets/audio/pop.mp3"></audio>
+    <audio id="music-outro" class="clip" data-start="20.10" data-duration="5.8" data-track-index="10" data-volume="0.36" src="assets/audio/music-outro.mp3"></audio>
+    <audio id="sfx-impact" class="clip" data-start="24.60" data-duration="1.40" data-track-index="11" data-volume="0.35" src="assets/audio/impact-bass-1.mp3"></audio>
+
+    <!-- Visual Scenes (Sub-compositions) -->
+    <div id="scene1" class="clip" data-composition-id="scene1" data-composition-src="compositions/scene1-midnight.html" data-start="0" data-duration="5.5" data-track-index="0" data-track-kind="graphics" data-width="1080" data-height="1920"></div>
+    <div id="scene2" class="clip" data-composition-id="scene2" data-composition-src="compositions/scene2-dadah.html" data-start="5.5" data-duration="8.0" data-track-index="0" data-track-kind="graphics" data-width="1080" data-height="1920"></div>
+    <div id="scene3" class="clip" data-composition-id="scene3" data-composition-src="compositions/scene3-otak.html" data-start="13.5" data-duration="6.5" data-track-index="0" data-track-kind="graphics" data-width="1080" data-height="1920"></div>
+    <div id="scene4" class="clip" data-composition-id="scene4" data-composition-src="compositions/scene4-koma.html" data-start="20.0" data-duration="6.0" data-track-index="0" data-track-kind="graphics" data-width="1080" data-height="1920"></div>
+
+    <!-- Animated Dynamic Captions -->
+    <div id="captions" class="clip" data-composition-id="captions" data-composition-src="compositions/captions.html" data-start="0" data-duration="26.0" data-track-index="1" data-track-kind="captions" data-width="1080" data-height="1920" style="z-index: 100; pointer-events: none;"></div>
+  </div>
+
+  <script>
+    window.__timelines = window.__timelines || {};
+    const tl = gsap.timeline({ paused: true });
+    tl.set({}, {}, 26.0);
+    window.__timelines.main = tl;
+  </script>
+</body>
+</html>

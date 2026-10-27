@@ -1,0 +1,95 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 360 260" width="360" height="260" id="koma-stacked-logo">
+  
+  <!-- Centered Symbol Mark -->
+  <g id="koma-symbol-top" data-layer="symbol" fill="#5A46D6">
+    <path id="glyph-comma-stacked" d="
+    M 163.6 68
+    A 22.4 22.4 0 0 1 208.4 68
+    C 208.4 88.16, 197.648 106.304, 163.6 118.4
+    C 170.32 110.84, 181.1 98.8, 182.5 90.4
+    C 182.5 89, 163.6 84.8, 163.6 68
+    Z
+  " />
+  </g>
+  <!-- Centered Wordmark (no trailing comma) -->
+  <g id="koma-wordmark-bottom" data-layer="wordmark" transform="translate(0, 100)" fill="#1D1B18">
+    
+    <g id="glyph-k" class="koma-glyph" data-letter="k">
+      <rect x="26" y="24" width="17" height="88" rx="0.75" />
+      <path d="
+        M 42.5 81.5
+        L 78 56
+        L 97 56
+        L 59 83
+        L 98 112
+        L 77 112
+        L 48.5 90.5
+        L 42.5 95
+        Z
+      " />
+    </g>
+  
+    
+    <g id="glyph-o" class="koma-glyph" data-letter="o">
+      <path fill-rule="evenodd" d="
+        M 133.5 55
+        A 28.5 28.5 0 1 1 133.49 55
+        Z
+        M 133.5 72
+        A 11.5 11.5 0 1 0 133.51 72
+        Z
+      " />
+    </g>
+  
+    
+    <g id="glyph-m" class="koma-glyph" data-letter="m">
+      <path d="
+        M 171 56
+        L 187.5 56
+        L 187.5 67
+        C 192.5 59.5, 201 55, 212.5 55
+        C 223.5 55, 231 60.5, 234.5 69.5
+        C 240.5 59.5, 249 55, 260.5 55
+        C 273.5 55, 280.5 63.5, 280.5 78
+        L 280.5 112
+        L 264 112
+        L 264 79.5
+        C 264 73.5, 260.5 70, 254.5 70
+        C 247.5 70, 242.5 74.5, 242.5 82
+        L 242.5 112
+        L 226 112
+        L 226 79.5
+        C 226 73.5, 222.5 70, 216 70
+        C 209 70, 204 74.5, 204 82
+        L 204 112
+        L 171 112
+        Z
+      " />
+    </g>
+  
+    
+    <g id="glyph-a" class="koma-glyph" data-letter="a">
+      <path fill-rule="evenodd" d="
+        M 316 55
+        C 331 55, 342.5 65, 345 76.5
+        L 345 56
+        L 361.5 56
+        L 361.5 112
+        L 345.5 112
+        L 345.5 102
+        C 342 108.5, 331.5 113, 317.5 113
+        C 301.5 113, 289 99.5, 289 83.5
+        C 289 68, 301 55, 316 55
+        Z
+        M 318 71.5
+        C 308 71.5, 305 77, 305 83.5
+        C 305 90.5, 308 96.5, 318 96.5
+        C 328 96.5, 345 90.5, 345 83.5
+        C 345 77, 328 71.5, 318 71.5
+        Z
+      " />
+    </g>
+  
+  </g>
+</svg>

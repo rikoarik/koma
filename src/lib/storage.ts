@@ -522,6 +522,26 @@ export async function getSearchEligiblePosts(): Promise<Post[]> {
   return eligiblePosts(await getFilteredPosts('terbaru'));
 }
 
+/** Author-only withdrawal; never grants consent without a fresh explicit author action. */
+export async function withdrawSearchConsent(postId: string, sessionId: string, providedSecret?: string): Promise<boolean> {
+  if (isPostgresConfigured && db) {
+    await ensurePostgresTables();
+    const [post] = await db.select({ sessionId: schema.posts.sessionId, deleteSecretHash: schema.posts.deleteSecretHash })
+      .from(schema.posts).where(eq(schema.posts.id, postId));
+    if (!post || (post.sessionId !== sessionId && (!providedSecret || post.deleteSecretHash !== hashSecret(providedSecret)))) return false;
+    await db.update(schema.posts).set({ searchConsent: false, updatedAt: new Date() })
+      .where(and(eq(schema.posts.id, postId), eq(schema.posts.searchConsent, true)));
+    return true;
+  }
+  const store = getLocalStore();
+  const post = store.posts.find((item) => item.id === postId);
+  if (!post || (post.sessionId !== sessionId && (!providedSecret || post.deleteSecretHash !== hashSecret(providedSecret)))) return false;
+  post.searchConsent = false;
+  post.updatedAt = new Date();
+  saveLocalStore(store);
+  return true;
+}
+
 export async function getSearchVisibilitySummary() {
   const all = isPostgresConfigured && db
     ? (await ensurePostgresTables(), await db.select().from(schema.posts))

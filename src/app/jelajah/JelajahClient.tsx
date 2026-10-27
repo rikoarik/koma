@@ -32,13 +32,17 @@ const PRESET_TOPICS = [
   { id: 'visual-zine', label: '#visual-zine' },
 ];
 
-export default function JelajahClient({ initialPosts }: { initialPosts: Post[] }) {
+export default function JelajahClient({ initialPosts, initialQuery = '' }: { initialPosts: Post[]; initialQuery?: string }) {
   const [posts, setPosts] = useState<Post[]>(initialPosts);
   const [filter, setFilter] = useState<FeedFilter>('populer');
   const [activeTopic, setActiveTopic] = useState('semua');
-  const [searchQuery, setSearchQuery] = useState('');
+  const [searchQuery, setSearchQuery] = useState(initialQuery);
   const [isLoading, setIsLoading] = useState(false);
   const [totalCount, setTotalCount] = useState(0);
+
+  useEffect(() => {
+    setSearchQuery(initialQuery);
+  }, [initialQuery]);
 
   // Modals
   const [isComposerOpen, setIsComposerOpen] = useState(false);
@@ -252,10 +256,21 @@ export default function JelajahClient({ initialPosts }: { initialPosts: Post[] }
           </p>
 
           {/* Search Box */}
-          <div className="relative pt-2">
+          <form
+            action="/jelajah"
+            method="get"
+            toolname="search_public_coretan"
+            tooldescription="Cari coretan yang sudah tampil publik di Koma berdasarkan kata, topik, atau nama samaran. Hasil dapat memuat coretan yang tidak diizinkan untuk indeks mesin pencari; jangan salin atau sebarkan di luar Koma. Hanya membaca, tidak menerbitkan atau mengubah coretan."
+            className="relative pt-2"
+            role="search"
+          >
             <Search className="absolute left-3.5 top-5 w-4 h-4 text-ink-muted" />
             <input
-              type="text"
+              type="search"
+              name="q"
+              aria-label="Cari coretan publik"
+              toolparamdescription="Kata atau topik dalam coretan publik Koma, maksimal 100 karakter."
+              maxLength={100}
               value={searchQuery}
               onChange={(e) => setSearchQuery(e.target.value)}
               placeholder="Cari kata kunci, topik (#tengah-malam), atau nama samaran..."
@@ -263,6 +278,7 @@ export default function JelajahClient({ initialPosts }: { initialPosts: Post[] }
             />
             {searchQuery && (
               <button
+                type="button"
                 onClick={() => setSearchQuery('')}
                 className="absolute right-3.5 top-5 p-0.5 text-ink-muted hover:text-ink rounded-full"
                 title="Hapus pencarian"
@@ -270,7 +286,8 @@ export default function JelajahClient({ initialPosts }: { initialPosts: Post[] }
                 <X className="w-4 h-4" />
               </button>
             )}
-          </div>
+            <button type="submit" className="sr-only">Cari coretan</button>
+          </form>
         </div>
 
         {/* Filter & Topic Bar */}

@@ -1,0 +1,265 @@
+<template>
+<style>
+@font-face { font-family: 'Koma Serif'; src: local('Georgia'); font-weight: 400; }
+@font-face { font-family: 'Koma Serif'; src: local('Georgia Bold'); font-weight: 700 900; }
+@font-face { font-family: 'Koma Serif'; src: local('Georgia Italic'); font-style: italic; }
+@font-face { font-family: 'Koma Mono'; src: local('Courier New'); font-weight: 400; }
+@font-face { font-family: 'Koma Mono'; src: local('Courier New Bold'); font-weight: 700 900; }
+
+* { box-sizing: border-box; }
+#root { position: absolute; inset: 0; overflow: hidden; width: 1080px; height: 1920px; background: #F7F4EE; }
+
+.scene {
+  position: absolute;
+  inset: 0;
+  background: linear-gradient(#F7F4EEe8, #F7F4EEe8), url('assets/visual/paper-texture.webp') center/1080px 1080px;
+}
+
+/* Safe Zone Header (x=110, y=210) */
+.header-meta {
+  position: absolute;
+  left: 110px;
+  top: 210px;
+  display: flex;
+  align-items: center;
+  gap: 16px;
+  font-family: 'Koma Mono';
+  font-size: 28px;
+  font-weight: 700;
+  color: #5C564E;
+  letter-spacing: 2px;
+}
+.status-pill {
+  background: #ECE9FE;
+  color: #3F2EA6;
+  padding: 6px 16px;
+  border: 1px solid #CBC3B5;
+  border-radius: 4px;
+}
+
+.headline-wrap {
+  position: absolute;
+  left: 110px;
+  top: 275px;
+  width: 860px;
+}
+.headline {
+  font-family: 'Koma Serif';
+  font-size: 108px;
+  line-height: 1.02;
+  letter-spacing: -4px;
+  font-weight: 700;
+  color: #1D1B18;
+  margin: 0;
+}
+.highlight-tape {
+  position: relative;
+  display: inline-block;
+  color: #FFFDF8 !important;
+  background: #5A46D6;
+  padding: 8px 24px 14px;
+  box-shadow: 6px 10px 0 #1D1B1818;
+  transform: rotate(-1.5deg);
+}
+
+/* Clock Card */
+.clock-card {
+  position: absolute;
+  left: 110px;
+  top: 660px;
+  width: 860px;
+  background: #FAF8F5;
+  border: 2px solid #CBC3B5;
+  border-radius: 8px;
+  padding: 40px 48px;
+  box-shadow: 10px 18px 0 #1D1B1812, 0 20px 40px #1D1B1810;
+}
+.clock-header {
+  display: flex;
+  justify-content: space-between;
+  padding-bottom: 20px;
+  border-bottom: 2px dashed #CBC3B5;
+  font-family: 'Koma Mono';
+  font-size: 28px;
+  color: #5C564E;
+  font-weight: 700;
+}
+
+.clock-display {
+  display: flex;
+  align-items: baseline;
+  justify-content: center;
+  margin: 32px 0 20px;
+  font-family: 'Koma Mono';
+  font-size: 150px;
+  font-weight: 900;
+  line-height: 1;
+  letter-spacing: -4px;
+  color: #1D1B18;
+}
+.clock-ampm {
+  font-size: 40px;
+  font-weight: 700;
+  color: #5A46D6;
+  margin-left: 20px;
+}
+.clock-sub {
+  text-align: center;
+  font-family: 'Koma Serif';
+  font-style: italic;
+  font-size: 38px;
+  color: #5C564E;
+}
+
+/* Brain Alert Window (Pops at 3.75s) */
+.brain-alert {
+  position: absolute;
+  left: 110px;
+  top: 610px;
+  width: 860px;
+  background: #1D1B18;
+  color: #FFFDF8;
+  border: 3px solid #5A46D6;
+  border-radius: 8px;
+  padding: 36px 40px;
+  box-shadow: 12px 20px 0 #5A46D6, 0 30px 60px #1D1B1844;
+  z-index: 10;
+}
+.alert-bar {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding-bottom: 16px;
+  border-bottom: 1px solid #5A46D688;
+  font-family: 'Koma Mono';
+  font-size: 28px;
+  font-weight: 700;
+  color: #ECE9FE;
+  letter-spacing: 1px;
+}
+.alert-dot {
+  width: 14px;
+  height: 14px;
+  border-radius: 50%;
+  background: #F43F5E;
+  display: inline-block;
+  margin-right: 8px;
+}
+.alert-body {
+  margin-top: 24px;
+  font-family: 'Koma Mono';
+  font-size: 32px;
+  line-height: 1.45;
+}
+.alert-prompt {
+  color: #A78BFA;
+}
+.alert-query {
+  color: #FFFDF8;
+  font-weight: 700;
+  background: #3F2EA6;
+  padding: 4px 10px;
+  border-radius: 3px;
+}
+.alert-status {
+  margin-top: 20px;
+  font-family: 'Koma Mono';
+  font-size: 28px;
+  color: #34D399;
+  letter-spacing: 1px;
+}
+
+.washi-top {
+  position: absolute;
+  width: 220px;
+  height: 52px;
+  top: -24px;
+  left: 320px;
+}
+</style>
+
+<div id="root" data-composition-id="scene1" data-width="1080" data-height="1920" data-duration="5.5">
+  <div id="s1-canvas" class="scene">
+    <!-- Header Meta -->
+    <div class="header-meta" id="s1-meta">
+      <span class="status-pill">ARSIP KEPALA // MALAM</span>
+      <span>•</span>
+      <span>02:00:00</span>
+    </div>
+
+    <!-- Bold Headline -->
+    <div class="headline-wrap" id="s1-title">
+      <h1 class="headline">
+        <span class="line-charcoal">Isi Kepala</span><br>
+        <span class="highlight-tape" id="s1-tape">Jam 2 Pagi.</span>
+      </h1>
+    </div>
+
+    <!-- Sleep Clock Card -->
+    <div class="clock-card" id="s1-clock">
+      <img src="assets/visual/tape-kraft.svg" class="washi-top" alt="" data-layout-ignore>
+      <div class="clock-header">
+        <span>STATUS: RENCANA TIDUR</span>
+        <span id="s1-sleep-stat">MATA: 98% MEREM</span>
+      </div>
+      <div class="clock-display">
+        <span>02</span><span id="s1-colon">:</span><span>00</span>
+        <span class="clock-ampm">AM</span>
+      </div>
+      <div class="clock-sub" id="s1-clock-sub">
+        "Sepuluh menit lagi pasti pules..."
+      </div>
+    </div>
+
+    <!-- Sudden Brain Terminal Alert (Hidden initially) -->
+    <div class="brain-alert" id="s1-alert" style="opacity: 0; transform: scale(0.92);" data-layout-ignore data-layout-allow-occlusion>
+      <div class="alert-bar">
+        <span><span class="alert-dot"></span>SYS_BRAIN // MEMORY_RECALL</span>
+        <span>PRIORITAS: TINGGI</span>
+      </div>
+      <div class="alert-body">
+        <span class="alert-prompt">&gt; QUERY:</span> <span class="alert-query">"Momen Paling Cringe"</span><br>
+        <span class="alert-prompt">&gt; FILE:</span> <span>insiden_dadah_salah_orang.dat</span>
+      </div>
+      <div class="alert-status" id="s1-load">
+        [ MEMUAT ULANG MEMORI 8 TAHUN LALU... ]
+      </div>
+    </div>
+  </div>
+</div>
+
+<script>
+(() => {
+  const tl = gsap.timeline({ paused: true });
+
+  // Frame 0: Hook is visible immediately (TikTok thumbnail rule)
+  tl.set('#s1-meta', { opacity: 1, y: 0 });
+  tl.set('#s1-title', { opacity: 1, y: 0 });
+  tl.set('#s1-clock', { opacity: 1, y: 0 });
+
+  // Gentle entrance stabilization
+  tl.fromTo('#s1-tape', { scaleX: 0.92, rotation: -3 }, { scaleX: 1, rotation: -1.5, duration: 0.35, ease: 'back.out(1.3)' }, 0.05);
+
+  // Blinking colon on clock
+  tl.fromTo('#s1-colon', { opacity: 1 }, { opacity: 0.2, duration: 0.45, repeat: 7, yoyo: true, ease: 'steps(1)' }, 0.2);
+
+  // At 2.15s: "Baru aja mau tidur..."
+  tl.to('#s1-clock-sub', { opacity: 0.4, y: 5, duration: 0.35 }, 2.15);
+  tl.to('#s1-sleep-stat', { color: '#5A46D6', duration: 0.2 }, 2.25);
+
+  // At 3.75s: "...terus tiba-tiba keinget!" -> Fade clock out cleanly & pop Brain Alert in!
+  tl.to('#s1-clock', { opacity: 0, duration: 0.15 }, 3.75);
+  tl.fromTo('#s1-alert', { scale: 0.8, opacity: 0, y: 30 }, { scale: 1, opacity: 1, y: 0, duration: 0.32, ease: 'back.out(1.8)' }, 3.75);
+
+  // Glitch / wobble on alert
+  tl.to('#s1-alert', { x: 8, duration: 0.05, repeat: 5, yoyo: true, ease: 'none' }, 4.1);
+
+  // Fast rewind zoom transition out into Scene 2 (5.15s - 5.5s)
+  tl.to('#s1-canvas', { scale: 1.12, opacity: 0, duration: 0.32, ease: 'power2.in' }, 5.18);
+
+  tl.set({}, {}, 5.5);
+  window.__timelines = window.__timelines || {};
+  window.__timelines['scene1'] = tl;
+})();
+</script>
+</template>

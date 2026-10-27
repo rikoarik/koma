@@ -1,0 +1,382 @@
+{
+  "version": 1,
+  "historyId": "a4427fa7-be97-4411-a86a-2dbdd740c6dd",
+  "currentRevision": null,
+  "pendingChanges": false,
+  "files": {
+    "assets/audio/clock-ticks.mp3": {
+      "hash": "4e7db156bc2b730e679e42991efed1fbc744a07f3f23587409df57702e647230",
+      "content": "/Users/macbookm2/.cache/hyperframes/history/a4427fa7-be97-4411-a86a-2dbdd740c6dd/blobs/4e/4e7db156bc2b730e679e42991efed1fbc744a07f3f23587409df57702e647230"
+    },
+    "assets/audio/cricket-chirp.mp3": {
+      "hash": "ca6d6cf182047db160930892a22c70ffe43e7bcec45671bfddf165ad3e481174",
+      "content": "/Users/macbookm2/.cache/hyperframes/history/a4427fa7-be97-4411-a86a-2dbdd740c6dd/blobs/ca/ca6d6cf182047db160930892a22c70ffe43e7bcec45671bfddf165ad3e481174"
+    },
+    "assets/audio/facepalm-thud.mp3": {
+      "hash": "2a70be6ae10f4fe98ea5842a4230a7ccbfde15105c8cde56c4c4936c3132d335",
+      "content": "/Users/macbookm2/.cache/hyperframes/history/a4427fa7-be97-4411-a86a-2dbdd740c6dd/blobs/2a/2a70be6ae10f4fe98ea5842a4230a7ccbfde15105c8cde56c4c4936c3132d335"
+    },
+    "assets/audio/impact-bass-1.mp3": {
+      "hash": "634d5eda5eb7b501aca98393a64f3815eccf24157cd1d95df55aaec1b5000bd7",
+      "content": "/Users/macbookm2/.cache/hyperframes/history/a4427fa7-be97-4411-a86a-2dbdd740c6dd/blobs/63/634d5eda5eb7b501aca98393a64f3815eccf24157cd1d95df55aaec1b5000bd7"
+    },
+    "assets/audio/music-memory.mp3": {
+      "hash": "d1685219e1d834ed725973f9d4c5961245fc28662e1f06021e545d1236631c49",
+      "content": "/Users/macbookm2/.cache/hyperframes/history/a4427fa7-be97-4411-a86a-2dbdd740c6dd/blobs/d1/d1685219e1d834ed725973f9d4c5961245fc28662e1f06021e545d1236631c49"
+    },
+    "assets/audio/music-outro.mp3": {
+      "hash": "7e9904dd06feb0e7b0aae238875175227772ca16de6433201d4e13684c95b63e",
+      "content": "/Users/macbookm2/.cache/hyperframes/history/a4427fa7-be97-4411-a86a-2dbdd740c6dd/blobs/7e/7e9904dd06feb0e7b0aae238875175227772ca16de6433201d4e13684c95b63e"
+    },
+    "assets/audio/night-ambience.mp3": {
+      "hash": "6d364c838e72bca764c25048e23618c44c38ab3cf8623a5d5565c3db6988bbf5",
+      "content": "/Users/macbookm2/.cache/hyperframes/history/a4427fa7-be97-4411-a86a-2dbdd740c6dd/blobs/6d/6d364c838e72bca764c25048e23618c44c38ab3cf8623a5d5565c3db6988bbf5"
+    },
+    "assets/audio/pop.mp3": {
+      "hash": "19ab7193f626ff57fdeef60b45543bac416fcbcec803cfb417abe4b271c1b352",
+      "content": "/Users/macbookm2/.cache/hyperframes/history/a4427fa7-be97-4411-a86a-2dbdd740c6dd/blobs/19/19ab7193f626ff57fdeef60b45543bac416fcbcec803cfb417abe4b271c1b352"
+    },
+    "assets/audio/record-scratch.mp3": {
+      "hash": "2d6a6cd107748c00a7cb687c66a39baf07fb94a881617c86851f0b205b3faf58",
+      "content": "/Users/macbookm2/.cache/hyperframes/history/a4427fa7-be97-4411-a86a-2dbdd740c6dd/blobs/2d/2d6a6cd107748c00a7cb687c66a39baf07fb94a881617c86851f0b205b3faf58"
+    },
+    "assets/audio/rewind-archive.mp3": {
+      "hash": "79a4daa671d232e8c756747334bc6478787c01255256d52c26967f4da6806ad6",
+      "content": "/Users/macbookm2/.cache/hyperframes/history/a4427fa7-be97-4411-a86a-2dbdd740c6dd/blobs/79/79a4daa671d232e8c756747334bc6478787c01255256d52c26967f4da6806ad6"
+    },
+    "assets/audio/whoosh-short.mp3": {
+      "hash": "c2efd9d902a59bf9ec5019035d7deadd17762136896b6e3cb6dd99ea50997a30",
+      "content": "/Users/macbookm2/.cache/hyperframes/history/a4427fa7-be97-4411-a86a-2dbdd740c6dd/blobs/c2/c2efd9d902a59bf9ec5019035d7deadd17762136896b6e3cb6dd99ea50997a30"
+    },
+    "assets/brand/png/favicon-192x192.png": {
+      "hash": "6a48faeaebe5d9c6dd53c08a0a55dc0e81d13f8e80cb0443b57c9e69148b8959",
+      "content": "/Users/macbookm2/.cache/hyperframes/history/a4427fa7-be97-4411-a86a-2dbdd740c6dd/blobs/6a/6a48faeaebe5d9c6dd53c08a0a55dc0e81d13f8e80cb0443b57c9e69148b8959"
+    },
+    "assets/brand/png/favicon-32x32.png": {
+      "hash": "bd2275f6517b46ecb5615558bd5d1a9a07900792cafc1da31a102a5d0af807e8",
+      "content": "/Users/macbookm2/.cache/hyperframes/history/a4427fa7-be97-4411-a86a-2dbdd740c6dd/blobs/bd/bd2275f6517b46ecb5615558bd5d1a9a07900792cafc1da31a102a5d0af807e8"
+    },
+    "assets/brand/png/favicon-64x64.png": {
+      "hash": "6b3f8757c5d1d72b72fd508f88f5f13c19dd85ca7b71d81ac0a7a259a674acd1",
+      "content": "/Users/macbookm2/.cache/hyperframes/history/a4427fa7-be97-4411-a86a-2dbdd740c6dd/blobs/6b/6b3f8757c5d1d72b72fd508f88f5f13c19dd85ca7b71d81ac0a7a259a674acd1"
+    },
+    "assets/brand/png/koma-app-icon-512.png": {
+      "hash": "4c6046daa782fe4c2dace6091aad923f76e511a76b1eacb57114826d7ee80932",
+      "content": "/Users/macbookm2/.cache/hyperframes/history/a4427fa7-be97-4411-a86a-2dbdd740c6dd/blobs/4c/4c6046daa782fe4c2dace6091aad923f76e511a76b1eacb57114826d7ee80932"
+    },
+    "assets/brand/png/koma-app-icon-ink-512.png": {
+      "hash": "cd7fb0493a03a464a940b375710ef7ffe5fc757361e15c3c39a0fcf53664ffd2",
+      "content": "/Users/macbookm2/.cache/hyperframes/history/a4427fa7-be97-4411-a86a-2dbdd740c6dd/blobs/cd/cd7fb0493a03a464a940b375710ef7ffe5fc757361e15c3c39a0fcf53664ffd2"
+    },
+    "assets/brand/png/koma-brand-specimen.png": {
+      "hash": "fdb4d8a7d12ed138ef0c6b2d41d510776e419b94d09c7f495e18de621d826ab3",
+      "content": "/Users/macbookm2/.cache/hyperframes/history/a4427fa7-be97-4411-a86a-2dbdd740c6dd/blobs/fd/fdb4d8a7d12ed138ef0c6b2d41d510776e419b94d09c7f495e18de621d826ab3"
+    },
+    "assets/brand/png/koma-logo-horizontal-color.png": {
+      "hash": "10f6e8325aed140f3c8f778533023c931592a332be8046105aaf203176bf33f8",
+      "content": "/Users/macbookm2/.cache/hyperframes/history/a4427fa7-be97-4411-a86a-2dbdd740c6dd/blobs/10/10f6e8325aed140f3c8f778533023c931592a332be8046105aaf203176bf33f8"
+    },
+    "assets/brand/png/koma-logo-horizontal-color@4x.png": {
+      "hash": "ad77902a1af09f745ace00d2862d90acf91d14ba6b824986ab26edf752257c16",
+      "content": "/Users/macbookm2/.cache/hyperframes/history/a4427fa7-be97-4411-a86a-2dbdd740c6dd/blobs/ad/ad77902a1af09f745ace00d2862d90acf91d14ba6b824986ab26edf752257c16"
+    },
+    "assets/brand/png/koma-logo-horizontal-dark.png": {
+      "hash": "71039a6db7e5b5bfafa6c21bbb2a07906a87e7f55fbc2d7183db9dd6e3fb4706",
+      "content": "/Users/macbookm2/.cache/hyperframes/history/a4427fa7-be97-4411-a86a-2dbdd740c6dd/blobs/71/71039a6db7e5b5bfafa6c21bbb2a07906a87e7f55fbc2d7183db9dd6e3fb4706"
+    },
+    "assets/brand/png/koma-logo-horizontal-ink.png": {
+      "hash": "70e9d85152339111fa7edfc5cfeb7cb76355444f59578ead49a803cf46f259fa",
+      "content": "/Users/macbookm2/.cache/hyperframes/history/a4427fa7-be97-4411-a86a-2dbdd740c6dd/blobs/70/70e9d85152339111fa7edfc5cfeb7cb76355444f59578ead49a803cf46f259fa"
+    },
+    "assets/brand/png/koma-logo-horizontal-paper.png": {
+      "hash": "f0ed40b0569503d9826b3eee8dc849806b158b09f596a9ab19cbba597e305c98",
+      "content": "/Users/macbookm2/.cache/hyperframes/history/a4427fa7-be97-4411-a86a-2dbdd740c6dd/blobs/f0/f0ed40b0569503d9826b3eee8dc849806b158b09f596a9ab19cbba597e305c98"
+    },
+    "assets/brand/png/koma-logo-stacked-color.png": {
+      "hash": "1ef36c2a520f299212e4c4ac3d58fc567b561cc301f0280b2ec933da2892d572",
+      "content": "/Users/macbookm2/.cache/hyperframes/history/a4427fa7-be97-4411-a86a-2dbdd740c6dd/blobs/1e/1ef36c2a520f299212e4c4ac3d58fc567b561cc301f0280b2ec933da2892d572"
+    },
+    "assets/brand/png/koma-symbol-ink.png": {
+      "hash": "2c2f90f674ab5ecb6a67eec5d41c82013edb887aeff4ea3cb67c936b5a739f24",
+      "content": "/Users/macbookm2/.cache/hyperframes/history/a4427fa7-be97-4411-a86a-2dbdd740c6dd/blobs/2c/2c2f90f674ab5ecb6a67eec5d41c82013edb887aeff4ea3cb67c936b5a739f24"
+    },
+    "assets/brand/png/koma-symbol-paper.png": {
+      "hash": "0615fe3c28e7ab9fa3f29ec004ad6f871b567ae86a54b66caa4aa622f238f8b4",
+      "content": "/Users/macbookm2/.cache/hyperframes/history/a4427fa7-be97-4411-a86a-2dbdd740c6dd/blobs/06/0615fe3c28e7ab9fa3f29ec004ad6f871b567ae86a54b66caa4aa622f238f8b4"
+    },
+    "assets/brand/png/koma-symbol-violet.png": {
+      "hash": "098925aefba2b56570852fcc4ee87100be026a7bf596ac8d418d96c31addaefd",
+      "content": "/Users/macbookm2/.cache/hyperframes/history/a4427fa7-be97-4411-a86a-2dbdd740c6dd/blobs/09/098925aefba2b56570852fcc4ee87100be026a7bf596ac8d418d96c31addaefd"
+    },
+    "assets/brand/png/koma-wordmark-only-ink.png": {
+      "hash": "a41cb078983aa64cd21d58d5471cf22c1fa7fa28d356382a108da0fd196886a8",
+      "content": "/Users/macbookm2/.cache/hyperframes/history/a4427fa7-be97-4411-a86a-2dbdd740c6dd/blobs/a4/a41cb078983aa64cd21d58d5471cf22c1fa7fa28d356382a108da0fd196886a8"
+    },
+    "assets/brand/png/koma-wordmark-only-paper.png": {
+      "hash": "c8c097437a83e81b07e3b648353f7a9a8e01e15a83fba7a1713ecfa5c9925c8a",
+      "content": "/Users/macbookm2/.cache/hyperframes/history/a4427fa7-be97-4411-a86a-2dbdd740c6dd/blobs/c8/c8c097437a83e81b07e3b648353f7a9a8e01e15a83fba7a1713ecfa5c9925c8a"
+    },
+    "assets/brand/svg/favicon.svg": {
+      "hash": "3ee13f15bc2ee371cbdb3d500742e706b8c302f20825babddfd97613e0d69f13",
+      "content": "/Users/macbookm2/.cache/hyperframes/history/a4427fa7-be97-4411-a86a-2dbdd740c6dd/blobs/3e/3ee13f15bc2ee371cbdb3d500742e706b8c302f20825babddfd97613e0d69f13"
+    },
+    "assets/brand/svg/icons/badge-check.svg": {
+      "hash": "ac0dbf2df825221ffd5868c708dd6fa1cca1d28cd1c9fa57ec4fa17f683e9587",
+      "content": "/Users/macbookm2/.cache/hyperframes/history/a4427fa7-be97-4411-a86a-2dbdd740c6dd/blobs/ac/ac0dbf2df825221ffd5868c708dd6fa1cca1d28cd1c9fa57ec4fa17f683e9587"
+    },
+    "assets/brand/svg/icons/badge-shield.svg": {
+      "hash": "1c00ea2ecb2059b449223d14f16794b1163433352012bd60d3d66fde0b57c6b0",
+      "content": "/Users/macbookm2/.cache/hyperframes/history/a4427fa7-be97-4411-a86a-2dbdd740c6dd/blobs/1c/1c00ea2ecb2059b449223d14f16794b1163433352012bd60d3d66fde0b57c6b0"
+    },
+    "assets/brand/svg/icons/badge-sparkle.svg": {
+      "hash": "b0b398facea6a9ad0df5d52edffae9a2f1dd0571800c9fad0611d849c66742a3",
+      "content": "/Users/macbookm2/.cache/hyperframes/history/a4427fa7-be97-4411-a86a-2dbdd740c6dd/blobs/b0/b0b398facea6a9ad0df5d52edffae9a2f1dd0571800c9fad0611d849c66742a3"
+    },
+    "assets/brand/svg/icons/badge-star.svg": {
+      "hash": "b2e001f504ab14d47cb1e396c60992e9b925b9298be972dd43150bed039a753f",
+      "content": "/Users/macbookm2/.cache/hyperframes/history/a4427fa7-be97-4411-a86a-2dbdd740c6dd/blobs/b2/b2e001f504ab14d47cb1e396c60992e9b925b9298be972dd43150bed039a753f"
+    },
+    "assets/brand/svg/icons/reaction-dengerin.svg": {
+      "hash": "dcad7a0d33cb774a00f335aa373e77a4d36237c77ba24153b985d247bcf6b277",
+      "content": "/Users/macbookm2/.cache/hyperframes/history/a4427fa7-be97-4411-a86a-2dbdd740c6dd/blobs/dc/dcad7a0d33cb774a00f335aa373e77a4d36237c77ba24153b985d247bcf6b277"
+    },
+    "assets/brand/svg/icons/reaction-peluk.svg": {
+      "hash": "966b2ebde47e1aa3cc17ec4b3274180a6640037bdc4253214f7576dcbe86fc9c",
+      "content": "/Users/macbookm2/.cache/hyperframes/history/a4427fa7-be97-4411-a86a-2dbdd740c6dd/blobs/96/966b2ebde47e1aa3cc17ec4b3274180a6640037bdc4253214f7576dcbe86fc9c"
+    },
+    "assets/brand/svg/icons/reaction-relate.svg": {
+      "hash": "9b745b485aa780f18d79c3eef12dd01199222fd878e52622806e6221506f3a50",
+      "content": "/Users/macbookm2/.cache/hyperframes/history/a4427fa7-be97-4411-a86a-2dbdd740c6dd/blobs/9b/9b745b485aa780f18d79c3eef12dd01199222fd878e52622806e6221506f3a50"
+    },
+    "assets/brand/svg/icons/reaction-senyum.svg": {
+      "hash": "f983a4b05a3b5040804dc049e75f0a80c33fbbd23262aa0d5257b38c568d850b",
+      "content": "/Users/macbookm2/.cache/hyperframes/history/a4427fa7-be97-4411-a86a-2dbdd740c6dd/blobs/f9/f983a4b05a3b5040804dc049e75f0a80c33fbbd23262aa0d5257b38c568d850b"
+    },
+    "assets/brand/svg/koma-app-icon-ink.svg": {
+      "hash": "6292e67adedcc41580bcdf51a7528166878546026b0a33aebb0c9862d86fc380",
+      "content": "/Users/macbookm2/.cache/hyperframes/history/a4427fa7-be97-4411-a86a-2dbdd740c6dd/blobs/62/6292e67adedcc41580bcdf51a7528166878546026b0a33aebb0c9862d86fc380"
+    },
+    "assets/brand/svg/koma-app-icon-violet.svg": {
+      "hash": "c4a877b1695ddf89c5966824e11e1c6af178282d76f6bf306775e8d1e5300abd",
+      "content": "/Users/macbookm2/.cache/hyperframes/history/a4427fa7-be97-4411-a86a-2dbdd740c6dd/blobs/c4/c4a877b1695ddf89c5966824e11e1c6af178282d76f6bf306775e8d1e5300abd"
+    },
+    "assets/brand/svg/koma-logo-horizontal-color.svg": {
+      "hash": "92c523ca377a925152796f5abe8e4d25bcee278b7bca05684dd00a69ef154da2",
+      "content": "/Users/macbookm2/.cache/hyperframes/history/a4427fa7-be97-4411-a86a-2dbdd740c6dd/blobs/92/92c523ca377a925152796f5abe8e4d25bcee278b7bca05684dd00a69ef154da2"
+    },
+    "assets/brand/svg/koma-logo-horizontal-dark.svg": {
+      "hash": "6c726277d764ae60655c224e09ff6c0ba35ce6a09672a0c8ea5d46bbcd45a618",
+      "content": "/Users/macbookm2/.cache/hyperframes/history/a4427fa7-be97-4411-a86a-2dbdd740c6dd/blobs/6c/6c726277d764ae60655c224e09ff6c0ba35ce6a09672a0c8ea5d46bbcd45a618"
+    },
+    "assets/brand/svg/koma-logo-horizontal-ink.svg": {
+      "hash": "809a2d520c1b05462604d8deeaab6d4ff38d8b5b7eb53882c705917c4252d565",
+      "content": "/Users/macbookm2/.cache/hyperframes/history/a4427fa7-be97-4411-a86a-2dbdd740c6dd/blobs/80/809a2d520c1b05462604d8deeaab6d4ff38d8b5b7eb53882c705917c4252d565"
+    },
+    "assets/brand/svg/koma-logo-horizontal-paper.svg": {
+      "hash": "7aa7606b50d59c8681b73ebacb9144ec3e63cd92eee0ec5a0f96073734e6de9b",
+      "content": "/Users/macbookm2/.cache/hyperframes/history/a4427fa7-be97-4411-a86a-2dbdd740c6dd/blobs/7a/7aa7606b50d59c8681b73ebacb9144ec3e63cd92eee0ec5a0f96073734e6de9b"
+    },
+    "assets/brand/svg/koma-logo-horizontal-paperbg.svg": {
+      "hash": "fcb84a400681ee595155b774cf118ea7a8eed6452198ff5962fc84de818e214e",
+      "content": "/Users/macbookm2/.cache/hyperframes/history/a4427fa7-be97-4411-a86a-2dbdd740c6dd/blobs/fc/fcb84a400681ee595155b774cf118ea7a8eed6452198ff5962fc84de818e214e"
+    },
+    "assets/brand/svg/koma-logo-stacked-color.svg": {
+      "hash": "29a44ac08341c1e8a724b89be99c66eced7517d8ed18389b0670807cdb4f7281",
+      "content": "/Users/macbookm2/.cache/hyperframes/history/a4427fa7-be97-4411-a86a-2dbdd740c6dd/blobs/29/29a44ac08341c1e8a724b89be99c66eced7517d8ed18389b0670807cdb4f7281"
+    },
+    "assets/brand/svg/koma-logo-stacked-paper.svg": {
+      "hash": "cfd0695e9f480fddfc74143e16728136a59f4c97a7b647cd1d221078d6e1f1ed",
+      "content": "/Users/macbookm2/.cache/hyperframes/history/a4427fa7-be97-4411-a86a-2dbdd740c6dd/blobs/cf/cfd0695e9f480fddfc74143e16728136a59f4c97a7b647cd1d221078d6e1f1ed"
+    },
+    "assets/brand/svg/koma-symbol-ink.svg": {
+      "hash": "f98c1f67a0a33eb848567bf11c4c93d9b826520cb125391d647362edf999bd71",
+      "content": "/Users/macbookm2/.cache/hyperframes/history/a4427fa7-be97-4411-a86a-2dbdd740c6dd/blobs/f9/f98c1f67a0a33eb848567bf11c4c93d9b826520cb125391d647362edf999bd71"
+    },
+    "assets/brand/svg/koma-symbol-paper.svg": {
+      "hash": "f587eb6297f736eb754c3b0943b9f936a9ed0e65ec8ef0b01eb19c9d0e42a8ff",
+      "content": "/Users/macbookm2/.cache/hyperframes/history/a4427fa7-be97-4411-a86a-2dbdd740c6dd/blobs/f5/f587eb6297f736eb754c3b0943b9f936a9ed0e65ec8ef0b01eb19c9d0e42a8ff"
+    },
+    "assets/brand/svg/koma-symbol-violet.svg": {
+      "hash": "bdc63498587badd89b502e113c7fa6bddb8addedecb722966a380a3c233cc7ee",
+      "content": "/Users/macbookm2/.cache/hyperframes/history/a4427fa7-be97-4411-a86a-2dbdd740c6dd/blobs/bd/bdc63498587badd89b502e113c7fa6bddb8addedecb722966a380a3c233cc7ee"
+    },
+    "assets/brand/svg/koma-wordmark-only-ink.svg": {
+      "hash": "7bb1748c385ff7bf9325df3153364731caac6da12a2d1bfba6a2b36562637a4e",
+      "content": "/Users/macbookm2/.cache/hyperframes/history/a4427fa7-be97-4411-a86a-2dbdd740c6dd/blobs/7b/7bb1748c385ff7bf9325df3153364731caac6da12a2d1bfba6a2b36562637a4e"
+    },
+    "assets/brand/svg/koma-wordmark-only-paper.svg": {
+      "hash": "d7366be52de0a70c8b513323ac4f436800581dcc557749e14e13c71c1bf33d0c",
+      "content": "/Users/macbookm2/.cache/hyperframes/history/a4427fa7-be97-4411-a86a-2dbdd740c6dd/blobs/d7/d7366be52de0a70c8b513323ac4f436800581dcc557749e14e13c71c1bf33d0c"
+    },
+    "assets/vendor/gsap.min.js": {
+      "hash": "c174bfce53a729418d57a8ad8625e7247c793a22fef8e2851e3cfa3de9cd8280",
+      "content": "/Users/macbookm2/.cache/hyperframes/history/a4427fa7-be97-4411-a86a-2dbdd740c6dd/blobs/c1/c174bfce53a729418d57a8ad8625e7247c793a22fef8e2851e3cfa3de9cd8280"
+    },
+    "assets/visual/doodle-arrow.svg": {
+      "hash": "f0d84c02138fb8ee5a7075d20ea18cdec00cdf849aa5eccf16f0165cdd472631",
+      "content": "/Users/macbookm2/.cache/hyperframes/history/a4427fa7-be97-4411-a86a-2dbdd740c6dd/blobs/f0/f0d84c02138fb8ee5a7075d20ea18cdec00cdf849aa5eccf16f0165cdd472631"
+    },
+    "assets/visual/doodle-star.svg": {
+      "hash": "f01d160f0ddc034b6643d7896032bdf38e6baec1bab9ef109a8b6049cf265871",
+      "content": "/Users/macbookm2/.cache/hyperframes/history/a4427fa7-be97-4411-a86a-2dbdd740c6dd/blobs/f0/f01d160f0ddc034b6643d7896032bdf38e6baec1bab9ef109a8b6049cf265871"
+    },
+    "assets/visual/feed-empty-state.webp": {
+      "hash": "475e0a3e632ee62e08505c11d59a92d1d68f1f21ee757366c3f8f2a4c07d4c1e",
+      "content": "/Users/macbookm2/.cache/hyperframes/history/a4427fa7-be97-4411-a86a-2dbdd740c6dd/blobs/47/475e0a3e632ee62e08505c11d59a92d1d68f1f21ee757366c3f8f2a4c07d4c1e"
+    },
+    "assets/visual/hero-bg.webp": {
+      "hash": "f34f798abbad6d722fdf10633db1aaf104dc5a9fb9db6e9885bc7701e43f3c4a",
+      "content": "/Users/macbookm2/.cache/hyperframes/history/a4427fa7-be97-4411-a86a-2dbdd740c6dd/blobs/f3/f34f798abbad6d722fdf10633db1aaf104dc5a9fb9db6e9885bc7701e43f3c4a"
+    },
+    "assets/visual/hero-foreground.webp": {
+      "hash": "eec4804267cb5544d76ec39625a524a4e8e128c083b1f1268a6aec169035c677",
+      "content": "/Users/macbookm2/.cache/hyperframes/history/a4427fa7-be97-4411-a86a-2dbdd740c6dd/blobs/ee/eec4804267cb5544d76ec39625a524a4e8e128c083b1f1268a6aec169035c677"
+    },
+    "assets/visual/hero-main.webp": {
+      "hash": "91f51ae0ded1f26e7b7fb59e2ef225c91bc304f93d5a3ad340aeca63c7ead571",
+      "content": "/Users/macbookm2/.cache/hyperframes/history/a4427fa7-be97-4411-a86a-2dbdd740c6dd/blobs/91/91f51ae0ded1f26e7b7fb59e2ef225c91bc304f93d5a3ad340aeca63c7ead571"
+    },
+    "assets/visual/hero-midground.webp": {
+      "hash": "ddd1155eebd73ba12936ca65edafd3763de6023a3d95063a8dc4bd68f456db54",
+      "content": "/Users/macbookm2/.cache/hyperframes/history/a4427fa7-be97-4411-a86a-2dbdd740c6dd/blobs/dd/ddd1155eebd73ba12936ca65edafd3763de6023a3d95063a8dc4bd68f456db54"
+    },
+    "assets/visual/paper-clip.svg": {
+      "hash": "fe6547436b4dd1397ffe478e24e4aa07b2de744b79a0b7f3135a088dfd56f4ee",
+      "content": "/Users/macbookm2/.cache/hyperframes/history/a4427fa7-be97-4411-a86a-2dbdd740c6dd/blobs/fe/fe6547436b4dd1397ffe478e24e4aa07b2de744b79a0b7f3135a088dfd56f4ee"
+    },
+    "assets/visual/paper-texture.webp": {
+      "hash": "c1aa626459eb545b615d55b8ce726780306929860a053e90724acff196c849d7",
+      "content": "/Users/macbookm2/.cache/hyperframes/history/a4427fa7-be97-4411-a86a-2dbdd740c6dd/blobs/c1/c1aa626459eb545b615d55b8ce726780306929860a053e90724acff196c849d7"
+    },
+    "assets/visual/reactions/dengerin.svg": {
+      "hash": "6eb0243e5df5a79eeb59c0c43e1354d512b8fb983c13634b21702983f96f71a8",
+      "content": "/Users/macbookm2/.cache/hyperframes/history/a4427fa7-be97-4411-a86a-2dbdd740c6dd/blobs/6e/6eb0243e5df5a79eeb59c0c43e1354d512b8fb983c13634b21702983f96f71a8"
+    },
+    "assets/visual/reactions/peluk.svg": {
+      "hash": "6469cf9236e51ee410397cfda32c71694d9eb35ac905758ed2a21384a5326d9a",
+      "content": "/Users/macbookm2/.cache/hyperframes/history/a4427fa7-be97-4411-a86a-2dbdd740c6dd/blobs/64/6469cf9236e51ee410397cfda32c71694d9eb35ac905758ed2a21384a5326d9a"
+    },
+    "assets/visual/reactions/relate.svg": {
+      "hash": "0f274e133d7150b368e0a65d264b9ea03ad141126b197911bcf364a7c992592a",
+      "content": "/Users/macbookm2/.cache/hyperframes/history/a4427fa7-be97-4411-a86a-2dbdd740c6dd/blobs/0f/0f274e133d7150b368e0a65d264b9ea03ad141126b197911bcf364a7c992592a"
+    },
+    "assets/visual/reactions/senyum.svg": {
+      "hash": "405673684452bca1e230b40ed6e2c3b0476d79a08284598ee19cf2aba1f05715",
+      "content": "/Users/macbookm2/.cache/hyperframes/history/a4427fa7-be97-4411-a86a-2dbdd740c6dd/blobs/40/405673684452bca1e230b40ed6e2c3b0476d79a08284598ee19cf2aba1f05715"
+    },
+    "assets/visual/section-connecting.webp": {
+      "hash": "8e9b77b755c7b51c853e116a2755a52cec71cda46bfecbb452482ce17d7698db",
+      "content": "/Users/macbookm2/.cache/hyperframes/history/a4427fa7-be97-4411-a86a-2dbdd740c6dd/blobs/8e/8e9b77b755c7b51c853e116a2755a52cec71cda46bfecbb452482ce17d7698db"
+    },
+    "assets/visual/section-discovering.webp": {
+      "hash": "3f06c7683c4e1dd5700cf12a720d7722acbf036000515c9adca0ebf5da73d455",
+      "content": "/Users/macbookm2/.cache/hyperframes/history/a4427fa7-be97-4411-a86a-2dbdd740c6dd/blobs/3f/3f06c7683c4e1dd5700cf12a720d7722acbf036000515c9adca0ebf5da73d455"
+    },
+    "assets/visual/section-writing.webp": {
+      "hash": "6180bf57fba9123f3e50cd5230666c841d4d501a50eacba699104b913f8adee9",
+      "content": "/Users/macbookm2/.cache/hyperframes/history/a4427fa7-be97-4411-a86a-2dbdd740c6dd/blobs/61/6180bf57fba9123f3e50cd5230666c841d4d501a50eacba699104b913f8adee9"
+    },
+    "assets/visual/stamp-dengar.svg": {
+      "hash": "7c1dd53d4b1160e04a202b794e5a6e6770de42fabae7dccd15803287599198eb",
+      "content": "/Users/macbookm2/.cache/hyperframes/history/a4427fa7-be97-4411-a86a-2dbdd740c6dd/blobs/7c/7c1dd53d4b1160e04a202b794e5a6e6770de42fabae7dccd15803287599198eb"
+    },
+    "assets/visual/stamp-koma.svg": {
+      "hash": "ab59018c2545f2efc5bea8fefbcdcd6555222af3bba4b8c173117e3b9bc63a97",
+      "content": "/Users/macbookm2/.cache/hyperframes/history/a4427fa7-be97-4411-a86a-2dbdd740c6dd/blobs/ab/ab59018c2545f2efc5bea8fefbcdcd6555222af3bba4b8c173117e3b9bc63a97"
+    },
+    "assets/visual/sticker-koma-zine.svg": {
+      "hash": "80a0b2392094218de0b83399963724e54d25258c7253c1b4cc137336a074e8cb",
+      "content": "/Users/macbookm2/.cache/hyperframes/history/a4427fa7-be97-4411-a86a-2dbdd740c6dd/blobs/80/80a0b2392094218de0b83399963724e54d25258c7253c1b4cc137336a074e8cb"
+    },
+    "assets/visual/sticker-relate.svg": {
+      "hash": "66b2f20c422dfbaeff899601d9c82582f1e4df72aa23f898371a3e21dec7cc98",
+      "content": "/Users/macbookm2/.cache/hyperframes/history/a4427fa7-be97-4411-a86a-2dbdd740c6dd/blobs/66/66b2f20c422dfbaeff899601d9c82582f1e4df72aa23f898371a3e21dec7cc98"
+    },
+    "assets/visual/tape-kraft.svg": {
+      "hash": "75b7d333a9c728e2209035dc2a7d67df029150ccafbcc484951a45ef5402ede2",
+      "content": "/Users/macbookm2/.cache/hyperframes/history/a4427fa7-be97-4411-a86a-2dbdd740c6dd/blobs/75/75b7d333a9c728e2209035dc2a7d67df029150ccafbcc484951a45ef5402ede2"
+    },
+    "assets/visual/tape-purple.svg": {
+      "hash": "69e5f5030de0af4451cab5ca2c5d7759983aa7a1f6b1fd7610a32bbb7f88c3ea",
+      "content": "/Users/macbookm2/.cache/hyperframes/history/a4427fa7-be97-4411-a86a-2dbdd740c6dd/blobs/69/69e5f5030de0af4451cab5ca2c5d7759983aa7a1f6b1fd7610a32bbb7f88c3ea"
+    },
+    "assets/visual/torn-edge.svg": {
+      "hash": "a45515f0d8d9b9c62039e1ff1c0491548cfe460e2ea6224436da6b2ca302f57f",
+      "content": "/Users/macbookm2/.cache/hyperframes/history/a4427fa7-be97-4411-a86a-2dbdd740c6dd/blobs/a4/a45515f0d8d9b9c62039e1ff1c0491548cfe460e2ea6224436da6b2ca302f57f"
+    },
+    "assets/voice/voiceover-master.mp3": {
+      "hash": "8fe7beda5b3ec859b94364ff6e1190f344481fdf677c239e7a9733d1cc52d7f1",
+      "content": "/Users/macbookm2/.cache/hyperframes/history/a4427fa7-be97-4411-a86a-2dbdd740c6dd/blobs/8f/8fe7beda5b3ec859b94364ff6e1190f344481fdf677c239e7a9733d1cc52d7f1"
+    },
+    "compositions/captions.html": {
+      "hash": "df874739394e35d1fd7a4eea416b15308852d34b628b44b8419029fa71955cb9",
+      "content": "/Users/macbookm2/.cache/hyperframes/history/a4427fa7-be97-4411-a86a-2dbdd740c6dd/blobs/df/df874739394e35d1fd7a4eea416b15308852d34b628b44b8419029fa71955cb9"
+    },
+    "compositions/scene1-midnight.html": {
+      "hash": "c71a360fc309a2f130df73b1a9c27d20056e9837b8fe732f94f0880c7420ecd2",
+      "content": "/Users/macbookm2/.cache/hyperframes/history/a4427fa7-be97-4411-a86a-2dbdd740c6dd/blobs/c7/c71a360fc309a2f130df73b1a9c27d20056e9837b8fe732f94f0880c7420ecd2"
+    },
+    "compositions/scene2-dadah.html": {
+      "hash": "3c773dfa0df9a312c497d964cd8af874d2cba8288f0fa397e5df1a3494424755",
+      "content": "/Users/macbookm2/.cache/hyperframes/history/a4427fa7-be97-4411-a86a-2dbdd740c6dd/blobs/3c/3c773dfa0df9a312c497d964cd8af874d2cba8288f0fa397e5df1a3494424755"
+    },
+    "compositions/scene3-otak.html": {
+      "hash": "5814a02703322d9ebbcb15611aeec8fac3071b2d16499b1a0ba5ca84787d70b3",
+      "content": "/Users/macbookm2/.cache/hyperframes/history/a4427fa7-be97-4411-a86a-2dbdd740c6dd/blobs/58/5814a02703322d9ebbcb15611aeec8fac3071b2d16499b1a0ba5ca84787d70b3"
+    },
+    "compositions/scene4-koma.html": {
+      "hash": "ea0be6266116dd5a6b276796e8f43dfb03bee6b5ee04d527ca875c960a4dac3e",
+      "content": "/Users/macbookm2/.cache/hyperframes/history/a4427fa7-be97-4411-a86a-2dbdd740c6dd/blobs/ea/ea0be6266116dd5a6b276796e8f43dfb03bee6b5ee04d527ca875c960a4dac3e"
+    },
+    "hyperframes.json": {
+      "hash": "0e2e6d559389a6de17fb0ecfa7fd56ca4078ce1610b7ec3a898fdbf6587e8c9a",
+      "content": "/Users/macbookm2/.cache/hyperframes/history/a4427fa7-be97-4411-a86a-2dbdd740c6dd/blobs/0e/0e2e6d559389a6de17fb0ecfa7fd56ca4078ce1610b7ec3a898fdbf6587e8c9a"
+    },
+    "index.html": {
+      "hash": "9caaa257165f624662186b72115ca4755bc149efc35f5aa37b82e60952e700cd",
+      "content": "/Users/macbookm2/.cache/hyperframes/history/a4427fa7-be97-4411-a86a-2dbdd740c6dd/blobs/9c/9caaa257165f624662186b72115ca4755bc149efc35f5aa37b82e60952e700cd"
+    }
+  },
+  "revisions": {},
+  "checks": {
+    "latest": {
+      "revision": null,
+      "id": "996897e5-f8ed-40f9-b13a-c63fed5d52d5"
+    },
+    "revisions": {},
+    "unversioned": [
+      {
+        "id": "996897e5-f8ed-40f9-b13a-c63fed5d52d5",
+        "scope": "project",
+        "report": "/Users/macbookm2/Documents/antigravity/jolly-lovelace/video/koma-film-ep03/.hyperframes/artifacts/checks/996897e5-f8ed-40f9-b13a-c63fed5d52d5.json",
+        "metadata": {
+          "ok": false,
+          "browserSkipped": false,
+          "options": {
+            "samples": 9,
+            "atTransitions": false,
+            "maxIssues": 80,
+            "collapseStatic": true,
+            "tolerance": 2,
+            "timeout": 3000,
+            "contrast": true,
+            "strict": false,
+            "snapshots": false,
+            "browserGpuMode": "auto"
+          }
+        },
+        "createdAt": 1793072637808,
+        "contentHash": "e87f67f428dfeab540fafd9d6dc017ff2f16b3fd7dc5aa8cc50420e05f0ff309",
+        "revision": null,
+        "inputFingerprint": "25e1f96af5b75edf7a7aac2a68dbcd3de251ea81ced9a0c4f2e83b42b68e9988",
+        "inputScope": "local-project-files",
+        "attribution": "unversioned"
+      }
+    ]
+  },
+  "snapshots": {
+    "latest": null,
+    "revisions": {},
+    "unversioned": []
+  }
+}

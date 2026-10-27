@@ -16,7 +16,7 @@ import {
 import AdminSidebar from '@/components/admin/AdminSidebar';
 import AdminTopbar from '@/components/admin/AdminTopbar';
 import AdminOverviewView from '@/components/admin/AdminOverviewView';
-import AdminAnalyticsView from '@/components/admin/AdminAnalyticsView';
+import AdminAnalyticsView, { type SearchVisibilityData } from '@/components/admin/AdminAnalyticsView';
 import AdminContentView from '@/components/admin/AdminContentView';
 import AdminModerationView from '@/components/admin/AdminModerationView';
 import AdminRulesView from '@/components/admin/AdminRulesView';
@@ -46,7 +46,7 @@ export default function AdminPage() {
   // Global data states
   const [analyticsSummary, setAnalyticsSummary] = useState<AdminAnalyticsSummary | null>(null);
   const [detailedAnalytics, setDetailedAnalytics] = useState<DetailedAnalyticsResult | null>(null);
-  const [searchVisibility, setSearchVisibility] = useState<{ eligible: number; noindex: number; excluded: number; sitemapUrl: string; note: string } | null>(null);
+  const [searchVisibility, setSearchVisibility] = useState<SearchVisibilityData | null>(null);
   const [analyticsPeriod, setAnalyticsPeriod] = useState<'24h' | '7d' | '30d' | 'all'>('7d');
   const [reports, setReports] = useState<any[]>([]);
   const [messages, setMessages] = useState<AdminMessage[]>([]);

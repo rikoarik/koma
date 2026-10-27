@@ -1,0 +1,13 @@
+{
+  "$schema": "https://hyperframes.heygen.com/schema/hyperframes.json",
+  "name": "koma-film-ep03",
+  "title": "Koma Episode 03 — Isi Kepala Jam 2 Pagi",
+  "fps": 30,
+  "width": 1080,
+  "height": 1920,
+  "duration": 26.0,
+  "paths": {
+    "blocks": "compositions",
+    "assets": "assets"
+  }
+}

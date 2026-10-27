@@ -1,0 +1,11 @@
+<svg width="180" height="60" viewBox="0 0 180 60" fill="none" xmlns="http://www.w3.org/2000/svg">
+  <!-- Rectangular Distressed Ink Stamp -->
+  <rect x="3" y="3" width="174" height="54" rx="4" stroke="#1D1B18" stroke-width="2.5" stroke-dasharray="32 1 12 2 40 1 8 3" opacity="0.88"/>
+  <rect x="7" y="7" width="166" height="46" rx="2" stroke="#1D1B18" stroke-width="1" stroke-dasharray="14 2 24 1" opacity="0.6"/>
+  <text x="90" y="28" text-anchor="middle" font-family="'Courier New', monospace" font-size="12" font-weight="900" fill="#1D1B18" letter-spacing="2">
+    TELAH DIDENGAR
+  </text>
+  <text x="90" y="44" text-anchor="middle" font-family="'Courier New', monospace" font-size="8.5" font-weight="700" fill="#5A46D6" letter-spacing="1.5">
+    ARSIP KOMA // TETAP RAHASIA
+  </text>
+</svg>

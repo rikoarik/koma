@@ -1,0 +1,95 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 411.5 160" width="411.5" height="160" id="koma-horizontal-logo">
+  
+  <!-- Wordmark Layer (Targetable for Stagger / Scroll-Craft) -->
+  <g id="koma-wordmark" data-layer="wordmark" fill="#1D1B18">
+    
+    <g id="glyph-k" class="koma-glyph" data-letter="k">
+      <rect x="36" y="24" width="17" height="88" rx="0.75" />
+      <path d="
+        M 52.5 81.5
+        L 88 56
+        L 107 56
+        L 69 83
+        L 108 112
+        L 87 112
+        L 58.5 90.5
+        L 52.5 95
+        Z
+      " />
+    </g>
+  
+    
+    <g id="glyph-o" class="koma-glyph" data-letter="o">
+      <path fill-rule="evenodd" d="
+        M 143.5 55
+        A 28.5 28.5 0 1 1 143.49 55
+        Z
+        M 143.5 72
+        A 11.5 11.5 0 1 0 143.51 72
+        Z
+      " />
+    </g>
+  
+    
+    <g id="glyph-m" class="koma-glyph" data-letter="m">
+      <path d="
+        M 181 56
+        L 197.5 56
+        L 197.5 67
+        C 202.5 59.5, 211 55, 222.5 55
+        C 233.5 55, 241 60.5, 244.5 69.5
+        C 250.5 59.5, 259 55, 270.5 55
+        C 283.5 55, 290.5 63.5, 290.5 78
+        L 290.5 112
+        L 274 112
+        L 274 79.5
+        C 274 73.5, 270.5 70, 264.5 70
+        C 257.5 70, 252.5 74.5, 252.5 82
+        L 252.5 112
+        L 236 112
+        L 236 79.5
+        C 236 73.5, 232.5 70, 226 70
+        C 219 70, 214 74.5, 214 82
+        L 214 112
+        L 181 112
+        Z
+      " />
+    </g>
+  
+    
+    <g id="glyph-a" class="koma-glyph" data-letter="a">
+      <path fill-rule="evenodd" d="
+        M 326 55
+        C 341 55, 352.5 65, 355 76.5
+        L 355 56
+        L 371.5 56
+        L 371.5 112
+        L 355.5 112
+        L 355.5 102
+        C 352 108.5, 341.5 113, 327.5 113
+        C 311.5 113, 299 99.5, 299 83.5
+        C 299 68, 311 55, 326 55
+        Z
+        M 328 71.5
+        C 318 71.5, 315 77, 315 83.5
+        C 315 90.5, 318 96.5, 328 96.5
+        C 338 96.5, 355 90.5, 355 83.5
+        C 355 77, 338 71.5, 328 71.5
+        Z
+      " />
+    </g>
+  
+  </g>
+  <!-- Symbol Layer (Independent Layer for Scroll-Craft Pinning / Floating / Morphing) -->
+  <g id="koma-symbol" data-layer="symbol" fill="#5A46D6">
+    <path id="glyph-comma" d="
+    M 371.5 96
+    A 16 16 0 0 1 403.5 96
+    C 403.5 110.4, 395.82 123.36, 371.5 132
+    C 376.3 126.6, 384 118, 385 112
+    C 385 111, 371.5 108, 371.5 96
+    Z
+  " />
+  </g>
+</svg>

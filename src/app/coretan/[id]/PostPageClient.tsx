@@ -14,6 +14,8 @@ export default function PostPageClient({ params, initialPost }: { params: { id: 
   const [isLoading, setIsLoading] = useState(false);
   const [errorMessage, setErrorMessage] = useState('');
   const [copied, setCopied] = useState(false);
+  const [withdrawingSearch, setWithdrawingSearch] = useState(false);
+  const [withdrawError, setWithdrawError] = useState('');
 
   useEffect(() => {
     async function loadPost() {
@@ -192,6 +194,32 @@ export default function PostPageClient({ params, initialPost }: { params: { id: 
               <span>#{post.topic}</span>
             </div>
 
+            {post.isOwner && post.searchConsent && (
+              <button
+                type="button"
+                disabled={withdrawingSearch}
+                onClick={async () => {
+                  setWithdrawingSearch(true);
+                  try {
+                    const secret = localStorage.getItem(`author_secret_${post.id}`) || undefined;
+                    const response = await fetch(`/api/posts/${post.id}`, {
+                      method: 'PUT', headers: { 'Content-Type': 'application/json' },
+                      body: JSON.stringify({ withdrawSearch: true, authorSecret: secret }),
+                    });
+                    if (!response.ok) throw new Error('Gagal mencabut izin pencarian.');
+                    setPost((current) => current ? { ...current, searchConsent: false } : null);
+                  } catch {
+                    setWithdrawError('Izin pencarian belum tercabut. Coba lagi.');
+                  } finally {
+                    setWithdrawingSearch(false);
+                  }
+                }}
+                className="font-sans text-xs font-semibold underline underline-offset-2 text-ink-muted hover:text-koma-purpleDark disabled:opacity-50"
+              >
+                {withdrawingSearch ? 'Mencabut izin…' : 'Cabut izin ditemukan mesin pencari'}
+              </button>
+            )}
+            {withdrawError && <p role="alert" className="font-sans text-xs text-rose-700">{withdrawError}</p>}
             <PostCard
               post={post}
               onReact={handleReact}

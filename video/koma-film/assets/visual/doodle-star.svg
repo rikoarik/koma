@@ -1,0 +1,7 @@
+<svg width="60" height="60" viewBox="0 0 60 60" fill="none" xmlns="http://www.w3.org/2000/svg">
+  <!-- Hand-drawn ink doodle star / sparkle -->
+  <path d="M30 4 C31 18, 33 25, 48 30 C33 33, 31 40, 30 56 C28 41, 26 33, 11 30 C26 26, 28 17, 30 4 Z" 
+        fill="#5A46D6" stroke="#1D1B18" stroke-width="1.5" stroke-linejoin="round"/>
+  <circle cx="48" cy="12" r="2.5" fill="#1D1B18"/>
+  <circle cx="12" cy="46" r="2" fill="#5A46D6"/>
+</svg>

@@ -1,0 +1,256 @@
+<template>
+<style>
+@font-face { font-family: 'Koma Serif'; src: local('Georgia'); font-weight: 400; }
+@font-face { font-family: 'Koma Serif'; src: local('Georgia Bold'); font-weight: 700 900; }
+@font-face { font-family: 'Koma Serif'; src: local('Georgia Italic'); font-style: italic; }
+@font-face { font-family: 'Koma Mono'; src: local('Courier New'); font-weight: 400; }
+@font-face { font-family: 'Koma Mono'; src: local('Courier New Bold'); font-weight: 700 900; }
+
+* { box-sizing: border-box; }
+#root { position: absolute; inset: 0; overflow: hidden; width: 1080px; height: 1920px; background: #F7F4EE; }
+
+.scene {
+  position: absolute;
+  inset: 0;
+  background: linear-gradient(#F7F4EEe0, #F7F4EEe0), url('assets/visual/paper-texture.webp') center/1080px 1080px;
+}
+
+/* Unified brand lockup & post composition */
+.brand-header {
+  position: absolute;
+  left: 110px;
+  top: 210px;
+  width: 860px;
+  text-align: center;
+}
+.brand-symbol {
+  width: 120px;
+  height: 120px;
+  margin: 0 auto 12px;
+}
+.brand-wordmark {
+  font-family: 'Koma Serif';
+  font-size: 130px;
+  font-weight: 900;
+  line-height: 0.95;
+  letter-spacing: -6px;
+  color: #1D1B18;
+  margin: 0;
+}
+.brand-wordmark .violet-comma {
+  color: #5A46D6;
+  display: inline-block;
+}
+.brand-kicker {
+  font-family: 'Koma Mono';
+  font-size: 28px;
+  font-weight: 700;
+  color: #3F2EA6;
+  letter-spacing: 3px;
+  margin-top: 14px;
+}
+
+/* Authentic Koma post card */
+.post-container {
+  position: absolute;
+  left: 110px;
+  top: 540px;
+  width: 860px;
+  background: #FAF8F5;
+  border: 2px solid #CBC3B5;
+  border-radius: 8px;
+  padding: 40px 44px;
+  box-shadow: 10px 18px 0 #1D1B1812, 0 24px 48px #1D1B1810;
+  z-index: 2;
+}
+
+.post-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding-bottom: 20px;
+  border-bottom: 2px dashed #CBC3B5;
+}
+
+.author-pill {
+  display: inline-flex;
+  align-items: center;
+  gap: 12px;
+  background: #ECE9FE;
+  color: #3F2EA6;
+  border: 1px solid #CBC3B5;
+  padding: 8px 18px;
+  border-radius: 6px;
+  font-family: 'Koma Mono';
+  font-size: 28px;
+  font-weight: 700;
+}
+.author-dot {
+  width: 12px;
+  height: 12px;
+  border-radius: 50%;
+  background: #5A46D6;
+}
+
+.post-time {
+  font-family: 'Koma Mono';
+  font-size: 28px;
+  color: #5C564E;
+  font-weight: 700;
+}
+
+.post-content {
+  margin: 28px 0 24px;
+  font-family: 'Koma Serif';
+  font-size: 52px;
+  line-height: 1.28;
+  letter-spacing: -1.5px;
+  font-weight: 700;
+  color: #1D1B18;
+}
+.post-content .em {
+  font-style: italic;
+  color: #5A46D6;
+}
+
+.post-footer {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding-top: 20px;
+  border-top: 2px solid #EAE3D2;
+}
+
+.mode-badge {
+  font-family: 'Koma Mono';
+  font-size: 28px;
+  font-weight: 700;
+  color: #5C564E;
+  background: #F4EFE6;
+  padding: 6px 16px;
+  border-radius: 4px;
+}
+
+.reaction-cluster {
+  display: flex;
+  gap: 12px;
+}
+.reaction-pill {
+  font-family: 'Koma Mono';
+  font-size: 28px;
+  font-weight: 700;
+  color: #1D1B18;
+  background: #FFF;
+  border: 1px solid #CBC3B5;
+  padding: 6px 16px;
+  border-radius: 20px;
+}
+
+/* Final Call To Action */
+.cta-area {
+  position: absolute;
+  left: 110px;
+  top: 1040px;
+  width: 860px;
+  text-align: center;
+  z-index: 3;
+}
+
+.url-box {
+  display: inline-block;
+  padding: 16px 36px;
+  background: #1D1B18;
+  color: #FFFDF8;
+  font-family: 'Koma Mono';
+  font-size: 34px;
+  font-weight: 700;
+  letter-spacing: 2px;
+  box-shadow: 8px 8px 0 #5A46D6;
+  border-radius: 4px;
+}
+.url-sub {
+  margin-top: 18px;
+  font-family: 'Koma Mono';
+  font-size: 28px;
+  font-weight: 700;
+  color: #5C564E;
+  letter-spacing: 0.5px;
+}
+
+.sticker-zine {
+  position: absolute;
+  right: -25px;
+  bottom: -35px;
+  width: 130px;
+  height: 130px;
+  transform: rotate(12deg);
+  z-index: 5;
+}
+</style>
+
+<div id="root" data-composition-id="scene4" data-width="1080" data-height="1920" data-duration="5.3">
+  <div id="s4-canvas" class="scene">
+    <!-- Brand Header -->
+    <div class="brand-header" id="s4-header">
+      <img src="assets/brand/svg/koma-symbol-violet.svg" class="brand-symbol" id="s4-sym" alt="" data-layout-ignore>
+      <h1 class="brand-wordmark" id="s4-wm">
+        koma<span class="violet-comma">,</span>
+      </h1>
+      <div class="brand-kicker" id="s4-kicker">RUANG CERITA ANONIM</div>
+    </div>
+
+    <!-- Authentic Koma Post Card with Closing Line -->
+    <div class="post-container" id="s4-card">
+      <div class="post-header">
+        <div class="author-pill">
+          <span class="author-dot"></span>
+          <span>tanpa nama</span>
+        </div>
+        <div class="post-time">BARU SAJA</div>
+      </div>
+      <div class="post-content" id="s4-manif">
+        Cerita apa aja,<br>
+        <span class="em">tanpa harus kirim ke siapa-siapa.</span>
+      </div>
+      <div class="post-footer">
+        <span class="mode-badge">CUKUP DIDENGAR</span>
+        <div class="reaction-cluster">
+          <span class="reaction-pill">dengerin (1)</span>
+          <span class="reaction-pill">relate (1)</span>
+        </div>
+      </div>
+    </div>
+
+    <!-- Verified CTA & Domain -->
+    <div class="cta-area" id="s4-cta">
+      <div>
+        <div class="url-box" id="s4-url">ruangkoma.web.id</div>
+      </div>
+      <div class="url-sub" id="s4-sub">
+        Tempat untuk semua kata yang nggak pernah terkirim.
+      </div>
+    </div>
+  </div>
+</div>
+
+<script>
+(() => {
+  const tl = gsap.timeline({ paused: true });
+
+  // Cohesive entrance: Header, Post Card, and CTA enter smoothly (0.05s to 0.7s)
+  tl.fromTo('#s4-sym', { scale: 0.5, rotation: -20, opacity: 0 }, { scale: 1, rotation: 0, opacity: 1, duration: 0.5, ease: 'back.out(1.5)' }, 0.05);
+  tl.fromTo('#s4-wm', { opacity: 0, y: 20 }, { opacity: 1, y: 0, duration: 0.45, ease: 'power2.out' }, 0.2);
+  tl.fromTo('#s4-kicker', { opacity: 0, y: 10 }, { opacity: 1, y: 0, duration: 0.4, ease: 'power2.out' }, 0.35);
+
+  tl.fromTo('#s4-card', { scale: 0.92, opacity: 0, y: 50 }, { scale: 1, opacity: 1, y: 0, duration: 0.55, ease: 'power3.out' }, 0.4);
+
+  tl.fromTo('#s4-cta', { opacity: 0, y: 30 }, { opacity: 1, y: 0, duration: 0.5, ease: 'power2.out' }, 0.85);
+  tl.fromTo('#s4-url', { scale: 0.9 }, { scale: 1, duration: 0.4, ease: 'back.out(1.3)' }, 0.95);
+
+  // Confident hold on this state until the end (5.3s total)
+  tl.set({}, {}, 5.3);
+  window.__timelines = window.__timelines || {};
+  window.__timelines['scene4'] = tl;
+})();
+</script>
+</template>

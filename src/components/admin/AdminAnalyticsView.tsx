@@ -17,10 +17,13 @@ import {
 } from 'lucide-react';
 import AdminChart from './AdminChart';
 import { DetailedAnalyticsResult } from '@/lib/storage';
+import type { SearchConsoleReport, BingSearchReport } from '@/lib/search-console';
+
+export type SearchVisibilityData = { eligible: number; noindex: number; excluded: number; sitemapUrl: string; note: string; googleSearch?: SearchConsoleReport; bingSearch?: BingSearchReport };
 
 interface AdminAnalyticsViewProps {
   data: DetailedAnalyticsResult | null;
-  searchVisibility: { eligible: number; noindex: number; excluded: number; sitemapUrl: string; note: string } | null;
+  searchVisibility: SearchVisibilityData | null;
   period: '24h' | '7d' | '30d' | 'all';
   onPeriodChange: (p: '24h' | '7d' | '30d' | 'all') => void;
   isLoading?: boolean;
@@ -248,7 +251,24 @@ export default function AdminAnalyticsView({
           </div>
           <p className="text-xs text-slate-600">{searchVisibility.note} Sitemap: <a className="underline" href={searchVisibility.sitemapUrl} target="_blank" rel="noreferrer">{searchVisibility.sitemapUrl}</a> (status pengiriman belum diverifikasi).</p>
         </> : <p className="text-xs text-slate-600">Status indeks belum tersedia.</p>}
-        <p className="text-xs text-slate-600">Klik, impresi, CTR, kesalahan crawl/indeks, dan tren Search Console/Bing belum tersedia: belum ada integrasi resmi yang dikonfigurasi. Trafik rujukan AI dan sitasi AI Overviews, ChatGPT, Perplexity, maupun Copilot tidak diukur oleh telemetri anonim Koma. Tidak ada angka yang diperkirakan.</p>
+        <div className="grid grid-cols-1 lg:grid-cols-2 gap-4 text-xs text-slate-700">
+          <div className="p-3 bg-slate-50 border border-slate-200 rounded-lg space-y-2">
+            <h4 className="font-bold">Google Search Console</h4>
+            <p>{searchVisibility?.googleSearch?.message || 'Belum dikonfigurasi.'}</p>
+            {searchVisibility?.googleSearch?.status === 'available' && searchVisibility.googleSearch.totals && <>
+              <p>Impresi: {searchVisibility.googleSearch.totals.impressions} · Klik: {searchVisibility.googleSearch.totals.clicks} · CTR: {(searchVisibility.googleSearch.totals.ctr * 100).toFixed(1)}%</p>
+              <p>Sitemap: {searchVisibility.googleSearch.sitemap?.submitted ? 'tercatat di Search Console' : 'belum tercatat'} · URL terindeks (laporan sitemap): {searchVisibility.googleSearch.sitemap?.indexedUrls ?? 'tidak tersedia'} · Kesalahan: {searchVisibility.googleSearch.sitemap?.errors ?? 'tidak tersedia'}</p>
+              {searchVisibility.googleSearch.pages.length > 0 && <div><strong>Halaman organik</strong><ul className="mt-1 space-y-1">{searchVisibility.googleSearch.pages.slice(0, 5).map((row) => <li key={row.label} className="break-all">{row.label} — {row.clicks} klik</li>)}</ul></div>}
+              {searchVisibility.googleSearch.queries.length > 0 && <div><strong>Kueri</strong><ul className="mt-1 space-y-1">{searchVisibility.googleSearch.queries.slice(0, 5).map((row) => <li key={row.label}>{row.label} — {row.clicks} klik</li>)}</ul></div>}
+            </>}
+          </div>
+          <div className="p-3 bg-slate-50 border border-slate-200 rounded-lg space-y-2">
+            <h4 className="font-bold">Bing Webmaster Tools</h4>
+            <p>{searchVisibility?.bingSearch?.message || 'Belum dikonfigurasi.'}</p>
+            {searchVisibility?.bingSearch?.totals && <p>Impresi: {searchVisibility.bingSearch.totals.impressions} · Klik: {searchVisibility.bingSearch.totals.clicks} · CTR: {(searchVisibility.bingSearch.totals.ctr * 100).toFixed(1)}%</p>}
+          </div>
+        </div>
+        <p className="text-xs text-slate-600">Visibilitas khusus Google AI Overviews/AI Mode, sitasi Copilot, kesalahan data terstruktur, dan trafik rujukan AI tidak disediakan sebagai metrik terpisah oleh integrasi ini. Koma tidak merekam referrer demi privasi; tidak ada angka yang diperkirakan.</p>
       </section>
 
       {/* Main Interactive Chart */}

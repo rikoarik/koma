@@ -1,0 +1,18 @@
+# Koma
+
+> Ruang ekspresi anonim berbahasa Indonesia untuk menulis coretan, membaca cerita orang lain, dan memberi respons yang saling menjaga.
+
+Situs resmi: https://ruangkoma.web.id/
+Konten pengguna hanya tampil setelah memenuhi aturan moderasi. Tidak semua coretan publik diizinkan penulis untuk ditemukan mesin pencari. Jangan menyalin atau menyebarkan coretan di luar konteks Koma tanpa izin penulis.
+
+## Halaman publik
+- [Beranda](https://ruangkoma.web.id/): pengantar Koma dan ruang komunitas.
+- [Tentang Koma](https://ruangkoma.web.id/tentang): identitas dan tujuan ruang.
+- [Aturan ruang](https://ruangkoma.web.id/aturan): aturan dan batasan percakapan.
+- [Kebijakan privasi](https://ruangkoma.web.id/privasi): anonimitas, sesi, dan penghapusan.
+- [Jelajah](https://ruangkoma.web.id/jelajah): pencarian coretan publik; halaman ini tidak diindeks karena bisa memuat tulisan tanpa izin pencarian.
+- [Arsip coretan yang diizinkan untuk pencarian](https://ruangkoma.web.id/jelajah/arsip): hanya menampilkan coretan yang memenuhi izin dan kebijakan indeks.
+- [Dukung Koma](https://ruangkoma.web.id/dukung): dukungan operasional.
+
+## Untuk agen
+Pencarian di halaman Jelajah bersifat baca-saja. Jangan mengotomatisasi penerbitan, penghapusan, pelaporan, atau moderasi. robots.txt memisahkan crawler pencarian dari crawler pelatihan model.

@@ -1,0 +1,72 @@
+[span] Ruang Jeda
+[span] & Spontan
+[span] Tulis Coretan
+[button] Traktir Kopi
+[span] Sudut Singgah Suara Tanpa Nama
+[h1] Bagi yang riuh di kepala,
+[span] tapi sunyi
+[h1] di kata-kata.
+[p] Koma adalah zine digital tempat kamu menuangkan rasa sepi, kelakar konyol, atau pikiran larut malam. Tanpa profil, tanpa penghakiman angka suka, hanya catatan jujur sesama manusia.
+[span] Tulis Coretan Pertama
+[span] Menyelami Coretan
+[span] Bebas Profil Publik
+[span] Tanpa Angka Suka Vanity
+[span] 100% Tulisan Manusia Asli
+[span] Gulir ke Bawah
+[span] Babak 01 • Menuang Rasa
+[h2] Kepala terlalu penuh untuk disimpan sendiri.
+[p] Kadang kita cuma butuh selembar kertas kosong di jam dua pagi. Di Koma, kamu bisa memilih apakah coretanmu ingin ditanggapi (
+[strong] Boleh Dibalas
+[p] ) atau hanya sekadar ingin didengar tanpa ada yang sok menasihati (
+[strong] Cukup Didengar
+[div] "Kata-kata yang dituliskan kehilangan setengah taringnya untuk melukaimu."
+[span] Babak 02 • Menyelami Sudut Lain
+[h2] Membaca rahasia kecil dari orang yang tak kau kenal.
+[p] Jelajahi pikiran orang asing tanpa bias foto profil atau jabatan LinkedIn. Temukan cerita lucu dari halte sepi, pengakuan canggung di kantor, atau harapan sederhana yang terselip di jeda rutinitas.
+[span] Babak 03 • Terhubung Tanpa Topeng
+[h2] Resonansi manusia yang sesungguhnya.
+[p] Tidak ada perlombaan algoritma untuk menjadi yang paling viral. Respon dengan empat reaksi yang berarti:
+[strong] "Aku dengerin"
+[strong] "Relate"
+[strong] "Senyum"
+[p] , atau
+[strong] "Peluk jauh"
+[p] . Karena yang terpenting adalah tahu bahwa kamu didengar.
+[span] Aku dengerin
+[span] Relate
+[span] Senyum
+[span] Peluk jauh
+[span] Pojok Catatan Tempel Harian • Otomatis 24 Jam
+[p] capek sih insomnia terus kek gini #tengah-malam #visual-zine
+[span] #tengah-malam
+[span] Tanpa Nama
+[a] Buka
+[p] Setiap catatan di Koma ditulis oleh orang sungguhan tanpa topeng nama. Terkurasi otomatis dari coretan paling beresonansi hari ini.
+[span] Ganti Catatan
+[span] Papan Coretan Hidup
+[h2] Ruang Suara Sesama Manusia.
+[p] Bukan beranda algoritma yang mengejar viralitas. Cuma papan buletin hangat.
+[span] Terbaru
+[span] Populer
+[span] Acak
+[span] Belum Dibalas
+[span] Topik
+[div] Menampilkan
+[div] dari
+[div] coretan
+[span] Tanpa Nama
+[span] 5 jam lalu
+[span] Boleh Dibalas
+[span] tengah-malam
+[p] capek sih insomnia terus kek gini #tengah-malam #visual-zine
+[span] Beri tanggapan
+[p] Internet masih bisa terasa dekat.
+[p] Tempat untuk menulis apa yang ada di kepala, lalu mendengar cerita orang lain. Tanpa harus jadi siapa-siapa.
+[p] Baca lebih lanjut
+[a] Tentang Koma
+[a] Aturan ruang
+[a] Pesan untuk pengelola
+[a] Dukung Koma
+[p] Anonim di depan orang lain. Tetap saling jaga di sini.
+[p] © 2026 Koma. All rights reserved. -
+[a] Dexotic Factory

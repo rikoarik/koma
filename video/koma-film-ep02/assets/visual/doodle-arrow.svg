@@ -1,0 +1,10 @@
+<svg width="120" height="70" viewBox="0 0 120 70" fill="none" xmlns="http://www.w3.org/2000/svg">
+  <!-- Hand-drawn scribbled arrow pointing right/down -->
+  <path d="M12 25 C35 15, 65 18, 92 38 C98 42, 102 46, 108 52" 
+        stroke="#1D1B18" stroke-width="2.5" stroke-linecap="round" stroke-dasharray="2 0.5"/>
+  <path d="M88 54 C98 53, 108 52, 110 50 C108 42, 105 32, 100 24" 
+        stroke="#1D1B18" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"/>
+  <text x="35" y="55" font-family="'Courier New', monospace" font-size="8.5" font-weight="700" fill="#5A46D6" transform="rotate(-5, 35, 55)">
+    baca ini ↓
+  </text>
+</svg>

@@ -1,0 +1,31 @@
+@font-face{font-family:'Koma Serif';src:local('Georgia');font-weight:400}
+@font-face{font-family:'Koma Serif';src:local('Georgia Bold');font-weight:700 900}
+@font-face{font-family:'Koma Serif';src:local('Georgia Italic');font-style:italic}
+@font-face{font-family:'Koma Mono';src:local('Courier New');font-weight:400}
+@font-face{font-family:'Koma Mono';src:local('Courier New Bold');font-weight:700 900}
+@font-face{font-family:'Koma Sans';src:local('Arial');font-weight:400}
+@font-face{font-family:'Koma Sans';src:local('Arial Bold');font-weight:700}
+*{box-sizing:border-box}html,body{margin:0;width:1080px;height:1920px;overflow:hidden;background:#F7F4EE;color:#1D1B18}
+body{font-family:'Koma Serif'}h1,h2,h3,p{margin:0}img{display:block}#root{position:absolute;inset:0;overflow:hidden}
+.scene{position:absolute;inset:0;background:linear-gradient(#F7F4EEb8,#F7F4EEb8),url('assets/visual/paper-texture.webp') center/1080px 1080px}
+.clip{position:absolute;inset:0}.mono{font-family:'Koma Mono';font-weight:700}.sans{font-family:'Koma Sans'}
+.headline{position:absolute;left:112px;top:275px;width:785px;font-size:126px;line-height:1.02;letter-spacing:-6px;font-weight:700}
+.small{font-family:'Koma Mono';font-size:30px;line-height:1.3;font-weight:700;letter-spacing:1px}
+.kicker{position:absolute;left:116px;top:210px;color:#3F2EA6;font:700 31px 'Koma Mono'}
+.violet{color:#5A46D6}.paper{background:#FAF8F5;border:2px solid #CBC3B5;box-shadow:8px 14px 0 #1d1b1814,0 24px 42px #1d1b1818}
+.tape{position:absolute;width:230px;height:62px;object-fit:fill;left:60px;top:-29px}
+.back-art{position:absolute;left:-90px;top:1360px;width:1260px;height:640px;object-fit:cover;opacity:.9;clip-path:polygon(0 4%,9% 2%,19% 5%,29% 1%,40% 4%,51% 0,63% 4%,76% 2%,89% 5%,100% 1%,100% 100%,0 100%)}
+.bottom-grain{position:absolute;left:0;right:0;top:1430px;height:490px;background:#5A46D6}
+.note{position:absolute;padding:38px 44px;background:#FAF8F5;border:2px solid #CBC3B5;box-shadow:8px 12px 0 #1d1b1818}
+.strip{background:#5A46D6;color:#fffdf8;display:inline-block;padding:10px 22px 17px}
+.demo-label{position:absolute;left:116px;top:1090px;font:700 28px 'Koma Mono';color:#36322D;background:#F7F4EE;padding:8px 0}
+.ui{position:absolute;left:106px;width:800px;padding:38px;background:#FAF8F5;border:2px solid #CBC3B5;box-shadow:10px 15px 0 #1D1B1814}
+.ui .ui-title{font:700 60px/1.06 'Koma Serif';letter-spacing:-2px}.ui-label{font:700 29px/1.3 'Koma Mono'}
+.ui-box{border:2px solid #CBC3B5;background:#fff;padding:22px;font:400 43px/1.35 'Koma Serif'}
+.ui-rule{border-top:2px solid #ddd7ce;margin:25px 0}.chip{display:inline-block;font:700 29px 'Koma Mono';padding:12px 16px;border:2px solid #CBC3B5;background:#f4f1fd}
+.ui-btn{display:inline-block;padding:17px 22px;background:#5A46D6;color:white;font:700 30px 'Koma Mono';border:2px solid #5A46D6}
+.cursor{position:absolute;width:68px;height:80px;z-index:10}.cursor path{fill:#1D1B18;stroke:#fff;stroke-width:3}
+.caption-band{position:absolute;left:108px;top:1195px;width:800px;min-height:115px;text-align:left}
+.caption-copy{display:inline-block;padding:12px 19px 16px;font:700 44px/1.18 'Koma Mono';letter-spacing:-1.6px;background:#1D1B18;color:#FFFDF8;box-shadow:8px 8px 0 #5A46D6;max-width:800px}
+.caption-copy .em{font-family:'Koma Serif';font-style:italic;font-size:51px;line-height:.95;color:#fffdf8}
+.scrap{position:absolute;background:linear-gradient(#F7F4EEaa,#F7F4EEaa),url('assets/visual/paper-texture.webp') center/900px;clip-path:polygon(2% 0,98% 2%,100% 97%,74% 99%,48% 97%,21% 100%,0 98%);box-shadow:10px 10px 0 #1D1B1844}

@@ -1,0 +1,12 @@
+<svg width="1200" height="40" viewBox="0 0 1200 40" preserveAspectRatio="none" fill="none" xmlns="http://www.w3.org/2000/svg">
+  <!-- Jagged torn paper divider edge -->
+  <path d="M0 0 L1200 0 L1200 12 
+           L1170 24 L1140 14 L1105 28 L1070 12 L1035 22 L1000 8 L960 26 L920 14 L880 28 L840 10 L800 24 
+           L760 12 L720 28 L680 14 L640 22 L600 8 L560 26 L520 12 L480 25 L440 9 L400 24 L360 10 L320 28 
+           L280 14 L240 26 L200 8 L160 24 L120 12 L80 26 L40 10 L0 25 Z" 
+        fill="#F7F4EE"/>
+  <path d="M0 25 L40 10 L80 26 L120 12 L160 24 L200 8 L240 26 L280 14 L320 28 L360 10 L400 24 L440 9 
+           L480 25 L520 12 L560 26 L600 8 L640 22 L680 14 L720 28 L760 12 L800 24 L840 10 L880 28 L920 14 
+           L960 26 L1000 8 L1035 22 L1070 12 L1105 28 L1140 14 L1170 24 L1200 12" 
+        stroke="#1D1B18" stroke-width="1.2" stroke-opacity="0.3" fill="none"/>
+</svg>

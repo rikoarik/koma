@@ -1,0 +1,1609 @@
+{
+  "version": 1,
+  "historyId": "10802efe-a71c-42bd-80ea-971d3262b8c8",
+  "currentRevision": "597b9823-3b9e-4197-b6b6-3ce2cc4d08ce",
+  "pendingChanges": false,
+  "files": {
+    "SPEC.md": {
+      "hash": "96dd073af0051cb9fba292388a3458a61ceee907d720a43e14f2a8a102adf95a",
+      "content": "/Users/macbookm2/.cache/hyperframes/history/10802efe-a71c-42bd-80ea-971d3262b8c8/blobs/96/96dd073af0051cb9fba292388a3458a61ceee907d720a43e14f2a8a102adf95a"
+    },
+    "VOICEOVER.md": {
+      "hash": "3f41da01e9176f889bffcc6ed4d18716fc049510e837a90265e38bce2d67c7c9",
+      "content": "/Users/macbookm2/.cache/hyperframes/history/10802efe-a71c-42bd-80ea-971d3262b8c8/blobs/3f/3f41da01e9176f889bffcc6ed4d18716fc049510e837a90265e38bce2d67c7c9"
+    },
+    "assets/audio/BACKSPACE.mp3": {
+      "hash": "293a4fb1ab19605348018c2e8fea805ef9454963aa69e2d26a06ed7217636889",
+      "content": "/Users/macbookm2/.cache/hyperframes/history/10802efe-a71c-42bd-80ea-971d3262b8c8/blobs/29/293a4fb1ab19605348018c2e8fea805ef9454963aa69e2d26a06ed7217636889"
+    },
+    "assets/audio/ENTER.mp3": {
+      "hash": "56d78f9b2b662ddd07255e2e130410536a0e877bdc639fef7e205edfd73558a1",
+      "content": "/Users/macbookm2/.cache/hyperframes/history/10802efe-a71c-42bd-80ea-971d3262b8c8/blobs/56/56d78f9b2b662ddd07255e2e130410536a0e877bdc639fef7e205edfd73558a1"
+    },
+    "assets/audio/GENERIC_R0.mp3": {
+      "hash": "79b2811f3061c406ac9dcf802ae83d68f5fac78f8ed588a515e2550d2fcd05df",
+      "content": "/Users/macbookm2/.cache/hyperframes/history/10802efe-a71c-42bd-80ea-971d3262b8c8/blobs/79/79b2811f3061c406ac9dcf802ae83d68f5fac78f8ed588a515e2550d2fcd05df"
+    },
+    "assets/audio/GENERIC_R1.mp3": {
+      "hash": "cb9aefe55a81c48d6680d2ab8960220c20439e31ba1e32fd570106ed15c7fd40",
+      "content": "/Users/macbookm2/.cache/hyperframes/history/10802efe-a71c-42bd-80ea-971d3262b8c8/blobs/cb/cb9aefe55a81c48d6680d2ab8960220c20439e31ba1e32fd570106ed15c7fd40"
+    },
+    "assets/audio/GENERIC_R2.mp3": {
+      "hash": "d346d76ef4c32f09be58556ccce843d7a88199214f9ebfdbf8b95226faf7ba3e",
+      "content": "/Users/macbookm2/.cache/hyperframes/history/10802efe-a71c-42bd-80ea-971d3262b8c8/blobs/d3/d346d76ef4c32f09be58556ccce843d7a88199214f9ebfdbf8b95226faf7ba3e"
+    },
+    "assets/audio/GENERIC_R3.mp3": {
+      "hash": "4141524713fc19942166866c093777351f6f122acb9d79c7503981a5b906c7dc",
+      "content": "/Users/macbookm2/.cache/hyperframes/history/10802efe-a71c-42bd-80ea-971d3262b8c8/blobs/41/4141524713fc19942166866c093777351f6f122acb9d79c7503981a5b906c7dc"
+    },
+    "assets/audio/GENERIC_R4.mp3": {
+      "hash": "60ac51060cc0f1880016be2dffa05d3e3cf928290df37be998fb081bdf1ea66f",
+      "content": "/Users/macbookm2/.cache/hyperframes/history/10802efe-a71c-42bd-80ea-971d3262b8c8/blobs/60/60ac51060cc0f1880016be2dffa05d3e3cf928290df37be998fb081bdf1ea66f"
+    },
+    "assets/audio/SPACE.mp3": {
+      "hash": "bcba046d707877095ff2fc6d031091348515f9a6f724ee73c029831d105b71a6",
+      "content": "/Users/macbookm2/.cache/hyperframes/history/10802efe-a71c-42bd-80ea-971d3262b8c8/blobs/bc/bcba046d707877095ff2fc6d031091348515f9a6f724ee73c029831d105b71a6"
+    },
+    "assets/audio/click-soft.mp3": {
+      "hash": "075e17bdac5c13662a1c9530050e0046f81d4138e00eb3bf30427a7b4404103d",
+      "content": "/Users/macbookm2/.cache/hyperframes/history/10802efe-a71c-42bd-80ea-971d3262b8c8/blobs/07/075e17bdac5c13662a1c9530050e0046f81d4138e00eb3bf30427a7b4404103d"
+    },
+    "assets/audio/impact-bass-1.mp3": {
+      "hash": "634d5eda5eb7b501aca98393a64f3815eccf24157cd1d95df55aaec1b5000bd7",
+      "content": "/Users/macbookm2/.cache/hyperframes/history/10802efe-a71c-42bd-80ea-971d3262b8c8/blobs/63/634d5eda5eb7b501aca98393a64f3815eccf24157cd1d95df55aaec1b5000bd7"
+    },
+    "assets/audio/music-bed.mp3": {
+      "hash": "c39ecf3ae0085d952e8bfa96c9f245e70bd018c2fccfea7ebff612642edd920f",
+      "content": "/Users/macbookm2/.cache/hyperframes/history/10802efe-a71c-42bd-80ea-971d3262b8c8/blobs/c3/c39ecf3ae0085d952e8bfa96c9f245e70bd018c2fccfea7ebff612642edd920f"
+    },
+    "assets/audio/pop.mp3": {
+      "hash": "19ab7193f626ff57fdeef60b45543bac416fcbcec803cfb417abe4b271c1b352",
+      "content": "/Users/macbookm2/.cache/hyperframes/history/10802efe-a71c-42bd-80ea-971d3262b8c8/blobs/19/19ab7193f626ff57fdeef60b45543bac416fcbcec803cfb417abe4b271c1b352"
+    },
+    "assets/audio/typing.mp3": {
+      "hash": "944160652faeb7b32acc9341ede4d735a5c9a4ce3fe8509ef7eab91efb430487",
+      "content": "/Users/macbookm2/.cache/hyperframes/history/10802efe-a71c-42bd-80ea-971d3262b8c8/blobs/94/944160652faeb7b32acc9341ede4d735a5c9a4ce3fe8509ef7eab91efb430487"
+    },
+    "assets/audio/whoosh-short.mp3": {
+      "hash": "c2efd9d902a59bf9ec5019035d7deadd17762136896b6e3cb6dd99ea50997a30",
+      "content": "/Users/macbookm2/.cache/hyperframes/history/10802efe-a71c-42bd-80ea-971d3262b8c8/blobs/c2/c2efd9d902a59bf9ec5019035d7deadd17762136896b6e3cb6dd99ea50997a30"
+    },
+    "assets/brand/png/favicon-192x192.png": {
+      "hash": "6a48faeaebe5d9c6dd53c08a0a55dc0e81d13f8e80cb0443b57c9e69148b8959",
+      "content": "/Users/macbookm2/.cache/hyperframes/history/10802efe-a71c-42bd-80ea-971d3262b8c8/blobs/6a/6a48faeaebe5d9c6dd53c08a0a55dc0e81d13f8e80cb0443b57c9e69148b8959"
+    },
+    "assets/brand/png/favicon-32x32.png": {
+      "hash": "bd2275f6517b46ecb5615558bd5d1a9a07900792cafc1da31a102a5d0af807e8",
+      "content": "/Users/macbookm2/.cache/hyperframes/history/10802efe-a71c-42bd-80ea-971d3262b8c8/blobs/bd/bd2275f6517b46ecb5615558bd5d1a9a07900792cafc1da31a102a5d0af807e8"
+    },
+    "assets/brand/png/favicon-64x64.png": {
+      "hash": "6b3f8757c5d1d72b72fd508f88f5f13c19dd85ca7b71d81ac0a7a259a674acd1",
+      "content": "/Users/macbookm2/.cache/hyperframes/history/10802efe-a71c-42bd-80ea-971d3262b8c8/blobs/6b/6b3f8757c5d1d72b72fd508f88f5f13c19dd85ca7b71d81ac0a7a259a674acd1"
+    },
+    "assets/brand/png/koma-app-icon-512.png": {
+      "hash": "4c6046daa782fe4c2dace6091aad923f76e511a76b1eacb57114826d7ee80932",
+      "content": "/Users/macbookm2/.cache/hyperframes/history/10802efe-a71c-42bd-80ea-971d3262b8c8/blobs/4c/4c6046daa782fe4c2dace6091aad923f76e511a76b1eacb57114826d7ee80932"
+    },
+    "assets/brand/png/koma-app-icon-ink-512.png": {
+      "hash": "cd7fb0493a03a464a940b375710ef7ffe5fc757361e15c3c39a0fcf53664ffd2",
+      "content": "/Users/macbookm2/.cache/hyperframes/history/10802efe-a71c-42bd-80ea-971d3262b8c8/blobs/cd/cd7fb0493a03a464a940b375710ef7ffe5fc757361e15c3c39a0fcf53664ffd2"
+    },
+    "assets/brand/png/koma-brand-specimen.png": {
+      "hash": "fdb4d8a7d12ed138ef0c6b2d41d510776e419b94d09c7f495e18de621d826ab3",
+      "content": "/Users/macbookm2/.cache/hyperframes/history/10802efe-a71c-42bd-80ea-971d3262b8c8/blobs/fd/fdb4d8a7d12ed138ef0c6b2d41d510776e419b94d09c7f495e18de621d826ab3"
+    },
+    "assets/brand/png/koma-logo-horizontal-color.png": {
+      "hash": "10f6e8325aed140f3c8f778533023c931592a332be8046105aaf203176bf33f8",
+      "content": "/Users/macbookm2/.cache/hyperframes/history/10802efe-a71c-42bd-80ea-971d3262b8c8/blobs/10/10f6e8325aed140f3c8f778533023c931592a332be8046105aaf203176bf33f8"
+    },
+    "assets/brand/png/koma-logo-horizontal-color@4x.png": {
+      "hash": "ad77902a1af09f745ace00d2862d90acf91d14ba6b824986ab26edf752257c16",
+      "content": "/Users/macbookm2/.cache/hyperframes/history/10802efe-a71c-42bd-80ea-971d3262b8c8/blobs/ad/ad77902a1af09f745ace00d2862d90acf91d14ba6b824986ab26edf752257c16"
+    },
+    "assets/brand/png/koma-logo-horizontal-dark.png": {
+      "hash": "71039a6db7e5b5bfafa6c21bbb2a07906a87e7f55fbc2d7183db9dd6e3fb4706",
+      "content": "/Users/macbookm2/.cache/hyperframes/history/10802efe-a71c-42bd-80ea-971d3262b8c8/blobs/71/71039a6db7e5b5bfafa6c21bbb2a07906a87e7f55fbc2d7183db9dd6e3fb4706"
+    },
+    "assets/brand/png/koma-logo-horizontal-ink.png": {
+      "hash": "70e9d85152339111fa7edfc5cfeb7cb76355444f59578ead49a803cf46f259fa",
+      "content": "/Users/macbookm2/.cache/hyperframes/history/10802efe-a71c-42bd-80ea-971d3262b8c8/blobs/70/70e9d85152339111fa7edfc5cfeb7cb76355444f59578ead49a803cf46f259fa"
+    },
+    "assets/brand/png/koma-logo-horizontal-paper.png": {
+      "hash": "f0ed40b0569503d9826b3eee8dc849806b158b09f596a9ab19cbba597e305c98",
+      "content": "/Users/macbookm2/.cache/hyperframes/history/10802efe-a71c-42bd-80ea-971d3262b8c8/blobs/f0/f0ed40b0569503d9826b3eee8dc849806b158b09f596a9ab19cbba597e305c98"
+    },
+    "assets/brand/png/koma-logo-stacked-color.png": {
+      "hash": "1ef36c2a520f299212e4c4ac3d58fc567b561cc301f0280b2ec933da2892d572",
+      "content": "/Users/macbookm2/.cache/hyperframes/history/10802efe-a71c-42bd-80ea-971d3262b8c8/blobs/1e/1ef36c2a520f299212e4c4ac3d58fc567b561cc301f0280b2ec933da2892d572"
+    },
+    "assets/brand/png/koma-symbol-ink.png": {
+      "hash": "2c2f90f674ab5ecb6a67eec5d41c82013edb887aeff4ea3cb67c936b5a739f24",
+      "content": "/Users/macbookm2/.cache/hyperframes/history/10802efe-a71c-42bd-80ea-971d3262b8c8/blobs/2c/2c2f90f674ab5ecb6a67eec5d41c82013edb887aeff4ea3cb67c936b5a739f24"
+    },
+    "assets/brand/png/koma-symbol-paper.png": {
+      "hash": "0615fe3c28e7ab9fa3f29ec004ad6f871b567ae86a54b66caa4aa622f238f8b4",
+      "content": "/Users/macbookm2/.cache/hyperframes/history/10802efe-a71c-42bd-80ea-971d3262b8c8/blobs/06/0615fe3c28e7ab9fa3f29ec004ad6f871b567ae86a54b66caa4aa622f238f8b4"
+    },
+    "assets/brand/png/koma-symbol-violet.png": {
+      "hash": "098925aefba2b56570852fcc4ee87100be026a7bf596ac8d418d96c31addaefd",
+      "content": "/Users/macbookm2/.cache/hyperframes/history/10802efe-a71c-42bd-80ea-971d3262b8c8/blobs/09/098925aefba2b56570852fcc4ee87100be026a7bf596ac8d418d96c31addaefd"
+    },
+    "assets/brand/png/koma-wordmark-only-ink.png": {
+      "hash": "a41cb078983aa64cd21d58d5471cf22c1fa7fa28d356382a108da0fd196886a8",
+      "content": "/Users/macbookm2/.cache/hyperframes/history/10802efe-a71c-42bd-80ea-971d3262b8c8/blobs/a4/a41cb078983aa64cd21d58d5471cf22c1fa7fa28d356382a108da0fd196886a8"
+    },
+    "assets/brand/png/koma-wordmark-only-paper.png": {
+      "hash": "c8c097437a83e81b07e3b648353f7a9a8e01e15a83fba7a1713ecfa5c9925c8a",
+      "content": "/Users/macbookm2/.cache/hyperframes/history/10802efe-a71c-42bd-80ea-971d3262b8c8/blobs/c8/c8c097437a83e81b07e3b648353f7a9a8e01e15a83fba7a1713ecfa5c9925c8a"
+    },
+    "assets/brand/svg/favicon.svg": {
+      "hash": "3ee13f15bc2ee371cbdb3d500742e706b8c302f20825babddfd97613e0d69f13",
+      "content": "/Users/macbookm2/.cache/hyperframes/history/10802efe-a71c-42bd-80ea-971d3262b8c8/blobs/3e/3ee13f15bc2ee371cbdb3d500742e706b8c302f20825babddfd97613e0d69f13"
+    },
+    "assets/brand/svg/icons/badge-check.svg": {
+      "hash": "ac0dbf2df825221ffd5868c708dd6fa1cca1d28cd1c9fa57ec4fa17f683e9587",
+      "content": "/Users/macbookm2/.cache/hyperframes/history/10802efe-a71c-42bd-80ea-971d3262b8c8/blobs/ac/ac0dbf2df825221ffd5868c708dd6fa1cca1d28cd1c9fa57ec4fa17f683e9587"
+    },
+    "assets/brand/svg/icons/badge-shield.svg": {
+      "hash": "1c00ea2ecb2059b449223d14f16794b1163433352012bd60d3d66fde0b57c6b0",
+      "content": "/Users/macbookm2/.cache/hyperframes/history/10802efe-a71c-42bd-80ea-971d3262b8c8/blobs/1c/1c00ea2ecb2059b449223d14f16794b1163433352012bd60d3d66fde0b57c6b0"
+    },
+    "assets/brand/svg/icons/badge-sparkle.svg": {
+      "hash": "b0b398facea6a9ad0df5d52edffae9a2f1dd0571800c9fad0611d849c66742a3",
+      "content": "/Users/macbookm2/.cache/hyperframes/history/10802efe-a71c-42bd-80ea-971d3262b8c8/blobs/b0/b0b398facea6a9ad0df5d52edffae9a2f1dd0571800c9fad0611d849c66742a3"
+    },
+    "assets/brand/svg/icons/badge-star.svg": {
+      "hash": "b2e001f504ab14d47cb1e396c60992e9b925b9298be972dd43150bed039a753f",
+      "content": "/Users/macbookm2/.cache/hyperframes/history/10802efe-a71c-42bd-80ea-971d3262b8c8/blobs/b2/b2e001f504ab14d47cb1e396c60992e9b925b9298be972dd43150bed039a753f"
+    },
+    "assets/brand/svg/icons/reaction-dengerin.svg": {
+      "hash": "dcad7a0d33cb774a00f335aa373e77a4d36237c77ba24153b985d247bcf6b277",
+      "content": "/Users/macbookm2/.cache/hyperframes/history/10802efe-a71c-42bd-80ea-971d3262b8c8/blobs/dc/dcad7a0d33cb774a00f335aa373e77a4d36237c77ba24153b985d247bcf6b277"
+    },
+    "assets/brand/svg/icons/reaction-peluk.svg": {
+      "hash": "966b2ebde47e1aa3cc17ec4b3274180a6640037bdc4253214f7576dcbe86fc9c",
+      "content": "/Users/macbookm2/.cache/hyperframes/history/10802efe-a71c-42bd-80ea-971d3262b8c8/blobs/96/966b2ebde47e1aa3cc17ec4b3274180a6640037bdc4253214f7576dcbe86fc9c"
+    },
+    "assets/brand/svg/icons/reaction-relate.svg": {
+      "hash": "9b745b485aa780f18d79c3eef12dd01199222fd878e52622806e6221506f3a50",
+      "content": "/Users/macbookm2/.cache/hyperframes/history/10802efe-a71c-42bd-80ea-971d3262b8c8/blobs/9b/9b745b485aa780f18d79c3eef12dd01199222fd878e52622806e6221506f3a50"
+    },
+    "assets/brand/svg/icons/reaction-senyum.svg": {
+      "hash": "f983a4b05a3b5040804dc049e75f0a80c33fbbd23262aa0d5257b38c568d850b",
+      "content": "/Users/macbookm2/.cache/hyperframes/history/10802efe-a71c-42bd-80ea-971d3262b8c8/blobs/f9/f983a4b05a3b5040804dc049e75f0a80c33fbbd23262aa0d5257b38c568d850b"
+    },
+    "assets/brand/svg/koma-app-icon-ink.svg": {
+      "hash": "6292e67adedcc41580bcdf51a7528166878546026b0a33aebb0c9862d86fc380",
+      "content": "/Users/macbookm2/.cache/hyperframes/history/10802efe-a71c-42bd-80ea-971d3262b8c8/blobs/62/6292e67adedcc41580bcdf51a7528166878546026b0a33aebb0c9862d86fc380"
+    },
+    "assets/brand/svg/koma-app-icon-violet.svg": {
+      "hash": "c4a877b1695ddf89c5966824e11e1c6af178282d76f6bf306775e8d1e5300abd",
+      "content": "/Users/macbookm2/.cache/hyperframes/history/10802efe-a71c-42bd-80ea-971d3262b8c8/blobs/c4/c4a877b1695ddf89c5966824e11e1c6af178282d76f6bf306775e8d1e5300abd"
+    },
+    "assets/brand/svg/koma-logo-horizontal-color.svg": {
+      "hash": "92c523ca377a925152796f5abe8e4d25bcee278b7bca05684dd00a69ef154da2",
+      "content": "/Users/macbookm2/.cache/hyperframes/history/10802efe-a71c-42bd-80ea-971d3262b8c8/blobs/92/92c523ca377a925152796f5abe8e4d25bcee278b7bca05684dd00a69ef154da2"
+    },
+    "assets/brand/svg/koma-logo-horizontal-dark.svg": {
+      "hash": "6c726277d764ae60655c224e09ff6c0ba35ce6a09672a0c8ea5d46bbcd45a618",
+      "content": "/Users/macbookm2/.cache/hyperframes/history/10802efe-a71c-42bd-80ea-971d3262b8c8/blobs/6c/6c726277d764ae60655c224e09ff6c0ba35ce6a09672a0c8ea5d46bbcd45a618"
+    },
+    "assets/brand/svg/koma-logo-horizontal-ink.svg": {
+      "hash": "809a2d520c1b05462604d8deeaab6d4ff38d8b5b7eb53882c705917c4252d565",
+      "content": "/Users/macbookm2/.cache/hyperframes/history/10802efe-a71c-42bd-80ea-971d3262b8c8/blobs/80/809a2d520c1b05462604d8deeaab6d4ff38d8b5b7eb53882c705917c4252d565"
+    },
+    "assets/brand/svg/koma-logo-horizontal-paper.svg": {
+      "hash": "7aa7606b50d59c8681b73ebacb9144ec3e63cd92eee0ec5a0f96073734e6de9b",
+      "content": "/Users/macbookm2/.cache/hyperframes/history/10802efe-a71c-42bd-80ea-971d3262b8c8/blobs/7a/7aa7606b50d59c8681b73ebacb9144ec3e63cd92eee0ec5a0f96073734e6de9b"
+    },
+    "assets/brand/svg/koma-logo-horizontal-paperbg.svg": {
+      "hash": "fcb84a400681ee595155b774cf118ea7a8eed6452198ff5962fc84de818e214e",
+      "content": "/Users/macbookm2/.cache/hyperframes/history/10802efe-a71c-42bd-80ea-971d3262b8c8/blobs/fc/fcb84a400681ee595155b774cf118ea7a8eed6452198ff5962fc84de818e214e"
+    },
+    "assets/brand/svg/koma-logo-stacked-color.svg": {
+      "hash": "29a44ac08341c1e8a724b89be99c66eced7517d8ed18389b0670807cdb4f7281",
+      "content": "/Users/macbookm2/.cache/hyperframes/history/10802efe-a71c-42bd-80ea-971d3262b8c8/blobs/29/29a44ac08341c1e8a724b89be99c66eced7517d8ed18389b0670807cdb4f7281"
+    },
+    "assets/brand/svg/koma-logo-stacked-paper.svg": {
+      "hash": "cfd0695e9f480fddfc74143e16728136a59f4c97a7b647cd1d221078d6e1f1ed",
+      "content": "/Users/macbookm2/.cache/hyperframes/history/10802efe-a71c-42bd-80ea-971d3262b8c8/blobs/cf/cfd0695e9f480fddfc74143e16728136a59f4c97a7b647cd1d221078d6e1f1ed"
+    },
+    "assets/brand/svg/koma-symbol-ink.svg": {
+      "hash": "f98c1f67a0a33eb848567bf11c4c93d9b826520cb125391d647362edf999bd71",
+      "content": "/Users/macbookm2/.cache/hyperframes/history/10802efe-a71c-42bd-80ea-971d3262b8c8/blobs/f9/f98c1f67a0a33eb848567bf11c4c93d9b826520cb125391d647362edf999bd71"
+    },
+    "assets/brand/svg/koma-symbol-paper.svg": {
+      "hash": "f587eb6297f736eb754c3b0943b9f936a9ed0e65ec8ef0b01eb19c9d0e42a8ff",
+      "content": "/Users/macbookm2/.cache/hyperframes/history/10802efe-a71c-42bd-80ea-971d3262b8c8/blobs/f5/f587eb6297f736eb754c3b0943b9f936a9ed0e65ec8ef0b01eb19c9d0e42a8ff"
+    },
+    "assets/brand/svg/koma-symbol-violet.svg": {
+      "hash": "bdc63498587badd89b502e113c7fa6bddb8addedecb722966a380a3c233cc7ee",
+      "content": "/Users/macbookm2/.cache/hyperframes/history/10802efe-a71c-42bd-80ea-971d3262b8c8/blobs/bd/bdc63498587badd89b502e113c7fa6bddb8addedecb722966a380a3c233cc7ee"
+    },
+    "assets/brand/svg/koma-wordmark-only-ink.svg": {
+      "hash": "7bb1748c385ff7bf9325df3153364731caac6da12a2d1bfba6a2b36562637a4e",
+      "content": "/Users/macbookm2/.cache/hyperframes/history/10802efe-a71c-42bd-80ea-971d3262b8c8/blobs/7b/7bb1748c385ff7bf9325df3153364731caac6da12a2d1bfba6a2b36562637a4e"
+    },
+    "assets/brand/svg/koma-wordmark-only-paper.svg": {
+      "hash": "d7366be52de0a70c8b513323ac4f436800581dcc557749e14e13c71c1bf33d0c",
+      "content": "/Users/macbookm2/.cache/hyperframes/history/10802efe-a71c-42bd-80ea-971d3262b8c8/blobs/d7/d7366be52de0a70c8b513323ac4f436800581dcc557749e14e13c71c1bf33d0c"
+    },
+    "assets/vendor/gsap.min.js": {
+      "hash": "c174bfce53a729418d57a8ad8625e7247c793a22fef8e2851e3cfa3de9cd8280",
+      "content": "/Users/macbookm2/.cache/hyperframes/history/10802efe-a71c-42bd-80ea-971d3262b8c8/blobs/c1/c174bfce53a729418d57a8ad8625e7247c793a22fef8e2851e3cfa3de9cd8280"
+    },
+    "assets/visual/doodle-arrow.svg": {
+      "hash": "f0d84c02138fb8ee5a7075d20ea18cdec00cdf849aa5eccf16f0165cdd472631",
+      "content": "/Users/macbookm2/.cache/hyperframes/history/10802efe-a71c-42bd-80ea-971d3262b8c8/blobs/f0/f0d84c02138fb8ee5a7075d20ea18cdec00cdf849aa5eccf16f0165cdd472631"
+    },
+    "assets/visual/doodle-star.svg": {
+      "hash": "f01d160f0ddc034b6643d7896032bdf38e6baec1bab9ef109a8b6049cf265871",
+      "content": "/Users/macbookm2/.cache/hyperframes/history/10802efe-a71c-42bd-80ea-971d3262b8c8/blobs/f0/f01d160f0ddc034b6643d7896032bdf38e6baec1bab9ef109a8b6049cf265871"
+    },
+    "assets/visual/feed-empty-state.webp": {
+      "hash": "475e0a3e632ee62e08505c11d59a92d1d68f1f21ee757366c3f8f2a4c07d4c1e",
+      "content": "/Users/macbookm2/.cache/hyperframes/history/10802efe-a71c-42bd-80ea-971d3262b8c8/blobs/47/475e0a3e632ee62e08505c11d59a92d1d68f1f21ee757366c3f8f2a4c07d4c1e"
+    },
+    "assets/visual/hero-bg.webp": {
+      "hash": "f34f798abbad6d722fdf10633db1aaf104dc5a9fb9db6e9885bc7701e43f3c4a",
+      "content": "/Users/macbookm2/.cache/hyperframes/history/10802efe-a71c-42bd-80ea-971d3262b8c8/blobs/f3/f34f798abbad6d722fdf10633db1aaf104dc5a9fb9db6e9885bc7701e43f3c4a"
+    },
+    "assets/visual/hero-foreground.webp": {
+      "hash": "eec4804267cb5544d76ec39625a524a4e8e128c083b1f1268a6aec169035c677",
+      "content": "/Users/macbookm2/.cache/hyperframes/history/10802efe-a71c-42bd-80ea-971d3262b8c8/blobs/ee/eec4804267cb5544d76ec39625a524a4e8e128c083b1f1268a6aec169035c677"
+    },
+    "assets/visual/hero-main.webp": {
+      "hash": "91f51ae0ded1f26e7b7fb59e2ef225c91bc304f93d5a3ad340aeca63c7ead571",
+      "content": "/Users/macbookm2/.cache/hyperframes/history/10802efe-a71c-42bd-80ea-971d3262b8c8/blobs/91/91f51ae0ded1f26e7b7fb59e2ef225c91bc304f93d5a3ad340aeca63c7ead571"
+    },
+    "assets/visual/hero-midground.webp": {
+      "hash": "ddd1155eebd73ba12936ca65edafd3763de6023a3d95063a8dc4bd68f456db54",
+      "content": "/Users/macbookm2/.cache/hyperframes/history/10802efe-a71c-42bd-80ea-971d3262b8c8/blobs/dd/ddd1155eebd73ba12936ca65edafd3763de6023a3d95063a8dc4bd68f456db54"
+    },
+    "assets/visual/paper-clip.svg": {
+      "hash": "fe6547436b4dd1397ffe478e24e4aa07b2de744b79a0b7f3135a088dfd56f4ee",
+      "content": "/Users/macbookm2/.cache/hyperframes/history/10802efe-a71c-42bd-80ea-971d3262b8c8/blobs/fe/fe6547436b4dd1397ffe478e24e4aa07b2de744b79a0b7f3135a088dfd56f4ee"
+    },
+    "assets/visual/paper-texture.webp": {
+      "hash": "c1aa626459eb545b615d55b8ce726780306929860a053e90724acff196c849d7",
+      "content": "/Users/macbookm2/.cache/hyperframes/history/10802efe-a71c-42bd-80ea-971d3262b8c8/blobs/c1/c1aa626459eb545b615d55b8ce726780306929860a053e90724acff196c849d7"
+    },
+    "assets/visual/reactions/dengerin.svg": {
+      "hash": "6eb0243e5df5a79eeb59c0c43e1354d512b8fb983c13634b21702983f96f71a8",
+      "content": "/Users/macbookm2/.cache/hyperframes/history/10802efe-a71c-42bd-80ea-971d3262b8c8/blobs/6e/6eb0243e5df5a79eeb59c0c43e1354d512b8fb983c13634b21702983f96f71a8"
+    },
+    "assets/visual/reactions/peluk.svg": {
+      "hash": "6469cf9236e51ee410397cfda32c71694d9eb35ac905758ed2a21384a5326d9a",
+      "content": "/Users/macbookm2/.cache/hyperframes/history/10802efe-a71c-42bd-80ea-971d3262b8c8/blobs/64/6469cf9236e51ee410397cfda32c71694d9eb35ac905758ed2a21384a5326d9a"
+    },
+    "assets/visual/reactions/relate.svg": {
+      "hash": "0f274e133d7150b368e0a65d264b9ea03ad141126b197911bcf364a7c992592a",
+      "content": "/Users/macbookm2/.cache/hyperframes/history/10802efe-a71c-42bd-80ea-971d3262b8c8/blobs/0f/0f274e133d7150b368e0a65d264b9ea03ad141126b197911bcf364a7c992592a"
+    },
+    "assets/visual/reactions/senyum.svg": {
+      "hash": "405673684452bca1e230b40ed6e2c3b0476d79a08284598ee19cf2aba1f05715",
+      "content": "/Users/macbookm2/.cache/hyperframes/history/10802efe-a71c-42bd-80ea-971d3262b8c8/blobs/40/405673684452bca1e230b40ed6e2c3b0476d79a08284598ee19cf2aba1f05715"
+    },
+    "assets/visual/section-connecting.webp": {
+      "hash": "8e9b77b755c7b51c853e116a2755a52cec71cda46bfecbb452482ce17d7698db",
+      "content": "/Users/macbookm2/.cache/hyperframes/history/10802efe-a71c-42bd-80ea-971d3262b8c8/blobs/8e/8e9b77b755c7b51c853e116a2755a52cec71cda46bfecbb452482ce17d7698db"
+    },
+    "assets/visual/section-discovering.webp": {
+      "hash": "3f06c7683c4e1dd5700cf12a720d7722acbf036000515c9adca0ebf5da73d455",
+      "content": "/Users/macbookm2/.cache/hyperframes/history/10802efe-a71c-42bd-80ea-971d3262b8c8/blobs/3f/3f06c7683c4e1dd5700cf12a720d7722acbf036000515c9adca0ebf5da73d455"
+    },
+    "assets/visual/section-writing.webp": {
+      "hash": "6180bf57fba9123f3e50cd5230666c841d4d501a50eacba699104b913f8adee9",
+      "content": "/Users/macbookm2/.cache/hyperframes/history/10802efe-a71c-42bd-80ea-971d3262b8c8/blobs/61/6180bf57fba9123f3e50cd5230666c841d4d501a50eacba699104b913f8adee9"
+    },
+    "assets/visual/stamp-dengar.svg": {
+      "hash": "7c1dd53d4b1160e04a202b794e5a6e6770de42fabae7dccd15803287599198eb",
+      "content": "/Users/macbookm2/.cache/hyperframes/history/10802efe-a71c-42bd-80ea-971d3262b8c8/blobs/7c/7c1dd53d4b1160e04a202b794e5a6e6770de42fabae7dccd15803287599198eb"
+    },
+    "assets/visual/stamp-koma.svg": {
+      "hash": "ab59018c2545f2efc5bea8fefbcdcd6555222af3bba4b8c173117e3b9bc63a97",
+      "content": "/Users/macbookm2/.cache/hyperframes/history/10802efe-a71c-42bd-80ea-971d3262b8c8/blobs/ab/ab59018c2545f2efc5bea8fefbcdcd6555222af3bba4b8c173117e3b9bc63a97"
+    },
+    "assets/visual/sticker-koma-zine.svg": {
+      "hash": "80a0b2392094218de0b83399963724e54d25258c7253c1b4cc137336a074e8cb",
+      "content": "/Users/macbookm2/.cache/hyperframes/history/10802efe-a71c-42bd-80ea-971d3262b8c8/blobs/80/80a0b2392094218de0b83399963724e54d25258c7253c1b4cc137336a074e8cb"
+    },
+    "assets/visual/sticker-relate.svg": {
+      "hash": "66b2f20c422dfbaeff899601d9c82582f1e4df72aa23f898371a3e21dec7cc98",
+      "content": "/Users/macbookm2/.cache/hyperframes/history/10802efe-a71c-42bd-80ea-971d3262b8c8/blobs/66/66b2f20c422dfbaeff899601d9c82582f1e4df72aa23f898371a3e21dec7cc98"
+    },
+    "assets/visual/tape-kraft.svg": {
+      "hash": "75b7d333a9c728e2209035dc2a7d67df029150ccafbcc484951a45ef5402ede2",
+      "content": "/Users/macbookm2/.cache/hyperframes/history/10802efe-a71c-42bd-80ea-971d3262b8c8/blobs/75/75b7d333a9c728e2209035dc2a7d67df029150ccafbcc484951a45ef5402ede2"
+    },
+    "assets/visual/tape-purple.svg": {
+      "hash": "69e5f5030de0af4451cab5ca2c5d7759983aa7a1f6b1fd7610a32bbb7f88c3ea",
+      "content": "/Users/macbookm2/.cache/hyperframes/history/10802efe-a71c-42bd-80ea-971d3262b8c8/blobs/69/69e5f5030de0af4451cab5ca2c5d7759983aa7a1f6b1fd7610a32bbb7f88c3ea"
+    },
+    "assets/visual/torn-edge.svg": {
+      "hash": "a45515f0d8d9b9c62039e1ff1c0491548cfe460e2ea6224436da6b2ca302f57f",
+      "content": "/Users/macbookm2/.cache/hyperframes/history/10802efe-a71c-42bd-80ea-971d3262b8c8/blobs/a4/a45515f0d8d9b9c62039e1ff1c0491548cfe460e2ea6224436da6b2ca302f57f"
+    },
+    "assets/voice/01-hook.mp3": {
+      "hash": "525d79e87425d0a7119330b87b8b51afba1832f435ad2f148bb6618deb3f09bb",
+      "content": "/Users/macbookm2/.cache/hyperframes/history/10802efe-a71c-42bd-80ea-971d3262b8c8/blobs/52/525d79e87425d0a7119330b87b8b51afba1832f435ad2f148bb6618deb3f09bb"
+    },
+    "assets/voice/02-hesitation.mp3": {
+      "hash": "c154826dd41e46273a67f88fd3177d7be332601c1adf7d87864225cad0a1db39",
+      "content": "/Users/macbookm2/.cache/hyperframes/history/10802efe-a71c-42bd-80ea-971d3262b8c8/blobs/c1/c154826dd41e46273a67f88fd3177d7be332601c1adf7d87864225cad0a1db39"
+    },
+    "assets/voice/03-fragments.mp3": {
+      "hash": "ace0f7a733f5bd89313104de10598b1470072456c80f809f2c0a7c68ebd9eeac",
+      "content": "/Users/macbookm2/.cache/hyperframes/history/10802efe-a71c-42bd-80ea-971d3262b8c8/blobs/ac/ace0f7a733f5bd89313104de10598b1470072456c80f809f2c0a7c68ebd9eeac"
+    },
+    "assets/voice/04-brand.mp3": {
+      "hash": "a54b10136094d1b6ff6653cf87d6d449b9c73149c4a8664e9f538a6d3c06a725",
+      "content": "/Users/macbookm2/.cache/hyperframes/history/10802efe-a71c-42bd-80ea-971d3262b8c8/blobs/a5/a54b10136094d1b6ff6653cf87d6d449b9c73149c4a8664e9f538a6d3c06a725"
+    },
+    "compositions/captions.html": {
+      "hash": "54b1ea978ce91128b76ed2be7a12320bef17281cc18720fbba28676c5d34f9cd",
+      "content": "/Users/macbookm2/.cache/hyperframes/history/10802efe-a71c-42bd-80ea-971d3262b8c8/blobs/54/54b1ea978ce91128b76ed2be7a12320bef17281cc18720fbba28676c5d34f9cd"
+    },
+    "compositions/scene1-hook.html": {
+      "hash": "3da2ff8b3ed74e6ac4768be7f14dae8bcc104eb0e4efda54634a693d9b59d663",
+      "content": "/Users/macbookm2/.cache/hyperframes/history/10802efe-a71c-42bd-80ea-971d3262b8c8/blobs/3d/3da2ff8b3ed74e6ac4768be7f14dae8bcc104eb0e4efda54634a693d9b59d663"
+    },
+    "compositions/scene2-hesitation.html": {
+      "hash": "7dd1998f0738879e17e5ddb4a5acf3e7faf520201e747f72fe89df8b51b4fca0",
+      "content": "/Users/macbookm2/.cache/hyperframes/history/10802efe-a71c-42bd-80ea-971d3262b8c8/blobs/7d/7dd1998f0738879e17e5ddb4a5acf3e7faf520201e747f72fe89df8b51b4fca0"
+    },
+    "compositions/scene3-fragments.html": {
+      "hash": "a353e638954f8e08a75d5b4a3f5707c5a6966712dc574c2f7d72109b02adacdb",
+      "content": "/Users/macbookm2/.cache/hyperframes/history/10802efe-a71c-42bd-80ea-971d3262b8c8/blobs/a3/a353e638954f8e08a75d5b4a3f5707c5a6966712dc574c2f7d72109b02adacdb"
+    },
+    "compositions/scene4-brand.html": {
+      "hash": "7ba7ef754673a162e7f79eb1c5f4916e143f1b5ee22c9bea1c81ca573210a193",
+      "content": "/Users/macbookm2/.cache/hyperframes/history/10802efe-a71c-42bd-80ea-971d3262b8c8/blobs/7b/7ba7ef754673a162e7f79eb1c5f4916e143f1b5ee22c9bea1c81ca573210a193"
+    },
+    "hyperframes.json": {
+      "hash": "d4c98a83cdd45bd10f591706ba73cb8d54451d0065085869764869ab3798ebe3",
+      "content": "/Users/macbookm2/.cache/hyperframes/history/10802efe-a71c-42bd-80ea-971d3262b8c8/blobs/d4/d4c98a83cdd45bd10f591706ba73cb8d54451d0065085869764869ab3798ebe3"
+    },
+    "index.html": {
+      "hash": "789d926b9cb3738fb8e270c0f0698872f95b880d9886fb3f9e3ce9b0a8d4ec94",
+      "content": "/Users/macbookm2/.cache/hyperframes/history/10802efe-a71c-42bd-80ea-971d3262b8c8/blobs/78/789d926b9cb3738fb8e270c0f0698872f95b880d9886fb3f9e3ce9b0a8d4ec94"
+    },
+    "produce-voice.py": {
+      "hash": "bf4c851a18bc7924af89e0e235d6f1bafd5aa84340a365045c9f13ffb60f1692",
+      "content": "/Users/macbookm2/.cache/hyperframes/history/10802efe-a71c-42bd-80ea-971d3262b8c8/blobs/bf/bf4c851a18bc7924af89e0e235d6f1bafd5aa84340a365045c9f13ffb60f1692"
+    },
+    "script.json": {
+      "hash": "23481caee3055377884cda0ccc19ae8975cac9e3cffca78c7ef9320d4b7979eb",
+      "content": "/Users/macbookm2/.cache/hyperframes/history/10802efe-a71c-42bd-80ea-971d3262b8c8/blobs/23/23481caee3055377884cda0ccc19ae8975cac9e3cffca78c7ef9320d4b7979eb"
+    },
+    "voice-timing.json": {
+      "hash": "81837d6a5058f853dfca1837cf16c5d631e19422efa3de6b16591c404656a650",
+      "content": "/Users/macbookm2/.cache/hyperframes/history/10802efe-a71c-42bd-80ea-971d3262b8c8/blobs/81/81837d6a5058f853dfca1837cf16c5d631e19422efa3de6b16591c404656a650"
+    },
+    "assets/audio/music-gymnopedie.mp3": {
+      "hash": "8cba6bb3da51066ad39520ec218a327bb6222d8fb32bc52f28a1e90b67756f70",
+      "content": "/Users/macbookm2/.cache/hyperframes/history/10802efe-a71c-42bd-80ea-971d3262b8c8/blobs/8c/8cba6bb3da51066ad39520ec218a327bb6222d8fb32bc52f28a1e90b67756f70"
+    },
+    "assets/voice_minimax/01-hook.mp3": {
+      "hash": "07a8424289dce5030b64cd034d1e35e562e2849ce63c75e03af6c0cf91b4419e",
+      "content": "/Users/macbookm2/.cache/hyperframes/history/10802efe-a71c-42bd-80ea-971d3262b8c8/blobs/07/07a8424289dce5030b64cd034d1e35e562e2849ce63c75e03af6c0cf91b4419e"
+    },
+    "assets/voice_minimax/02-hesitation.mp3": {
+      "hash": "a4ba00deea29dd6543b741aa0cdc6597783d373e93f9b78bd7e6c236ad7f65dc",
+      "content": "/Users/macbookm2/.cache/hyperframes/history/10802efe-a71c-42bd-80ea-971d3262b8c8/blobs/a4/a4ba00deea29dd6543b741aa0cdc6597783d373e93f9b78bd7e6c236ad7f65dc"
+    },
+    "assets/voice_minimax/03-fragments.mp3": {
+      "hash": "87a75155721521da9c7bd60ddc44727196e70bbe6c61ea1babb36d37a3f94ec2",
+      "content": "/Users/macbookm2/.cache/hyperframes/history/10802efe-a71c-42bd-80ea-971d3262b8c8/blobs/87/87a75155721521da9c7bd60ddc44727196e70bbe6c61ea1babb36d37a3f94ec2"
+    },
+    "assets/voice_minimax/04-brand.mp3": {
+      "hash": "1145fc573392e49c80783464db470256bc87bc1d660b9e40163d8b8f39543f75",
+      "content": "/Users/macbookm2/.cache/hyperframes/history/10802efe-a71c-42bd-80ea-971d3262b8c8/blobs/11/1145fc573392e49c80783464db470256bc87bc1d660b9e40163d8b8f39543f75"
+    }
+  },
+  "revisions": {
+    "b55e181c-8142-4499-a114-6c9e5da0172d": {
+      "actor": {
+        "kind": "outside",
+        "name": "Outside"
+      },
+      "label": "Changed outside the app",
+      "startedAt": 1793070376548,
+      "endedAt": 1793070376551,
+      "files": {
+        "compositions/scene2-hesitation.html": {
+          "before": "/Users/macbookm2/.cache/hyperframes/history/10802efe-a71c-42bd-80ea-971d3262b8c8/blobs/71/719141156acca994284ef1cf03194b45c029ab9729b73078f53d61371498b5b0",
+          "after": "/Users/macbookm2/.cache/hyperframes/history/10802efe-a71c-42bd-80ea-971d3262b8c8/blobs/ae/aec1c3049e4ada1f616add081e81461aa9904a90222b9095ab9a48a5140a59f4"
+        },
+        "compositions/scene3-fragments.html": {
+          "before": "/Users/macbookm2/.cache/hyperframes/history/10802efe-a71c-42bd-80ea-971d3262b8c8/blobs/fa/fa27462d87a603d7c6e5e329a4f1ee1d3b8fa0c5a7b801065aedf53e40aff5fc",
+          "after": "/Users/macbookm2/.cache/hyperframes/history/10802efe-a71c-42bd-80ea-971d3262b8c8/blobs/e5/e532cd9586bca6434415ea61c08700ad89cbd6ddd159e9d505668fff77b028b9"
+        },
+        "compositions/scene4-brand.html": {
+          "before": "/Users/macbookm2/.cache/hyperframes/history/10802efe-a71c-42bd-80ea-971d3262b8c8/blobs/f4/f4c22fb39667d8706c294495a06c8a0c0f2609124c3aafd6ddccded957b41292",
+          "after": "/Users/macbookm2/.cache/hyperframes/history/10802efe-a71c-42bd-80ea-971d3262b8c8/blobs/9c/9c9e8659c50d011d71f62db69b3ac2cdd75f6fc62e02e8f0a03f812732f47e18"
+        }
+      }
+    },
+    "5f5a0e74-64e7-49f6-b604-d4cbba47f02f": {
+      "actor": {
+        "kind": "outside",
+        "name": "Outside"
+      },
+      "label": "Changed outside the app",
+      "startedAt": 1793070423750,
+      "endedAt": 1793070423755,
+      "files": {
+        "compositions/scene1-hook.html": {
+          "before": "/Users/macbookm2/.cache/hyperframes/history/10802efe-a71c-42bd-80ea-971d3262b8c8/blobs/92/92a1ffd0a5176f975a99790a2b375e01bb432b72126886ffabeff28f21ada19e",
+          "after": "/Users/macbookm2/.cache/hyperframes/history/10802efe-a71c-42bd-80ea-971d3262b8c8/blobs/a9/a960e37b3b193bd538d96910364a797af8036c37fc27896dfda86d56c8d5093c"
+        },
+        "compositions/scene2-hesitation.html": {
+          "before": "/Users/macbookm2/.cache/hyperframes/history/10802efe-a71c-42bd-80ea-971d3262b8c8/blobs/ae/aec1c3049e4ada1f616add081e81461aa9904a90222b9095ab9a48a5140a59f4",
+          "after": "/Users/macbookm2/.cache/hyperframes/history/10802efe-a71c-42bd-80ea-971d3262b8c8/blobs/f1/f154b687f7f907a2208b40ccf44858120770482ea5dc30fbfc54f8797754bec8"
+        },
+        "compositions/scene4-brand.html": {
+          "before": "/Users/macbookm2/.cache/hyperframes/history/10802efe-a71c-42bd-80ea-971d3262b8c8/blobs/9c/9c9e8659c50d011d71f62db69b3ac2cdd75f6fc62e02e8f0a03f812732f47e18",
+          "after": "/Users/macbookm2/.cache/hyperframes/history/10802efe-a71c-42bd-80ea-971d3262b8c8/blobs/5e/5e6905a82e0572350f41c7879fafad19fda05540a080faac46663c6332422129"
+        }
+      }
+    },
+    "61548f92-7f14-4a47-b345-710dff995187": {
+      "actor": {
+        "kind": "outside",
+        "name": "Outside"
+      },
+      "label": "Changed outside the app",
+      "startedAt": 1793070456364,
+      "endedAt": 1793070456367,
+      "files": {
+        "compositions/scene1-hook.html": {
+          "before": "/Users/macbookm2/.cache/hyperframes/history/10802efe-a71c-42bd-80ea-971d3262b8c8/blobs/a9/a960e37b3b193bd538d96910364a797af8036c37fc27896dfda86d56c8d5093c",
+          "after": "/Users/macbookm2/.cache/hyperframes/history/10802efe-a71c-42bd-80ea-971d3262b8c8/blobs/a3/a355b737824c4a82f69fd619ce4e51e326348a4c7f63cc53234810208ecb51a9"
+        },
+        "compositions/scene3-fragments.html": {
+          "before": "/Users/macbookm2/.cache/hyperframes/history/10802efe-a71c-42bd-80ea-971d3262b8c8/blobs/e5/e532cd9586bca6434415ea61c08700ad89cbd6ddd159e9d505668fff77b028b9",
+          "after": "/Users/macbookm2/.cache/hyperframes/history/10802efe-a71c-42bd-80ea-971d3262b8c8/blobs/d9/d96449ceaf3efc6e5e3790c20329bae460e89c944246baa7c926b9bc0f8258a5"
+        },
+        "compositions/scene4-brand.html": {
+          "before": "/Users/macbookm2/.cache/hyperframes/history/10802efe-a71c-42bd-80ea-971d3262b8c8/blobs/5e/5e6905a82e0572350f41c7879fafad19fda05540a080faac46663c6332422129",
+          "after": "/Users/macbookm2/.cache/hyperframes/history/10802efe-a71c-42bd-80ea-971d3262b8c8/blobs/76/767534db2ae91d1744c6fd70ced4429d6bfee384c8f80d7abc44edaf7e7254d1"
+        }
+      }
+    },
+    "b8cd6a46-8a40-46f2-8bed-0344fe84b6bd": {
+      "actor": {
+        "kind": "outside",
+        "name": "Outside"
+      },
+      "label": "Changed outside the app",
+      "startedAt": 1793070488236,
+      "endedAt": 1793070488238,
+      "files": {
+        "compositions/scene3-fragments.html": {
+          "before": "/Users/macbookm2/.cache/hyperframes/history/10802efe-a71c-42bd-80ea-971d3262b8c8/blobs/d9/d96449ceaf3efc6e5e3790c20329bae460e89c944246baa7c926b9bc0f8258a5",
+          "after": "/Users/macbookm2/.cache/hyperframes/history/10802efe-a71c-42bd-80ea-971d3262b8c8/blobs/8a/8aadaa935be4c32b7a4ccca2fef09d9f3da3b23490999ae4880bbc5f244d47d3"
+        },
+        "compositions/scene4-brand.html": {
+          "before": "/Users/macbookm2/.cache/hyperframes/history/10802efe-a71c-42bd-80ea-971d3262b8c8/blobs/76/767534db2ae91d1744c6fd70ced4429d6bfee384c8f80d7abc44edaf7e7254d1",
+          "after": "/Users/macbookm2/.cache/hyperframes/history/10802efe-a71c-42bd-80ea-971d3262b8c8/blobs/73/73f53f68af8349b6df521180f34caa573dc08267c4093ae817cd1c2475cd7531"
+        }
+      }
+    },
+    "ae487f08-aaf4-4210-85df-da1fbdb8fbf4": {
+      "actor": {
+        "kind": "outside",
+        "name": "Outside"
+      },
+      "label": "Changed outside the app",
+      "startedAt": 1793070509628,
+      "endedAt": 1793070509630,
+      "files": {
+        "compositions/scene2-hesitation.html": {
+          "before": "/Users/macbookm2/.cache/hyperframes/history/10802efe-a71c-42bd-80ea-971d3262b8c8/blobs/f1/f154b687f7f907a2208b40ccf44858120770482ea5dc30fbfc54f8797754bec8",
+          "after": "/Users/macbookm2/.cache/hyperframes/history/10802efe-a71c-42bd-80ea-971d3262b8c8/blobs/6e/6e10e3bc2f830e0ab3684a2a50edad33a63dd0262f276be4757598cf21495093"
+        },
+        "compositions/scene4-brand.html": {
+          "before": "/Users/macbookm2/.cache/hyperframes/history/10802efe-a71c-42bd-80ea-971d3262b8c8/blobs/73/73f53f68af8349b6df521180f34caa573dc08267c4093ae817cd1c2475cd7531",
+          "after": "/Users/macbookm2/.cache/hyperframes/history/10802efe-a71c-42bd-80ea-971d3262b8c8/blobs/e5/e53bf72be239869269bbe3ad56c4cae090081707089298eb4d62870c140e9ad7"
+        }
+      }
+    },
+    "ec53c057-5fc2-4314-9f73-03a90b6d6bac": {
+      "actor": {
+        "kind": "outside",
+        "name": "Outside"
+      },
+      "label": "Changed outside the app",
+      "startedAt": 1793070529451,
+      "endedAt": 1793070529454,
+      "files": {
+        "compositions/scene1-hook.html": {
+          "before": "/Users/macbookm2/.cache/hyperframes/history/10802efe-a71c-42bd-80ea-971d3262b8c8/blobs/a3/a355b737824c4a82f69fd619ce4e51e326348a4c7f63cc53234810208ecb51a9",
+          "after": "/Users/macbookm2/.cache/hyperframes/history/10802efe-a71c-42bd-80ea-971d3262b8c8/blobs/15/1577ccd8bd3e76df15fc1216f3bb8db9c9fc8fa069363385354653059a03cb87"
+        },
+        "compositions/scene4-brand.html": {
+          "before": "/Users/macbookm2/.cache/hyperframes/history/10802efe-a71c-42bd-80ea-971d3262b8c8/blobs/e5/e53bf72be239869269bbe3ad56c4cae090081707089298eb4d62870c140e9ad7",
+          "after": "/Users/macbookm2/.cache/hyperframes/history/10802efe-a71c-42bd-80ea-971d3262b8c8/blobs/7b/7ba7ef754673a162e7f79eb1c5f4916e143f1b5ee22c9bea1c81ca573210a193"
+        }
+      }
+    },
+    "529fa199-c914-41f9-983e-ce3bae965c30": {
+      "actor": {
+        "kind": "outside",
+        "name": "Outside"
+      },
+      "label": "Changed outside the app",
+      "startedAt": 1793070564319,
+      "endedAt": 1793070564322,
+      "files": {
+        "compositions/scene1-hook.html": {
+          "before": "/Users/macbookm2/.cache/hyperframes/history/10802efe-a71c-42bd-80ea-971d3262b8c8/blobs/15/1577ccd8bd3e76df15fc1216f3bb8db9c9fc8fa069363385354653059a03cb87",
+          "after": "/Users/macbookm2/.cache/hyperframes/history/10802efe-a71c-42bd-80ea-971d3262b8c8/blobs/97/977f9bc518b427b8be14510557423340b732d7572457338b693b5ef275b9a6eb"
+        },
+        "index.html": {
+          "before": "/Users/macbookm2/.cache/hyperframes/history/10802efe-a71c-42bd-80ea-971d3262b8c8/blobs/d2/d2750980859859a782ce0069cefc4bbf3f0471de66d8eff7ae2bf8494c51cd0d",
+          "after": "/Users/macbookm2/.cache/hyperframes/history/10802efe-a71c-42bd-80ea-971d3262b8c8/blobs/b4/b4ef521b7fb8ae388060941e01e5ea6e58ff23a3bc8179513ec4045257bb45d4"
+        }
+      }
+    },
+    "725de43b-5b83-45af-9e33-13e5a19083d1": {
+      "actor": {
+        "kind": "outside",
+        "name": "Outside"
+      },
+      "label": "Changed outside the app",
+      "startedAt": 1793070578480,
+      "endedAt": 1793070578481,
+      "files": {
+        "compositions/scene1-hook.html": {
+          "before": "/Users/macbookm2/.cache/hyperframes/history/10802efe-a71c-42bd-80ea-971d3262b8c8/blobs/97/977f9bc518b427b8be14510557423340b732d7572457338b693b5ef275b9a6eb",
+          "after": "/Users/macbookm2/.cache/hyperframes/history/10802efe-a71c-42bd-80ea-971d3262b8c8/blobs/be/beeeebc0bc2ab9383dd34521ca21660e5492108ac2fda6f0b549b2f382916b57"
+        }
+      }
+    },
+    "f4a64dc8-6bad-445d-a898-bb2971ea5d14": {
+      "actor": {
+        "kind": "outside",
+        "name": "Outside"
+      },
+      "label": "Changed outside the app",
+      "startedAt": 1793071636175,
+      "endedAt": 1793071636188,
+      "files": {
+        "assets/audio/music-bed.mp3": {
+          "before": "/Users/macbookm2/.cache/hyperframes/history/10802efe-a71c-42bd-80ea-971d3262b8c8/blobs/4a/4ae996b8da762a2cdf710ffbca2ceb9a816268da5fe7448ceb4a378317ea5774",
+          "after": "/Users/macbookm2/.cache/hyperframes/history/10802efe-a71c-42bd-80ea-971d3262b8c8/blobs/c3/c39ecf3ae0085d952e8bfa96c9f245e70bd018c2fccfea7ebff612642edd920f"
+        },
+        "assets/voice_minimax/01-hook.mp3": {
+          "before": null,
+          "after": "/Users/macbookm2/.cache/hyperframes/history/10802efe-a71c-42bd-80ea-971d3262b8c8/blobs/07/07a8424289dce5030b64cd034d1e35e562e2849ce63c75e03af6c0cf91b4419e"
+        },
+        "assets/voice_minimax/02-hesitation.mp3": {
+          "before": null,
+          "after": "/Users/macbookm2/.cache/hyperframes/history/10802efe-a71c-42bd-80ea-971d3262b8c8/blobs/a4/a4ba00deea29dd6543b741aa0cdc6597783d373e93f9b78bd7e6c236ad7f65dc"
+        },
+        "assets/voice_minimax/03-fragments.mp3": {
+          "before": null,
+          "after": "/Users/macbookm2/.cache/hyperframes/history/10802efe-a71c-42bd-80ea-971d3262b8c8/blobs/87/87a75155721521da9c7bd60ddc44727196e70bbe6c61ea1babb36d37a3f94ec2"
+        },
+        "assets/voice_minimax/04-brand.mp3": {
+          "before": null,
+          "after": "/Users/macbookm2/.cache/hyperframes/history/10802efe-a71c-42bd-80ea-971d3262b8c8/blobs/11/1145fc573392e49c80783464db470256bc87bc1d660b9e40163d8b8f39543f75"
+        },
+        "assets/voice/01-hook.mp3": {
+          "before": "/Users/macbookm2/.cache/hyperframes/history/10802efe-a71c-42bd-80ea-971d3262b8c8/blobs/b1/b141abadcde882019252de480987c42a6fb6425dc27fa385fbe57cdb2f145fbc",
+          "after": "/Users/macbookm2/.cache/hyperframes/history/10802efe-a71c-42bd-80ea-971d3262b8c8/blobs/52/525d79e87425d0a7119330b87b8b51afba1832f435ad2f148bb6618deb3f09bb"
+        },
+        "assets/voice/02-hesitation.mp3": {
+          "before": "/Users/macbookm2/.cache/hyperframes/history/10802efe-a71c-42bd-80ea-971d3262b8c8/blobs/55/5565d357b608973375c65a78957c5cece7f4ec98a2ddd489836adb08b9c1b321",
+          "after": "/Users/macbookm2/.cache/hyperframes/history/10802efe-a71c-42bd-80ea-971d3262b8c8/blobs/c1/c154826dd41e46273a67f88fd3177d7be332601c1adf7d87864225cad0a1db39"
+        },
+        "assets/voice/03-fragments.mp3": {
+          "before": "/Users/macbookm2/.cache/hyperframes/history/10802efe-a71c-42bd-80ea-971d3262b8c8/blobs/09/097e12b9892a1b33b6695ede7d2bbe1a4bb9eed120382458aee3c5a90ef3f82f",
+          "after": "/Users/macbookm2/.cache/hyperframes/history/10802efe-a71c-42bd-80ea-971d3262b8c8/blobs/ac/ace0f7a733f5bd89313104de10598b1470072456c80f809f2c0a7c68ebd9eeac"
+        },
+        "assets/voice/04-brand.mp3": {
+          "before": "/Users/macbookm2/.cache/hyperframes/history/10802efe-a71c-42bd-80ea-971d3262b8c8/blobs/5f/5ff7de14ef4ad229da32b6701b6feef33d423a0d9a1a6766bfced46bbecd627f",
+          "after": "/Users/macbookm2/.cache/hyperframes/history/10802efe-a71c-42bd-80ea-971d3262b8c8/blobs/a5/a54b10136094d1b6ff6653cf87d6d449b9c73149c4a8664e9f538a6d3c06a725"
+        },
+        "compositions/captions.html": {
+          "before": "/Users/macbookm2/.cache/hyperframes/history/10802efe-a71c-42bd-80ea-971d3262b8c8/blobs/1a/1a0a8f6ae5063e95a0eb7222be2a537111b649ca9686ee14019999a4bf4ece0a",
+          "after": "/Users/macbookm2/.cache/hyperframes/history/10802efe-a71c-42bd-80ea-971d3262b8c8/blobs/54/54b1ea978ce91128b76ed2be7a12320bef17281cc18720fbba28676c5d34f9cd"
+        },
+        "compositions/scene1-hook.html": {
+          "before": "/Users/macbookm2/.cache/hyperframes/history/10802efe-a71c-42bd-80ea-971d3262b8c8/blobs/be/beeeebc0bc2ab9383dd34521ca21660e5492108ac2fda6f0b549b2f382916b57",
+          "after": "/Users/macbookm2/.cache/hyperframes/history/10802efe-a71c-42bd-80ea-971d3262b8c8/blobs/3d/3da2ff8b3ed74e6ac4768be7f14dae8bcc104eb0e4efda54634a693d9b59d663"
+        },
+        "compositions/scene2-hesitation.html": {
+          "before": "/Users/macbookm2/.cache/hyperframes/history/10802efe-a71c-42bd-80ea-971d3262b8c8/blobs/6e/6e10e3bc2f830e0ab3684a2a50edad33a63dd0262f276be4757598cf21495093",
+          "after": "/Users/macbookm2/.cache/hyperframes/history/10802efe-a71c-42bd-80ea-971d3262b8c8/blobs/e6/e680b51c1a46726a6d60a9f3ee0b7e1a4e1c181baf8e50f321b4f5ebe31b351b"
+        },
+        "compositions/scene3-fragments.html": {
+          "before": "/Users/macbookm2/.cache/hyperframes/history/10802efe-a71c-42bd-80ea-971d3262b8c8/blobs/8a/8aadaa935be4c32b7a4ccca2fef09d9f3da3b23490999ae4880bbc5f244d47d3",
+          "after": "/Users/macbookm2/.cache/hyperframes/history/10802efe-a71c-42bd-80ea-971d3262b8c8/blobs/a3/a353e638954f8e08a75d5b4a3f5707c5a6966712dc574c2f7d72109b02adacdb"
+        },
+        "hyperframes.json": {
+          "before": "/Users/macbookm2/.cache/hyperframes/history/10802efe-a71c-42bd-80ea-971d3262b8c8/blobs/57/577f6940baabf2c598aa69b9e7a5761c754972e8336252993ad6ec802771a1c3",
+          "after": "/Users/macbookm2/.cache/hyperframes/history/10802efe-a71c-42bd-80ea-971d3262b8c8/blobs/d4/d4c98a83cdd45bd10f591706ba73cb8d54451d0065085869764869ab3798ebe3"
+        },
+        "index.html": {
+          "before": "/Users/macbookm2/.cache/hyperframes/history/10802efe-a71c-42bd-80ea-971d3262b8c8/blobs/b4/b4ef521b7fb8ae388060941e01e5ea6e58ff23a3bc8179513ec4045257bb45d4",
+          "after": "/Users/macbookm2/.cache/hyperframes/history/10802efe-a71c-42bd-80ea-971d3262b8c8/blobs/78/789d926b9cb3738fb8e270c0f0698872f95b880d9886fb3f9e3ce9b0a8d4ec94"
+        }
+      }
+    },
+    "d4e978c4-44ab-4aaa-8648-3921e1d04fc6": {
+      "actor": {
+        "kind": "outside",
+        "name": "Outside"
+      },
+      "label": "Changed outside the app",
+      "startedAt": 1793071651461,
+      "endedAt": 1793071651461,
+      "files": {
+        "compositions/scene2-hesitation.html": {
+          "before": "/Users/macbookm2/.cache/hyperframes/history/10802efe-a71c-42bd-80ea-971d3262b8c8/blobs/e6/e680b51c1a46726a6d60a9f3ee0b7e1a4e1c181baf8e50f321b4f5ebe31b351b",
+          "after": "/Users/macbookm2/.cache/hyperframes/history/10802efe-a71c-42bd-80ea-971d3262b8c8/blobs/05/05d02c842664ea4a71754aeb0606f619fcc613bf333c5dd656c03e2d80be78ef"
+        }
+      }
+    },
+    "597b9823-3b9e-4197-b6b6-3ce2cc4d08ce": {
+      "actor": {
+        "kind": "outside",
+        "name": "Outside"
+      },
+      "label": "Changed outside the app",
+      "startedAt": 1793071661962,
+      "endedAt": 1793071661963,
+      "files": {
+        "compositions/scene2-hesitation.html": {
+          "before": "/Users/macbookm2/.cache/hyperframes/history/10802efe-a71c-42bd-80ea-971d3262b8c8/blobs/05/05d02c842664ea4a71754aeb0606f619fcc613bf333c5dd656c03e2d80be78ef",
+          "after": "/Users/macbookm2/.cache/hyperframes/history/10802efe-a71c-42bd-80ea-971d3262b8c8/blobs/7d/7dd1998f0738879e17e5ddb4a5acf3e7faf520201e747f72fe89df8b51b4fca0"
+        }
+      }
+    }
+  },
+  "checks": {
+    "latest": {
+      "revision": "597b9823-3b9e-4197-b6b6-3ce2cc4d08ce",
+      "id": "b899ca6b-123d-4fdd-8ed5-9cf066ebae34"
+    },
+    "revisions": {
+      "b55e181c-8142-4499-a114-6c9e5da0172d": [
+        {
+          "id": "71a44978-98cf-42f3-8649-e4c014c53c9b",
+          "scope": "project",
+          "metadata": {
+            "ok": false,
+            "browserSkipped": false,
+            "options": {
+              "samples": 9,
+              "atTransitions": false,
+              "maxIssues": 80,
+              "collapseStatic": true,
+              "tolerance": 2,
+              "timeout": 3000,
+              "contrast": true,
+              "strict": false,
+              "snapshots": false,
+              "browserGpuMode": "auto"
+            }
+          },
+          "createdAt": 1793070379725,
+          "contentHash": "903ca2bf2c3d0ca59ee7836be3cb13337cb239d2084a124a32a9facf187a156f",
+          "revision": "b55e181c-8142-4499-a114-6c9e5da0172d",
+          "inputFingerprint": "8f0ba360918f81adc8c994b7a328a7175b6259485e8323b4835b25af90938c36",
+          "inputScope": "local-project-files",
+          "attribution": "recorded-revision",
+          "status": "cleaned",
+          "cleanedAfterRender": "e1c9bf90-483b-4cc8-acea-fb3c3279f16f"
+        }
+      ],
+      "5f5a0e74-64e7-49f6-b604-d4cbba47f02f": [
+        {
+          "id": "6906d2c1-d016-4c3a-b4ad-39f5fcd6b1a6",
+          "scope": "project",
+          "metadata": {
+            "ok": false,
+            "browserSkipped": false,
+            "options": {
+              "samples": 9,
+              "atTransitions": false,
+              "maxIssues": 80,
+              "collapseStatic": true,
+              "tolerance": 2,
+              "timeout": 3000,
+              "contrast": true,
+              "strict": false,
+              "snapshots": false,
+              "browserGpuMode": "auto"
+            }
+          },
+          "createdAt": 1793070426181,
+          "contentHash": "c35f50cb8a258c227e07c6a73a7c6aa8dcf7d631a17540d66f01e227dad238cf",
+          "revision": "5f5a0e74-64e7-49f6-b604-d4cbba47f02f",
+          "inputFingerprint": "344e2968900a2eb59b7b4446c2a72f45ba57b7b57f149471c0b57eae15b4309b",
+          "inputScope": "local-project-files",
+          "attribution": "recorded-revision",
+          "status": "cleaned",
+          "cleanedAfterRender": "e1c9bf90-483b-4cc8-acea-fb3c3279f16f"
+        }
+      ],
+      "61548f92-7f14-4a47-b345-710dff995187": [
+        {
+          "id": "549cd7dd-e66a-4565-bcfa-ab99e1a124cc",
+          "scope": "project",
+          "metadata": {
+            "ok": false,
+            "browserSkipped": false,
+            "options": {
+              "samples": 9,
+              "atTransitions": false,
+              "maxIssues": 80,
+              "collapseStatic": true,
+              "tolerance": 2,
+              "timeout": 3000,
+              "contrast": true,
+              "strict": false,
+              "snapshots": false,
+              "browserGpuMode": "auto"
+            }
+          },
+          "createdAt": 1793070458756,
+          "contentHash": "7209eba509592ca24ae546ead0187e6d1758852db83e38b8c930a770638c1f36",
+          "revision": "61548f92-7f14-4a47-b345-710dff995187",
+          "inputFingerprint": "c7e0772cddc9689313020658c85b83cb3b42c61a2f18f3257d5bf3827beee0a4",
+          "inputScope": "local-project-files",
+          "attribution": "recorded-revision",
+          "status": "cleaned",
+          "cleanedAfterRender": "e1c9bf90-483b-4cc8-acea-fb3c3279f16f"
+        }
+      ],
+      "b8cd6a46-8a40-46f2-8bed-0344fe84b6bd": [
+        {
+          "id": "4f885482-985f-4e34-a657-c3479041ed85",
+          "scope": "project",
+          "metadata": {
+            "ok": false,
+            "browserSkipped": false,
+            "options": {
+              "samples": 9,
+              "atTransitions": false,
+              "maxIssues": 80,
+              "collapseStatic": true,
+              "tolerance": 2,
+              "timeout": 3000,
+              "contrast": true,
+              "strict": false,
+              "snapshots": false,
+              "browserGpuMode": "auto"
+            }
+          },
+          "createdAt": 1793070490716,
+          "contentHash": "8780d4105b200252286b39120acae908c0202a331307b5862caeb6e3f588f3b9",
+          "revision": "b8cd6a46-8a40-46f2-8bed-0344fe84b6bd",
+          "inputFingerprint": "219b5605722b7bd4e28cac0199bbc540043a5d9832078decdedc18792b539e75",
+          "inputScope": "local-project-files",
+          "attribution": "recorded-revision",
+          "status": "cleaned",
+          "cleanedAfterRender": "e1c9bf90-483b-4cc8-acea-fb3c3279f16f"
+        }
+      ],
+      "ae487f08-aaf4-4210-85df-da1fbdb8fbf4": [
+        {
+          "id": "8c048a5f-6c7e-4b87-ae8f-3c0784a2a64b",
+          "scope": "project",
+          "metadata": {
+            "ok": false,
+            "browserSkipped": false,
+            "options": {
+              "samples": 9,
+              "atTransitions": false,
+              "maxIssues": 80,
+              "collapseStatic": true,
+              "tolerance": 2,
+              "timeout": 3000,
+              "contrast": true,
+              "strict": false,
+              "snapshots": false,
+              "browserGpuMode": "auto"
+            }
+          },
+          "createdAt": 1793070512081,
+          "contentHash": "9d897fe8e3b153a60c46e1663c0cf6cf5384922976a13324a8e71218d7e491df",
+          "revision": "ae487f08-aaf4-4210-85df-da1fbdb8fbf4",
+          "inputFingerprint": "a20ef93f0b04e044723af5f652314f5dae064968a125d0e8838cdd09f536c095",
+          "inputScope": "local-project-files",
+          "attribution": "recorded-revision",
+          "status": "cleaned",
+          "cleanedAfterRender": "e1c9bf90-483b-4cc8-acea-fb3c3279f16f"
+        }
+      ],
+      "ec53c057-5fc2-4314-9f73-03a90b6d6bac": [
+        {
+          "id": "a0182cdb-1bcd-4910-8423-28f630cf0a92",
+          "scope": "project",
+          "metadata": {
+            "ok": true,
+            "browserSkipped": false,
+            "options": {
+              "samples": 9,
+              "atTransitions": false,
+              "maxIssues": 80,
+              "collapseStatic": true,
+              "tolerance": 2,
+              "timeout": 3000,
+              "contrast": true,
+              "strict": false,
+              "snapshots": false,
+              "browserGpuMode": "auto"
+            }
+          },
+          "createdAt": 1793070531924,
+          "contentHash": "22ea0555ecb4b4e953317e2489e983b422a04d6c1f94c5046674e3c5e73f7407",
+          "revision": "ec53c057-5fc2-4314-9f73-03a90b6d6bac",
+          "inputFingerprint": "03d89cdecb40214d63d8303ef56caf074e4888ce1d6faee0700774585fcb0cc5",
+          "inputScope": "local-project-files",
+          "attribution": "recorded-revision",
+          "status": "cleaned",
+          "cleanedAfterRender": "e1c9bf90-483b-4cc8-acea-fb3c3279f16f"
+        }
+      ],
+      "529fa199-c914-41f9-983e-ce3bae965c30": [
+        {
+          "id": "614354dc-746f-48a3-8c40-24535274e2fa",
+          "scope": "project",
+          "metadata": {
+            "ok": true,
+            "browserSkipped": false,
+            "options": {
+              "samples": 9,
+              "atTransitions": false,
+              "maxIssues": 80,
+              "collapseStatic": true,
+              "tolerance": 2,
+              "timeout": 3000,
+              "contrast": true,
+              "strict": false,
+              "snapshots": false,
+              "browserGpuMode": "auto"
+            }
+          },
+          "createdAt": 1793070567353,
+          "contentHash": "e78591851f70c35331a974570c79b4b791a8080aa8a72a5f17abd01704bac134",
+          "revision": "529fa199-c914-41f9-983e-ce3bae965c30",
+          "inputFingerprint": "8a63fae664e1048a8571a24e9d1d894fe7421ee01391af501aeb0102fb00bdeb",
+          "inputScope": "local-project-files",
+          "attribution": "recorded-revision",
+          "status": "cleaned",
+          "cleanedAfterRender": "e1c9bf90-483b-4cc8-acea-fb3c3279f16f"
+        }
+      ],
+      "725de43b-5b83-45af-9e33-13e5a19083d1": [
+        {
+          "id": "be521352-a36a-4fde-b7b2-e5e9349622f2",
+          "scope": "project",
+          "report": "/Users/macbookm2/Documents/antigravity/jolly-lovelace/video/koma-film-ep02/.hyperframes/artifacts/checks/be521352-a36a-4fde-b7b2-e5e9349622f2.json",
+          "metadata": {
+            "ok": true,
+            "browserSkipped": false,
+            "options": {
+              "samples": 9,
+              "atTransitions": false,
+              "maxIssues": 80,
+              "collapseStatic": true,
+              "tolerance": 2,
+              "timeout": 3000,
+              "contrast": true,
+              "strict": false,
+              "snapshots": false,
+              "browserGpuMode": "auto"
+            }
+          },
+          "createdAt": 1793070581043,
+          "contentHash": "f5daebdcdc8231a2ed808f1c81ec07914a76311811f0e55907027cbd1f39e4ba",
+          "revision": "725de43b-5b83-45af-9e33-13e5a19083d1",
+          "inputFingerprint": "df342c61f6ac670d734ba51061f5a853a7b955970df87c11cca51c9797f29172",
+          "inputScope": "local-project-files",
+          "attribution": "recorded-revision"
+        }
+      ],
+      "f4a64dc8-6bad-445d-a898-bb2971ea5d14": [
+        {
+          "id": "cbc3e4ed-06f7-4efb-809a-1b3e3d941ca6",
+          "scope": "project",
+          "metadata": {
+            "ok": true,
+            "browserSkipped": false,
+            "options": {
+              "samples": 9,
+              "atTransitions": false,
+              "maxIssues": 80,
+              "collapseStatic": true,
+              "tolerance": 2,
+              "timeout": 3000,
+              "contrast": true,
+              "strict": false,
+              "snapshots": false,
+              "browserGpuMode": "auto"
+            }
+          },
+          "createdAt": 1793071641859,
+          "contentHash": "c957e1e8bab4f9f4923ab5e4684877f97fe27ed5d120bb5c3eab449aae836260",
+          "revision": "f4a64dc8-6bad-445d-a898-bb2971ea5d14",
+          "inputFingerprint": "89458cd742ca1c5208979d78f0e947529999ffe3747d21bb0ef56970980367f4",
+          "inputScope": "local-project-files",
+          "attribution": "recorded-revision",
+          "status": "cleaned",
+          "cleanedAfterRender": "e595af1f-a525-445f-bb10-ea6f91c52447"
+        }
+      ],
+      "d4e978c4-44ab-4aaa-8648-3921e1d04fc6": [
+        {
+          "id": "f45229c7-15ec-4c8c-9c3b-9faf697fb04d",
+          "scope": "project",
+          "metadata": {
+            "ok": true,
+            "browserSkipped": false,
+            "options": {
+              "samples": 9,
+              "atTransitions": false,
+              "maxIssues": 80,
+              "collapseStatic": true,
+              "tolerance": 2,
+              "timeout": 3000,
+              "contrast": true,
+              "strict": false,
+              "snapshots": false,
+              "browserGpuMode": "auto"
+            }
+          },
+          "createdAt": 1793071653880,
+          "contentHash": "c957e1e8bab4f9f4923ab5e4684877f97fe27ed5d120bb5c3eab449aae836260",
+          "revision": "d4e978c4-44ab-4aaa-8648-3921e1d04fc6",
+          "inputFingerprint": "99048e79f0fd31f66b8ef6343f8f6e182f5da136dfeed0c97051e859d5cc81ea",
+          "inputScope": "local-project-files",
+          "attribution": "recorded-revision",
+          "status": "cleaned",
+          "cleanedAfterRender": "e595af1f-a525-445f-bb10-ea6f91c52447"
+        }
+      ],
+      "597b9823-3b9e-4197-b6b6-3ce2cc4d08ce": [
+        {
+          "id": "b899ca6b-123d-4fdd-8ed5-9cf066ebae34",
+          "scope": "project",
+          "report": "/Users/macbookm2/Documents/antigravity/jolly-lovelace/video/koma-film-ep02/.hyperframes/artifacts/checks/b899ca6b-123d-4fdd-8ed5-9cf066ebae34.json",
+          "metadata": {
+            "ok": true,
+            "browserSkipped": false,
+            "options": {
+              "samples": 9,
+              "atTransitions": false,
+              "maxIssues": 80,
+              "collapseStatic": true,
+              "tolerance": 2,
+              "timeout": 3000,
+              "contrast": true,
+              "strict": false,
+              "snapshots": false,
+              "browserGpuMode": "auto"
+            }
+          },
+          "createdAt": 1793071664332,
+          "contentHash": "285d732af0f47168890fbd1da33ed238d0eac62b683d65804d2e326380e23908",
+          "revision": "597b9823-3b9e-4197-b6b6-3ce2cc4d08ce",
+          "inputFingerprint": "10daa95fbe689a6fe98fd4c0f6a0d20409a8e78c3df6e10a6c6f2596d6699d90",
+          "inputScope": "local-project-files",
+          "attribution": "recorded-revision"
+        }
+      ]
+    },
+    "unversioned": [
+      {
+        "id": "0e41199b-661d-433b-b413-187fc5c98348",
+        "scope": "project",
+        "report": "/Users/macbookm2/Documents/antigravity/jolly-lovelace/video/koma-film-ep02/.hyperframes/artifacts/checks/0e41199b-661d-433b-b413-187fc5c98348.json",
+        "metadata": {
+          "ok": false,
+          "browserSkipped": true,
+          "options": {
+            "samples": 9,
+            "atTransitions": false,
+            "maxIssues": 80,
+            "collapseStatic": true,
+            "tolerance": 2,
+            "timeout": 3000,
+            "contrast": true,
+            "strict": false,
+            "snapshots": false,
+            "browserGpuMode": "auto"
+          }
+        },
+        "createdAt": 1793070334108,
+        "contentHash": "b3bb75bcf9a17bb938d3fed5ad70a7d44def714241407d721c892072ac539dd4",
+        "revision": null,
+        "inputFingerprint": "57b1783051e0bb8b3b4bfb966998457ac19136bbe9a34d8732a4d33a4a871e5b",
+        "inputScope": "local-project-files",
+        "attribution": "unversioned"
+      }
+    ]
+  },
+  "snapshots": {
+    "latest": {
+      "revision": "725de43b-5b83-45af-9e33-13e5a19083d1",
+      "id": "159ee450-bea3-472a-a677-ff6bfb2b3792-22"
+    },
+    "revisions": {
+      "725de43b-5b83-45af-9e33-13e5a19083d1": [
+        {
+          "scope": "full",
+          "id": "159ee450-bea3-472a-a677-ff6bfb2b3792-0",
+          "image": "/Users/macbookm2/Documents/antigravity/jolly-lovelace/video/koma-film-ep02/.hyperframes/artifacts/snapshots/a1a6448a-f87f-4652-a8d1-f0347642b860/beat-01-at-0.3s.png",
+          "time": 0.3,
+          "metadata": {
+            "width": 1080,
+            "height": 1920,
+            "zoomScale": 1,
+            "browserGpuMode": "auto",
+            "review": {
+              "role": "beat",
+              "label": "scene1"
+            },
+            "warnings": [],
+            "partial": false
+          },
+          "createdAt": 1793070595532,
+          "contentHash": "1a4e876d3f37ee524682af4f5e1852a5725e781c6b527ba42c29fbc658846294",
+          "revision": "725de43b-5b83-45af-9e33-13e5a19083d1",
+          "inputFingerprint": "df342c61f6ac670d734ba51061f5a853a7b955970df87c11cca51c9797f29172",
+          "inputScope": "local-project-files",
+          "attribution": "recorded-revision"
+        },
+        {
+          "scope": "full",
+          "id": "159ee450-bea3-472a-a677-ff6bfb2b3792-1",
+          "image": "/Users/macbookm2/Documents/antigravity/jolly-lovelace/video/koma-film-ep02/.hyperframes/artifacts/snapshots/a1a6448a-f87f-4652-a8d1-f0347642b860/beat-02-at-1.85s.png",
+          "time": 1.85,
+          "metadata": {
+            "width": 1080,
+            "height": 1920,
+            "zoomScale": 1,
+            "browserGpuMode": "auto",
+            "review": {
+              "role": "beat",
+              "label": "scene1 mid"
+            },
+            "warnings": [],
+            "partial": false
+          },
+          "createdAt": 1793070595532,
+          "contentHash": "5f087972b5db3fcca2cace0179b3e1811a71aecbaa060ff55a49222ee012ffc5",
+          "revision": "725de43b-5b83-45af-9e33-13e5a19083d1",
+          "inputFingerprint": "df342c61f6ac670d734ba51061f5a853a7b955970df87c11cca51c9797f29172",
+          "inputScope": "local-project-files",
+          "attribution": "recorded-revision"
+        },
+        {
+          "scope": "full",
+          "id": "159ee450-bea3-472a-a677-ff6bfb2b3792-2",
+          "image": "/Users/macbookm2/Documents/antigravity/jolly-lovelace/video/koma-film-ep02/.hyperframes/artifacts/snapshots/a1a6448a-f87f-4652-a8d1-f0347642b860/beat-03-at-4s.png",
+          "time": 4,
+          "metadata": {
+            "width": 1080,
+            "height": 1920,
+            "zoomScale": 1,
+            "browserGpuMode": "auto",
+            "review": {
+              "role": "beat",
+              "label": "scene2"
+            },
+            "warnings": [],
+            "partial": false
+          },
+          "createdAt": 1793070595532,
+          "contentHash": "3b37461ab4e79cf61434b724b9cff2dc39a7c0753638ff6a847a8ddc8ee49564",
+          "revision": "725de43b-5b83-45af-9e33-13e5a19083d1",
+          "inputFingerprint": "df342c61f6ac670d734ba51061f5a853a7b955970df87c11cca51c9797f29172",
+          "inputScope": "local-project-files",
+          "attribution": "recorded-revision"
+        },
+        {
+          "scope": "full",
+          "id": "159ee450-bea3-472a-a677-ff6bfb2b3792-3",
+          "image": "/Users/macbookm2/Documents/antigravity/jolly-lovelace/video/koma-film-ep02/.hyperframes/artifacts/snapshots/a1a6448a-f87f-4652-a8d1-f0347642b860/beat-04-at-5.85s.png",
+          "time": 5.85,
+          "metadata": {
+            "width": 1080,
+            "height": 1920,
+            "zoomScale": 1,
+            "browserGpuMode": "auto",
+            "review": {
+              "role": "beat",
+              "label": "scene2 mid"
+            },
+            "warnings": [],
+            "partial": false
+          },
+          "createdAt": 1793070595532,
+          "contentHash": "4ec35fe01f2ae2a05d7fe6f5d0f870c96e16388c735820f48e178fa008583ab1",
+          "revision": "725de43b-5b83-45af-9e33-13e5a19083d1",
+          "inputFingerprint": "df342c61f6ac670d734ba51061f5a853a7b955970df87c11cca51c9797f29172",
+          "inputScope": "local-project-files",
+          "attribution": "recorded-revision"
+        },
+        {
+          "scope": "full",
+          "id": "159ee450-bea3-472a-a677-ff6bfb2b3792-4",
+          "image": "/Users/macbookm2/Documents/antigravity/jolly-lovelace/video/koma-film-ep02/.hyperframes/artifacts/snapshots/a1a6448a-f87f-4652-a8d1-f0347642b860/beat-05-at-8.3s.png",
+          "time": 8.3,
+          "metadata": {
+            "width": 1080,
+            "height": 1920,
+            "zoomScale": 1,
+            "browserGpuMode": "auto",
+            "review": {
+              "role": "beat",
+              "label": "scene3"
+            },
+            "warnings": [],
+            "partial": false
+          },
+          "createdAt": 1793070595533,
+          "contentHash": "4ff52940d92d3f31b5a6a76e51cc5dec40869d97b6f1ceda6012d4dab824f630",
+          "revision": "725de43b-5b83-45af-9e33-13e5a19083d1",
+          "inputFingerprint": "df342c61f6ac670d734ba51061f5a853a7b955970df87c11cca51c9797f29172",
+          "inputScope": "local-project-files",
+          "attribution": "recorded-revision"
+        },
+        {
+          "scope": "full",
+          "id": "159ee450-bea3-472a-a677-ff6bfb2b3792-5",
+          "image": "/Users/macbookm2/Documents/antigravity/jolly-lovelace/video/koma-film-ep02/.hyperframes/artifacts/snapshots/a1a6448a-f87f-4652-a8d1-f0347642b860/beat-06-at-10.1s.png",
+          "time": 10.1,
+          "metadata": {
+            "width": 1080,
+            "height": 1920,
+            "zoomScale": 1,
+            "browserGpuMode": "auto",
+            "review": {
+              "role": "beat",
+              "label": "scene3 mid"
+            },
+            "warnings": [],
+            "partial": false
+          },
+          "createdAt": 1793070595533,
+          "contentHash": "43b45ab1eb02a0edf977224765ea2626e68e97e1d99825be4aa642214bfedd98",
+          "revision": "725de43b-5b83-45af-9e33-13e5a19083d1",
+          "inputFingerprint": "df342c61f6ac670d734ba51061f5a853a7b955970df87c11cca51c9797f29172",
+          "inputScope": "local-project-files",
+          "attribution": "recorded-revision"
+        },
+        {
+          "scope": "full",
+          "id": "159ee450-bea3-472a-a677-ff6bfb2b3792-6",
+          "image": "/Users/macbookm2/Documents/antigravity/jolly-lovelace/video/koma-film-ep02/.hyperframes/artifacts/snapshots/a1a6448a-f87f-4652-a8d1-f0347642b860/beat-07-at-12.5s.png",
+          "time": 12.5,
+          "metadata": {
+            "width": 1080,
+            "height": 1920,
+            "zoomScale": 1,
+            "browserGpuMode": "auto",
+            "review": {
+              "role": "beat",
+              "label": "scene4"
+            },
+            "warnings": [],
+            "partial": false
+          },
+          "createdAt": 1793070595533,
+          "contentHash": "05d9d20fb2a5137f0c5ae21ea0c326df2a593d9f56969663dac4376dd050e042",
+          "revision": "725de43b-5b83-45af-9e33-13e5a19083d1",
+          "inputFingerprint": "df342c61f6ac670d734ba51061f5a853a7b955970df87c11cca51c9797f29172",
+          "inputScope": "local-project-files",
+          "attribution": "recorded-revision"
+        },
+        {
+          "scope": "full",
+          "id": "159ee450-bea3-472a-a677-ff6bfb2b3792-7",
+          "image": "/Users/macbookm2/Documents/antigravity/jolly-lovelace/video/koma-film-ep02/.hyperframes/artifacts/snapshots/a1a6448a-f87f-4652-a8d1-f0347642b860/beat-08-at-14.85s.png",
+          "time": 14.85,
+          "metadata": {
+            "width": 1080,
+            "height": 1920,
+            "zoomScale": 1,
+            "browserGpuMode": "auto",
+            "review": {
+              "role": "beat",
+              "label": "scene4 mid"
+            },
+            "warnings": [],
+            "partial": false
+          },
+          "createdAt": 1793070595533,
+          "contentHash": "4cf4b4fc54e0791927c30d30fc80ea8df4509973101968dad564217c347672f7",
+          "revision": "725de43b-5b83-45af-9e33-13e5a19083d1",
+          "inputFingerprint": "df342c61f6ac670d734ba51061f5a853a7b955970df87c11cca51c9797f29172",
+          "inputScope": "local-project-files",
+          "attribution": "recorded-revision"
+        },
+        {
+          "scope": "full",
+          "id": "159ee450-bea3-472a-a677-ff6bfb2b3792-8",
+          "image": "/Users/macbookm2/Documents/antigravity/jolly-lovelace/video/koma-film-ep02/.hyperframes/artifacts/snapshots/a1a6448a-f87f-4652-a8d1-f0347642b860/seam-01-1-at-3.5s.png",
+          "time": 3.5,
+          "metadata": {
+            "width": 1080,
+            "height": 1920,
+            "zoomScale": 1,
+            "browserGpuMode": "auto",
+            "review": {
+              "role": "seam",
+              "label": "cut -0.2"
+            },
+            "warnings": [],
+            "partial": false
+          },
+          "createdAt": 1793070595533,
+          "contentHash": "7b60486f9156bbf6d82733bedd641852325a392a81b3beb0dcace3f485cba4ed",
+          "revision": "725de43b-5b83-45af-9e33-13e5a19083d1",
+          "inputFingerprint": "df342c61f6ac670d734ba51061f5a853a7b955970df87c11cca51c9797f29172",
+          "inputScope": "local-project-files",
+          "attribution": "recorded-revision"
+        },
+        {
+          "scope": "full",
+          "id": "159ee450-bea3-472a-a677-ff6bfb2b3792-9",
+          "image": "/Users/macbookm2/Documents/antigravity/jolly-lovelace/video/koma-film-ep02/.hyperframes/artifacts/snapshots/a1a6448a-f87f-4652-a8d1-f0347642b860/seam-01-2-at-3.6s.png",
+          "time": 3.6,
+          "metadata": {
+            "width": 1080,
+            "height": 1920,
+            "zoomScale": 1,
+            "browserGpuMode": "auto",
+            "review": {
+              "role": "seam",
+              "label": "-0.1"
+            },
+            "warnings": [],
+            "partial": false
+          },
+          "createdAt": 1793070595533,
+          "contentHash": "893f484003696dfc43f741e281c79b9662ad20a21cccbb28aaa3dc6e1d55990b",
+          "revision": "725de43b-5b83-45af-9e33-13e5a19083d1",
+          "inputFingerprint": "df342c61f6ac670d734ba51061f5a853a7b955970df87c11cca51c9797f29172",
+          "inputScope": "local-project-files",
+          "attribution": "recorded-revision"
+        },
+        {
+          "scope": "full",
+          "id": "159ee450-bea3-472a-a677-ff6bfb2b3792-10",
+          "image": "/Users/macbookm2/Documents/antigravity/jolly-lovelace/video/koma-film-ep02/.hyperframes/artifacts/snapshots/a1a6448a-f87f-4652-a8d1-f0347642b860/seam-01-3-at-3.7s.png",
+          "time": 3.7,
+          "metadata": {
+            "width": 1080,
+            "height": 1920,
+            "zoomScale": 1,
+            "browserGpuMode": "auto",
+            "review": {
+              "role": "seam",
+              "label": "cut scene1 -> scene2"
+            },
+            "warnings": [],
+            "partial": false
+          },
+          "createdAt": 1793070595533,
+          "contentHash": "7feeff1ad257f766159ae8c605973f0ad9a8950c5303c7fd0b72b7a65a54a9ba",
+          "revision": "725de43b-5b83-45af-9e33-13e5a19083d1",
+          "inputFingerprint": "df342c61f6ac670d734ba51061f5a853a7b955970df87c11cca51c9797f29172",
+          "inputScope": "local-project-files",
+          "attribution": "recorded-revision"
+        },
+        {
+          "scope": "full",
+          "id": "159ee450-bea3-472a-a677-ff6bfb2b3792-11",
+          "image": "/Users/macbookm2/Documents/antigravity/jolly-lovelace/video/koma-film-ep02/.hyperframes/artifacts/snapshots/a1a6448a-f87f-4652-a8d1-f0347642b860/seam-01-4-at-3.8s.png",
+          "time": 3.8,
+          "metadata": {
+            "width": 1080,
+            "height": 1920,
+            "zoomScale": 1,
+            "browserGpuMode": "auto",
+            "review": {
+              "role": "seam",
+              "label": "+0.1"
+            },
+            "warnings": [],
+            "partial": false
+          },
+          "createdAt": 1793070595533,
+          "contentHash": "8ae08b3c74842d35321485c46d4a63cedb111cacffceaaad6723f2bc8bd61aa9",
+          "revision": "725de43b-5b83-45af-9e33-13e5a19083d1",
+          "inputFingerprint": "df342c61f6ac670d734ba51061f5a853a7b955970df87c11cca51c9797f29172",
+          "inputScope": "local-project-files",
+          "attribution": "recorded-revision"
+        },
+        {
+          "scope": "full",
+          "id": "159ee450-bea3-472a-a677-ff6bfb2b3792-12",
+          "image": "/Users/macbookm2/Documents/antigravity/jolly-lovelace/video/koma-film-ep02/.hyperframes/artifacts/snapshots/a1a6448a-f87f-4652-a8d1-f0347642b860/seam-01-5-at-3.9s.png",
+          "time": 3.9,
+          "metadata": {
+            "width": 1080,
+            "height": 1920,
+            "zoomScale": 1,
+            "browserGpuMode": "auto",
+            "review": {
+              "role": "seam",
+              "label": "+0.2"
+            },
+            "warnings": [],
+            "partial": false
+          },
+          "createdAt": 1793070595533,
+          "contentHash": "2bbf12ad88bb78dae2b021f24348960d79dcce450236d866b40c17afb618fa8d",
+          "revision": "725de43b-5b83-45af-9e33-13e5a19083d1",
+          "inputFingerprint": "df342c61f6ac670d734ba51061f5a853a7b955970df87c11cca51c9797f29172",
+          "inputScope": "local-project-files",
+          "attribution": "recorded-revision"
+        },
+        {
+          "scope": "full",
+          "id": "159ee450-bea3-472a-a677-ff6bfb2b3792-13",
+          "image": "/Users/macbookm2/Documents/antigravity/jolly-lovelace/video/koma-film-ep02/.hyperframes/artifacts/snapshots/a1a6448a-f87f-4652-a8d1-f0347642b860/seam-02-1-at-7.8s.png",
+          "time": 7.8,
+          "metadata": {
+            "width": 1080,
+            "height": 1920,
+            "zoomScale": 1,
+            "browserGpuMode": "auto",
+            "review": {
+              "role": "seam",
+              "label": "cut -0.2"
+            },
+            "warnings": [],
+            "partial": false
+          },
+          "createdAt": 1793070595533,
+          "contentHash": "c16df741fe0115e63ce64967473cec09a5da7f9ba7e47f209a829e6851bd92db",
+          "revision": "725de43b-5b83-45af-9e33-13e5a19083d1",
+          "inputFingerprint": "df342c61f6ac670d734ba51061f5a853a7b955970df87c11cca51c9797f29172",
+          "inputScope": "local-project-files",
+          "attribution": "recorded-revision"
+        },
+        {
+          "scope": "full",
+          "id": "159ee450-bea3-472a-a677-ff6bfb2b3792-14",
+          "image": "/Users/macbookm2/Documents/antigravity/jolly-lovelace/video/koma-film-ep02/.hyperframes/artifacts/snapshots/a1a6448a-f87f-4652-a8d1-f0347642b860/seam-02-2-at-7.9s.png",
+          "time": 7.9,
+          "metadata": {
+            "width": 1080,
+            "height": 1920,
+            "zoomScale": 1,
+            "browserGpuMode": "auto",
+            "review": {
+              "role": "seam",
+              "label": "-0.1"
+            },
+            "warnings": [],
+            "partial": false
+          },
+          "createdAt": 1793070595533,
+          "contentHash": "e5d49f5222adcf38a6b1e8d42e614cdc47b16ab1d0675ec4a1da730b6ed2a12c",
+          "revision": "725de43b-5b83-45af-9e33-13e5a19083d1",
+          "inputFingerprint": "df342c61f6ac670d734ba51061f5a853a7b955970df87c11cca51c9797f29172",
+          "inputScope": "local-project-files",
+          "attribution": "recorded-revision"
+        },
+        {
+          "scope": "full",
+          "id": "159ee450-bea3-472a-a677-ff6bfb2b3792-15",
+          "image": "/Users/macbookm2/Documents/antigravity/jolly-lovelace/video/koma-film-ep02/.hyperframes/artifacts/snapshots/a1a6448a-f87f-4652-a8d1-f0347642b860/seam-02-3-at-8s.png",
+          "time": 8,
+          "metadata": {
+            "width": 1080,
+            "height": 1920,
+            "zoomScale": 1,
+            "browserGpuMode": "auto",
+            "review": {
+              "role": "seam",
+              "label": "cut scene2 -> scene3"
+            },
+            "warnings": [],
+            "partial": false
+          },
+          "createdAt": 1793070595533,
+          "contentHash": "7feeff1ad257f766159ae8c605973f0ad9a8950c5303c7fd0b72b7a65a54a9ba",
+          "revision": "725de43b-5b83-45af-9e33-13e5a19083d1",
+          "inputFingerprint": "df342c61f6ac670d734ba51061f5a853a7b955970df87c11cca51c9797f29172",
+          "inputScope": "local-project-files",
+          "attribution": "recorded-revision"
+        },
+        {
+          "scope": "full",
+          "id": "159ee450-bea3-472a-a677-ff6bfb2b3792-16",
+          "image": "/Users/macbookm2/Documents/antigravity/jolly-lovelace/video/koma-film-ep02/.hyperframes/artifacts/snapshots/a1a6448a-f87f-4652-a8d1-f0347642b860/seam-02-4-at-8.1s.png",
+          "time": 8.1,
+          "metadata": {
+            "width": 1080,
+            "height": 1920,
+            "zoomScale": 1,
+            "browserGpuMode": "auto",
+            "review": {
+              "role": "seam",
+              "label": "+0.1"
+            },
+            "warnings": [],
+            "partial": false
+          },
+          "createdAt": 1793070595533,
+          "contentHash": "908e3460df40e424f8a5cd0c0a8e4407077d29a5ee5da5e1fc21416390f15ee7",
+          "revision": "725de43b-5b83-45af-9e33-13e5a19083d1",
+          "inputFingerprint": "df342c61f6ac670d734ba51061f5a853a7b955970df87c11cca51c9797f29172",
+          "inputScope": "local-project-files",
+          "attribution": "recorded-revision"
+        },
+        {
+          "scope": "full",
+          "id": "159ee450-bea3-472a-a677-ff6bfb2b3792-17",
+          "image": "/Users/macbookm2/Documents/antigravity/jolly-lovelace/video/koma-film-ep02/.hyperframes/artifacts/snapshots/a1a6448a-f87f-4652-a8d1-f0347642b860/seam-02-5-at-8.2s.png",
+          "time": 8.2,
+          "metadata": {
+            "width": 1080,
+            "height": 1920,
+            "zoomScale": 1,
+            "browserGpuMode": "auto",
+            "review": {
+              "role": "seam",
+              "label": "+0.2"
+            },
+            "warnings": [],
+            "partial": false
+          },
+          "createdAt": 1793070595533,
+          "contentHash": "9dedf4b84dc9b851f8e1a0ba03165f5fb2a6ca5e33f8dc4b68b338ae6d330b81",
+          "revision": "725de43b-5b83-45af-9e33-13e5a19083d1",
+          "inputFingerprint": "df342c61f6ac670d734ba51061f5a853a7b955970df87c11cca51c9797f29172",
+          "inputScope": "local-project-files",
+          "attribution": "recorded-revision"
+        },
+        {
+          "scope": "full",
+          "id": "159ee450-bea3-472a-a677-ff6bfb2b3792-18",
+          "image": "/Users/macbookm2/Documents/antigravity/jolly-lovelace/video/koma-film-ep02/.hyperframes/artifacts/snapshots/a1a6448a-f87f-4652-a8d1-f0347642b860/seam-03-1-at-12s.png",
+          "time": 12,
+          "metadata": {
+            "width": 1080,
+            "height": 1920,
+            "zoomScale": 1,
+            "browserGpuMode": "auto",
+            "review": {
+              "role": "seam",
+              "label": "cut -0.2"
+            },
+            "warnings": [],
+            "partial": false
+          },
+          "createdAt": 1793070595533,
+          "contentHash": "012a0e0f40fc5a5f6abd60000e4b5524abf6265d70d95119c3e3656a685583af",
+          "revision": "725de43b-5b83-45af-9e33-13e5a19083d1",
+          "inputFingerprint": "df342c61f6ac670d734ba51061f5a853a7b955970df87c11cca51c9797f29172",
+          "inputScope": "local-project-files",
+          "attribution": "recorded-revision"
+        },
+        {
+          "scope": "full",
+          "id": "159ee450-bea3-472a-a677-ff6bfb2b3792-19",
+          "image": "/Users/macbookm2/Documents/antigravity/jolly-lovelace/video/koma-film-ep02/.hyperframes/artifacts/snapshots/a1a6448a-f87f-4652-a8d1-f0347642b860/seam-03-2-at-12.1s.png",
+          "time": 12.1,
+          "metadata": {
+            "width": 1080,
+            "height": 1920,
+            "zoomScale": 1,
+            "browserGpuMode": "auto",
+            "review": {
+              "role": "seam",
+              "label": "-0.1"
+            },
+            "warnings": [],
+            "partial": false
+          },
+          "createdAt": 1793070595533,
+          "contentHash": "23cbaf4a1193718b353cf2d9684c1195e6b86b07094290ae2b583b2e7f911086",
+          "revision": "725de43b-5b83-45af-9e33-13e5a19083d1",
+          "inputFingerprint": "df342c61f6ac670d734ba51061f5a853a7b955970df87c11cca51c9797f29172",
+          "inputScope": "local-project-files",
+          "attribution": "recorded-revision"
+        },
+        {
+          "scope": "full",
+          "id": "159ee450-bea3-472a-a677-ff6bfb2b3792-20",
+          "image": "/Users/macbookm2/Documents/antigravity/jolly-lovelace/video/koma-film-ep02/.hyperframes/artifacts/snapshots/a1a6448a-f87f-4652-a8d1-f0347642b860/seam-03-3-at-12.2s.png",
+          "time": 12.2,
+          "metadata": {
+            "width": 1080,
+            "height": 1920,
+            "zoomScale": 1,
+            "browserGpuMode": "auto",
+            "review": {
+              "role": "seam",
+              "label": "cut scene3 -> scene4"
+            },
+            "warnings": [],
+            "partial": false
+          },
+          "createdAt": 1793070595533,
+          "contentHash": "7feeff1ad257f766159ae8c605973f0ad9a8950c5303c7fd0b72b7a65a54a9ba",
+          "revision": "725de43b-5b83-45af-9e33-13e5a19083d1",
+          "inputFingerprint": "df342c61f6ac670d734ba51061f5a853a7b955970df87c11cca51c9797f29172",
+          "inputScope": "local-project-files",
+          "attribution": "recorded-revision"
+        },
+        {
+          "scope": "full",
+          "id": "159ee450-bea3-472a-a677-ff6bfb2b3792-21",
+          "image": "/Users/macbookm2/Documents/antigravity/jolly-lovelace/video/koma-film-ep02/.hyperframes/artifacts/snapshots/a1a6448a-f87f-4652-a8d1-f0347642b860/seam-03-4-at-12.3s.png",
+          "time": 12.3,
+          "metadata": {
+            "width": 1080,
+            "height": 1920,
+            "zoomScale": 1,
+            "browserGpuMode": "auto",
+            "review": {
+              "role": "seam",
+              "label": "+0.1"
+            },
+            "warnings": [],
+            "partial": false
+          },
+          "createdAt": 1793070595533,
+          "contentHash": "6ddf447ab8fc7118c896fd02e76b39766ade494023a7167b5cbc4c3ca07604f1",
+          "revision": "725de43b-5b83-45af-9e33-13e5a19083d1",
+          "inputFingerprint": "df342c61f6ac670d734ba51061f5a853a7b955970df87c11cca51c9797f29172",
+          "inputScope": "local-project-files",
+          "attribution": "recorded-revision"
+        },
+        {
+          "scope": "full",
+          "id": "159ee450-bea3-472a-a677-ff6bfb2b3792-22",
+          "image": "/Users/macbookm2/Documents/antigravity/jolly-lovelace/video/koma-film-ep02/.hyperframes/artifacts/snapshots/a1a6448a-f87f-4652-a8d1-f0347642b860/seam-03-5-at-12.4s.png",
+          "time": 12.4,
+          "metadata": {
+            "width": 1080,
+            "height": 1920,
+            "zoomScale": 1,
+            "browserGpuMode": "auto",
+            "review": {
+              "role": "seam",
+              "label": "+0.2"
+            },
+            "warnings": [],
+            "partial": false
+          },
+          "createdAt": 1793070595533,
+          "contentHash": "3584d2fe72d60f4b72997c91df76158c41563faf880825c400c434ea9ecf6999",
+          "revision": "725de43b-5b83-45af-9e33-13e5a19083d1",
+          "inputFingerprint": "df342c61f6ac670d734ba51061f5a853a7b955970df87c11cca51c9797f29172",
+          "inputScope": "local-project-files",
+          "attribution": "recorded-revision"
+        }
+      ]
+    },
+    "unversioned": []
+  },
+  "renders": {
+    "latest": {
+      "id": "e595af1f-a525-445f-bb10-ea6f91c52447",
+      "completedAt": 1793071686790,
+      "output": "/Users/macbookm2/Documents/antigravity/jolly-lovelace/video/koma-film-ep02/renders/koma-film-ep02-final.mp4",
+      "status": "completed",
+      "revision": "597b9823-3b9e-4197-b6b6-3ce2cc4d08ce"
+    },
+    "retainedRevisions": [
+      "597b9823-3b9e-4197-b6b6-3ce2cc4d08ce",
+      "725de43b-5b83-45af-9e33-13e5a19083d1"
+    ]
+  },
+  "pendingArtifactCleanup": []
+}

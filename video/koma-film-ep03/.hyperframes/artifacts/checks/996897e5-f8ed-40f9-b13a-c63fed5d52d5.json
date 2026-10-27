@@ -1,0 +1,965 @@
+{
+  "ok": false,
+  "strict": false,
+  "browserSkipped": false,
+  "lint": {
+    "ok": true,
+    "errorCount": 0,
+    "warningCount": 0,
+    "infoCount": 0,
+    "findings": [],
+    "filesScanned": 6
+  },
+  "runtime": {
+    "ok": true,
+    "errorCount": 0,
+    "warningCount": 0,
+    "infoCount": 0,
+    "findings": []
+  },
+  "layout": {
+    "ok": false,
+    "errorCount": 7,
+    "warningCount": 0,
+    "infoCount": 11,
+    "findings": [
+      {
+        "code": "content_overlap",
+        "severity": "error",
+        "time": 4.333,
+        "selector": "div.clock-display > span:nth-of-type(1)",
+        "message": "Two text blocks overlap and may render unreadable.",
+        "rect": {
+          "left": 294.95,
+          "top": 777,
+          "right": 466.98,
+          "bottom": 947,
+          "width": 172.03,
+          "height": 170
+        },
+        "containerSelector": "div.alert-body > span:nth-of-type(4)",
+        "text": "02",
+        "fixHint": "Give each block its own zone, or put data-layout-allow-overlap on the text or on a container inside the scene. A marker on the scene root does not apply.",
+        "dataAttributes": {},
+        "sourceFile": "compositions/scene1-midnight.html",
+        "bbox": {
+          "x": 294.95,
+          "y": 777,
+          "width": 172.03,
+          "height": 170
+        },
+        "firstSeen": 3.777,
+        "lastSeen": 5.374,
+        "occurrences": 13,
+        "heldMs": 1596.9999999999995,
+        "times": [
+          3.777,
+          3.922,
+          4.067,
+          4.212,
+          4.333,
+          4.358,
+          4.503,
+          4.648,
+          4.793,
+          4.939,
+          5.084,
+          5.229,
+          5.374
+        ]
+      },
+      {
+        "code": "content_overlap",
+        "severity": "error",
+        "time": 4.333,
+        "selector": "div.clock-display > span:nth-of-type(3)",
+        "message": "Two text blocks overlap and may render unreadable.",
+        "rect": {
+          "left": 553,
+          "top": 777,
+          "right": 725.03,
+          "bottom": 947,
+          "width": 172.03,
+          "height": 170
+        },
+        "containerSelector": "div.alert-body > span:nth-of-type(4)",
+        "text": "00",
+        "fixHint": "Give each block its own zone, or put data-layout-allow-overlap on the text or on a container inside the scene. A marker on the scene root does not apply.",
+        "dataAttributes": {},
+        "sourceFile": "compositions/scene1-midnight.html",
+        "bbox": {
+          "x": 553,
+          "y": 777,
+          "width": 172.03,
+          "height": 170
+        },
+        "firstSeen": 3.777,
+        "lastSeen": 5.374,
+        "occurrences": 13,
+        "heldMs": 1596.9999999999995,
+        "times": [
+          3.777,
+          3.922,
+          4.067,
+          4.212,
+          4.333,
+          4.358,
+          4.503,
+          4.648,
+          4.793,
+          4.939,
+          5.084,
+          5.229,
+          5.374
+        ]
+      },
+      {
+        "code": "content_overlap",
+        "severity": "error",
+        "time": 4.333,
+        "selector": "span.clock-ampm",
+        "message": "Two text blocks overlap and may render unreadable.",
+        "rect": {
+          "left": 745.03,
+          "top": 869,
+          "right": 785.05,
+          "bottom": 914,
+          "width": 40.02,
+          "height": 45
+        },
+        "containerSelector": "#s1-load",
+        "text": "AM",
+        "fixHint": "Give each block its own zone, or put data-layout-allow-overlap on the text or on a container inside the scene. A marker on the scene root does not apply.",
+        "dataAttributes": {},
+        "sourceFile": "compositions/scene1-midnight.html",
+        "bbox": {
+          "x": 745.03,
+          "y": 869,
+          "width": 40.02,
+          "height": 45
+        },
+        "firstSeen": 3.777,
+        "lastSeen": 5.374,
+        "occurrences": 13,
+        "heldMs": 1596.9999999999995,
+        "times": [
+          3.777,
+          3.922,
+          4.067,
+          4.212,
+          4.333,
+          4.358,
+          4.503,
+          4.648,
+          4.793,
+          4.939,
+          5.084,
+          5.229,
+          5.374
+        ]
+      },
+      {
+        "code": "content_overlap",
+        "severity": "error",
+        "time": 13,
+        "selector": "#s2-hand",
+        "message": "Two text blocks overlap and may render unreadable.",
+        "rect": {
+          "left": 452,
+          "top": 764.5,
+          "right": 628,
+          "bottom": 864.5,
+          "width": 176,
+          "height": 100
+        },
+        "containerSelector": "div.truth-arrow",
+        "text": "🙋‍♂️👋",
+        "fixHint": "Give each block its own zone, or put data-layout-allow-overlap on the text or on a container inside the scene. A marker on the scene root does not apply.",
+        "dataAttributes": {},
+        "sourceFile": "compositions/scene2-dadah.html",
+        "bbox": {
+          "x": 452,
+          "y": 764.5,
+          "width": 176,
+          "height": 100
+        },
+        "firstSeen": 10.458,
+        "lastSeen": 13.363,
+        "occurrences": 22,
+        "heldMs": 2904.9999999999995,
+        "times": [
+          10.458,
+          10.603,
+          10.749,
+          10.894,
+          11.039,
+          11.184,
+          11.33,
+          11.475,
+          11.62,
+          11.765,
+          11.911,
+          12.056,
+          12.201,
+          12.346,
+          12.492,
+          12.637,
+          12.782,
+          12.927,
+          13,
+          13.073,
+          13.218,
+          13.363
+        ]
+      },
+      {
+        "code": "content_overlap",
+        "severity": "error",
+        "time": 13,
+        "selector": "#s2-wave-cap",
+        "message": "Two text blocks overlap and may render unreadable.",
+        "rect": {
+          "left": 271.16,
+          "top": 879.5,
+          "right": 808.84,
+          "bottom": 916.5,
+          "width": 537.68,
+          "height": 37
+        },
+        "containerSelector": "div.truth-sub",
+        "text": "\"...tunggu, dia liat siapa?\"",
+        "fixHint": "Give each block its own zone, or put data-layout-allow-overlap on the text or on a container inside the scene. A marker on the scene root does not apply.",
+        "dataAttributes": {},
+        "sourceFile": "compositions/scene2-dadah.html",
+        "bbox": {
+          "x": 271.16,
+          "y": 879.5,
+          "width": 537.68,
+          "height": 37
+        },
+        "firstSeen": 10.458,
+        "lastSeen": 13.363,
+        "occurrences": 22,
+        "heldMs": 2904.9999999999995,
+        "times": [
+          10.458,
+          10.603,
+          10.749,
+          10.894,
+          11.039,
+          11.184,
+          11.33,
+          11.475,
+          11.62,
+          11.765,
+          11.911,
+          12.056,
+          12.201,
+          12.346,
+          12.492,
+          12.637,
+          12.782,
+          12.927,
+          13,
+          13.073,
+          13.218,
+          13.363
+        ]
+      },
+      {
+        "code": "content_overlap",
+        "severity": "error",
+        "time": 13,
+        "selector": "div.truth-text",
+        "message": "Two text blocks overlap and may render unreadable.",
+        "rect": {
+          "left": 258.3,
+          "top": 811,
+          "right": 821.7,
+          "bottom": 861,
+          "width": 563.4,
+          "height": 50
+        },
+        "containerSelector": "#s2-stamp",
+        "text": "\"Orang di belakang gue.\"",
+        "fixHint": "Give each block its own zone, or put data-layout-allow-overlap on the text or on a container inside the scene. A marker on the scene root does not apply.",
+        "dataAttributes": {},
+        "sourceFile": "compositions/scene2-dadah.html",
+        "bbox": {
+          "x": 258.3,
+          "y": 811,
+          "width": 563.4,
+          "height": 50
+        },
+        "firstSeen": 12.346,
+        "lastSeen": 13.363,
+        "occurrences": 9,
+        "heldMs": 1016.9999999999994,
+        "times": [
+          12.346,
+          12.492,
+          12.637,
+          12.782,
+          12.927,
+          13,
+          13.073,
+          13.218,
+          13.363
+        ]
+      },
+      {
+        "code": "content_overlap",
+        "severity": "error",
+        "time": 13,
+        "selector": "div.truth-sub",
+        "message": "Two text blocks overlap and may render unreadable.",
+        "rect": {
+          "left": 245.94,
+          "top": 876,
+          "right": 834.05,
+          "bottom": 938,
+          "width": 588.11,
+          "height": 62
+        },
+        "containerSelector": "#s2-stamp",
+        "text": "Gue cuma penghalang angin di tengah mereka.",
+        "fixHint": "Give each block its own zone, or put data-layout-allow-overlap on the text or on a container inside the scene. A marker on the scene root does not apply.",
+        "dataAttributes": {},
+        "sourceFile": "compositions/scene2-dadah.html",
+        "bbox": {
+          "x": 245.94,
+          "y": 876,
+          "width": 588.11,
+          "height": 62
+        },
+        "firstSeen": 12.346,
+        "lastSeen": 13.363,
+        "occurrences": 9,
+        "heldMs": 1016.9999999999994,
+        "times": [
+          12.346,
+          12.492,
+          12.637,
+          12.782,
+          12.927,
+          13,
+          13.073,
+          13.218,
+          13.363
+        ]
+      },
+      {
+        "code": "content_overlap",
+        "severity": "info",
+        "time": 3.777,
+        "selector": "div.clock-header > span:nth-of-type(1)",
+        "message": "Two text blocks overlap and may render unreadable.",
+        "rect": {
+          "left": 160,
+          "top": 702,
+          "right": 512.86,
+          "bottom": 733,
+          "width": 352.86,
+          "height": 31
+        },
+        "containerSelector": "div.alert-bar > span:nth-of-type(1)",
+        "text": "STATUS: RENCANA TIDUR",
+        "fixHint": "Give each block its own zone, or put data-layout-allow-overlap on the text or on a container inside the scene. A marker on the scene root does not apply.",
+        "dataAttributes": {},
+        "sourceFile": "compositions/scene1-midnight.html",
+        "bbox": {
+          "x": 160,
+          "y": 702,
+          "width": 352.86,
+          "height": 31
+        },
+        "firstSeen": 3.777,
+        "lastSeen": 3.777,
+        "occurrences": 1,
+        "heldMs": 0,
+        "times": [
+          3.777
+        ]
+      },
+      {
+        "code": "text_occluded",
+        "severity": "info",
+        "time": 4.333,
+        "selector": "div.clock-header > span:nth-of-type(1)",
+        "message": "Text is hidden beneath an opaque element.",
+        "rect": {
+          "left": 160,
+          "top": 702,
+          "right": 512.86,
+          "bottom": 733,
+          "width": 352.86,
+          "height": 31
+        },
+        "containerSelector": "#s1-alert",
+        "text": "STATUS: RENCANA TIDUR",
+        "fixHint": "Give the text its own zone, raise its stacking order above the covering element, or mark intentional layering with data-layout-allow-occlusion.",
+        "coveredFraction": 1,
+        "dataAttributes": {},
+        "sourceFile": "compositions/scene1-midnight.html",
+        "bbox": {
+          "x": 160,
+          "y": 702,
+          "width": 352.86,
+          "height": 31
+        },
+        "firstSeen": 4.333,
+        "lastSeen": 4.333,
+        "occurrences": 1,
+        "heldMs": 0,
+        "times": [
+          4.333
+        ]
+      },
+      {
+        "code": "text_occluded",
+        "severity": "info",
+        "time": 4.333,
+        "selector": "#s1-sleep-stat",
+        "message": "Text is hidden beneath an opaque element.",
+        "rect": {
+          "left": 667.95,
+          "top": 702,
+          "right": 920,
+          "bottom": 733,
+          "width": 252.05,
+          "height": 31
+        },
+        "containerSelector": "#s1-alert",
+        "text": "MATA: 98% MEREM",
+        "fixHint": "Give the text its own zone, raise its stacking order above the covering element, or mark intentional layering with data-layout-allow-occlusion.",
+        "coveredFraction": 1,
+        "dataAttributes": {},
+        "sourceFile": "compositions/scene1-midnight.html",
+        "bbox": {
+          "x": 667.95,
+          "y": 702,
+          "width": 252.05,
+          "height": 31
+        },
+        "firstSeen": 4.333,
+        "lastSeen": 4.333,
+        "occurrences": 1,
+        "heldMs": 0,
+        "times": [
+          4.333
+        ]
+      },
+      {
+        "code": "text_occluded",
+        "severity": "info",
+        "time": 4.333,
+        "selector": "div.clock-display > span:nth-of-type(1)",
+        "message": "Text is hidden beneath an opaque element.",
+        "rect": {
+          "left": 294.95,
+          "top": 777,
+          "right": 466.98,
+          "bottom": 947,
+          "width": 172.03,
+          "height": 170
+        },
+        "containerSelector": "#s1-alert",
+        "text": "02",
+        "fixHint": "Give the text its own zone, raise its stacking order above the covering element, or mark intentional layering with data-layout-allow-occlusion.",
+        "coveredFraction": 1,
+        "dataAttributes": {},
+        "sourceFile": "compositions/scene1-midnight.html",
+        "bbox": {
+          "x": 294.95,
+          "y": 777,
+          "width": 172.03,
+          "height": 170
+        },
+        "firstSeen": 4.333,
+        "lastSeen": 4.333,
+        "occurrences": 1,
+        "heldMs": 0,
+        "times": [
+          4.333
+        ]
+      },
+      {
+        "code": "text_occluded",
+        "severity": "info",
+        "time": 4.333,
+        "selector": "#s1-colon",
+        "message": "Text is hidden beneath an opaque element.",
+        "rect": {
+          "left": 466.98,
+          "top": 777,
+          "right": 553,
+          "bottom": 947,
+          "width": 86.02,
+          "height": 170
+        },
+        "containerSelector": "#s1-alert",
+        "text": ":",
+        "fixHint": "Give the text its own zone, raise its stacking order above the covering element, or mark intentional layering with data-layout-allow-occlusion.",
+        "coveredFraction": 1,
+        "dataAttributes": {},
+        "sourceFile": "compositions/scene1-midnight.html",
+        "bbox": {
+          "x": 466.98,
+          "y": 777,
+          "width": 86.02,
+          "height": 170
+        },
+        "firstSeen": 4.333,
+        "lastSeen": 4.333,
+        "occurrences": 1,
+        "heldMs": 0,
+        "times": [
+          4.333
+        ]
+      },
+      {
+        "code": "text_occluded",
+        "severity": "info",
+        "time": 4.333,
+        "selector": "div.clock-display > span:nth-of-type(3)",
+        "message": "Text is hidden beneath an opaque element.",
+        "rect": {
+          "left": 553,
+          "top": 777,
+          "right": 725.03,
+          "bottom": 947,
+          "width": 172.03,
+          "height": 170
+        },
+        "containerSelector": "#s1-alert",
+        "text": "00",
+        "fixHint": "Give the text its own zone, raise its stacking order above the covering element, or mark intentional layering with data-layout-allow-occlusion.",
+        "coveredFraction": 1,
+        "dataAttributes": {},
+        "sourceFile": "compositions/scene1-midnight.html",
+        "bbox": {
+          "x": 553,
+          "y": 777,
+          "width": 172.03,
+          "height": 170
+        },
+        "firstSeen": 4.333,
+        "lastSeen": 4.333,
+        "occurrences": 1,
+        "heldMs": 0,
+        "times": [
+          4.333
+        ]
+      },
+      {
+        "code": "text_occluded",
+        "severity": "info",
+        "time": 4.333,
+        "selector": "span.clock-ampm",
+        "message": "Text is hidden beneath an opaque element.",
+        "rect": {
+          "left": 745.03,
+          "top": 869,
+          "right": 785.05,
+          "bottom": 914,
+          "width": 40.02,
+          "height": 45
+        },
+        "containerSelector": "#s1-alert",
+        "text": "AM",
+        "fixHint": "Give the text its own zone, raise its stacking order above the covering element, or mark intentional layering with data-layout-allow-occlusion.",
+        "coveredFraction": 1,
+        "dataAttributes": {},
+        "sourceFile": "compositions/scene1-midnight.html",
+        "bbox": {
+          "x": 745.03,
+          "y": 869,
+          "width": 40.02,
+          "height": 45
+        },
+        "firstSeen": 4.333,
+        "lastSeen": 4.333,
+        "occurrences": 1,
+        "heldMs": 0,
+        "times": [
+          4.333
+        ]
+      },
+      {
+        "code": "text_occluded",
+        "severity": "info",
+        "time": 13,
+        "selector": "#s2-hand",
+        "message": "Text is hidden beneath an opaque element.",
+        "rect": {
+          "left": 452,
+          "top": 764.5,
+          "right": 628,
+          "bottom": 864.5,
+          "width": 176,
+          "height": 100
+        },
+        "containerSelector": "#s2-truth",
+        "text": "🙋‍♂️👋",
+        "fixHint": "Give the text its own zone, raise its stacking order above the covering element, or mark intentional layering with data-layout-allow-occlusion.",
+        "coveredFraction": 1,
+        "dataAttributes": {},
+        "sourceFile": "compositions/scene2-dadah.html",
+        "bbox": {
+          "x": 452,
+          "y": 764.5,
+          "width": 176,
+          "height": 100
+        },
+        "firstSeen": 13,
+        "lastSeen": 13,
+        "occurrences": 1,
+        "heldMs": 0,
+        "times": [
+          13
+        ]
+      },
+      {
+        "code": "text_occluded",
+        "severity": "info",
+        "time": 13,
+        "selector": "#s2-wave-cap",
+        "message": "Text is hidden beneath an opaque element.",
+        "rect": {
+          "left": 271.16,
+          "top": 879.5,
+          "right": 808.84,
+          "bottom": 916.5,
+          "width": 537.69,
+          "height": 37
+        },
+        "containerSelector": "#s2-truth",
+        "text": "\"...tunggu, dia liat siapa?\"",
+        "fixHint": "Give the text its own zone, raise its stacking order above the covering element, or mark intentional layering with data-layout-allow-occlusion.",
+        "coveredFraction": 1,
+        "dataAttributes": {},
+        "sourceFile": "compositions/scene2-dadah.html",
+        "bbox": {
+          "x": 271.16,
+          "y": 879.5,
+          "width": 537.69,
+          "height": 37
+        },
+        "firstSeen": 13,
+        "lastSeen": 13,
+        "occurrences": 1,
+        "heldMs": 0,
+        "times": [
+          13
+        ]
+      },
+      {
+        "code": "text_occluded",
+        "severity": "info",
+        "time": 13,
+        "selector": "div.truth-text",
+        "message": "Text is hidden beneath an opaque element.",
+        "rect": {
+          "left": 258.3,
+          "top": 811,
+          "right": 821.7,
+          "bottom": 861,
+          "width": 563.41,
+          "height": 50
+        },
+        "containerSelector": "#s2-stamp",
+        "text": "\"Orang di belakang gue.\"",
+        "fixHint": "Give the text its own zone, raise its stacking order above the covering element, or mark intentional layering with data-layout-allow-occlusion.",
+        "coveredFraction": 0.63,
+        "dataAttributes": {},
+        "sourceFile": "compositions/scene2-dadah.html",
+        "bbox": {
+          "x": 258.3,
+          "y": 811,
+          "width": 563.41,
+          "height": 50
+        },
+        "firstSeen": 13,
+        "lastSeen": 13,
+        "occurrences": 1,
+        "heldMs": 0,
+        "times": [
+          13
+        ]
+      },
+      {
+        "code": "text_occluded",
+        "severity": "info",
+        "time": 13,
+        "selector": "div.truth-sub",
+        "message": "Text is hidden beneath an opaque element.",
+        "rect": {
+          "left": 245.94,
+          "top": 876,
+          "right": 834.05,
+          "bottom": 938,
+          "width": 588.11,
+          "height": 62
+        },
+        "containerSelector": "#s2-stamp",
+        "text": "Gue cuma penghalang angin di tengah mereka.",
+        "fixHint": "Give the text its own zone, raise its stacking order above the covering element, or mark intentional layering with data-layout-allow-occlusion.",
+        "coveredFraction": 0.2,
+        "dataAttributes": {},
+        "sourceFile": "compositions/scene2-dadah.html",
+        "bbox": {
+          "x": 245.94,
+          "y": 876,
+          "width": 588.11,
+          "height": 62
+        },
+        "firstSeen": 13,
+        "lastSeen": 13,
+        "occurrences": 1,
+        "heldMs": 0,
+        "times": [
+          13
+        ]
+      }
+    ],
+    "duration": 26,
+    "samples": [
+      1.444,
+      4.333,
+      7.222,
+      10.111,
+      13,
+      15.889,
+      18.778,
+      21.667,
+      24.556
+    ],
+    "transitionSamples": [],
+    "transitionSamplesDropped": 0,
+    "tolerance": 2,
+    "totalIssueCount": 18,
+    "truncated": false
+  },
+  "motion": {
+    "ok": true,
+    "errorCount": 0,
+    "warningCount": 0,
+    "infoCount": 0,
+    "findings": [],
+    "enabled": false,
+    "samples": 0
+  },
+  "contrast": {
+    "ok": true,
+    "errorCount": 0,
+    "warningCount": 2,
+    "infoCount": 0,
+    "findings": [
+      {
+        "code": "contrast_aa_failure",
+        "severity": "warning",
+        "message": "Contrast is 1.05:1; WCAG AA requires 3:1.",
+        "text": "🙋‍♂️👋",
+        "fg": "rgb(29,27,24)",
+        "bg": "rgb(33,31,28)",
+        "ratio": 1.05,
+        "requiredRatio": 3,
+        "suggestedColor": "rgb(107,106,104)",
+        "large": true,
+        "selector": "#s2-hand",
+        "dataAttributes": {},
+        "sourceFile": "compositions/scene2-dadah.html",
+        "bbox": {
+          "x": 452,
+          "y": 770.5,
+          "width": 176,
+          "height": 88
+        },
+        "time": 13,
+        "times": [
+          13
+        ]
+      },
+      {
+        "code": "contrast_aa_failure",
+        "severity": "warning",
+        "message": "Contrast is 1.17:1; WCAG AA requires 3:1.",
+        "text": "\"Orang di belakang gue.\"",
+        "fg": "rgb(255,253,248)",
+        "bg": "rgb(237,235,232)",
+        "ratio": 1.17,
+        "requiredRatio": 3,
+        "suggestedColor": "rgb(136,135,132)",
+        "large": true,
+        "selector": "div > div:nth-of-type(2) > div > div > div:nth-of-type(2) > div:nth-of-type(2) > div:nth-of-type(2) > div:nth-of-type(2)",
+        "dataAttributes": {},
+        "sourceFile": "compositions/scene2-dadah.html",
+        "bbox": {
+          "x": 258.296875,
+          "y": 809,
+          "width": 563.40625,
+          "height": 55
+        },
+        "time": 13,
+        "times": [
+          13
+        ]
+      }
+    ],
+    "enabled": true,
+    "samples": [
+      1.444,
+      7.222,
+      13,
+      18.778,
+      24.556
+    ],
+    "checked": 56,
+    "passed": 54
+  },
+  "craft": {
+    "ok": true,
+    "errorCount": 0,
+    "warningCount": 4,
+    "infoCount": 0,
+    "findings": [
+      {
+        "code": "line_unread",
+        "severity": "warning",
+        "message": "\"> QUERY: \"Momen Paling Cringe\" > FILE: insiden_dadah_sala...\" (10 words) is on screen 1.66 s (±0.01 s), under its 2.63 s floor: hold it about 0.5 s + 0.3 s a word (3.50 s here) before it leaves or changes; see references/motion.md.",
+        "text": "> QUERY: \"Momen Paling Cringe\" > FILE: insiden_dadah_salah_orang.dat",
+        "selector": "div.alert-body",
+        "dataAttributes": {},
+        "sourceFile": "compositions/scene1-midnight.html",
+        "bbox": {
+          "x": 152.34,
+          "y": 755.72,
+          "width": 711.73,
+          "height": 83.52999999999997
+        },
+        "time": 3.805,
+        "words": 10,
+        "seconds": 1.664,
+        "floorSeconds": 2.625
+      },
+      {
+        "code": "line_unread",
+        "severity": "warning",
+        "message": "\"[ MEMUAT ULANG MEMORI 8 TAHUN LALU... ]\" (6 words) is on screen 1.63 s (±0.01 s), under its 1.72 s floor: hold it about 0.5 s + 0.3 s a word (2.30 s here) before it leaves or changes; see references/motion.md.",
+        "text": "[ MEMUAT ULANG MEMORI 8 TAHUN LALU... ]",
+        "selector": "#s1-load",
+        "dataAttributes": {},
+        "sourceFile": "compositions/scene1-midnight.html",
+        "bbox": {
+          "x": 152.34,
+          "y": 864.69,
+          "width": 695.49,
+          "height": 31.049999999999955
+        },
+        "time": 3.836,
+        "words": 6,
+        "seconds": 1.633,
+        "floorSeconds": 1.725
+      },
+      {
+        "code": "text_below_floor",
+        "severity": "warning",
+        "message": "Type floor is 28 px (2.6% of the 1080 px short side, what a phone can read) and 2 text elements stay under it for 0.5 s or more, the smallest \"• Momen Dadah Salah Orang (2018)\" at 27 px: set reading text to at least 28 px, or put data-layout-ignore on text that is texture rather than reading; see references/look.md.",
+        "text": "• Momen Dadah Salah Orang (2018)",
+        "selector": "#s3-item-hi > span:nth-of-type(1)",
+        "dataAttributes": {},
+        "sourceFile": "compositions/scene3-otak.html",
+        "bbox": {
+          "x": 185.76,
+          "y": 893.25,
+          "width": 516.18,
+          "height": 29.76
+        },
+        "time": 13.75,
+        "times": [
+          13.75,
+          13.75
+        ],
+        "fontPx": 26.88,
+        "floorPx": 28,
+        "seconds": 3.875,
+        "elements": [
+          {
+            "selector": "#s3-item-hi > span:nth-of-type(1)",
+            "text": "• Momen Dadah Salah Orang (2018)",
+            "fontPx": 26.88,
+            "time": 13.75,
+            "seconds": 3.875
+          },
+          {
+            "selector": "#s3-item-hi > span:nth-of-type(2)",
+            "text": "98.7%",
+            "fontPx": 26.88,
+            "time": 13.75,
+            "seconds": 3.875
+          }
+        ]
+      },
+      {
+        "code": "line_unread",
+        "severity": "warning",
+        "message": "\"• Momen Dadah Salah Orang (2018)\" (5 words) is on screen 0.37 s (±0.01 s), under its 1.50 s floor: hold it about 0.5 s + 0.3 s a word (2.00 s here) before it leaves or changes; see references/motion.md.",
+        "text": "• Momen Dadah Salah Orang (2018)",
+        "selector": "#s3-item-hi > span:nth-of-type(1)",
+        "dataAttributes": {},
+        "sourceFile": "compositions/scene3-otak.html",
+        "bbox": {
+          "x": 168.86,
+          "y": 874.91,
+          "width": 540.81,
+          "height": 31.17999999999995
+        },
+        "time": 17.539,
+        "words": 5,
+        "seconds": 0.367,
+        "floorSeconds": 1.5
+      }
+    ],
+    "enabled": true,
+    "step": 0.125,
+    "samples": 208
+  },
+  "audio": {
+    "ok": true,
+    "errorCount": 0,
+    "warningCount": 1,
+    "infoCount": 0,
+    "findings": [
+      {
+        "code": "audio_clip_silent",
+        "severity": "warning",
+        "message": "assets/audio/cricket-chirp.mp3 is silent for the whole part this clip plays (0-0.65 s of the file).",
+        "selector": "#sfx-cricket",
+        "dataAttributes": {},
+        "sourceFile": "index.html",
+        "bbox": {
+          "x": 0,
+          "y": 0,
+          "width": 0,
+          "height": 0
+        },
+        "time": 9.5,
+        "timeRange": [
+          9.5,
+          10.15
+        ],
+        "fixHint": "Check the file has sound there, or move data-media-start to where it does."
+      }
+    ]
+  },
+  "hdr": {
+    "autoPromotion": null,
+    "inspection": "available"
+  },
+  "snapshots": {
+    "enabled": false,
+    "files": [],
+    "times": [],
+    "findingFiles": []
+  }
+}

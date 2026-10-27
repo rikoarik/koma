@@ -1,5 +1,5 @@
 import { NextRequest, NextResponse } from 'next/server';
-import { updatePost, deletePost, getPostById } from '@/lib/storage';
+import { updatePost, deletePost, getPostById, withdrawSearchConsent } from '@/lib/storage';
 import { getOrCreateSessionId, applySessionCookie } from '@/lib/session';
 
 export async function GET(
@@ -34,10 +34,18 @@ export async function PUT(
     const postId = params.id;
     const { sessionId, isNew } = getOrCreateSessionId(request);
     const body = await request.json();
-    const { content, authorSecret } = body;
-    if (typeof content !== 'string') return NextResponse.json({ success: false, error: 'Isi coretan tidak valid.' }, { status: 400 });
+    const { content, authorSecret, withdrawSearch } = body;
+    if (typeof authorSecret !== 'undefined' && typeof authorSecret !== 'string') return NextResponse.json({ success: false, error: 'Kunci penulis tidak valid.' }, { status: 400 });
+    if (withdrawSearch === true && content === undefined) {
+      const withdrawn = await withdrawSearchConsent(postId, sessionId, authorSecret);
+      if (!withdrawn) return NextResponse.json({ success: false, error: 'Coretan tidak ditemukan atau akses ditolak.' }, { status: 403 });
+      const response = NextResponse.json({ success: true, message: 'Izin pencarian dicabut.' }, { headers: { 'Cache-Control': 'no-store' } });
+      if (isNew) applySessionCookie(response, sessionId);
+      return response;
+    }
+    if (withdrawSearch !== undefined || typeof content !== 'string') return NextResponse.json({ success: false, error: 'Isi coretan tidak valid.' }, { status: 400 });
 
-    const result = await updatePost(postId, content || '', sessionId, authorSecret);
+    const result = await updatePost(postId, content, sessionId, authorSecret);
     if (!result.success) {
       return NextResponse.json({ success: false, error: result.error }, { status: 403 });
     }
