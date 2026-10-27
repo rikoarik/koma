@@ -37,6 +37,9 @@ export default function RootLayout({
 }) {
   return (
     <html lang="id">
+      <head>
+        <link rel="ard" href="/.well-known/ard.json" type="application/json" />
+      </head>
       <body className="min-h-screen bg-paper text-ink antialiased selection:bg-koma-purple selection:text-paper">
         <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify({ '@context': 'https://schema.org', '@graph': [
           { '@type': 'WebSite', '@id': 'https://ruangkoma.web.id/#website', name: 'Koma', url: 'https://ruangkoma.web.id', inLanguage: 'id-ID', description: 'Ruang ekspresi anonim dan percakapan teks dalam bahasa Indonesia.' },

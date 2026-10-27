@@ -1,0 +1,18 @@
+{
+  "entries": [
+    {
+      "identifier": "urn:air:ruangkoma.web.id:skill:koma-public-guide",
+      "displayName": "Panduan Halaman Resmi Koma",
+      "type": "application/agent-skills+md",
+      "url": "https://ruangkoma.web.id/agents/koma-public-guide/SKILL.md",
+      "description": "Panduan baca-saja untuk menemukan halaman resmi Koma tentang identitas komunitas, aturan, privasi, dan dukungan. Tidak mencakup coretan pengguna atau tindakan menulis.",
+      "capabilities": ["ReadOfficialPages"],
+      "representativeQueries": [
+        "Apa itu Koma dan untuk siapa ruang ini?",
+        "Apa aturan saat menulis dan membalas di Koma?",
+        "Bagaimana Koma menjaga privasi penulis anonim?",
+        "Di mana informasi resmi untuk mendukung Koma?"
+      ]
+    }
+  ]
+}
