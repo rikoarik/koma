@@ -415,14 +415,14 @@ export default function AdminPage() {
   };
 
   // Save Donation Config
-  const handleSaveDonation = async () => {
+  const handleSaveDonation = async (qrisImageUrl: string) => {
     setIsSavingDonation(true);
     setSaveSuccessMsg('');
     try {
       const res = await fetch('/api/donations', {
         method: 'POST',
         headers: { 'Content-Type': 'application/json' },
-        body: JSON.stringify(donationConfig),
+        body: JSON.stringify({ ...donationConfig, qrisImageUrl }),
       });
       const data = await res.json();
       if (data.success) {

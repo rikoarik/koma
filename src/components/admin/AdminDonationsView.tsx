@@ -1,15 +1,15 @@
 'use client';
 
-import React from 'react';
+import React, { useRef, useState } from 'react';
 import Image from 'next/image';
-import { QrCode, Check, Heart, Save } from 'lucide-react';
+import { QrCode, Check, Heart, Save, Upload, Trash2 } from 'lucide-react';
 import { DonationConfig } from '@/types';
 import { DEFAULT_DONATION_URL } from '@/lib/donation-defaults';
 
 interface AdminDonationsViewProps {
   donationConfig: DonationConfig;
   setDonationConfig: (config: DonationConfig) => void;
-  onSave: () => Promise<boolean>;
+  onSave: (qrisImageUrl: string) => Promise<boolean>;
   isSaving?: boolean;
   saveSuccessMsg?: string;
 }
@@ -21,9 +21,37 @@ export default function AdminDonationsView({
   isSaving = false,
   saveSuccessMsg,
 }: AdminDonationsViewProps) {
+  const fileInputRef = useRef<HTMLInputElement>(null);
+  const [selectedFile, setSelectedFile] = useState<File | null>(null);
+  const [uploading, setUploading] = useState(false);
+  const [uploadError, setUploadError] = useState('');
+
   const handleSubmit = async (e: React.FormEvent) => {
     e.preventDefault();
-    await onSave();
+    if (uploading) return;
+    setUploadError('');
+    let url = donationConfig.qrisImageUrl;
+    if (selectedFile) {
+      setUploading(true);
+      try {
+        const form = new FormData();
+        form.append('file', selectedFile);
+        const response = await fetch('/api/admin/donations/qris', { method: 'POST', body: form });
+        const result = await response.json();
+        if (!response.ok || !result.success || typeof result.url !== 'string') {
+          throw new Error(result.error || 'Gagal mengunggah QRIS.');
+        }
+        url = result.url;
+        setDonationConfig({ ...donationConfig, qrisImageUrl: url });
+        setSelectedFile(null);
+      } catch (error) {
+        setUploadError(error instanceof Error ? error.message : 'Gagal mengunggah QRIS.');
+        return;
+      } finally {
+        setUploading(false);
+      }
+    }
+    if (await onSave(url) && fileInputRef.current) fileInputRef.current.value = '';
   };
 
   return (
@@ -74,23 +102,42 @@ export default function AdminDonationsView({
             </label>
           </div>
 
-          {/* QRIS Image URL */}
+          {/* QRIS file picker */}
           <div>
-            <label className="font-bold text-slate-700 block mb-1 font-sans">
-              URL / Path Gambar QRIS (opsional)
+            <label htmlFor="qris-file" className="font-bold text-slate-700 block mb-1 font-sans">
+              Foto QRIS (opsional)
             </label>
             <input
-              type="text"
-              value={donationConfig.qrisImageUrl}
-              onChange={(e) =>
-                setDonationConfig({ ...donationConfig, qrisImageUrl: e.target.value })
-              }
-              placeholder="/assets/qris-koma.png"
-              className="w-full px-3 py-2 bg-slate-50 border border-slate-200 rounded-lg text-slate-900 font-mono text-xs focus:outline-none focus:border-indigo-500 focus:bg-white"
+              id="qris-file"
+              ref={fileInputRef}
+              type="file"
+              accept="image/png,image/jpeg,image/webp"
+              disabled={isSaving || uploading}
+              onChange={(e) => {
+                setUploadError('');
+                const file = e.target.files?.[0] || null;
+                if (file && file.size > 5 * 1024 * 1024) {
+                  setUploadError('Gambar terlalu besar. Maksimal 5 MB.');
+                  setSelectedFile(null);
+                  e.target.value = '';
+                  return;
+                }
+                setSelectedFile(file);
+              }}
+              className="block w-full rounded-lg border border-slate-200 bg-slate-50 p-2 text-xs text-slate-700 file:mr-3 file:rounded file:border-0 file:bg-slate-200 file:px-3 file:py-1.5 file:font-semibold file:text-slate-800 hover:file:bg-slate-300 focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-slate-600 disabled:opacity-50"
             />
-            <span className="text-[11px] text-slate-400 mt-1 block">
-              Kosongkan jika belum punya QRIS. Jangan gunakan gambar stiker sebagai QR pembayaran.
-            </span>
+            <p className="text-[11px] text-slate-500 mt-1">Pilih PNG, JPG, atau WebP maksimal 5 MB, lalu klik Simpan. Pastikan QR dapat dipindai sebelum dipublikasikan.</p>
+            {selectedFile && <p className="mt-2 flex items-center gap-1.5 break-all text-slate-700"><Upload className="h-3.5 w-3.5 shrink-0" />{selectedFile.name} siap diunggah saat disimpan.</p>}
+            {donationConfig.qrisImageUrl && (
+              <button type="button" disabled={uploading || isSaving} onClick={() => {
+                setSelectedFile(null);
+                setDonationConfig({ ...donationConfig, qrisImageUrl: '' });
+                if (fileInputRef.current) fileInputRef.current.value = '';
+              }} className="mt-2 inline-flex items-center gap-1.5 text-rose-700 underline underline-offset-2 hover:text-rose-900 disabled:opacity-50">
+                <Trash2 className="h-3.5 w-3.5" /> Hapus QRIS dari tampilan (klik Simpan)
+              </button>
+            )}
+            {uploadError && <p role="alert" className="mt-2 text-rose-700">{uploadError}</p>}
           </div>
 
           {/* Custom Message */}
@@ -130,11 +177,11 @@ export default function AdminDonationsView({
           <div className="pt-2">
             <button
               type="submit"
-              disabled={isSaving}
-              className="flex items-center gap-2 px-5 py-2.5 bg-indigo-600 hover:bg-indigo-700 text-white font-semibold text-xs rounded-lg shadow-xs transition-all disabled:opacity-50"
+              disabled={isSaving || uploading}
+              className="flex items-center gap-2 px-5 py-2.5 bg-indigo-600 hover:bg-indigo-700 text-white font-semibold text-xs rounded-lg shadow-xs transition-colors disabled:opacity-50"
             >
               <Save className="w-4 h-4" />
-              <span>{isSaving ? 'Menyimpan...' : 'Simpan Konfigurasi Donasi'}</span>
+              <span>{uploading ? 'Mengunggah QRIS...' : isSaving ? 'Menyimpan...' : 'Simpan Konfigurasi Donasi'}</span>
             </button>
           </div>
         </form>

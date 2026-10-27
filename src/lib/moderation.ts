@@ -102,7 +102,8 @@ export function normalizeText(rawText: string): string {
  */
 export function checkContentModeration(
   text: string,
-  customRules: ModerationRuleItem[] = []
+  customRules: ModerationRuleItem[] = [],
+  includeBaseline = true
 ): ModerationResult {
   if (!text || text.trim().length === 0) {
     return { action: 'allow', severity: 'low' };
@@ -112,7 +113,7 @@ export function checkContentModeration(
   const normalized = normalizeText(text);
 
   // Built-in safety rules run before custom rules; admin rules cannot override them.
-  const allRules = [...BASELINE_RULES, ...customRules];
+  const allRules = includeBaseline ? [...BASELINE_RULES, ...customRules] : customRules;
 
   // An allowlist only bypasses a matching low-severity term, never privacy or threats.
   const activeAllowlist = new Set<string>(DEFAULT_ALLOWLIST);

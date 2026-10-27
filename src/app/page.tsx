@@ -9,7 +9,6 @@ import FeedContainer from '@/components/feed/FeedContainer';
 import ComposerModal from '@/components/feed/ComposerModal';
 import DonationModal from '@/components/donation/DonationModal';
 import Footer from '@/components/layout/Footer';
-import confetti from 'canvas-confetti';
 import Lenis from 'lenis';
 import 'lenis/dist/lenis.css';
 
@@ -86,12 +85,16 @@ export default function HomePage() {
       const json = await res.json();
       if (json.success) {
         // Celebrate only content actually visible to the community.
-        if (json.moderation?.state === 'published') confetti({
-          particleCount: 25,
-          spread: 40,
-          origin: { y: 0.8 },
-          colors: ['#5A46D6', '#1D1B18', '#DCCDBB'],
-        });
+        if (json.moderation?.state === 'published') {
+          import('canvas-confetti').then(({ default: confetti }) => {
+            confetti({
+              particleCount: 25,
+              spread: 40,
+              origin: { y: 0.8 },
+              colors: ['#5A46D6', '#1D1B18', '#DCCDBB'],
+            });
+          }).catch(() => {});
+        }
 
         // Store author delete secret
         if (json.authorSecret && json.post?.id) {

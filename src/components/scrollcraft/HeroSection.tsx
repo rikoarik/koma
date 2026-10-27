@@ -57,7 +57,7 @@ export default function HeroSection({
           alt="Latar Kertas Tekstur Analog"
           fill
           priority
-          sizes="100vw"
+          sizes="(max-width: 768px) 100vw, 1376px"
           className="object-cover object-center opacity-85"
         />
         <div className="absolute inset-0 bg-gradient-to-b from-paper/30 via-transparent to-paper" />
@@ -77,8 +77,7 @@ export default function HeroSection({
             src="/assets/hero-midground.webp"
             alt="Kolase Kertas Mengambang Koma"
             fill
-            priority
-            sizes="(max-width: 1200px) 100vw, 1200px"
+            sizes="(max-width: 768px) 100vw, 1200px"
             className="object-contain"
           />
         </div>

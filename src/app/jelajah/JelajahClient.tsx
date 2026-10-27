@@ -3,7 +3,6 @@
 import React, { useState, useEffect } from 'react';
 import Link from 'next/link';
 import Image from 'next/image';
-import confetti from 'canvas-confetti';
 import {
   Compass,
   Search,
@@ -206,12 +205,16 @@ export default function JelajahClient({ initialPosts }: { initialPosts: Post[] }
 
       const json = await res.json();
       if (json.success) {
-        if (json.moderation?.state === 'published') confetti({
-          particleCount: 25,
-          spread: 40,
-          origin: { y: 0.8 },
-          colors: ['#5A46D6', '#1D1B18', '#DCCDBB'],
-        });
+        if (json.moderation?.state === 'published') {
+          import('canvas-confetti').then(({ default: confetti }) => {
+            confetti({
+              particleCount: 25,
+              spread: 40,
+              origin: { y: 0.8 },
+              colors: ['#5A46D6', '#1D1B18', '#DCCDBB'],
+            });
+          }).catch(() => {});
+        }
 
         if (json.authorSecret && json.post?.id) {
           localStorage.setItem(`author_secret_${json.post.id}`, json.authorSecret);
