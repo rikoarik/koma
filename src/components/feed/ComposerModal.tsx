@@ -123,6 +123,8 @@ export default function ComposerModal({
   const [isUploading, setIsUploading] = useState(false);
   const [isSubmitting, setIsSubmitting] = useState(false);
   const [errorMessage, setErrorMessage] = useState('');
+  const [submissionNotice, setSubmissionNotice] = useState<'held_for_review' | 'removed' | null>(null);
+  const noticeButtonRef = useRef<HTMLButtonElement>(null);
   const fileInputRef = useRef<HTMLInputElement>(null);
 
   const artworkOptions: SelectOption[] = [
@@ -156,6 +158,14 @@ export default function ComposerModal({
     window.addEventListener('keydown', handleKeyDown);
     return () => window.removeEventListener('keydown', handleKeyDown);
   }, [isOpen, onClose]);
+
+  React.useEffect(() => {
+    if (!isOpen) setSubmissionNotice(null);
+  }, [isOpen]);
+
+  React.useEffect(() => {
+    if (submissionNotice) noticeButtonRef.current?.focus();
+  }, [submissionNotice]);
 
   if (!isOpen) return null;
 
@@ -229,11 +239,10 @@ export default function ComposerModal({
       setSelectedImage('');
       setUploadToken('');
       setSearchConsent(false);
-      onClose();
-      if (result.state !== 'published') {
-        window.alert(result.state === 'removed'
-          ? 'Coretan disimpan, tetapi tidak ditampilkan karena terindikasi melanggar aturan. Pengelola dapat meninjaunya.'
-          : 'Coretan disimpan dan menunggu pemeriksaan pengelola sebelum tampil di publik.');
+      if (result.state === 'removed' || result.state === 'held_for_review') {
+        setSubmissionNotice(result.state);
+      } else {
+        onClose();
       }
     } else setErrorMessage(result.error || 'Coretan gagal dikirim. Coba lagi.');
     setIsSubmitting(false);
@@ -250,10 +259,40 @@ export default function ComposerModal({
 
       {/* Modal centering wrapper */}
       <div className="flex min-h-full items-center justify-center p-3 sm:p-6">
-        <div 
+        <div
+          role="dialog"
+          aria-modal="true"
+          aria-labelledby={submissionNotice ? 'composer-notice-title' : 'composer-title'}
+          aria-describedby={submissionNotice ? 'composer-notice-description' : undefined}
           onClick={(e) => e.stopPropagation()}
-          className="relative w-full max-w-3xl lg:max-w-4xl my-4 sm:my-6 p-4 sm:p-6 bg-[#FAF8F5] border-2 border-ink/20 shadow-paper-float rounded-sm text-ink animate-in fade-in zoom-in-95 duration-200"
+          className={`relative w-full ${submissionNotice ? 'max-w-md' : 'max-w-3xl lg:max-w-4xl'} my-4 sm:my-6 p-4 sm:p-6 bg-[#FAF8F5] border-2 border-ink/20 shadow-paper-float rounded-sm text-ink animate-in fade-in zoom-in-95 duration-200`}
         >
+          {submissionNotice ? (
+            <div className="py-3 sm:py-5">
+              <span className="font-mono text-[11px] font-black text-sela-purpleDark uppercase tracking-wider">
+                Koma • Kabar Coretan
+              </span>
+              <h2 id="composer-notice-title" className="mt-2 font-serif font-black text-2xl sm:text-3xl tracking-tight">
+                {submissionNotice === 'removed' ? 'Coretan belum bisa ditampilkan.' : 'Coretanmu sudah disimpan.'}
+              </h2>
+              <p id="composer-notice-description" className="mt-3 font-sans text-sm sm:text-base leading-relaxed text-ink-muted">
+                {submissionNotice === 'removed'
+                  ? 'Coretan terindikasi melanggar aturan, jadi tidak ditampilkan. Pengelola dapat meninjaunya.'
+                  : 'Coretan menunggu pemeriksaan pengelola sebelum tampil di publik.'}
+              </p>
+              <div className="mt-6 pt-4 border-t border-ink/15 flex justify-end">
+                <button
+                  ref={noticeButtonRef}
+                  type="button"
+                  onClick={onClose}
+                  className="px-5 py-2 bg-ink text-paper font-sans text-sm font-bold rounded-sm hover:bg-sela-purple focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-sela-purple transition-colors"
+                >
+                  Mengerti
+                </button>
+              </div>
+            </div>
+          ) : (
+          <>
           {/* Top Washi Tape */}
           <div className="absolute -top-3 left-8 z-10 w-24 pointer-events-none">
             <Image
@@ -287,7 +326,7 @@ export default function ComposerModal({
                 </span>
               )}
             </div>
-            <h2 className="font-serif font-black text-xl sm:text-2xl tracking-tight text-ink">
+            <h2 id="composer-title" className="font-serif font-black text-xl sm:text-2xl tracking-tight text-ink">
               Tumpahkan isi kepalamu.
             </h2>
           </div>
@@ -620,6 +659,8 @@ export default function ComposerModal({
               </div>
             </div>
           </form>
+          </>
+          )}
         </div>
       </div>
     </div>
