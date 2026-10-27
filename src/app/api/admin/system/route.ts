@@ -1,7 +1,7 @@
 import { NextRequest, NextResponse } from 'next/server';
 import { getSystemHealth, logAdminAudit } from '@/lib/storage';
 import { verifyAdminAuth } from '@/lib/admin-auth';
-import { generateStudioSuggestions } from '@/lib/ai-provider';
+import { generateStudioSuggestions, StudioUnavailableError } from '@/lib/ai-provider';
 
 export async function GET(request: NextRequest) {
   try {
@@ -62,8 +62,8 @@ export async function POST(request: NextRequest) {
           success: false,
           status: 'error',
           latencyMs,
-          error: err?.message || 'Gagal menghubungi penyedia AI',
-        });
+          error: err instanceof StudioUnavailableError ? err.message : 'Gagal menghubungi penyedia AI',
+        }, { status: 503 });
       }
     }
 

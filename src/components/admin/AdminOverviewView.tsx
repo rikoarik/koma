@@ -245,22 +245,22 @@ export default function AdminOverviewView({
             <div className="flex items-center justify-between border-b border-slate-100 pb-2">
               <div className="flex items-center gap-2">
                 <Sparkles className="w-4 h-4 text-purple-600" />
-                <h3 className="font-sans font-bold text-sm text-slate-900">Status Studio AI</h3>
+                <h3 className="font-sans font-bold text-sm text-slate-900">Konfigurasi Studio AI</h3>
               </div>
-              <span className="w-2 h-2 rounded-full bg-emerald-500" />
+              <span className={`w-2 h-2 rounded-full ${aiHealth?.aiEngine?.studioConfigured ? 'bg-emerald-500' : 'bg-amber-500'}`} />
             </div>
 
             <div className="space-y-2 text-xs">
               <div className="flex items-center justify-between">
                 <span className="text-slate-600">Mode Penyedia:</span>
                 <span className="font-semibold text-slate-900 font-mono text-[11px]">
-                  {aiHealth?.aiEngine?.provider || 'Curated Bank (Zero Downtime)'}
+                  {aiHealth?.aiEngine?.studioConfigured ? aiHealth.aiEngine.studioModel : 'Studio belum dikonfigurasi'}
                 </span>
               </div>
               <div className="flex items-center justify-between">
                 <span className="text-slate-600">Kunci API Terkonfigurasi:</span>
-                <span className={`font-mono text-[11px] font-bold ${aiHealth?.aiEngine?.apiKeySet ? 'text-emerald-700' : 'text-amber-700'}`}>
-                  {aiHealth?.aiEngine?.apiKeySet ? 'Tersedia' : 'Mode Offline Siap'}
+                <span className={`font-mono text-[11px] font-bold ${aiHealth?.aiEngine?.studioConfigured ? 'text-emerald-700' : 'text-amber-700'}`}>
+                  {aiHealth?.aiEngine?.studioConfigured ? 'Tersedia, belum diuji' : 'Tidak tersedia'}
                 </span>
               </div>
               <div className="flex items-center justify-between">

@@ -1845,6 +1845,8 @@ export async function getSystemHealth() {
       provider: aiApiKeyConfigured && aiModelConfigured ? 'Model moderasi terkonfigurasi (belum diuji)' : 'Moderasi AI tidak tersedia',
       apiKeySet: aiApiKeyConfigured && aiModelConfigured,
       baseUrl: aiBaseUrl,
+      studioConfigured: Boolean(process.env.AI_API_KEY?.trim() && process.env.AI_MODEL?.trim()),
+      studioModel: process.env.AI_MODEL?.trim() || null,
       fallbackModeActive: false,
       totalAiGeneratedPosts: counts.aiPosts,
     },

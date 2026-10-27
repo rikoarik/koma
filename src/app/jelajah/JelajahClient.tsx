@@ -22,6 +22,7 @@ import Footer from '@/components/layout/Footer';
 import PostCard from '@/components/feed/PostCard';
 import EmptyFeed from '@/components/feed/EmptyFeed';
 import ComposerModal from '@/components/feed/ComposerModal';
+import AIStudioModal from '@/components/studio/AIStudioModal';
 
 const PRESET_TOPICS = [
   { id: 'semua', label: 'Semua Topik' },
@@ -47,6 +48,15 @@ export default function JelajahClient({ initialPosts, initialQuery = '' }: { ini
   // Modals
   const [isComposerOpen, setIsComposerOpen] = useState(false);
   const [composerInitialText, setComposerInitialText] = useState('');
+  const [isStudioOpen, setIsStudioOpen] = useState(false);
+  const [studioDraft, setStudioDraft] = useState<{ text: string; prompt: string; imageUrl?: string } | null>(null);
+
+  const handleApplyStudio = (text: string, prompt: string, imageUrl?: string) => {
+    setStudioDraft({ text, prompt, imageUrl });
+    setComposerInitialText(text);
+    setIsStudioOpen(false);
+    setIsComposerOpen(true);
+  };
 
   const initialLoad = React.useRef(true);
   const fetchPosts = async () => {
@@ -225,6 +235,7 @@ export default function JelajahClient({ initialPosts, initialQuery = '' }: { ini
         }
 
         setComposerInitialText('');
+        setStudioDraft(null);
         fetchPosts();
         return { success: true, state: json.moderation?.state };
       }
@@ -440,7 +451,17 @@ export default function JelajahClient({ initialPosts, initialQuery = '' }: { ini
         isOpen={isComposerOpen}
         onClose={() => setIsComposerOpen(false)}
         onSubmitPost={handlePostCreated}
+        onOpenStudio={(draft) => { setComposerInitialText(draft); setIsComposerOpen(false); setIsStudioOpen(true); }}
         initialContent={composerInitialText}
+        isAiAssisted={Boolean(studioDraft)}
+        aiPrompt={studioDraft?.prompt}
+        initialImageUrl={studioDraft?.imageUrl}
+      />
+      <AIStudioModal
+        isOpen={isStudioOpen}
+        onClose={() => { setIsStudioOpen(false); setIsComposerOpen(true); }}
+        onApplyToComposer={handleApplyStudio}
+        initialDraft={composerInitialText}
       />
     </div>
   );

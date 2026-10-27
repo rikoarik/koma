@@ -1,6 +1,13 @@
 import { NextRequest, NextResponse } from 'next/server';
-import { generateStudioSuggestions, StudioCategory } from '@/lib/ai-provider';
+import { generateStudioSuggestions, StudioUnavailableError } from '@/lib/ai-provider';
 import { checkRateLimit } from '@/lib/validation';
+import { z } from 'zod';
+
+const requestSchema = z.object({
+  category: z.enum(['random_thoughts', 'humor_receh', 'questions', 'discussion_topics', 'rewrite_shorten']),
+  inputPrompt: z.string().max(300).optional(),
+  draftContent: z.string().max(1000).optional(),
+}).strict().refine((value) => value.category !== 'rewrite_shorten' || Boolean(value.draftContent?.trim()));
 
 export async function POST(request: NextRequest) {
   try {
@@ -13,36 +20,20 @@ export async function POST(request: NextRequest) {
       );
     }
 
-    const body = await request.json();
-    const { category, inputPrompt, draftContent } = body;
-
-    const validCategories: StudioCategory[] = [
-      'random_thoughts',
-      'humor_receh',
-      'questions',
-      'discussion_topics',
-      'rewrite_shorten',
-    ];
-
-    const resolvedCategory: StudioCategory = validCategories.includes(category)
-      ? category
-      : 'random_thoughts';
-
-    const result = await generateStudioSuggestions({
-      category: resolvedCategory,
-      inputPrompt: typeof inputPrompt === 'string' ? inputPrompt.slice(0, 300) : undefined,
-      draftContent: typeof draftContent === 'string' ? draftContent.slice(0, 1000) : undefined,
-    });
+    const body = requestSchema.safeParse(await request.json());
+    if (!body.success) {
+      return NextResponse.json({ success: false, error: 'Permintaan studio tidak valid.' }, { status: 400 });
+    }
+    const result = await generateStudioSuggestions(body.data);
 
     return NextResponse.json({
       success: true,
       data: result,
     });
-  } catch (error: any) {
-    console.error('[AI Studio Route Error]:', error);
+  } catch (error) {
     return NextResponse.json(
-      { success: false, error: error?.message || 'Gagal memproses inspirasi studio AI.' },
-      { status: 500 }
+      { success: false, error: error instanceof StudioUnavailableError ? error.message : 'Gagal memproses inspirasi studio AI.' },
+      { status: error instanceof StudioUnavailableError ? 503 : 400 }
     );
   }
 }

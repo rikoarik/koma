@@ -22,40 +22,18 @@ export interface StudioGenerationResult {
   suggestions: [string, string, string];
   category: StudioCategory;
   modelUsed: string;
-  source: 'primary' | 'fallback_model' | 'curated_bank';
+  source: 'primary';
 }
 
-// Curated Indonesian authentic seed bank (guaranteed zero-downtime fallback)
-const CURATED_STUDIO_BANK: Record<StudioCategory, [string, string, string]> = {
-  random_thoughts: [
-    'Kadang jam 2 pagi itu bukan soal belum ngantuk, tapi heran kenapa semua hal yang harusnya udah selesai malah antre minta dibahas ulang waktu lampu kamar mati.',
-    'Menjadi dewasa ternyata bukan tentang tahu jawaban atas segala hal, tapi belajar tetap tenang saat ga tahu apa-apa.',
-    'Pernah ga ngerasa asing sama foto diri sendiri tiga tahun lalu? Bukan mukanya yang beda, tapi tatapan matanya yang dulu masih percaya banyak hal.',
-  ],
-  humor_receh: [
-    'Tadi mau sok misterius jalan kaki malam-malam pakai hoodie, eh malah kesandung paving block copot di depan pos satpam.',
-    'Resolusi minggu ini sederhana: jangan buka email kerja setelah jam 8 malam kecuali kantor kebakaran dan aku pemadamnya.',
-    'Kekuatan super orang kita: bisa menyimpulkan semua masalah hidup yang ruwet cuma dengan satu kalimat: "Ya namanya juga hidup."',
-  ],
-  questions: [
-    'Kapan terakhir kali kamu ngerasa bener-bener aman buat cerita apa adanya tanpa mikir bakal dihakimi?',
-    'Kalau kamu bisa ngirim satu pesan singkat ke diri sendiri lima tahun lalu tanpa penjelasan tambahan, apa yang bakal kamu tulis?',
-    'Hal kecil apa hari ini yang bikin kamu diem-diem ngerasa bersyukur masih ada di sini?',
-  ],
-  discussion_topics: [
-    'Kenapa makin dewasa, punya satu teman yang ga nuntut obrolan berbobot itu jauh lebih berharga daripada seratus kenalan?',
-    'Momen di mana kamu sadar kalau rumah ternyata bukan lagi sebuah tempat atau bangunan, melainkan orang tertentu.',
-    'Cara orang bertahan hidup di kota besar: pura-pura kuat di jam kerja, terus luluh cuma gara-gara lagu lama di radio taksi.',
-  ],
-  rewrite_shorten: [
-    'Gue cuma pengen bilang: capek itu manusiawi. Tarik napas dulu, malam ini simpan dulu bebanmu di sini.',
-    'Ternyata ga semua hal harus diselesaikan malam ini. Kadang tidur adalah bentuk perlawanan paling jujur.',
-    'Terlalu sibuk kelihatan baik-baik saja sampai lupa cara bernapas lega. Semoga malam ini lebih ramah padamu.',
-  ],
-};
+export class StudioUnavailableError extends Error {
+  constructor() {
+    super('Studio AI belum tersedia. Coba lagi nanti.');
+    this.name = 'StudioUnavailableError';
+  }
+}
 
 function getOpenAIClient(): OpenAI | null {
-  const apiKey = process.env.AI_API_KEY;
+  const apiKey = process.env.AI_API_KEY?.trim();
   if (!apiKey) return null;
 
   return new OpenAI({
@@ -89,27 +67,15 @@ Pedoman Gaya Bahasa & Nada:
 
 function parseAndValidateSuggestions(rawText: string): [string, string, string] | null {
   try {
-    // 1. Try JSON parsing
+    // Only a complete JSON response with exactly three short strings is accepted.
     const cleaned = rawText.replace(/```json/gi, '').replace(/```/g, '').trim();
     const parsed = JSON.parse(cleaned);
-    if (Array.isArray(parsed?.suggestions) && parsed.suggestions.length >= 3) {
-      const s0 = String(parsed.suggestions[0]).trim().replace(/^["'\d\.\-\s]+/, '');
-      const s1 = String(parsed.suggestions[1]).trim().replace(/^["'\d\.\-\s]+/, '');
-      const s2 = String(parsed.suggestions[2]).trim().replace(/^["'\d\.\-\s]+/, '');
-      if (s0.length > 5 && s1.length > 5 && s2.length > 5) {
-        return [s0, s1, s2];
-      }
+    if (Array.isArray(parsed?.suggestions) && parsed.suggestions.length === 3 &&
+        parsed.suggestions.every((s: unknown) => typeof s === 'string' && s.trim().length > 5 && s.length <= 220)) {
+      return parsed.suggestions.map((s: string) => s.trim()) as [string, string, string];
     }
   } catch {
-    // 2. Fallback to line split parsing
-    const lines = rawText
-      .split('\n')
-      .map((l) => l.trim().replace(/^["'\d\.\-\s]+/, '').replace(/["']$/, ''))
-      .filter((l) => l.length > 10);
-
-    if (lines.length >= 3) {
-      return [lines[0], lines[1], lines[2]];
-    }
+    // Invalid or incomplete provider output is not a successful generation.
   }
   return null;
 }
@@ -118,82 +84,36 @@ export async function generateStudioSuggestions(
   params: StudioGenerationParams
 ): Promise<StudioGenerationResult> {
   const { category, inputPrompt, draftContent } = params;
-  const client = getOpenAIClient();
+  const primaryModel = process.env.AI_MODEL?.trim();
+  if (!process.env.AI_API_KEY?.trim() || !primaryModel) throw new StudioUnavailableError();
 
-  const primaryModel = process.env.AI_MODEL;
-  const fallbackModel = process.env.AI_FALLBACK_MODEL;
-  const systemPrompt = buildPrompt(category, inputPrompt, draftContent);
+  try {
+    const client = getOpenAIClient();
+    if (!client) throw new StudioUnavailableError();
+    const completion = await client.chat.completions.create({
+      model: primaryModel,
+      messages: [
+        {
+          role: 'system',
+          content: 'Kamu adalah asisten studio konten kreatif zine Koma. Balas hanya dengan format JSON: {"suggestions": ["...", "...", "..."]}',
+        },
+        { role: 'user', content: buildPrompt(category, inputPrompt, draftContent) },
+      ],
+      temperature: 0.85,
+      max_tokens: 650,
+    });
 
-  // 1. Attempt Primary Model
-  if (client && primaryModel) {
-    try {
-      const completion = await client.chat.completions.create({
-        model: primaryModel,
-        messages: [
-          {
-            role: 'system',
-            content: 'Kamu adalah asisten studio konten kreatif zine Koma. Balas hanya dengan format JSON: {"suggestions": ["...", "...", "..."]}',
-          },
-          { role: 'user', content: systemPrompt },
-        ],
-        temperature: 0.85,
-        max_tokens: 350,
-      });
-
-      const text = completion.choices[0]?.message?.content || '';
-      const validated = parseAndValidateSuggestions(text);
-      if (validated) {
-        return {
-          suggestions: validated,
-          category,
-          modelUsed: primaryModel,
-          source: 'primary',
-        };
-      }
-    } catch (primaryErr) {
-      console.warn(`[AI Studio] Primary model (${primaryModel}) failed:`, (primaryErr as any)?.message || primaryErr);
-    }
+    const validated = parseAndValidateSuggestions(completion.choices[0]?.message?.content || '');
+    if (!validated) throw new Error('Invalid studio response');
+    return { suggestions: validated, category, modelUsed: primaryModel, source: 'primary' };
+  } catch (error) {
+    // Do not log prompts, provider response bodies or credentials.
+    console.error('[AI Studio] provider failure', {
+      type: error instanceof Error ? error.name : 'UnknownError',
+      status: error instanceof OpenAI.APIError ? error.status : undefined,
+    });
+    throw new StudioUnavailableError();
   }
-
-  // 2. Attempt Fallback Model
-  if (client && fallbackModel && fallbackModel !== primaryModel) {
-    try {
-      const fallbackCompletion = await client.chat.completions.create({
-        model: fallbackModel,
-        messages: [
-          {
-            role: 'system',
-            content: 'Kamu adalah asisten studio konten kreatif zine Koma. Balas hanya dengan format JSON: {"suggestions": ["...", "...", "..."]}',
-          },
-          { role: 'user', content: systemPrompt },
-        ],
-        temperature: 0.85,
-        max_tokens: 350,
-      });
-
-      const text = fallbackCompletion.choices[0]?.message?.content || '';
-      const validated = parseAndValidateSuggestions(text);
-      if (validated) {
-        return {
-          suggestions: validated,
-          category,
-          modelUsed: fallbackModel,
-          source: 'fallback_model',
-        };
-      }
-    } catch (fallbackErr) {
-      console.warn(`[AI Studio] Fallback model (${fallbackModel}) failed:`, (fallbackErr as any)?.message || fallbackErr);
-    }
-  }
-
-  // 3. Fallback to Curated Bank
-  const fallbackList = CURATED_STUDIO_BANK[category] || CURATED_STUDIO_BANK.random_thoughts;
-  return {
-    suggestions: [fallbackList[0], fallbackList[1], fallbackList[2]],
-    category,
-    modelUsed: 'curated-indonesian-bank',
-    source: 'curated_bank',
-  };
 }
 
 /**

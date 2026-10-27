@@ -58,16 +58,16 @@ export default function AdminAIView({
         {/* Card 1: Provider Status */}
         <div className="bg-white p-5 rounded-xl border border-slate-200 shadow-xs space-y-2">
           <div className="flex items-center justify-between text-slate-500">
-            <span className="text-xs font-mono font-bold uppercase">Penyedia AI Aktif</span>
+            <span className="text-xs font-mono font-bold uppercase">Konfigurasi Studio AI</span>
             <Bot className="w-5 h-5 text-purple-600" />
           </div>
           <div className="text-lg font-black text-slate-900 font-sans tracking-tight">
-            {engine.provider || 'Memuat...'}
+            {engine.studioConfigured ? 'Studio AI terkonfigurasi' : 'Studio AI tidak tersedia'}
           </div>
           <div className="flex items-center gap-1.5 text-[11px] font-mono">
-            <span className={`w-2 h-2 rounded-full ${engine.apiKeySet ? 'bg-emerald-500' : 'bg-amber-500'}`} />
+            <span className={`w-2 h-2 rounded-full ${engine.studioConfigured ? 'bg-emerald-500' : 'bg-amber-500'}`} />
             <span className="text-slate-600">
-              {engine.apiKeySet ? 'Konfigurasi tersedia, koneksi belum diverifikasi' : 'Moderasi AI tidak tersedia; konten ditahan untuk tinjauan'}
+              {engine.studioConfigured ? `Studio: ${engine.studioModel} (koneksi belum diuji)` : 'Studio belum dikonfigurasi'}
             </span>
           </div>
         </div>

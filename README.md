@@ -83,7 +83,7 @@ Semua kunci/password bersifat **server-side**. Jangan menggunakan prefiks `NEXT_
 | `ADMIN_PASSWORD` | Kata sandi dashboard `/admin`. Tanpa nilai, akses admin ditolak. | Wajib untuk mengakses admin. |
 | `POSTGRES_URL` | Koneksi PostgreSQL; kode juga mendeteksi `DATABASE_URL` / `POSTGRES_PRISMA_URL`. | Wajib untuk pesan pengelola di produksi; direkomendasikan untuk seluruh data produksi. |
 | `AI_API_KEY`, `AI_MODEL` | Provider kompatibel OpenAI untuk studio saran; juga dapat dipakai moderasi teks bila variabel khusus tidak diatur. | Opsional untuk studio; tanpa moderasi yang tersedia konten teks dapat menunggu tinjauan. |
-| `AI_BASE_URL`, `AI_FALLBACK_MODEL` | Endpoint/model cadangan studio tulisan. | Opsional sesuai provider. |
+| `AI_BASE_URL` | Endpoint provider Studio AI yang kompatibel dengan chat completions. | Jika provider/model gagal, Studio mengembalikan error; tidak menyajikan contoh statis sebagai hasil AI. |
 | `AI_MODERATION_API_KEY`, `AI_MODERATION_MODEL`, `AI_MODERATION_BASE_URL` | Provider khusus moderasi teks. | Bila memakai provider moderasi yang berbeda dari studio. |
 | `BLOB_READ_WRITE_TOKEN`, `IMAGE_UPLOAD_SIGNING_SECRET` | Penyimpanan gambar di Vercel Blob dan pengikatan hasil upload ke sesi. | Diperlukan bersama pemeriksaan gambar agar upload tersedia. |
 | `AI_IMAGE_MODERATION_API_KEY`, `AI_IMAGE_MODERATION_MODEL`, `AI_IMAGE_MODERATION_BASE_URL` | Pemeriksaan konten gambar dan model vision; kunci dapat memakai variabel moderasi/AI umum jika dikonfigurasi. | Upload gambar membutuhkan model vision yang mendukung chat completions dengan input gambar dan balasan JSON. |

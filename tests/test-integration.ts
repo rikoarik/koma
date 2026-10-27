@@ -10,7 +10,7 @@ import {
   getDonationConfig,
 } from '../src/lib/storage';
 import { checkContentModeration } from '../src/lib/moderation';
-import { generateStudioSuggestions, StudioCategory } from '../src/lib/ai-provider';
+import { generateStudioSuggestions, StudioUnavailableError } from '../src/lib/ai-provider';
 
 let failedTests = 0;
 
@@ -144,25 +144,20 @@ async function runTests() {
     'Search includes the edited post only when it is published'
   );
 
-  console.log('\n--- 6. Testing AI Content Studio (3 Suggestions) ---');
-  const categories: StudioCategory[] = [
-    'random_thoughts',
-    'humor_receh',
-    'questions',
-    'discussion_topics',
-    'rewrite_shorten',
-  ];
-
-  for (const cat of categories) {
-    const res = await generateStudioSuggestions({ category: cat });
-    assert(
-      Array.isArray(res.suggestions) && res.suggestions.length === 3,
-      `AI Studio category "${cat}" returned exactly 3 natural Indonesian suggestions`
-    );
-    assert(
-      res.suggestions[0].length > 10 && res.suggestions[1].length > 10 && res.suggestions[2].length > 10,
-      `AI Studio suggestions are non-empty and well-formed`
-    );
+  console.log('\n--- 6. Testing AI Content Studio fails without credentials ---');
+  const studioKey = process.env.AI_API_KEY;
+  try {
+    delete process.env.AI_API_KEY;
+    let unavailable = false;
+    try {
+      await generateStudioSuggestions({ category: 'random_thoughts' });
+    } catch (error) {
+      unavailable = error instanceof StudioUnavailableError;
+    }
+    assert(unavailable, 'Studio does not return fabricated suggestions without credentials');
+  } finally {
+    if (studioKey === undefined) delete process.env.AI_API_KEY;
+    else process.env.AI_API_KEY = studioKey;
   }
 
   console.log('\n--- 7. Testing Admin Analytics & Donation Settings ---');

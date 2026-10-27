@@ -24,10 +24,11 @@ interface ComposerModalProps {
     isAiGenerated?: boolean;
     aiPrompt?: string;
   }) => Promise<{ success: boolean; state?: 'published' | 'held_for_review' | 'removed'; error?: string }>;
-  onOpenStudio?: () => void;
+  onOpenStudio?: (draft: string) => void;
   initialContent?: string;
   isAiAssisted?: boolean;
   aiPrompt?: string;
+  initialImageUrl?: string;
 }
 
 const PSEUDONYM_SUGGESTIONS = [
@@ -111,6 +112,7 @@ export default function ComposerModal({
   initialContent = '',
   isAiAssisted = false,
   aiPrompt,
+  initialImageUrl,
 }: ComposerModalProps) {
   const [content, setContent] = useState(initialContent);
   const [authorType, setAuthorType] = useState<AliasType>('tanpa_nama');
@@ -143,10 +145,9 @@ export default function ComposerModal({
 
   // Sync initial content if provided
   React.useEffect(() => {
-    if (initialContent) {
-      setContent(initialContent);
-    }
-  }, [initialContent]);
+    if (initialContent) setContent(initialContent);
+    if (initialImageUrl) { setSelectedImage(initialImageUrl); setUploadToken(''); }
+  }, [initialContent, initialImageUrl]);
 
   // Escape key support
   React.useEffect(() => {
@@ -425,6 +426,17 @@ export default function ComposerModal({
                     required
                     className="w-full flex-1 min-h-[130px] p-3 font-serif text-sm sm:text-base text-ink placeholder:text-ink-muted/80 bg-white border-2 border-ink/20 rounded-sm focus:outline-none focus:border-sela-purple shadow-inner leading-relaxed resize-none"
                   />
+
+                  {onOpenStudio && (
+                    <button
+                      type="button"
+                      onClick={() => onOpenStudio(content)}
+                      className="mt-2 inline-flex items-center gap-1.5 self-start border-b border-sela-purple font-mono text-xs font-bold text-sela-purpleDark hover:text-ink focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-sela-purple"
+                    >
+                      <Sparkles className="w-3.5 h-3.5" />
+                      Buka Studio AI
+                    </button>
+                  )}
 
                   {/* In-Text Quick Hashtag Chips */}
                   <div className="flex flex-wrap items-center gap-1 mt-2">

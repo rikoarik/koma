@@ -7,6 +7,7 @@ import StoryActs from '@/components/scrollcraft/StoryActs';
 import CollageInteractive from '@/components/scrollcraft/CollageInteractive';
 import FeedContainer from '@/components/feed/FeedContainer';
 import ComposerModal from '@/components/feed/ComposerModal';
+import AIStudioModal from '@/components/studio/AIStudioModal';
 import DonationModal from '@/components/donation/DonationModal';
 import Footer from '@/components/layout/Footer';
 import Lenis from 'lenis';
@@ -15,7 +16,9 @@ import 'lenis/dist/lenis.css';
 export default function HomePage() {
   const [isComposerOpen, setIsComposerOpen] = useState(false);
   const [isDonationOpen, setIsDonationOpen] = useState(false);
+  const [isStudioOpen, setIsStudioOpen] = useState(false);
   const [composerInitialText, setComposerInitialText] = useState('');
+  const [studioDraft, setStudioDraft] = useState<{ text: string; prompt: string; imageUrl?: string } | null>(null);
   const lenisRef = useRef<Lenis | null>(null);
 
   // Initialize Lenis smooth scroll specifically on Home page (as requested)
@@ -48,14 +51,27 @@ export default function HomePage() {
   // Pause Lenis scrolling when modals are open
   useEffect(() => {
     if (!lenisRef.current) return;
-    if (isComposerOpen || isDonationOpen) {
+    if (isComposerOpen || isDonationOpen || isStudioOpen) {
       lenisRef.current.stop();
     } else {
       lenisRef.current.start();
     }
-  }, [isComposerOpen, isDonationOpen]);
+  }, [isComposerOpen, isDonationOpen, isStudioOpen]);
 
   const handleOpenComposer = () => {
+    setIsComposerOpen(true);
+  };
+
+  const handleOpenStudio = (draft: string) => {
+    setComposerInitialText(draft);
+    setIsComposerOpen(false);
+    setIsStudioOpen(true);
+  };
+
+  const handleApplyStudio = (text: string, prompt: string, imageUrl?: string) => {
+    setStudioDraft({ text, prompt, imageUrl });
+    setComposerInitialText(text);
+    setIsStudioOpen(false);
     setIsComposerOpen(true);
   };
 
@@ -103,6 +119,7 @@ export default function HomePage() {
 
         // Reset composer states
         setComposerInitialText('');
+        setStudioDraft(null);
 
         // Scroll to community feed
         const el = document.getElementById('komunitas');
@@ -153,7 +170,18 @@ export default function HomePage() {
         isOpen={isComposerOpen}
         onClose={() => setIsComposerOpen(false)}
         onSubmitPost={handlePostCreated}
+        onOpenStudio={handleOpenStudio}
         initialContent={composerInitialText}
+        isAiAssisted={Boolean(studioDraft)}
+        aiPrompt={studioDraft?.prompt}
+        initialImageUrl={studioDraft?.imageUrl}
+      />
+
+      <AIStudioModal
+        isOpen={isStudioOpen}
+        onClose={() => { setIsStudioOpen(false); setIsComposerOpen(true); }}
+        onApplyToComposer={handleApplyStudio}
+        initialDraft={composerInitialText}
       />
 
       {/* Modal: Traktir Kopi / QRIS Donation */}

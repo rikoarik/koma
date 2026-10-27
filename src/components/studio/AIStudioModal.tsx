@@ -2,13 +2,14 @@
 
 import React, { useState, useEffect } from 'react';
 import Image from 'next/image';
-import { X, Sparkles, RefreshCw, PenLine, Check, Eye, Wand2, Copy } from 'lucide-react';
-import { StudioCategory } from '@/lib/ai-provider';
+import { X, Sparkles, RefreshCw, PenLine, Check, Eye, Wand2 } from 'lucide-react';
+import type { StudioCategory } from '@/lib/ai-provider';
 
 interface AIStudioModalProps {
   isOpen: boolean;
   onClose: () => void;
   onApplyToComposer: (text: string, prompt: string, imageUrl?: string) => void;
+  initialDraft?: string;
 }
 
 const CATEGORIES: { id: StudioCategory; label: string; desc: string }[] = [
@@ -31,6 +32,7 @@ export default function AIStudioModal({
   isOpen,
   onClose,
   onApplyToComposer,
+  initialDraft = '',
 }: AIStudioModalProps) {
   const [category, setCategory] = useState<StudioCategory>('random_thoughts');
   const [promptInput, setPromptInput] = useState('');
@@ -39,20 +41,31 @@ export default function AIStudioModal({
   const [isGenerating, setIsGenerating] = useState(false);
   const [errorMsg, setErrorMsg] = useState('');
 
-  // Exactly 3 generated suggestions
-  const [suggestions, setSuggestions] = useState<[string, string, string]>([
-    'Kadang kita cuma butuh tahu kalau malam ini, di bawah langit yang sama, ada orang lain yang juga sedang menatap langit-langit kamar tanpa kata.',
-    'Menjadi dewasa ternyata bukan tentang tahu jawaban atas segala hal, tapi belajar tetap tenang saat ga tahu apa-apa.',
-    'Teori konspirasi pribadi: rasa teh manis di warung pecel lele itu lebih enak karena gelasnya udah melewati ribuan peradaban.',
-  ]);
-
+  const [suggestions, setSuggestions] = useState<[string, string, string] | null>(null);
   const [selectedIndex, setSelectedIndex] = useState<number>(0);
-  const [editedDraft, setEditedDraft] = useState<string>(suggestions[0]);
+  const [editedDraft, setEditedDraft] = useState<string>('');
   const [showPreview, setShowPreview] = useState(false);
+  const requestVersion = React.useRef(0);
+
+  useEffect(() => {
+    if (isOpen) {
+      setDraftToRewrite(initialDraft.slice(0, 1000));
+      setPromptInput('');
+      setCategory('random_thoughts');
+      setSelectedVisual('');
+      setShowPreview(false);
+      setErrorMsg('');
+    } else {
+      requestVersion.current += 1;
+      setIsGenerating(false);
+      setSuggestions(null);
+      setEditedDraft('');
+    }
+  }, [isOpen, initialDraft]);
 
   // Sync edited draft when selected index or suggestions change
   useEffect(() => {
-    if (suggestions[selectedIndex]) {
+    if (suggestions?.[selectedIndex]) {
       setEditedDraft(suggestions[selectedIndex]);
     }
   }, [selectedIndex, suggestions]);
@@ -70,8 +83,19 @@ export default function AIStudioModal({
 
   if (!isOpen) return null;
 
+  const invalidateSuggestions = () => {
+    requestVersion.current += 1;
+    setIsGenerating(false);
+    setSuggestions(null);
+    setEditedDraft('');
+    setErrorMsg('');
+  };
+
   const handleGenerate = async () => {
+    const version = ++requestVersion.current;
     setIsGenerating(true);
+    setSuggestions(null);
+    setEditedDraft('');
     setErrorMsg('');
 
     try {
@@ -86,32 +110,33 @@ export default function AIStudioModal({
       });
 
       const json = await res.json();
-      if (json.success && json.data && json.data.suggestions) {
+      if (version !== requestVersion.current) return;
+      if (res.ok && json.success && Array.isArray(json.data?.suggestions) && json.data.suggestions.length === 3) {
         setSuggestions(json.data.suggestions);
         setSelectedIndex(0);
         setEditedDraft(json.data.suggestions[0]);
       } else {
         setErrorMsg(json.error || 'Gagal meramu saran studio AI');
       }
-    } catch (err) {
-      console.error('Failed to generate AI text:', err);
+    } catch {
+      if (version !== requestVersion.current) return;
       setErrorMsg('Koneksi terputus saat meramu inspirasi');
     } finally {
-      setIsGenerating(false);
+      if (version === requestVersion.current) setIsGenerating(false);
     }
   };
 
   const handleUseDraft = () => {
-    const promptLabel = promptInput
-      ? promptInput
-      : CATEGORIES.find((c) => c.id === category)?.label || 'Inspirasi Studio Koma';
+    if (!suggestions || editedDraft.trim().length < 3 || editedDraft.length > 2000) return;
+    const promptLabel = category === 'rewrite_shorten'
+      ? 'Tulis Ulang'
+      : promptInput.trim() || CATEGORIES.find((c) => c.id === category)?.label || 'Inspirasi Studio Koma';
     onApplyToComposer(editedDraft, promptLabel, selectedVisual || undefined);
-    onClose();
   };
 
   return (
     <div className="fixed inset-0 z-50 flex items-center justify-center p-4 bg-black/60 backdrop-blur-sm overflow-y-auto">
-      <div className="relative w-full max-w-2xl my-8 p-6 sm:p-8 bg-[#FAF8F5] border-2 border-ink/20 shadow-paper-float rounded-sm text-ink animate-in fade-in zoom-in-95 duration-200">
+      <div role="dialog" aria-modal="true" aria-labelledby="studio-title" className="relative w-full max-w-2xl my-8 p-6 sm:p-8 bg-[#FAF8F5] border-2 border-ink/20 shadow-paper-float rounded-sm text-ink animate-in fade-in zoom-in-95 duration-200">
         {/* Top Washi Tape */}
         <div className="absolute -top-3 left-14 z-10 w-32 pointer-events-none">
           <Image
@@ -127,6 +152,7 @@ export default function AIStudioModal({
         <button
           onClick={onClose}
           className="absolute top-4 right-4 p-1.5 rounded-sm hover:bg-black/10 text-ink hover:text-black transition-colors"
+          aria-label="Tutup Studio AI"
           title="Tutup (Esc)"
         >
           <X className="w-5 h-5" />
@@ -143,12 +169,13 @@ export default function AIStudioModal({
               3 Saran Bahasa Alami
             </span>
           </div>
-          <h2 className="font-serif font-black text-2xl sm:text-3xl tracking-tight text-ink">
+          <h2 id="studio-title" className="font-serif font-black text-2xl sm:text-3xl tracking-tight text-ink">
             Ramu gagasan, poles dengan sentuhanmu.
           </h2>
           <p className="font-sans text-xs sm:text-sm text-ink-muted mt-1 leading-relaxed">
-            Studio menghasilkan 3 variasi tulisan alami dalam bahasa Indonesia santai.
+            Studio meramu 3 variasi tulisan dalam bahasa Indonesia santai.
             Pilih variasi terbaik, sunting sesuai kejujuran hatimu, dan tinjau sebelum menerbitkan.
+            Topik atau draf yang kamu kirim diproses penyedia AI; jangan masukkan data pribadi.
           </p>
         </div>
 
@@ -162,7 +189,7 @@ export default function AIStudioModal({
         </div>
 
         {errorMsg && (
-          <div className="mb-4 p-3 bg-red-50 border border-red-300 text-red-900 text-xs font-mono font-bold rounded-sm">
+          <div role="alert" className="mb-4 p-3 bg-red-50 border border-red-300 text-red-900 text-xs font-mono font-bold rounded-sm">
             {errorMsg}
           </div>
         )}
@@ -178,7 +205,7 @@ export default function AIStudioModal({
                 <button
                   key={cat.id}
                   type="button"
-                  onClick={() => setCategory(cat.id)}
+                  onClick={() => { setCategory(cat.id); invalidateSuggestions(); }}
                   className={`p-2 text-left rounded-sm border-2 transition-all ${
                     category === cat.id
                       ? 'bg-koma-purple text-white border-koma-purple shadow-paper-sm'
@@ -205,8 +232,10 @@ export default function AIStudioModal({
                 Tempel atau Tulis Draft yang Ingin Dipersingkat
               </label>
               <textarea
+                aria-label="Draf untuk ditulis ulang"
                 value={draftToRewrite}
-                onChange={(e) => setDraftToRewrite(e.target.value)}
+                onChange={(e) => { setDraftToRewrite(e.target.value); invalidateSuggestions(); }}
+                maxLength={1000}
                 placeholder="Tuliskan draf kasarmu di sini untuk dipersingkat dan dipoles menjadi lebih mengena..."
                 rows={3}
                 className="w-full p-2.5 text-xs font-mono text-ink bg-white border-2 border-ink/20 rounded-sm focus:outline-none focus:border-koma-purple"
@@ -220,8 +249,10 @@ export default function AIStudioModal({
               <div className="flex gap-2">
                 <input
                   type="text"
+                  aria-label="Topik atau kata kunci"
                   value={promptInput}
-                  onChange={(e) => setPromptInput(e.target.value)}
+                  onChange={(e) => { setPromptInput(e.target.value); invalidateSuggestions(); }}
+                  maxLength={300}
                   placeholder="Contoh: kopi dingin di halte, rindu rumah, overthinking masa depan..."
                   className="flex-1 px-3 py-2 text-xs font-mono font-medium text-ink placeholder:text-ink-muted bg-white border-2 border-ink/20 rounded-sm focus:outline-none focus:border-koma-purple"
                 />
@@ -257,15 +288,26 @@ export default function AIStudioModal({
             <label className="block font-mono text-[11px] font-bold text-ink mb-1.5 uppercase tracking-wider">
               2. Tiga Saran AI yang Dihasilkan (Klik Salah Satu untuk Dipilih)
             </label>
+            {!suggestions && <p className="font-sans text-sm text-ink-muted">Pilih kategori lalu ramu saran untuk memulai.</p>}
             <div className="space-y-2">
-              {suggestions.map((sug, idx) => (
+              {suggestions?.map((sug, idx) => (
                 <div
                   key={idx}
+                  role="button"
+                  tabIndex={0}
+                  aria-pressed={selectedIndex === idx}
                   onClick={() => {
                     setSelectedIndex(idx);
                     setEditedDraft(sug);
                   }}
-                  className={`p-3 rounded-sm border-2 cursor-pointer transition-all ${
+                  onKeyDown={(event) => {
+                    if (event.key === 'Enter' || event.key === ' ') {
+                      event.preventDefault();
+                      setSelectedIndex(idx);
+                      setEditedDraft(sug);
+                    }
+                  }}
+                  className={`p-3 rounded-sm border-2 cursor-pointer focus-visible:outline focus-visible:outline-2 focus-visible:outline-koma-purple transition-colors ${
                     selectedIndex === idx
                       ? 'border-koma-purple bg-white shadow-paper-sm ring-1 ring-koma-purple/30'
                       : 'border-ink/15 bg-white/70 hover:border-ink/35 hover:bg-white'
@@ -323,8 +365,11 @@ export default function AIStudioModal({
               </div>
             ) : (
               <textarea
+                aria-label="Sunting saran AI terpilih"
                 value={editedDraft}
                 onChange={(e) => setEditedDraft(e.target.value)}
+                disabled={!suggestions}
+                maxLength={2000}
                 rows={3}
                 className="w-full p-3 font-serif text-sm text-ink bg-white border-2 border-ink/20 rounded-sm focus:outline-none focus:border-koma-purple shadow-inner leading-relaxed resize-none"
               />
@@ -371,7 +416,7 @@ export default function AIStudioModal({
               <button
                 type="button"
                 onClick={handleUseDraft}
-                disabled={!editedDraft.trim()}
+                disabled={!suggestions || editedDraft.trim().length < 3 || editedDraft.length > 2000}
                 className="flex items-center gap-2 px-5 py-2 bg-koma-purple text-white text-xs sm:text-sm font-sans font-black rounded-sm hover:bg-koma-purpleHover disabled:opacity-50 transition-all shadow-paper-lift active:scale-95"
               >
                 <Check className="w-3.5 h-3.5" />
