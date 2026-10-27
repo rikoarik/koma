@@ -10,6 +10,7 @@ async function main() {
   const originalKey = process.env.AI_API_KEY;
   const originalModel = process.env.AI_MODEL;
   const originalBaseUrl = process.env.AI_MODERATION_BASE_URL;
+  const originalSharedBaseUrl = process.env.AI_BASE_URL;
   const originalModerationKey = process.env.AI_MODERATION_API_KEY;
   const originalModerationModel = process.env.AI_MODERATION_MODEL;
   let verdict: { category: string; decision: string } = { category: 'safe', decision: 'allow' };
@@ -92,10 +93,16 @@ async function main() {
     assert.ok(address && typeof address !== 'string');
     process.env.AI_API_KEY = 'local-test-only';
     process.env.AI_MODEL = 'local-test-model';
-    process.env.AI_MODERATION_BASE_URL = `http://127.0.0.1:${address.port}/v1`;
+    delete process.env.AI_MODERATION_BASE_URL;
+    process.env.AI_BASE_URL = `http://127.0.0.1:${address.port}/v1`;
+    // The shared provider URL must be used when no moderation-specific URL exists.
     assert.equal((await moderateText('Saya merasa sedih hari ini', 'post')).state, 'published');
     assert.equal((await createPost({ content: 'Tulisan aman langsung terbit' }, 'safe-owner')).moderation?.state, 'published');
     assert.equal((await moderateText('Bangsat, hari ini berat sekali', 'post')).state, 'published');
+    process.env.AI_MODERATION_BASE_URL = `http://127.0.0.1:${address.port}/v1`;
+    process.env.AI_BASE_URL = 'http://127.0.0.1:1/v1';
+    assert.equal((await moderateText('Saya menulis lagi', 'post')).state, 'published'); // Dedicated URL takes priority.
+    process.env.AI_BASE_URL = `http://127.0.0.1:${address.port}/v1`;
     const colloquialPost = await createPost({ content: 'Bangsat, hari ini berat sekali' }, 'colloquial-owner');
     assert.equal(colloquialPost.moderation?.state, 'published');
     assert.equal((await getFilteredPosts()).some((p) => p.id === colloquialPost.post!.id), true);
@@ -154,7 +161,7 @@ async function main() {
     server.close();
     process.chdir(originalCwd);
     rmSync(directory, { recursive: true, force: true });
-    for (const [key, value] of Object.entries({ AI_API_KEY: originalKey, AI_MODEL: originalModel, AI_MODERATION_BASE_URL: originalBaseUrl, AI_MODERATION_API_KEY: originalModerationKey, AI_MODERATION_MODEL: originalModerationModel })) {
+    for (const [key, value] of Object.entries({ AI_API_KEY: originalKey, AI_MODEL: originalModel, AI_MODERATION_BASE_URL: originalBaseUrl, AI_BASE_URL: originalSharedBaseUrl, AI_MODERATION_API_KEY: originalModerationKey, AI_MODERATION_MODEL: originalModerationModel })) {
       if (value === undefined) delete process.env[key];
       else process.env[key] = value;
     }

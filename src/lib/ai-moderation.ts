@@ -41,15 +41,17 @@ export async function moderateText(text: string, kind: 'post' | 'reply', customR
     return { state: 'held_for_review', source: 'rule', category: 'uncertain', reason: rule.reason || 'Aturan pengelola memerlukan peninjauan.' };
   }
   // Distress must never be automatically taken down just for expressing distress.
-  const apiKey = process.env.AI_MODERATION_API_KEY || process.env.AI_API_KEY;
-  const model = process.env.AI_MODERATION_MODEL || process.env.AI_MODEL;
-  if (!apiKey?.trim() || !model?.trim()) {
+  const apiKey = process.env.AI_MODERATION_API_KEY?.trim() || process.env.AI_API_KEY?.trim();
+  const model = process.env.AI_MODERATION_MODEL?.trim() || process.env.AI_MODEL?.trim();
+  if (!apiKey || !model) {
     console.warn('[Moderation] AI moderation credentials or model are not configured.');
     return { state: 'held_for_review', source: 'unavailable', category: 'uncertain', reason: 'Pemeriksaan otomatis belum tersedia. Konten menunggu pengelola.' };
   }
 
   try {
-    const client = new OpenAI({ apiKey, baseURL: process.env.AI_MODERATION_BASE_URL || 'https://api.openai.com/v1', timeout: 8000, maxRetries: 0 });
+    // A shared AI key/model must use the matching shared provider endpoint.
+    const baseURL = process.env.AI_MODERATION_BASE_URL?.trim() || process.env.AI_BASE_URL?.trim() || 'https://api.openai.com/v1';
+    const client = new OpenAI({ apiKey, baseURL, timeout: 20000, maxRetries: 0 });
     const completion = await client.chat.completions.create({
       model,
       response_format: { type: 'json_object' },
