@@ -266,11 +266,11 @@ export default function ComposerModal({
           aria-labelledby={submissionNotice ? 'composer-notice-title' : 'composer-title'}
           aria-describedby={submissionNotice ? 'composer-notice-description' : undefined}
           onClick={(e) => e.stopPropagation()}
-          className={`relative w-full ${submissionNotice ? 'max-w-md' : 'max-w-3xl lg:max-w-4xl'} my-4 sm:my-6 p-4 sm:p-6 bg-[#FAF8F5] border-2 border-ink/20 shadow-paper-float rounded-sm text-ink animate-in fade-in zoom-in-95 duration-200`}
+          className={`relative w-full ${submissionNotice ? 'max-w-md' : 'max-w-5xl'} my-4 sm:my-6 p-4 sm:p-6 lg:p-8 bg-[#FAF8F5] border-2 border-ink/20 shadow-paper-float rounded-sm text-ink animate-in fade-in zoom-in-95 duration-200`}
         >
           {submissionNotice ? (
             <div className="py-3 sm:py-5">
-              <span className="font-mono text-[11px] font-black text-sela-purpleDark uppercase tracking-wider">
+              <span className="font-mono text-xs font-black text-sela-purpleDark uppercase tracking-wider">
                 Koma • Kabar Coretan
               </span>
               <h2 id="composer-notice-title" className="mt-2 font-serif font-black text-2xl sm:text-3xl tracking-tight">
@@ -317,17 +317,17 @@ export default function ComposerModal({
           {/* Modal Header */}
           <div className="mb-3 pr-8">
             <div className="flex items-center gap-2 mb-0.5">
-              <span className="font-mono text-[11px] font-black text-sela-purpleDark uppercase tracking-wider">
+              <span className="font-mono text-xs font-black text-sela-purpleDark uppercase tracking-wider">
                 Koma • Lembar Baru
               </span>
               {isAiAssisted && (
-                <span className="inline-flex items-center gap-1 px-1.5 py-0.5 rounded-xs bg-sela-purpleLight text-sela-purpleDark border border-sela-purple/40 font-mono text-[9px] font-bold">
+                <span className="inline-flex items-center gap-1 px-1.5 py-0.5 rounded-xs bg-sela-purpleLight text-sela-purpleDark border border-sela-purple/40 font-mono text-xs font-bold">
                   <Sparkles className="w-2.5 h-2.5 text-sela-purple" />
                   <span>Studio AI</span>
                 </span>
               )}
             </div>
-            <h2 id="composer-title" className="font-serif font-black text-xl sm:text-2xl tracking-tight text-ink">
+            <h2 id="composer-title" className="font-serif font-black text-2xl sm:text-3xl tracking-tight text-ink">
               Tumpahkan isi kepalamu.
             </h2>
           </div>
@@ -351,17 +351,17 @@ export default function ComposerModal({
 
           <form onSubmit={handleSubmit}>
             {/* 2-Column Responsive Layout: Left for Writing, Right for Metadata */}
-            <div className="grid grid-cols-1 md:grid-cols-12 gap-4 sm:gap-5">
+            <div className="grid grid-cols-1 lg:grid-cols-12 gap-5 lg:gap-7">
               
               {/* LEFT COLUMN: Identity & Textarea (7 cols on desktop) */}
-              <div className="md:col-span-7 flex flex-col space-y-3">
+              <div className="lg:col-span-7 flex flex-col space-y-4">
                 {/* 1. Identity Selector (Inline Compact) */}
                 <div className="p-2.5 bg-paper border border-ink/20 rounded-sm">
                   <div className="flex flex-wrap items-center justify-between gap-2">
-                    <span className="font-mono text-[10px] font-bold text-ink uppercase tracking-wider">
+                    <span className="font-mono text-sm font-bold text-ink uppercase tracking-wider">
                       Identitas Pengirim
                     </span>
-                    <div className="flex items-center gap-3 font-sans text-xs text-ink">
+                    <div className="flex items-center gap-3 font-sans text-sm text-ink">
                       <label className="flex items-center gap-1.5 cursor-pointer">
                         <input
                           type="radio"
@@ -371,7 +371,7 @@ export default function ComposerModal({
                           onChange={() => setAuthorType('tanpa_nama')}
                           className="text-sela-purple focus:ring-sela-purple w-3.5 h-3.5"
                         />
-                        <span className="font-bold text-[11px] sm:text-xs">Tanpa Nama</span>
+                        <span className="font-bold text-sm">Tanpa Nama</span>
                       </label>
 
                       <label className="flex items-center gap-1.5 cursor-pointer">
@@ -383,7 +383,7 @@ export default function ComposerModal({
                           onChange={() => setAuthorType('pseudonim')}
                           className="text-sela-purple focus:ring-sela-purple w-3.5 h-3.5"
                         />
-                        <span className="font-semibold text-[11px] sm:text-xs">Samaran</span>
+                        <span className="font-semibold text-sm">Samaran</span>
                       </label>
                     </div>
                   </div>
@@ -401,7 +401,7 @@ export default function ComposerModal({
                       <button
                         type="button"
                         onClick={handleRandomizePseudonym}
-                        className="px-2 py-1 bg-white border border-ink/30 hover:border-sela-purple text-[11px] font-mono font-bold rounded-xs flex items-center gap-1 text-ink shrink-0"
+                        className="px-2 py-1 bg-white border border-ink/30 hover:border-sela-purple text-xs font-mono font-bold rounded-xs flex items-center gap-1 text-ink shrink-0"
                         title="Acak nama samaran"
                       >
                         <Shuffle className="w-3 h-3 text-sela-purple" />
@@ -413,9 +413,9 @@ export default function ComposerModal({
 
                 {/* 2. Main Content Area */}
                 <div className="flex-1 flex flex-col">
-                  <div className="flex justify-between items-center mb-1 text-[11px] font-mono font-bold text-ink">
+                  <div className="flex justify-between items-center mb-1 text-xs font-mono font-bold text-ink">
                     <span>Naskah Coretan (Min. 3 karakter)</span>
-                    <span className="text-[10px] text-ink-muted">{content.length} / 2000</span>
+                    <span className="text-xs text-ink-muted">{content.length} / 2000</span>
                   </div>
                   <textarea
                     value={content}
@@ -424,7 +424,7 @@ export default function ComposerModal({
                     rows={5}
                     maxLength={2000}
                     required
-                    className="w-full flex-1 min-h-[130px] p-3 font-serif text-sm sm:text-base text-ink placeholder:text-ink-muted/80 bg-white border-2 border-ink/20 rounded-sm focus:outline-none focus:border-sela-purple shadow-inner leading-relaxed resize-none"
+                    className="w-full flex-1 min-h-[190px] p-4 font-serif text-base sm:text-lg text-ink placeholder:text-ink-muted/80 bg-white border-2 border-ink/20 rounded-sm focus:outline-none focus:border-sela-purple shadow-inner leading-relaxed resize-none"
                   />
 
                   {onOpenStudio && (
@@ -440,7 +440,7 @@ export default function ComposerModal({
 
                   {/* In-Text Quick Hashtag Chips */}
                   <div className="flex flex-wrap items-center gap-1 mt-2">
-                    <span className="font-mono text-[9px] text-ink-muted uppercase tracking-wider font-bold mr-1">
+                    <span className="font-mono text-xs text-ink-muted uppercase tracking-wider font-bold mr-1">
                       Tag cepat:
                     </span>
                     {[
@@ -460,7 +460,7 @@ export default function ComposerModal({
                             return trimmed ? `${trimmed} ${tag}` : tag;
                           });
                         }}
-                        className="px-1.5 py-0.5 rounded-xs bg-white border border-ink/20 hover:border-sela-purple text-ink hover:text-sela-purple text-[9px] font-mono font-bold transition-all shadow-xs active:scale-95"
+                        className="px-1.5 py-0.5 rounded-xs bg-white border border-ink/20 hover:border-sela-purple text-ink hover:text-sela-purple text-xs font-mono font-bold transition-all shadow-xs active:scale-95"
                       >
                         {tag}
                       </button>
@@ -470,53 +470,53 @@ export default function ComposerModal({
               </div>
 
               {/* RIGHT COLUMN: Response, Paper, Visual Swatches & Consent (5 cols on desktop) */}
-              <div className="md:col-span-5 flex flex-col justify-between space-y-3">
+              <div className="lg:col-span-5 flex flex-col justify-between space-y-4">
                 {/* 3. Response Mode */}
                 <div>
-                  <label className="block font-mono text-[10px] font-bold text-ink mb-1 uppercase tracking-wider">
+                  <label className="block font-mono text-xs font-bold text-ink mb-1 uppercase tracking-wider">
                     Respon yang Diharapkan
                   </label>
-                  <div className="grid grid-cols-2 gap-1.5">
+                  <div className="grid grid-cols-1 sm:grid-cols-2 gap-2">
                     <button
                       type="button"
                       onClick={() => setResponseMode('boleh_dibalas')}
-                      className={`p-2 rounded-sm border text-left transition-all flex flex-col justify-between ${
+                      className={`p-3 rounded-sm border text-left transition-all flex flex-col justify-between ${
                         responseMode === 'boleh_dibalas'
                           ? 'border-sela-purple bg-sela-purple/10 ring-1 ring-sela-purple/40 shadow-xs'
                           : 'border-ink/20 bg-white hover:border-ink/40'
                       }`}
                     >
-                      <div className="flex items-center gap-1 font-mono text-[11px] font-bold text-ink whitespace-nowrap">
+                      <div className="flex items-center gap-1 font-mono text-xs font-bold text-ink">
                         <MessageCircle className="w-3 h-3 text-sela-purple shrink-0" />
                         <span>Boleh Dibalas</span>
                       </div>
-                      <span className="text-[9px] text-ink-muted font-sans mt-0.5">Terbuka komentar</span>
+                      <span className="text-xs text-ink-muted font-sans mt-0.5">Terbuka komentar</span>
                     </button>
 
                     <button
                       type="button"
                       onClick={() => setResponseMode('cukup_didengar')}
-                      className={`p-2 rounded-sm border text-left transition-all flex flex-col justify-between ${
+                      className={`p-3 rounded-sm border text-left transition-all flex flex-col justify-between ${
                         responseMode === 'cukup_didengar'
                           ? 'border-sela-purple bg-sela-purple/10 ring-1 ring-sela-purple/40 shadow-xs'
                           : 'border-ink/20 bg-white hover:border-ink/40'
                       }`}
                     >
-                      <div className="flex items-center gap-1 font-mono text-[11px] font-bold text-ink whitespace-nowrap">
+                      <div className="flex items-center gap-1 font-mono text-xs font-bold text-ink">
                         <IconDengerin className="w-3 h-3 text-sela-purple shrink-0" />
                         <span>Cukup Didengar</span>
                       </div>
-                      <span className="text-[9px] text-ink-muted font-sans mt-0.5">Hanya ventilasi</span>
+                      <span className="text-xs text-ink-muted font-sans mt-0.5">Hanya ventilasi</span>
                     </button>
                   </div>
                 </div>
 
                 {/* 4. Paper Color */}
                 <div>
-                  <label className="block font-mono text-[10px] font-bold text-ink mb-1 uppercase tracking-wider">
+                  <label className="block font-mono text-xs font-bold text-ink mb-1 uppercase tracking-wider">
                     Warna Kertas
                   </label>
-                  <div className="grid grid-cols-4 gap-1.5">
+                  <div className="grid grid-cols-2 sm:grid-cols-4 gap-2">
                     {[
                       { id: 'cream', bg: 'bg-[#FAF8F5]', border: 'border-ink/30', label: 'Cream', text: 'text-ink' },
                       { id: 'kraft', bg: 'bg-[#F2ECE1]', border: 'border-ink/30', label: 'Kraft', text: 'text-ink' },
@@ -527,7 +527,7 @@ export default function ComposerModal({
                         key={col.id}
                         type="button"
                         onClick={() => setPaperColor(col.id as any)}
-                        className={`py-1.5 px-1 text-[11px] font-mono font-bold rounded-sm border ${col.border} ${col.bg} ${col.text} ${
+                        className={`py-2 px-1 text-sm font-mono font-bold rounded-sm border ${col.border} ${col.bg} ${col.text} ${
                           paperColor === col.id ? 'ring-2 ring-sela-purple shadow-sm' : 'opacity-80 hover:opacity-100'
                         }`}
                       >
@@ -540,26 +540,26 @@ export default function ComposerModal({
                 {/* 5. Visual Attachment Preset */}
                 <div className="space-y-1.5">
                   <div className="flex items-center justify-between">
-                    <label className="block font-mono text-[10px] font-bold text-ink uppercase tracking-wider">
+                    <label className="block font-mono text-xs font-bold text-ink uppercase tracking-wider">
                       Lampiran Visual (Opsional)
                     </label>
                     {selectedImage && (
                       <button
                         type="button"
                         onClick={() => { setSelectedImage(''); setUploadToken(''); }}
-                        className="font-mono text-[9px] font-bold text-rose-700 hover:text-rose-900 transition-colors"
+                        className="font-mono text-xs font-bold text-rose-700 hover:text-rose-900 transition-colors"
                       >
                         × Hapus Visual
                       </button>
                     )}
                   </div>
 
-                  <div className="grid grid-cols-5 gap-1">
+                  <div className="grid grid-cols-2 sm:grid-cols-5 gap-2">
                     {/* Option 1: Tanpa Visual */}
                     <button
                       type="button"
                       onClick={() => { setSelectedImage(''); setUploadToken(''); }}
-                      className={`relative p-1 rounded-sm border text-center transition-all flex flex-col items-center justify-center gap-0.5 h-[58px] ${
+                      className={`relative p-1 rounded-sm border text-center transition-all flex flex-col items-center justify-center gap-1 h-[76px] ${
                         !selectedImage
                           ? 'border-sela-purple bg-sela-purple/10 ring-1 ring-sela-purple/40 shadow-xs'
                           : 'border-ink/20 bg-white hover:border-ink/40'
@@ -567,7 +567,7 @@ export default function ComposerModal({
                       title="Tanpa Visual"
                     >
                       <FileText className={`w-3.5 h-3.5 ${!selectedImage ? 'text-sela-purple' : 'text-ink/40'}`} />
-                      <span className="font-mono text-[8px] font-bold text-ink leading-tight">Teks</span>
+                      <span className="font-mono text-xs font-bold text-ink leading-tight">Teks</span>
                       {!selectedImage && (
                         <span className="absolute top-0.5 right-0.5 w-1.5 h-1.5 rounded-full bg-sela-purple" />
                       )}
@@ -581,14 +581,14 @@ export default function ComposerModal({
                           key={preset.value}
                           type="button"
                           onClick={() => { setSelectedImage(preset.value); setUploadToken(''); }}
-                          className={`relative p-0.5 rounded-sm border text-center transition-all flex flex-col items-center justify-between h-[58px] overflow-hidden group ${
+                          className={`relative p-0.5 rounded-sm border text-center transition-all flex flex-col items-center justify-between h-[76px] overflow-hidden group ${
                             isSelected
                               ? 'border-sela-purple bg-sela-purple/10 ring-1 ring-sela-purple/40 shadow-xs'
                               : 'border-ink/20 bg-white hover:border-ink/40'
                           }`}
                           title={preset.label}
                         >
-                          <div className="relative w-full h-7 rounded-xs overflow-hidden border border-ink/15">
+                          <div className="relative w-full h-10 rounded-xs overflow-hidden border border-ink/15">
                             <Image
                               src={preset.imageUrl!}
                               alt={preset.label}
@@ -597,7 +597,7 @@ export default function ComposerModal({
                               sizes="50px"
                             />
                           </div>
-                          <span className="font-mono text-[8px] font-bold text-ink truncate w-full">
+                          <span className="font-mono text-xs font-bold text-ink leading-tight break-words w-full">
                             {preset.label.replace('Zine ', '').replace('Kolase ', '').replace('Hero Koma', 'Sampul')}
                           </span>
                           {isSelected && (
@@ -621,25 +621,25 @@ export default function ComposerModal({
                     type="button"
                     disabled={isUploading}
                     onClick={() => fileInputRef.current?.click()}
-                    className="w-full inline-flex items-center justify-center gap-1.5 px-2.5 py-1 text-[10px] font-mono font-bold border border-ink/30 rounded-xs hover:border-sela-purple bg-white text-ink disabled:opacity-50 transition-colors"
+                    className="w-full inline-flex items-center justify-center gap-1.5 px-2.5 py-2 text-sm font-mono font-bold border border-ink/30 rounded-xs hover:border-sela-purple bg-white text-ink disabled:opacity-50 transition-colors"
                   >
                     <Upload className="w-3 h-3 text-sela-purple" />
                     <span>{isUploading ? 'Memeriksa...' : 'Unggah Foto Sendiri (Maks 5MB)'}</span>
                   </button>
                   {selectedImage && !VISUAL_PRESET_OPTIONS.some((option) => option.value === selectedImage) && (
-                    <div className="flex items-center gap-1 text-[10px] font-mono text-ink">
+                    <div className="flex items-center gap-1 text-xs font-mono text-ink">
                       <Check className="w-3 h-3 text-sela-purple" /> Foto siap dilampirkan
                     </div>
                   )}
                 </div>
 
                 {/* 6. Search Consent Checkbox */}
-                <label className="flex items-start gap-1.5 text-[10px] font-sans text-ink-muted cursor-pointer pt-0.5 leading-snug">
+                <label className="flex items-start gap-2 text-sm font-sans text-ink-muted cursor-pointer pt-0.5 leading-snug">
                   <input
                     type="checkbox"
                     checked={searchConsent}
                     onChange={(e) => setSearchConsent(e.target.checked)}
-                    className="mt-0.5 rounded-xs text-sela-purple focus:ring-sela-purple w-3 h-3 shrink-0"
+                    className="mt-0.5 rounded-xs text-sela-purple focus:ring-sela-purple w-4 h-4 shrink-0"
                   />
                   <span>Izinkan coretan ditemukan melalui mesin pencari jika lolos moderasi.</span>
                 </label>
@@ -647,8 +647,8 @@ export default function ComposerModal({
             </div>
 
             {/* Bottom Actions Bar (Full width) */}
-            <div className="pt-3 mt-4 border-t border-ink/15 flex items-center justify-between">
-              <span className="font-mono text-[10px] sm:text-xs font-semibold text-ink-muted">
+            <div className="pt-4 mt-5 border-t border-ink/15 flex flex-col sm:flex-row sm:items-center justify-between gap-3">
+              <span className="font-mono text-sm font-semibold text-ink-muted">
                 Coretan diperiksa sebelum tampil publik
               </span>
 
@@ -656,14 +656,14 @@ export default function ComposerModal({
                 <button
                   type="button"
                   onClick={onClose}
-                  className="px-3.5 py-1.5 text-xs font-mono font-bold text-ink hover:text-black border border-ink/30 rounded-sm hover:bg-black/5"
+                  className="px-4 py-2 text-sm font-mono font-bold text-ink hover:text-black border border-ink/30 rounded-sm hover:bg-black/5"
                 >
                   Batal
                 </button>
                 <button
                   type="submit"
                   disabled={isSubmitting || isUploading || !content.trim()}
-                  className="flex items-center gap-1.5 px-4 sm:px-5 py-1.5 sm:py-2 bg-ink text-paper text-xs sm:text-sm font-sans font-black rounded-sm hover:bg-sela-purple disabled:opacity-50 transition-all shadow-paper hover:-translate-y-0.5 active:translate-y-0"
+                  className="flex items-center gap-1.5 px-4 sm:px-5 py-1.5 sm:py-2 bg-ink text-paper text-sm font-sans font-black rounded-sm hover:bg-sela-purple disabled:opacity-50 transition-all shadow-paper hover:-translate-y-0.5 active:translate-y-0"
                 >
                   <Send className="w-3 h-3" />
                   <span>{isSubmitting ? 'Menerbitkan...' : 'Terbitkan Coretan'}</span>

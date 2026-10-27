@@ -61,8 +61,8 @@ export default function DonationModal({ isOpen, onClose }: DonationModalProps) {
   };
 
   return (
-    <div className="fixed inset-0 z-50 flex items-center justify-center p-4 bg-black/60 backdrop-blur-sm">
-      <div role="dialog" aria-modal="true" aria-labelledby="donation-title" className="relative w-full max-w-2xl max-h-[calc(100dvh-2rem)] overflow-y-auto p-5 sm:p-8 bg-[#FAF8F5] border-2 border-ink/20 shadow-paper-float rounded-sm text-ink animate-in fade-in zoom-in-95 duration-200">
+    <div className="fixed inset-0 z-50 flex items-center justify-center p-3 sm:p-4 bg-black/60 backdrop-blur-sm">
+      <div role="dialog" aria-modal="true" aria-labelledby="donation-title" className="relative w-full max-w-lg max-h-[calc(100dvh-1.5rem)] sm:max-h-[calc(100dvh-2rem)] overflow-y-auto overscroll-contain p-5 sm:p-6 bg-[#FAF8F5] border-2 border-ink/20 shadow-paper-float rounded-sm text-ink animate-in fade-in zoom-in-95 duration-200">
         {/* Top Washi Tape */}
         <div className="absolute -top-3.5 left-12 z-10 w-28 pointer-events-none">
           <Image src="/assets/tape-purple.svg" alt="Tape" width={110} height={26} className="opacity-95" />
@@ -94,8 +94,8 @@ export default function DonationModal({ isOpen, onClose }: DonationModalProps) {
 
         {config.qrisImageUrl && (
           <div className="p-3 sm:p-4 bg-white border-2 border-ink/20 rounded-sm shadow-inner flex flex-col items-center gap-3">
-            <a href={config.qrisImageUrl} target="_blank" rel="noopener noreferrer" aria-label="Buka gambar QRIS ukuran penuh di tab baru" className="block w-full max-w-[520px] bg-white border border-ink/20 rounded-sm p-1 focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-koma-purple">
-              <Image src={config.qrisImageUrl} alt="QRIS Koma, ketuk untuk memperbesar" width={800} height={800} sizes="(max-width: 640px) calc(100vw - 4rem), 520px" className="w-full h-auto max-h-[70dvh] object-contain" />
+            <a href={config.qrisImageUrl} target="_blank" rel="noopener noreferrer" aria-label="Buka gambar QRIS ukuran penuh di tab baru" className="block w-full max-w-[380px] bg-white border border-ink/20 rounded-sm p-1 focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-koma-purple">
+              <Image src={config.qrisImageUrl} alt="QRIS Koma, ketuk untuk memperbesar" width={800} height={800} sizes="(max-width: 640px) min(100vw - 5rem, 380px), 380px" className="w-full h-auto max-h-[min(55dvh,520px)] object-contain" />
             </a>
             <span className="font-mono text-[10px] text-ink-muted uppercase tracking-wider font-semibold">
               Pindai QRIS · ketuk gambar untuk ukuran penuh

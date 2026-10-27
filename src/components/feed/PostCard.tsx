@@ -130,10 +130,7 @@ export default function PostCard({
 
   return (
     <article
-      className={`relative p-5 sm:p-7 rounded-sm border shadow-paper hover:shadow-paper-lift transition-all duration-300 ${currentBg}`}
-      style={{
-        transform: `rotate(${post.rotation || 0}deg)`,
-      }}
+      className={`relative p-5 sm:p-7 rounded-sm border shadow-paper hover:shadow-paper-lift transition-shadow duration-300 ${currentBg}`}
     >
       {/* Tape decoration on card top */}
       <div className="absolute -top-3 left-8 z-10 w-24 pointer-events-none opacity-90">
