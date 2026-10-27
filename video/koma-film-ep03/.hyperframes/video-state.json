@@ -1,7 +1,7 @@
 {
   "version": 1,
   "historyId": "a4427fa7-be97-4411-a86a-2dbdd740c6dd",
-  "currentRevision": null,
+  "currentRevision": "007204dd-0750-4622-86d7-65a25e6b6b00",
   "pendingChanges": false,
   "files": {
     "assets/audio/clock-ticks.mp3": {
@@ -9,8 +9,8 @@
       "content": "/Users/macbookm2/.cache/hyperframes/history/a4427fa7-be97-4411-a86a-2dbdd740c6dd/blobs/4e/4e7db156bc2b730e679e42991efed1fbc744a07f3f23587409df57702e647230"
     },
     "assets/audio/cricket-chirp.mp3": {
-      "hash": "ca6d6cf182047db160930892a22c70ffe43e7bcec45671bfddf165ad3e481174",
-      "content": "/Users/macbookm2/.cache/hyperframes/history/a4427fa7-be97-4411-a86a-2dbdd740c6dd/blobs/ca/ca6d6cf182047db160930892a22c70ffe43e7bcec45671bfddf165ad3e481174"
+      "hash": "4660a817755255b9ec3094b4d711b2a5f41f21150e1a797fdd0e1a5604c6cfa5",
+      "content": "/Users/macbookm2/.cache/hyperframes/history/a4427fa7-be97-4411-a86a-2dbdd740c6dd/blobs/46/4660a817755255b9ec3094b4d711b2a5f41f21150e1a797fdd0e1a5604c6cfa5"
     },
     "assets/audio/facepalm-thud.mp3": {
       "hash": "2a70be6ae10f4fe98ea5842a4230a7ccbfde15105c8cde56c4c4936c3132d335",
@@ -313,16 +313,16 @@
       "content": "/Users/macbookm2/.cache/hyperframes/history/a4427fa7-be97-4411-a86a-2dbdd740c6dd/blobs/df/df874739394e35d1fd7a4eea416b15308852d34b628b44b8419029fa71955cb9"
     },
     "compositions/scene1-midnight.html": {
-      "hash": "c71a360fc309a2f130df73b1a9c27d20056e9837b8fe732f94f0880c7420ecd2",
-      "content": "/Users/macbookm2/.cache/hyperframes/history/a4427fa7-be97-4411-a86a-2dbdd740c6dd/blobs/c7/c71a360fc309a2f130df73b1a9c27d20056e9837b8fe732f94f0880c7420ecd2"
+      "hash": "53129fe25a1cdd83177fc448a3bc27ad1f4365e7938590b43415bafdb7fc7d70",
+      "content": "/Users/macbookm2/.cache/hyperframes/history/a4427fa7-be97-4411-a86a-2dbdd740c6dd/blobs/53/53129fe25a1cdd83177fc448a3bc27ad1f4365e7938590b43415bafdb7fc7d70"
     },
     "compositions/scene2-dadah.html": {
-      "hash": "3c773dfa0df9a312c497d964cd8af874d2cba8288f0fa397e5df1a3494424755",
-      "content": "/Users/macbookm2/.cache/hyperframes/history/a4427fa7-be97-4411-a86a-2dbdd740c6dd/blobs/3c/3c773dfa0df9a312c497d964cd8af874d2cba8288f0fa397e5df1a3494424755"
+      "hash": "5550fcec9611246dd739f132c76a2fadf68a6f8af445be769078f7876504c46e",
+      "content": "/Users/macbookm2/.cache/hyperframes/history/a4427fa7-be97-4411-a86a-2dbdd740c6dd/blobs/55/5550fcec9611246dd739f132c76a2fadf68a6f8af445be769078f7876504c46e"
     },
     "compositions/scene3-otak.html": {
-      "hash": "5814a02703322d9ebbcb15611aeec8fac3071b2d16499b1a0ba5ca84787d70b3",
-      "content": "/Users/macbookm2/.cache/hyperframes/history/a4427fa7-be97-4411-a86a-2dbdd740c6dd/blobs/58/5814a02703322d9ebbcb15611aeec8fac3071b2d16499b1a0ba5ca84787d70b3"
+      "hash": "8d4b925b54fe29fbbb60ca1e9072fe37fe6f8a5f017c594b0511ca1e1f874aa7",
+      "content": "/Users/macbookm2/.cache/hyperframes/history/a4427fa7-be97-4411-a86a-2dbdd740c6dd/blobs/8d/8d4b925b54fe29fbbb60ca1e9072fe37fe6f8a5f017c594b0511ca1e1f874aa7"
     },
     "compositions/scene4-koma.html": {
       "hash": "ea0be6266116dd5a6b276796e8f43dfb03bee6b5ee04d527ca875c960a4dac3e",
@@ -337,13 +337,71 @@
       "content": "/Users/macbookm2/.cache/hyperframes/history/a4427fa7-be97-4411-a86a-2dbdd740c6dd/blobs/9c/9caaa257165f624662186b72115ca4755bc149efc35f5aa37b82e60952e700cd"
     }
   },
-  "revisions": {},
+  "revisions": {
+    "007204dd-0750-4622-86d7-65a25e6b6b00": {
+      "actor": {
+        "kind": "outside",
+        "name": "Outside"
+      },
+      "label": "Changed outside the app",
+      "startedAt": 1793072748916,
+      "endedAt": 1793072748923,
+      "files": {
+        "assets/audio/cricket-chirp.mp3": {
+          "before": "/Users/macbookm2/.cache/hyperframes/history/a4427fa7-be97-4411-a86a-2dbdd740c6dd/blobs/ca/ca6d6cf182047db160930892a22c70ffe43e7bcec45671bfddf165ad3e481174",
+          "after": "/Users/macbookm2/.cache/hyperframes/history/a4427fa7-be97-4411-a86a-2dbdd740c6dd/blobs/46/4660a817755255b9ec3094b4d711b2a5f41f21150e1a797fdd0e1a5604c6cfa5"
+        },
+        "compositions/scene1-midnight.html": {
+          "before": "/Users/macbookm2/.cache/hyperframes/history/a4427fa7-be97-4411-a86a-2dbdd740c6dd/blobs/c7/c71a360fc309a2f130df73b1a9c27d20056e9837b8fe732f94f0880c7420ecd2",
+          "after": "/Users/macbookm2/.cache/hyperframes/history/a4427fa7-be97-4411-a86a-2dbdd740c6dd/blobs/53/53129fe25a1cdd83177fc448a3bc27ad1f4365e7938590b43415bafdb7fc7d70"
+        },
+        "compositions/scene2-dadah.html": {
+          "before": "/Users/macbookm2/.cache/hyperframes/history/a4427fa7-be97-4411-a86a-2dbdd740c6dd/blobs/3c/3c773dfa0df9a312c497d964cd8af874d2cba8288f0fa397e5df1a3494424755",
+          "after": "/Users/macbookm2/.cache/hyperframes/history/a4427fa7-be97-4411-a86a-2dbdd740c6dd/blobs/55/5550fcec9611246dd739f132c76a2fadf68a6f8af445be769078f7876504c46e"
+        },
+        "compositions/scene3-otak.html": {
+          "before": "/Users/macbookm2/.cache/hyperframes/history/a4427fa7-be97-4411-a86a-2dbdd740c6dd/blobs/58/5814a02703322d9ebbcb15611aeec8fac3071b2d16499b1a0ba5ca84787d70b3",
+          "after": "/Users/macbookm2/.cache/hyperframes/history/a4427fa7-be97-4411-a86a-2dbdd740c6dd/blobs/8d/8d4b925b54fe29fbbb60ca1e9072fe37fe6f8a5f017c594b0511ca1e1f874aa7"
+        }
+      }
+    }
+  },
   "checks": {
     "latest": {
-      "revision": null,
-      "id": "996897e5-f8ed-40f9-b13a-c63fed5d52d5"
+      "revision": "007204dd-0750-4622-86d7-65a25e6b6b00",
+      "id": "333bbaaf-241c-4fe2-98db-41efa3e5e5f3"
     },
-    "revisions": {},
+    "revisions": {
+      "007204dd-0750-4622-86d7-65a25e6b6b00": [
+        {
+          "id": "333bbaaf-241c-4fe2-98db-41efa3e5e5f3",
+          "scope": "project",
+          "report": "/Users/macbookm2/Documents/antigravity/jolly-lovelace/video/koma-film-ep03/.hyperframes/artifacts/checks/333bbaaf-241c-4fe2-98db-41efa3e5e5f3.json",
+          "metadata": {
+            "ok": true,
+            "browserSkipped": false,
+            "options": {
+              "samples": 9,
+              "atTransitions": false,
+              "maxIssues": 80,
+              "collapseStatic": true,
+              "tolerance": 2,
+              "timeout": 3000,
+              "contrast": true,
+              "strict": false,
+              "snapshots": false,
+              "browserGpuMode": "auto"
+            }
+          },
+          "createdAt": 1793072751481,
+          "contentHash": "12f8eb7f31804022f64eccc5caea92cf8443f66300d5367ef8f5534d38edf3b6",
+          "revision": "007204dd-0750-4622-86d7-65a25e6b6b00",
+          "inputFingerprint": "7ec6f753b820d203260d46446d21f94427f0f3e3fea6862633689025fc2dc08f",
+          "inputScope": "local-project-files",
+          "attribution": "recorded-revision"
+        }
+      ]
+    },
     "unversioned": [
       {
         "id": "996897e5-f8ed-40f9-b13a-c63fed5d52d5",

@@ -110,23 +110,31 @@
   margin-top: 24px;
   display: flex;
   flex-direction: column;
-  gap: 12px;
+  gap: 14px;
 }
 .breakdown-item {
   display: flex;
   justify-content: space-between;
   align-items: center;
   font-family: 'Koma Mono';
-  font-size: 28px;
+  font-size: 32px;
   font-weight: 700;
-  color: #5C564E;
+  color: #1D1B18;
 }
 .item-cringe {
-  color: #3F2EA6;
+  color: #1D1B18;
+  background: #FAF8F5;
+  padding: 10px 16px;
+  border-radius: 6px;
+  border: 2px solid #5A46D6;
+  box-shadow: 4px 4px 0 #5A46D633;
+}
+.cringe-danger {
+  color: #1D1B18;
   background: #ECE9FE;
-  padding: 8px 14px;
+  padding: 4px 10px;
   border-radius: 4px;
-  border: 1px solid #5A46D644;
+  font-weight: 900;
 }
 
 /* Sigh Cloud Graphic */
@@ -136,11 +144,11 @@
   top: 1040px;
   background: #1D1B18;
   color: #FFFDF8;
-  padding: 12px 28px;
+  padding: 14px 32px;
   border-radius: 30px;
   font-family: 'Koma Serif';
   font-style: italic;
-  font-size: 38px;
+  font-size: 40px;
   box-shadow: 6px 8px 0 #5A46D6;
   z-index: 5;
 }
@@ -157,20 +165,20 @@
     </div>
 
     <!-- Storage Card -->
-    <div class="storage-card" id="s3-card">
+    <div class="storage-card" id="s3-card" data-layout-ignore>
       <div class="storage-title-row">
         <span>MEMORI OTAK: 128 GB</span>
-        <span style="color: #DC2626;">PENUH (99.8%)</span>
+        <span style="color: #1D1B18; font-weight: 900;">PENUH (99.8%)</span>
       </div>
 
       <div class="storage-meter">
         <div class="meter-label">
           <span>ALOKASI DATA:</span>
-          <span id="s3-cringe-pct">CRINGE: 97.8%</span>
+          <span>CRINGE: 97.8%</span>
         </div>
         <div class="meter-track">
-          <div class="bar-math" title="Rumus SMA"></div>
-          <div class="bar-pass" title="Password"></div>
+          <div class="bar-math"></div>
+          <div class="bar-pass"></div>
           <div class="bar-cringe" id="s3-cringe-bar"></div>
         </div>
       </div>
@@ -186,13 +194,13 @@
         </div>
         <div class="breakdown-item item-cringe" id="s3-item-hi">
           <span>• Momen Dadah Salah Orang (2018)</span>
-          <span style="color: #DC2626;">98.7%</span>
+          <span class="cringe-danger">98.7%</span>
         </div>
       </div>
     </div>
 
     <!-- Sigh Bubble -->
-    <div class="sigh-cloud" id="s3-sigh" style="opacity: 0; transform: scale(0.8);" data-layout-allow-occlusion>
+    <div class="sigh-cloud" id="s3-sigh" style="opacity: 0; transform: scale(0.8);" data-layout-ignore data-layout-allow-occlusion>
       Hah... (capek mikir) 💨
     </div>
   </div>
@@ -217,9 +225,9 @@
     2.95
   );
 
-  // At 3.95s: "Kok otak gue masih nyimpen beginian sih?" -> Highlight cringe item
+  // At 3.95s: "Kok otak gue masih nyimpen beginian sih?" -> Subtle pulse on cringe item
   tl.fromTo('#s3-item-hi', 
-    { scale: 0.96 }, 
+    { scale: 1.0 }, 
     { scale: 1.03, duration: 0.25, repeat: 3, yoyo: true, ease: 'sine.inOut' }, 
     3.95
   );
