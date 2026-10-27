@@ -61,8 +61,8 @@ export default function DonationModal({ isOpen, onClose }: DonationModalProps) {
   };
 
   return (
-    <div className="fixed inset-0 z-50 flex items-center justify-center p-4 bg-black/60 backdrop-blur-sm overflow-y-auto">
-      <div role="dialog" aria-modal="true" aria-labelledby="donation-title" className="relative w-full max-w-md my-8 p-6 sm:p-8 bg-[#FAF8F5] border-2 border-ink/20 shadow-paper-float rounded-sm text-ink animate-in fade-in zoom-in-95 duration-200">
+    <div className="fixed inset-0 z-50 flex items-center justify-center p-4 bg-black/60 backdrop-blur-sm">
+      <div role="dialog" aria-modal="true" aria-labelledby="donation-title" className="relative w-full max-w-xl max-h-[calc(100dvh-2rem)] overflow-y-auto p-5 sm:p-8 bg-[#FAF8F5] border-2 border-ink/20 shadow-paper-float rounded-sm text-ink animate-in fade-in zoom-in-95 duration-200">
         {/* Top Washi Tape */}
         <div className="absolute -top-3.5 left-12 z-10 w-28 pointer-events-none">
           <Image src="/assets/tape-purple.svg" alt="Tape" width={110} height={26} className="opacity-95" />
@@ -93,12 +93,12 @@ export default function DonationModal({ isOpen, onClose }: DonationModalProps) {
         </div>
 
         {config.qrisImageUrl && (
-          <div className="p-4 bg-white border-2 border-ink/20 rounded-sm shadow-inner flex flex-col items-center gap-3">
-            <div className="relative w-52 h-52 bg-paper-card border border-ink/20 rounded-sm overflow-hidden">
-              <Image src={config.qrisImageUrl} alt="QRIS Koma" fill sizes="220px" className="object-contain p-2" />
-            </div>
+          <div className="p-3 sm:p-4 bg-white border-2 border-ink/20 rounded-sm shadow-inner flex flex-col items-center gap-3">
+            <a href={config.qrisImageUrl} target="_blank" rel="noopener noreferrer" aria-label="Buka gambar QRIS ukuran penuh di tab baru" className="block w-full max-w-[400px] bg-white border border-ink/20 rounded-sm p-1 focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-koma-purple">
+              <Image src={config.qrisImageUrl} alt="QRIS Koma, ketuk untuk memperbesar" width={800} height={800} sizes="(max-width: 640px) calc(100vw - 4rem), 400px" className="w-full h-auto max-h-[55dvh] object-contain" />
+            </a>
             <span className="font-mono text-[10px] text-ink-muted uppercase tracking-wider font-semibold">
-              Pindai QRIS untuk memberi dukungan
+              Pindai QRIS · ketuk gambar untuk ukuran penuh
             </span>
             <button
               onClick={handleDownloadQR}
