@@ -91,6 +91,14 @@ Semua kunci/password bersifat **server-side**. Jangan menggunakan prefiks `NEXT_
 
 Rujukan variabel lain: [`.env.example`](.env.example). Untuk penyedia layanan apa pun, gunakan kredensial asli dari layanan tersebut **hanya di environment server**. Jangan menaruh fallback kredensial di source code.
 
+### Penemuan di Google dan ChatGPT Search
+
+- Beranda, Tentang, Aturan, Privasi, dan Dukung adalah halaman resmi yang dapat diindeks. `/jelajah` tetap `noindex` karena feed memuat tulisan tanpa izin pencarian. Hanya coretan publik yang **secara eksplisit** diizinkan penulis dan lolos kebijakan `src/lib/search-policy.ts` yang dapat masuk arsip dan sitemap. Jangan memasukkan semua coretan ke sitemap untuk mengejar peringkat.
+- Pemilik domain: periksa properti `ruangkoma.web.id` di [Google Search Console](https://search.google.com/search-console) (Domain property dengan DNS TXT, atau URL-prefix dengan meta tag). Jika sudah terverifikasi, pakai properti yang ada. Untuk metode meta tag, isi `GOOGLE_SITE_VERIFICATION` di environment **Production** dengan nilai token dari Google, lakukan deploy otomatis, lalu pastikan HTML `https://ruangkoma.web.id/` berisi `<meta name="google-site-verification" ...>`. Keberadaan variabel Vercel saja bukan bukti verifikasi.
+- Di URL Inspection, periksa `https://ruangkoma.web.id/` dan jalankan **Test Live URL**. Catat status indexed/not indexed beserta alasannya. Jika layak, minta indexing **sekali**; bukan jaminan. Kirim `https://ruangkoma.web.id/sitemap.xml` di menu Sitemaps dan cek apakah terbaca. Jangan simpulkan status indeks hanya dari `site:` atau jumlah URL sitemap.
+- Periksa properti di [Bing Webmaster Tools](https://www.bing.com/webmasters/) dan kirim sitemap yang sama. `BING_SITE_VERIFICATION` dipakai bila metode verifikasi yang dipilih adalah meta tag; DNS dapat digunakan tanpa tag. `OAI-SearchBot` diizinkan di `robots.txt` untuk penemuan ChatGPT Search, sedangkan `GPTBot` untuk pelatihan diblokir. Tidak ada jaminan masuk hasil AI.
+- Dashboard admin hanya menampilkan metrik Google/Bing jika akses baca-saja dikonfigurasi; jangan menganggap token verifikasi kepemilikan sebagai token Search Console API. URL `llms.txt` dan katalog agen bukan pengganti pengindeksan halaman HTML.
+
 ## Database dan penyimpanan
 
 - **Pengembangan tanpa PostgreSQL:** aplikasi menyimpan data di `.local-koma-db.json` (diabaikan oleh Git). Saat file belum ada, penyimpanan lokal dibuat dengan contoh coretan awal. **Data contoh itu bukan aktivitas pengguna riil.** Jangan gunakan file ini untuk data sensitif atau menganggapnya penyimpanan produksi.

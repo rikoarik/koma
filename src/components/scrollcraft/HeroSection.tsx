@@ -215,9 +215,9 @@ export default function HeroSection({
 
           {/* Narrative Deck - Deep crisp text */}
           <p className="font-sans text-sm sm:text-base text-ink font-medium max-w-lg mx-auto leading-relaxed mb-7">
-            Koma adalah zine digital tempat kamu menuangkan rasa sepi, kelakar konyol, atau
-            pikiran larut malam. Tanpa profil, tanpa penghakiman angka suka, hanya catatan
-            jujur sesama manusia.
+            Koma adalah tempat cerita anonim untuk menulis pikiran, pengalaman, pertanyaan,
+            atau hal random tanpa nama di depan pembaca. Pilih mau dibalas atau cukup didengar;
+            tulisanmu tetap dijaga dengan aturan ruang.
           </p>
 
           {/* Primary Action Buttons */}

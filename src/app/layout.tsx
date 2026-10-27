@@ -4,12 +4,13 @@ import './globals.css';
 
 export const metadata: Metadata = {
   metadataBase: new URL('https://ruangkoma.web.id'),
-  title: 'Koma — Sudut Singgah Anonim & Zine Digital',
+  title: 'Koma — Tempat Cerita Anonim & Berbagi Pikiran',
   alternates: { canonical: '/' },
-  openGraph: { title: 'Koma — Sudut Singgah Anonim & Zine Digital', description: 'Tempat buat bilang hal-hal yang selama ini cuma ada di kepala.', url: '/', siteName: 'Koma', locale: 'id_ID', type: 'website', images: ['/brand/png/koma-app-icon-512.png'] },
-  twitter: { card: 'summary', title: 'Koma — Sudut Singgah Anonim & Zine Digital', description: 'Tempat buat bilang hal-hal yang selama ini cuma ada di kepala.', images: ['/brand/png/koma-app-icon-512.png'] },
-  verification: { google: process.env.GOOGLE_SITE_VERIFICATION || undefined, other: process.env.BING_SITE_VERIFICATION ? { 'msvalidate.01': process.env.BING_SITE_VERIFICATION } : {} },
-  description: 'Tempat buat bilang hal-hal yang selama ini cuma ada di kepala. Tanpa nama, tanpa algoritma penghakiman.',
+  robots: { index: true, follow: true },
+  openGraph: { title: 'Koma — Tempat Cerita Anonim & Berbagi Pikiran', description: 'Tulis cerita atau pikiran tanpa nama di depan pembaca. Di Koma, pilih boleh dibalas atau cukup didengar.', url: '/', siteName: 'Koma', locale: 'id_ID', type: 'website', images: ['/brand/png/koma-app-icon-512.png'] },
+  twitter: { card: 'summary', title: 'Koma — Tempat Cerita Anonim & Berbagi Pikiran', description: 'Tulis cerita atau pikiran tanpa nama di depan pembaca. Di Koma, pilih boleh dibalas atau cukup didengar.', images: ['/brand/png/koma-app-icon-512.png'] },
+  verification: { google: process.env.GOOGLE_SITE_VERIFICATION?.trim() || undefined, other: process.env.BING_SITE_VERIFICATION?.trim() ? { 'msvalidate.01': process.env.BING_SITE_VERIFICATION.trim() } : {} },
+  description: 'Tulis cerita atau pikiran tanpa nama di depan pembaca. Di Koma, pilih boleh dibalas atau cukup didengar.',
   applicationName: 'Koma',
   manifest: '/manifest.webmanifest',
   appleWebApp: {
