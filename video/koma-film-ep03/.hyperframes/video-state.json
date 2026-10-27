@@ -1,7 +1,7 @@
 {
   "version": 1,
   "historyId": "a4427fa7-be97-4411-a86a-2dbdd740c6dd",
-  "currentRevision": "007204dd-0750-4622-86d7-65a25e6b6b00",
+  "currentRevision": "526f96c0-c419-41bc-af6f-863f09ab8d85",
   "pendingChanges": false,
   "files": {
     "assets/audio/clock-ticks.mp3": {
@@ -335,6 +335,14 @@
     "index.html": {
       "hash": "9caaa257165f624662186b72115ca4755bc149efc35f5aa37b82e60952e700cd",
       "content": "/Users/macbookm2/.cache/hyperframes/history/a4427fa7-be97-4411-a86a-2dbdd740c6dd/blobs/9c/9caaa257165f624662186b72115ca4755bc149efc35f5aa37b82e60952e700cd"
+    },
+    "SPEC.md": {
+      "hash": "ec5173ba49b35f7b7afababd117b38f2acce2a7814a19633b17585b5dfa3cf3e",
+      "content": "/Users/macbookm2/.cache/hyperframes/history/a4427fa7-be97-4411-a86a-2dbdd740c6dd/blobs/ec/ec5173ba49b35f7b7afababd117b38f2acce2a7814a19633b17585b5dfa3cf3e"
+    },
+    "VOICEOVER.md": {
+      "hash": "32c4b43dd72252baea42801d0e8b911f40a83689e5ab08ae4ad285a43a9c8ecc",
+      "content": "/Users/macbookm2/.cache/hyperframes/history/a4427fa7-be97-4411-a86a-2dbdd740c6dd/blobs/32/32c4b43dd72252baea42801d0e8b911f40a83689e5ab08ae4ad285a43a9c8ecc"
     }
   },
   "revisions": {
@@ -362,6 +370,25 @@
         "compositions/scene3-otak.html": {
           "before": "/Users/macbookm2/.cache/hyperframes/history/a4427fa7-be97-4411-a86a-2dbdd740c6dd/blobs/58/5814a02703322d9ebbcb15611aeec8fac3071b2d16499b1a0ba5ca84787d70b3",
           "after": "/Users/macbookm2/.cache/hyperframes/history/a4427fa7-be97-4411-a86a-2dbdd740c6dd/blobs/8d/8d4b925b54fe29fbbb60ca1e9072fe37fe6f8a5f017c594b0511ca1e1f874aa7"
+        }
+      }
+    },
+    "526f96c0-c419-41bc-af6f-863f09ab8d85": {
+      "actor": {
+        "kind": "outside",
+        "name": "Outside"
+      },
+      "label": "Changed outside the app",
+      "startedAt": 1793072791222,
+      "endedAt": 1793072791231,
+      "files": {
+        "SPEC.md": {
+          "before": null,
+          "after": "/Users/macbookm2/.cache/hyperframes/history/a4427fa7-be97-4411-a86a-2dbdd740c6dd/blobs/ec/ec5173ba49b35f7b7afababd117b38f2acce2a7814a19633b17585b5dfa3cf3e"
+        },
+        "VOICEOVER.md": {
+          "before": null,
+          "after": "/Users/macbookm2/.cache/hyperframes/history/a4427fa7-be97-4411-a86a-2dbdd740c6dd/blobs/32/32c4b43dd72252baea42801d0e8b911f40a83689e5ab08ae4ad285a43a9c8ecc"
         }
       }
     }
