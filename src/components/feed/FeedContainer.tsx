@@ -4,6 +4,7 @@ import React, { useState, useEffect } from 'react';
 import Image from 'next/image';
 import { Post, FeedFilter, ReactionType } from '@/types';
 import PostCard from './PostCard';
+import { submitReaction } from '@/lib/reactions-client';
 import EmptyFeed from './EmptyFeed';
 import { Clock, Shuffle, MessageCircleHeart, Tag, Search, Flame } from 'lucide-react';
 
@@ -53,31 +54,11 @@ export default function FeedContainer({ onOpenComposer }: FeedContainerProps) {
     return () => clearTimeout(timer);
   }, [filter, activeTopic, searchQuery]);
 
-  const handleReact = async (postId: string, reaction: ReactionType) => {
-    try {
-      const res = await fetch(`/api/posts/${postId}/reactions`, {
-        method: 'POST',
-        headers: { 'Content-Type': 'application/json' },
-        body: JSON.stringify({ reaction }),
-      });
-      const data = await res.json();
-      if (data.success && data.reactions) {
-        setPosts((prev) =>
-          prev.map((p) => {
-            if (p.id === postId) {
-              return {
-                ...p,
-                reactions: data.reactions,
-                userReactions: data.userReactions || p.userReactions,
-              };
-            }
-            return p;
-          })
-        );
-      }
-    } catch (err) {
-      console.error('Failed to react:', err);
-    }
+  const handleReact = async (postId: string, reaction: ReactionType): Promise<boolean> => {
+    const updated = await submitReaction(postId, reaction);
+    if (!updated) return false;
+    setPosts((prev) => prev.map((p) => p.id === postId ? { ...p, ...updated } : p));
+    return true;
   };
 
   const handleReply = async (postId: string, content: string, alias: string): Promise<boolean> => {

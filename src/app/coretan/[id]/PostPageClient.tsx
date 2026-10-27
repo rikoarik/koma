@@ -6,6 +6,7 @@ import Image from 'next/image';
 import { ArrowLeft, Share2, Check, Sparkles, AlertCircle } from 'lucide-react';
 import { Post, ReactionType } from '@/types';
 import PostCard from '@/components/feed/PostCard';
+import { submitReaction } from '@/lib/reactions-client';
 import Navbar from '@/components/layout/Navbar';
 import Footer from '@/components/layout/Footer';
 
@@ -38,39 +39,11 @@ export default function PostPageClient({ params, initialPost }: { params: { id: 
     if (params.id) loadPost();
   }, [params.id]);
 
-  const handleReact = async (postId: string, reactionType: ReactionType) => {
-    try {
-      const res = await fetch(`/api/posts/${postId}/reactions`, {
-        method: 'POST',
-        headers: { 'Content-Type': 'application/json' },
-        body: JSON.stringify({ reactionType }),
-      });
-      const data = await res.json();
-      if (data.success) {
-        setPost((prev) => {
-          if (!prev) return null;
-          const userAlready = (prev.userReactions || []).includes(reactionType);
-          const updatedReactions = { ...prev.reactions };
-          let updatedUserReactions = [...(prev.userReactions || [])];
-
-          if (userAlready) {
-            updatedReactions[reactionType] = Math.max(0, updatedReactions[reactionType] - 1);
-            updatedUserReactions = updatedUserReactions.filter((r) => r !== reactionType);
-          } else {
-            updatedReactions[reactionType] += 1;
-            updatedUserReactions.push(reactionType);
-          }
-
-          return {
-            ...prev,
-            reactions: updatedReactions,
-            userReactions: updatedUserReactions,
-          };
-        });
-      }
-    } catch (err) {
-      console.error('Failed to react:', err);
-    }
+  const handleReact = async (postId: string, reaction: ReactionType): Promise<boolean> => {
+    const updated = await submitReaction(postId, reaction);
+    if (!updated) return false;
+    setPost((prev) => prev && prev.id === postId ? { ...prev, ...updated } : prev);
+    return true;
   };
 
   const handleReply = async (

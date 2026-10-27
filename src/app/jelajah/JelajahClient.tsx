@@ -23,6 +23,7 @@ import PostCard from '@/components/feed/PostCard';
 import EmptyFeed from '@/components/feed/EmptyFeed';
 import ComposerModal from '@/components/feed/ComposerModal';
 import AIStudioModal from '@/components/studio/AIStudioModal';
+import { submitReaction } from '@/lib/reactions-client';
 
 const PRESET_TOPICS = [
   { id: 'semua', label: 'Semua Topik' },
@@ -85,42 +86,11 @@ export default function JelajahClient({ initialPosts, initialQuery = '' }: { ini
     return () => clearTimeout(timer);
   }, [filter, activeTopic, searchQuery]);
 
-  const handleReact = async (postId: string, reactionType: ReactionType) => {
-    try {
-      const res = await fetch(`/api/posts/${postId}/reactions`, {
-        method: 'POST',
-        headers: { 'Content-Type': 'application/json' },
-        body: JSON.stringify({ reactionType }),
-      });
-      const data = await res.json();
-      if (data.success) {
-        setPosts((prev) =>
-          prev.map((p) => {
-            if (p.id !== postId) return p;
-            const currentReactions = p.userReactions || [];
-            const userAlready = currentReactions.includes(reactionType);
-            const updatedReactions = { ...p.reactions };
-            let updatedUserReactions = [...currentReactions];
-
-            if (userAlready) {
-              updatedReactions[reactionType] = Math.max(0, updatedReactions[reactionType] - 1);
-              updatedUserReactions = updatedUserReactions.filter((r) => r !== reactionType);
-            } else {
-              updatedReactions[reactionType] += 1;
-              updatedUserReactions.push(reactionType);
-            }
-
-            return {
-              ...p,
-              reactions: updatedReactions,
-              userReactions: updatedUserReactions,
-            };
-          })
-        );
-      }
-    } catch (e) {
-      console.error('Failed to react:', e);
-    }
+  const handleReact = async (postId: string, reaction: ReactionType): Promise<boolean> => {
+    const updated = await submitReaction(postId, reaction);
+    if (!updated) return false;
+    setPosts((prev) => prev.map((p) => p.id === postId ? { ...p, ...updated } : p));
+    return true;
   };
 
   const handleReply = async (

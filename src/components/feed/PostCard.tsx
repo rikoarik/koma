@@ -9,7 +9,7 @@ import { IconDengerin, IconRelate, IconSenyum, IconPeluk } from '@/components/ui
 
 interface PostCardProps {
   post: Post;
-  onReact: (postId: string, reaction: ReactionType) => void;
+  onReact: (postId: string, reaction: ReactionType) => Promise<boolean>;
   onReply: (postId: string, content: string, alias: string) => Promise<boolean>;
   onReport: (postId: string, reason: string) => Promise<boolean>;
   onEdit?: (postId: string, content: string) => Promise<boolean>;
@@ -31,6 +31,8 @@ export default function PostCard({
   const [showReportModal, setShowReportModal] = useState(false);
   const [reportReason, setReportReason] = useState('spam');
   const [reportSuccess, setReportSuccess] = useState(false);
+  const [isReacting, setIsReacting] = useState(false);
+  const [reactionError, setReactionError] = useState(false);
 
   // Edit states
   const [isEditing, setIsEditing] = useState(false);
@@ -59,8 +61,17 @@ export default function PostCard({
     }
   };
 
-  const handleReactionClick = (type: ReactionType) => {
-    onReact(post.id, type);
+  const handleReactionClick = async (type: ReactionType) => {
+    if (isReacting) return;
+    setIsReacting(true);
+    setReactionError(false);
+    try {
+      if (!await onReact(post.id, type)) setReactionError(true);
+    } catch {
+      setReactionError(true);
+    } finally {
+      setIsReacting(false);
+    }
   };
 
   const handleSubmitReply = async (e: React.FormEvent) => {
@@ -244,6 +255,7 @@ export default function PostCard({
           {/* Aku dengerin */}
           <button
             onClick={() => handleReactionClick('dengerin')}
+            disabled={isReacting}
             className={`flex items-center gap-1.5 px-2.5 py-1 rounded-sm text-xs font-mono font-bold transition-all border ${
               hasUserReacted('dengerin')
                 ? 'bg-amber-100 border-amber-500 text-amber-950 scale-105 shadow-xs'
@@ -260,6 +272,7 @@ export default function PostCard({
           {/* Relate */}
           <button
             onClick={() => handleReactionClick('relate')}
+            disabled={isReacting}
             className={`flex items-center gap-1.5 px-2.5 py-1 rounded-sm text-xs font-mono font-bold transition-all border ${
               hasUserReacted('relate')
                 ? 'bg-purple-100 border-koma-purple text-koma-purpleDark scale-105 shadow-xs'
@@ -276,6 +289,7 @@ export default function PostCard({
           {/* Senyum */}
           <button
             onClick={() => handleReactionClick('senyum')}
+            disabled={isReacting}
             className={`flex items-center gap-1.5 px-2.5 py-1 rounded-sm text-xs font-mono font-bold transition-all border ${
               hasUserReacted('senyum')
                 ? 'bg-emerald-100 border-emerald-500 text-emerald-950 scale-105 shadow-xs'
@@ -292,6 +306,7 @@ export default function PostCard({
           {/* Peluk jauh */}
           <button
             onClick={() => handleReactionClick('peluk')}
+            disabled={isReacting}
             className={`flex items-center gap-1.5 px-2.5 py-1 rounded-sm text-xs font-mono font-bold transition-all border ${
               hasUserReacted('peluk')
                 ? 'bg-rose-100 border-rose-500 text-rose-950 scale-105 shadow-xs'
@@ -305,6 +320,8 @@ export default function PostCard({
             <span>{post.reactions?.peluk || 0}</span>
           </button>
         </div>
+
+        {reactionError && <p role="alert" className={`w-full font-mono text-xs ${isDarkCard ? 'text-rose-300' : 'text-rose-700'}`}>Reaksi gagal disimpan. Coba lagi.</p>}
 
         {/* Right Action buttons: Replies toggle, Edit, Delete, Report */}
         <div className="flex items-center gap-2.5">
